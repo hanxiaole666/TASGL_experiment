@@ -1,0 +1,48 @@
+{
+  "schema": "p3_evidence_manifest_v1",
+  "purpose": "声明六项投稿前真实证据所需的产物位置与当前状态；路径不存在即为待产生，不得由程序存在冒充已完成",
+  "real_data_root": "D:/TASGL_experiment/Data",
+  "datasets_present": {
+    "elliptic": "D:/TASGL_experiment/Data/elliptic",
+    "dgraphfin": "D:/TASGL_experiment/Data/dgraphfin",
+    "bitheteronet": "D:/TASGL_experiment/Data/bitheteronet",
+    "ethereum": "D:/TASGL_experiment/Data/ethereum",
+    "dexposure": "D:/TASGL_experiment/Data/dexposure"
+  },
+  "blockers_found_2026_11_02": [
+    {
+      "item": "P3-2",
+      "severity": "code_blocking",
+      "detail": "真实 DGraphFin.npz 的 train/valid/test 是索引数组(857899/183862/183840)，节点 3700550；p0_data.load_dgraphfin 抛 '掩码与节点数不一致'，P0-6 无法运行",
+      "fix": "p3_data.load_dgraphfin_real 兼容索引掩码并把 y∈{2,3} 视为未标注"
+    },
+    {
+      "item": "P3-2",
+      "severity": "semantic",
+      "detail": "真实 y∈{0,1,2,3}：0=负类、1=正类、2/3 仅出现在官方划分之外，需按未标注处理",
+      "fix": "p3_data 标签映射；split_audit 逐段报告标注数与正类率"
+    },
+    {
+      "item": "P3-4",
+      "severity": "scientific",
+      "detail": "Elliptic 匿名特征与 DGraph-Fin/Ethereum 之间无已核实的逐列语义对应；独立 PCA 不能代替语义对齐",
+      "fix": "p3_core.check_semantic_mapping 在缺少已核验语义时返回 scientifically_blocked_unverified_semantics"
+    }
+  ],
+  "expected_artifacts": {
+    "P3-1_independent_declaration": "results/p3/independent/independent_split_declaration.json",
+    "P3-1_locked_evaluation": "results/p0/independent_dgraph/evaluation.json",
+    "P3-2_training_runs": "results/p3/second_dataset/seed{seed}/test_predictions.npz",
+    "P3-2_metrics": "results/p3/second_dataset/second_dataset_metrics.json",
+    "P3-3_hpo_winners": "results/p0/hpo/hpo_winners.json",
+    "P3-3_fair_comparison": "results/p3/fair_comparison/fair_comparison.json",
+    "P3-4_semantic_check": "results/p3/crosschain/semantic_mapping_check.json",
+    "P3-5_layerwise": "results/p3/sparsity_layerwise/layerwise_sparsity.json",
+    "P3-6_verdicts": "results/p3/verdicts/hypothesis_verdicts.json"
+  },
+  "status_rule": [
+    "路径不存在 → status=pending_real_run，不得生成替代数值",
+    "种子不完整 → status=incomplete_missing_seeds，不得用子集冒充十种子/二十种子结论",
+    "预算不公平或被阻塞 → 结论阻断，退出码 2"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "protocol": "p0_independent_elliptic_v1",
+  "dataset": {
+    "name": "elliptic",
+    "root": "./data/elliptic"
+  },
+  "model_name": "graphsage_equal_budget_hpo",
+  "predictions": {
+    "path_pattern": "results/p0/hpo/frozen/graphsage_seed{seed}.npz",
+    "contains_labels": false
+  },
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "threshold": {
+    "source": "calibration_artifact",
+    "selection_data": "validation_time_30_34_only",
+    "test_reoptimization": false
+  },
+  "calibration": {
+    "source": "artifact",
+    "path_pattern": "results/p0/hpo/frozen/graphsage_seed{seed}.calibration.json",
+    "fitting_data": "validation_time_30_34_only"
+  },
+  "statistics": {
+    "test": "wilcoxon_exact_two_sided",
+    "paired_unit": "seed",
+    "alpha": 0.05,
+    "sample_sd_ddof": 1,
+    "confidence_interval": "two_sided_student_t_95",
+    "effect_size": "cohen_dz",
+    "multiple_comparison": "Holm"
+  },
+  "exclusions": {
+    "seed_replacement_after_test": false,
+    "failed_seed_must_remain_incomplete": true,
+    "minimum_labeled_test_nodes_per_seed": 1,
+    "prediction_missing_policy": "fail_not_skip"
+  },
+  "evaluation": {
+    "time_start": 35,
+    "time_end": 49,
+    "positive_label": "1=illicit",
+    "single_locked_configuration": true,
+    "prior_test_exposure": true,
+    "exposure_note": "Elliptic 35-49 was observed in v2/v3/v4 development; exploratory reconfirmation only"
+  }
+}

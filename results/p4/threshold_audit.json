@@ -1,0 +1,42 @@
+{
+  "schema": "p4_threshold_audit_v1",
+  "per_hypothesis": {
+    "H1": {
+      "basis": "derived",
+      "verdict": "justified",
+      "has_gates": true,
+      "derivation_present": true
+    },
+    "H2": {
+      "basis": "operational",
+      "verdict": "justified",
+      "has_gates": true,
+      "derivation_present": true
+    },
+    "H3": {
+      "basis": "derived",
+      "verdict": "justified",
+      "has_gates": false,
+      "derivation_present": false
+    },
+    "H4": {
+      "basis": "derived",
+      "verdict": "justified",
+      "has_gates": false,
+      "derivation_present": false
+    },
+    "H6": {
+      "basis": "operational",
+      "verdict": "not_registered",
+      "has_gates": false,
+      "derivation_present": false
+    },
+    "H5": {
+      "basis": "literature",
+      "verdict": "justified",
+      "has_gates": true,
+      "derivation_present": true
+    }
+  },
+  "all_justified": true
+}

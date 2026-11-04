@@ -1,0 +1,15 @@
+{
+  "protocol": "p0_preregistered_statistics_v1",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "paired_unit": "seed",
+  "test": "wilcoxon_exact_two_sided",
+  "alpha": 0.05,
+  "comparisons": [
+    {
+      "name": "tasgl_vs_equal_budget_graphsage",
+      "a": "results/p0/independent_tasgl/evaluation.json",
+      "b": "results/p0/independent_graphsage/evaluation.json",
+      "value_key": "f1"
+    }
+  ]
+}

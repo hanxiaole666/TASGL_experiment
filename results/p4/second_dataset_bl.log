@@ -1,0 +1,22 @@
+[BitHeNet] 地址组 822942, 超上限跳过 976, 无向边 1342830
+[P4][2nd] mlp seed 0: F1=0.4202 thr=0.82
+[P4][2nd] mlp seed 1: F1=0.3169 thr=0.50
+[P4][2nd] mlp seed 2: F1=0.4418 thr=0.86
+[P4][2nd] mlp seed 3: F1=0.3303 thr=0.50
+[P4][2nd] mlp seed 4: F1=0.4360 thr=0.82
+[P4][2nd] mlp seed 5: F1=0.4131 thr=0.80
+[P4][2nd] mlp seed 6: F1=0.4723 thr=0.84
+[P4][2nd] mlp seed 7: F1=0.3688 thr=0.50
+[P4][2nd] mlp seed 8: F1=0.4546 thr=0.84
+[P4][2nd] mlp seed 9: F1=0.4346 thr=0.78
+[P4][2nd] graphsage seed 0: F1=0.3791 thr=0.50
+[P4][2nd] graphsage seed 1: F1=0.5669 thr=0.92
+[P4][2nd] graphsage seed 2: F1=0.5499 thr=0.78
+[P4][2nd] graphsage seed 3: F1=0.2748 thr=0.52
+[P4][2nd] graphsage seed 4: F1=0.5955 thr=0.88
+[P4][2nd] graphsage seed 5: F1=0.5704 thr=0.82
+[P4][2nd] graphsage seed 6: F1=0.2860 thr=0.54
+[P4][2nd] graphsage seed 7: F1=0.2762 thr=0.50
+[P4][2nd] graphsage seed 8: F1=0.6098 thr=0.90
+[P4][2nd] graphsage seed 9: F1=0.5991 thr=0.80
+saved results/p4/second_dataset_baselines.json

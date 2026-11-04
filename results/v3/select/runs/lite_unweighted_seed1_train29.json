@@ -1,0 +1,106 @@
+{
+  "protocol": 5,
+  "metadata": {
+    "schedule": {
+      "phase": "select",
+      "seed": 1,
+      "train_end": 29,
+      "val_start": 30,
+      "val_end": 32,
+      "test_start": 33,
+      "test_end": 34
+    },
+    "config": {
+      "hidden": 48,
+      "hops": 2,
+      "dropout": 0.2,
+      "lr": 0.001,
+      "wd": 0.0001,
+      "class_weight_power": 0.0,
+      "focal_gamma": 0.0,
+      "edge_drop": 0.15,
+      "robust_ce_weight": 0.5,
+      "consistency_weight": 0.1,
+      "kd_weight": 0.0,
+      "temporal_weight": 0.02,
+      "teacher": "graphsage",
+      "calibration": "temp_bias",
+      "name": "lite_unweighted"
+    },
+    "lock_id": null
+  },
+  "config": {
+    "hidden": 48,
+    "hops": 2,
+    "dropout": 0.2,
+    "lr": 0.001,
+    "wd": 0.0001,
+    "class_weight_power": 0.0,
+    "focal_gamma": 0.0,
+    "edge_drop": 0.15,
+    "robust_ce_weight": 0.5,
+    "consistency_weight": 0.1,
+    "kd_weight": 0.0,
+    "temporal_weight": 0.02,
+    "teacher": "graphsage",
+    "calibration": "temp_bias",
+    "name": "lite_unweighted"
+  },
+  "seed": 1,
+  "complete": true,
+  "calibrator": {
+    "method": "temp_bias",
+    "temperature": 0.7350016236305237,
+    "bias": -1.3865337371826172
+  },
+  "validation_f1": 0.8738404512405396,
+  "clean": {
+    "f1": 0.624113475177305,
+    "precision": 0.5432098765432098,
+    "recall": 0.7333333333333333,
+    "pr_auc": 0.7007849534338737,
+    "recall_at_fpr_1pct": 0.6166666666666667,
+    "ece": 0.013936956058486242,
+    "brier": 0.0354808767211248,
+    "nll": 0.1273595690727234,
+    "selective_auc": 0.7796474007842977,
+    "threshold": 0.4200000464916229
+  },
+  "clean_uncalibrated": {
+    "f1": 0.5106382978723404,
+    "precision": 0.375,
+    "recall": 0.8,
+    "pr_auc": 0.7007849534338737,
+    "recall_at_fpr_1pct": 0.6166666666666667,
+    "ece": 0.03140228145042726,
+    "brier": 0.05839283019332061,
+    "nll": 0.19771914184093475,
+    "selective_auc": 0.3711767362770441,
+    "threshold": 0.4200000464916229
+  },
+  "edge_drop50": {
+    "f1": 0.5508982035928144,
+    "precision": 0.42990654205607476,
+    "recall": 0.7666666666666667,
+    "pr_auc": 0.6079077467765241,
+    "recall_at_fpr_1pct": 0.4666666666666667,
+    "ece": 0.016916610955194433,
+    "brier": 0.04955165478054832,
+    "nll": 0.16975001990795135,
+    "selective_auc": 0.7067308756222915,
+    "threshold": 0.4200000464916229
+  },
+  "params_model": 15455,
+  "params": 15457,
+  "teacher_params_excluded": false,
+  "efficiency": {
+    "params": 15455,
+    "model_size_mb": 0.059,
+    "latency_ms": 16.086,
+    "peak_mem_mb": 479.4,
+    "throughput": 12667122.6,
+    "active_edge_ratio": null,
+    "calibration_included": true,
+    "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protocol": "p2_multiseed_statistics_v1",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "paired_unit": "seed",
+  "test": "wilcoxon_exact_two_sided",
+  "alpha": 0.05,
+  "n_boot": 10000,
+  "boot_seed": 0,
+  "comparisons": [
+    {
+      "name": "tasgl_vs_equal_budget_graphsage",
+      "value_key": "f1",
+      "a_records": "results/p0/independent_tasgl/evaluation.json",
+      "b_records": "results/p0/independent_graphsage/evaluation.json",
+      "sd_prior": null
+    }
+  ],
+  "notes": [
+    "a_records / b_records 可为 JSON 文件路径（含 per_seed 或列表）或内联记录数组",
+    "sd_prior 为预注册时对配对差值标准差的先验估计；留空则只报告标准化 MDE",
+    "缺任一预声明种子时状态为 incomplete_missing_seeds，不得进入显著性结论"
+  ]
+}

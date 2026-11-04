@@ -1,0 +1,19 @@
+{
+  "f1": 0.5253490080822925,
+  "precision": 0.436241610738255,
+  "recall": 0.6602031394275162,
+  "pr_auc": 0.6204059384767961,
+  "recall_at_fpr_1pct": 0.4450600184672207,
+  "ece": 0.025261840851777455,
+  "mean_uncertainty": 0.2911416292190552,
+  "selective_auc": 0.40210109884368317,
+  "threshold": 0.88,
+  "params": 19595,
+  "model_size_mb": 0.075,
+  "latency_ms": 33.325,
+  "peak_mem_mb": 679.5,
+  "throughput": 6114513.8,
+  "active_edge_ratio": 0.6922339797019958,
+  "protocol": 3,
+  "seed": 2
+}

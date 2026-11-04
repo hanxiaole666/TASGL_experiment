@@ -1,0 +1,18 @@
+{
+  "schema": "p2_seed_registry_v1",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "n_seeds": 20,
+  "paired_unit": "seed",
+  "test": "wilcoxon_exact_two_sided",
+  "alpha": 0.05,
+  "sample_sd_ddof": 1,
+  "effect_size": "cohen_dz",
+  "confidence_interval": "two_sided_student_t_95_plus_bootstrap_percentile",
+  "multiple_comparison": "Holm",
+  "notes": [
+    "20 个预注册种子落在 10-20 区间；精确双侧 Wilcoxon 在 n=20 时最小可达 p = 1.907e-06",
+    "n=5 时最小 p 为 0.0625，无法达到 0.05；因此历史 5 种子结论不得写为统计显著",
+    "时间窗与攻击种子是嵌套重复，必须先折叠到种子级再配对，不得展开为独立单元",
+    "注册后不得增删种子；增删会改变 seed_pool_sha256，属于新的探索版本"
+  ]
+}

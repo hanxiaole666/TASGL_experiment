@@ -1,0 +1,22 @@
+{
+  "schema": "p4_environment_fingerprint_v1",
+  "python_version": "3.11.5",
+  "os": "Windows 10",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "cpu": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+  "machine": "AMD64",
+  "numpy_version": "1.26.4",
+  "torch_version": "2.2.1",
+  "cuda_runtime": "11.8",
+  "cudnn": "8700",
+  "cuda_available": true,
+  "gpu_count": 1,
+  "gpu_name": "NVIDIA GeForce RTX 2060",
+  "gpu_total_mem_mb": 6143.6,
+  "gpu_sm_count": 30,
+  "driver_version": "522.06",
+  "power_limit_w": "[N/A]",
+  "missing": [],
+  "complete": true,
+  "fingerprint": "bb60cfd42c6aee8a1868cc937c26a5995b70ff14f29a2f5ddba08f76013a96f6"
+}

@@ -1,0 +1,102 @@
+============================================================
+[开始] python3 exp_robustness.py --seeds 0 1
+[开始时间] 2026-11-02 13:14:36.136
+[tasgl][clean:0][0] 已完成, 跳过 (F1=0.4018)
+[tasgl][feature_noise:0.1][0] 已完成, 跳过 (F1=0.3931)
+[tasgl][feature_noise:0.3][0] 已完成, 跳过 (F1=0.3571)
+[tasgl][feature_noise:0.5][0] 已完成, 跳过 (F1=0.3132)
+[tasgl][edge_drop:0.1][0] 已完成, 跳过 (F1=0.3865)
+[tasgl][edge_drop:0.3][0] 已完成, 跳过 (F1=0.3509)
+[tasgl][edge_drop:0.5][0] 已完成, 跳过 (F1=0.3171)
+[tasgl][edge_inject:0.1][0] 已完成, 跳过 (F1=0.4805)
+[tasgl][edge_inject:0.3][0] 已完成, 跳过 (F1=0.5723)
+[tasgl][label_flip:0.05][0] 已完成, 跳过 (F1=0.3655)
+[tasgl][label_flip:0.10][0] 已完成, 跳过 (F1=0.3566)
+[tasgl][clean:0][1] 已完成, 跳过 (F1=0.6268)
+[tasgl][feature_noise:0.1][1] 已完成, 跳过 (F1=0.6236)
+[tasgl][feature_noise:0.3][1] 已完成, 跳过 (F1=0.5590)
+[tasgl][feature_noise:0.5][1] 已完成, 跳过 (F1=0.4657)
+[tasgl][edge_drop:0.1][1] 已完成, 跳过 (F1=0.5905)
+[tasgl][edge_drop:0.3][1] 已完成, 跳过 (F1=0.5069)
+[tasgl][edge_drop:0.5][1] 已完成, 跳过 (F1=0.4528)
+[tasgl][edge_inject:0.1][1] 已完成, 跳过 (F1=0.7029)
+[tasgl][edge_inject:0.3][1] 已完成, 跳过 (F1=0.7234)
+[tasgl][label_flip:0.05][1] 已完成, 跳过 (F1=0.4856)
+[tasgl][label_flip:0.10][1] 已完成, 跳过 (F1=0.5308)
+[gcn][clean:0][0] 已完成, 跳过 (F1=0.2889)
+[gcn][feature_noise:0.1][0] 已完成, 跳过 (F1=0.2900)
+[gcn][feature_noise:0.3][0] 已完成, 跳过 (F1=0.2911)
+[gcn][feature_noise:0.5][0] 已完成, 跳过 (F1=0.2878)
+[gcn][edge_drop:0.1][0] 已完成, 跳过 (F1=0.2949)
+[gcn][edge_drop:0.3][0] 已完成, 跳过 (F1=0.3038)
+[gcn][edge_drop:0.5][0] 已完成, 跳过 (F1=0.3293)
+[gcn][edge_inject:0.1][0] 已完成, 跳过 (F1=0.4661)
+[gcn][edge_inject:0.3][0] 已完成, 跳过 (F1=0.5927)
+[gcn][label_flip:0.05][0] 已完成, 跳过 (F1=0.2643)
+[gcn][label_flip:0.10][0] 已完成, 跳过 (F1=0.2377)
+[gcn][clean:0][1] 已完成, 跳过 (F1=0.2739)
+[gcn][feature_noise:0.1][1] 已完成, 跳过 (F1=0.2722)
+[gcn][feature_noise:0.3][1] 已完成, 跳过 (F1=0.2628)
+[gcn][feature_noise:0.5][1] 已完成, 跳过 (F1=0.2633)
+[gcn][edge_drop:0.1][1] 已完成, 跳过 (F1=0.2816)
+[gcn][edge_drop:0.3][1] 已完成, 跳过 (F1=0.2932)
+[gcn][edge_drop:0.5][1] 已完成, 跳过 (F1=0.2879)
+[gcn][edge_inject:0.1][1] 已完成, 跳过 (F1=0.3803)
+[gcn][edge_inject:0.3][1] 已完成, 跳过 (F1=0.4736)
+[gcn][label_flip:0.05][1] 已完成, 跳过 (F1=0.2829)
+[gcn][label_flip:0.10][1] 已完成, 跳过 (F1=0.2902)
+[gat][clean:0][0] 已完成, 跳过 (F1=0.2380)
+[gat][feature_noise:0.1][0] 已完成, 跳过 (F1=0.2356)
+[gat][feature_noise:0.3][0] 已完成, 跳过 (F1=0.2386)
+[gat][feature_noise:0.5][0] 已完成, 跳过 (F1=0.2387)
+[gat][edge_drop:0.1][0] 已完成, 跳过 (F1=0.2525)
+[gat][edge_drop:0.3][0] 已完成, 跳过 (F1=0.2787)
+[gat][edge_drop:0.5][0] 已完成, 跳过 (F1=0.3005)
+[gat][edge_inject:0.1][0] 已完成, 跳过 (F1=0.3805)
+[gat][edge_inject:0.3][0] 已完成, 跳过 (F1=0.4606)
+[gat][label_flip:0.05][0] 已完成, 跳过 (F1=0.2435)
+[gat][label_flip:0.10][0] 已完成, 跳过 (F1=0.2390)
+[gat][clean:0][1] 已完成, 跳过 (F1=0.4178)
+[gat][feature_noise:0.1][1] 已完成, 跳过 (F1=0.4146)
+[gat][feature_noise:0.3][1] 已完成, 跳过 (F1=0.3932)
+[gat][feature_noise:0.5][1] 已完成, 跳过 (F1=0.3611)
+[gat][edge_drop:0.1][1] 已完成, 跳过 (F1=0.4041)
+[gat][edge_drop:0.3][1] 已完成, 跳过 (F1=0.3730)
+[gat][edge_drop:0.5][1] 已完成, 跳过 (F1=0.3510)
+[gat][edge_inject:0.1][1] 已完成, 跳过 (F1=0.6273)
+[gat][edge_inject:0.3][1] 已完成, 跳过 (F1=0.7476)
+[gat][label_flip:0.05][1] 已完成, 跳过 (F1=0.2410)
+[gat][label_flip:0.10][1] 已完成, 跳过 (F1=0.2485)
+
+model            attack            f1 rel_drop
+tasgl feature_noise:0.1 0.5083±0.1153     1.2%
+tasgl feature_noise:0.3 0.4581±0.1010    10.9%
+tasgl feature_noise:0.5 0.3895±0.0763    24.3%
+tasgl     edge_drop:0.1 0.4885±0.1020     5.0%
+tasgl     edge_drop:0.3 0.4289±0.0780    16.6%
+tasgl     edge_drop:0.5 0.3850±0.0678    25.1%
+tasgl   edge_inject:0.1 0.5917±0.1112   -15.1%
+tasgl   edge_inject:0.3 0.6478±0.0755   -26.0%
+tasgl   label_flip:0.05 0.4255±0.0601    17.3%
+tasgl   label_flip:0.10 0.4437±0.0871    13.7%
+  gcn feature_noise:0.1 0.2811±0.0089     0.1%
+  gcn feature_noise:0.3 0.2770±0.0141     1.6%
+  gcn feature_noise:0.5 0.2756±0.0122     2.1%
+  gcn     edge_drop:0.1 0.2882±0.0066    -2.4%
+  gcn     edge_drop:0.3 0.2985±0.0053    -6.1%
+  gcn     edge_drop:0.5 0.3086±0.0207    -9.7%
+  gcn   edge_inject:0.1 0.4232±0.0429   -50.4%
+  gcn   edge_inject:0.3 0.5332±0.0596   -89.5%
+  gcn   label_flip:0.05 0.2736±0.0093     2.8%
+  gcn   label_flip:0.10 0.2640±0.0262     6.2%
+  gat feature_noise:0.1 0.3251±0.0895     0.8%
+  gat feature_noise:0.3 0.3159±0.0773     3.6%
+  gat feature_noise:0.5 0.2999±0.0612     8.5%
+  gat     edge_drop:0.1 0.3283±0.0758    -0.1%
+  gat     edge_drop:0.3 0.3259±0.0471     0.6%
+  gat     edge_drop:0.5 0.3258±0.0252     0.6%
+  gat   edge_inject:0.1 0.5039±0.1234   -53.7%
+  gat   edge_inject:0.3 0.6041±0.1435   -84.2%
+  gat   label_flip:0.05 0.2422±0.0013    26.1%
+  gat   label_flip:0.10 0.2437±0.0048    25.7%
+[结束时间] 2026-11-02 13:14:50.193 (退出码=0)

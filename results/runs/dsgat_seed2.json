@@ -1,0 +1,16 @@
+{
+  "f1": 0.3111814345991561,
+  "precision": 0.21779254337393872,
+  "recall": 0.5447830101569714,
+  "pr_auc": 0.1983561282622072,
+  "recall_at_fpr_1pct": 0.01569713758079409,
+  "threshold": 0.9600000000000001,
+  "params": 15170,
+  "model_size_mb": 0.058,
+  "latency_ms": 26.62,
+  "peak_mem_mb": 537.7,
+  "throughput": 7654712.2,
+  "active_edge_ratio": null,
+  "protocol": 3,
+  "seed": 2
+}

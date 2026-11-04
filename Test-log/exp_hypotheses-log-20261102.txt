@@ -1,0 +1,42 @@
+============================================================
+[开始] python3 exp_hypotheses.py --phase select --selection_seeds 0 1
+[开始时间] 2026-11-02 13:17:22.335
+device=cuda; phase=select; protocol=6
+[v3][lite_h48_seed0_train29] 已完成，跳过
+[v3][lite_h48_seed0_train24] 已完成，跳过
+[v3][lite_h48_seed1_train29] 已完成，跳过
+[v3][lite_h48_seed1_train24] 已完成，跳过
+[select] {"name": "lite_h48", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.015220378887952624, "brier": 0.033377400823338184, "latency_ms": 16.224, "params": 15457, "edge_drop50_f1": 0.634161058250174, "edge_drop50_rel_drop": 0.032519258185561714, "short_f1": 0.5305358550039401, "extrapolation_loss": 0.19061062504427537, "selection_score": 1.2710581210996252, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_h32_seed0_train29] 已完成，跳过
+[v3][lite_h32_seed0_train24] 已完成，跳过
+[v3][lite_h32_seed1_train29] 已完成，跳过
+[v3][lite_h32_seed1_train24] 已完成，跳过
+[select] {"name": "lite_h32", "f1": 0.6724724724724724, "pr_auc": 0.7914199806078377, "ece": 0.012620796718357995, "brier": 0.03206819896720167, "latency_ms": 11.575, "params": 8881, "edge_drop50_f1": 0.6505255255255256, "edge_drop50_rel_drop": 0.03263620125037203, "short_f1": 0.5715686274509804, "extrapolation_loss": 0.15004903420135546, "selection_score": 0.6260679689583727, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_kd_seed0_train29] 已完成，跳过
+[v3][lite_kd_seed0_train24] 已完成，跳过
+[v3][lite_kd_seed1_train29] 已完成，跳过
+[v3][lite_kd_seed1_train24] 已完成，跳过
+[select] {"name": "lite_kd", "f1": 0.6853333333333333, "pr_auc": 0.7826352945811388, "ece": 0.01186042310179028, "brier": 0.02896171939016491, "latency_ms": 11.7285, "params": 13153, "edge_drop50_f1": 0.6604128588323837, "edge_drop50_rel_drop": 0.036362560069479126, "short_f1": 0.5619573796369377, "extrapolation_loss": 0.18002327873987692, "selection_score": 0.6575993885184158, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][graphless_kd_seed0_train29] 已完成，跳过
+[v3][graphless_kd_seed0_train24] 已完成，跳过
+[v3][graphless_kd_seed1_train29] 已完成，跳过
+[v3][graphless_kd_seed1_train24] 已完成，跳过
+[select] {"name": "graphless_kd", "f1": 0.7010893246187364, "pr_auc": 0.792842179225791, "ece": 0.013281803624899318, "brier": 0.03405051248035108, "latency_ms": 6.2465, "params": 10849, "edge_drop50_f1": 0.7010893246187364, "edge_drop50_rel_drop": 0.0, "short_f1": 0.5510494266019598, "extrapolation_loss": 0.2140096742998772, "selection_score": 0.20391849638109893, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": true, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_robust_seed0_train29] 已完成，跳过
+[v3][lite_robust_seed0_train24] 已完成，跳过
+[v3][lite_robust_seed1_train29] 已完成，跳过
+[v3][lite_robust_seed1_train24] 已完成，跳过
+[select] {"name": "lite_robust", "f1": 0.6798163668392676, "pr_auc": 0.7656100636932783, "ece": 0.016866329854751765, "brier": 0.03303199907256917, "latency_ms": 11.0485, "params": 13153, "edge_drop50_f1": 0.662004662004662, "edge_drop50_rel_drop": 0.026200759062949865, "short_f1": 0.5102750869815524, "extrapolation_loss": 0.24939275976243253, "selection_score": 0.6495311948555007, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_unweighted_seed0_train29] 已完成，跳过
+[v3][lite_unweighted_seed0_train24] 已完成，跳过
+[v3][lite_unweighted_seed1_train29] 已完成，跳过
+[v3][lite_unweighted_seed1_train24] 已完成，跳过
+[select] {"name": "lite_unweighted", "f1": 0.6257822277847309, "pr_auc": 0.7349783067487189, "ece": 0.01448102625842871, "brier": 0.03460912671859513, "latency_ms": 15.634, "params": 15457, "edge_drop50_f1": 0.5767311530784585, "edge_drop50_rel_drop": 0.07838361738062338, "short_f1": 0.5683499193114577, "extrapolation_loss": 0.09177682894029054, "selection_score": 1.1675643696208948, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": false, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H3_absolute_drop_proxy", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_temp_seed0_train29] 已完成，跳过
+[v3][lite_temp_seed0_train24] 已完成，跳过
+[v3][lite_temp_seed1_train29] 已完成，跳过
+[v3][lite_temp_seed1_train24] 已完成，跳过
+[select] {"name": "lite_temp", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.022560144474566224, "brier": 0.05857710885162906, "latency_ms": 15.609, "params": 15456, "edge_drop50_f1": 0.6317972350230414, "edge_drop50_rel_drop": 0.03612552416413625, "short_f1": 0.5262632978723405, "extrapolation_loss": 0.19712886940719843, "selection_score": 1.2007007504625484, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[select] 协议停止：没有候选同时通过全部开发硬门槛；开发结果已保存，未生成新锁，禁止进入确认
+[结束时间] 2026-11-02 13:17:39.690 (退出码=2)
+[错误] exp_hypotheses 失败，详见 Test-log\exp_hypotheses-log-20261102.txt

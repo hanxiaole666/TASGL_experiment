@@ -1,0 +1,738 @@
+{
+  "schema": "p4_fair_hpo_v1",
+  "seeds": [
+    0,
+    1
+  ],
+  "epochs": 100,
+  "models": {
+    "tasgl": {
+      "n_trials": 6,
+      "n_seeds": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "epochs": 100,
+      "selection_metric": "validation_f1_tuned_on_validation",
+      "trajectory": [
+        {
+          "trial": 2,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.4,
+            "rank": 8
+          },
+          "val_f1_seeds": [
+            0.5240274599542334,
+            0.5436187399030694
+          ],
+          "mean_val_f1": 0.5338230999286514,
+          "params": 30171
+        },
+        {
+          "trial": 1,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.2,
+            "rank": 8
+          },
+          "val_f1_seeds": [
+            0.5509404388714734,
+            0.5147615442846328
+          ],
+          "mean_val_f1": 0.532850991578053,
+          "params": 11067
+        },
+        {
+          "trial": 4,
+          "config": {
+            "hidden": 48,
+            "dropout": 0.1,
+            "rank": 16
+          },
+          "val_f1_seeds": [
+            0.5535055350553506,
+            0.4986915887850467
+          ],
+          "mean_val_f1": 0.5260985619201987,
+          "params": 20107
+        },
+        {
+          "trial": 0,
+          "config": {
+            "hidden": 48,
+            "dropout": 0.3,
+            "rank": 8
+          },
+          "val_f1_seeds": [
+            0.4017910447761194,
+            0.5193655477683512
+          ],
+          "mean_val_f1": 0.4605782962722353,
+          "params": 19595
+        },
+        {
+          "trial": 5,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.4,
+            "rank": 4
+          },
+          "val_f1_seeds": [
+            0.448265082838387,
+            0.4396936821952776
+          ],
+          "mean_val_f1": 0.44397938251683233,
+          "params": 10875
+        },
+        {
+          "trial": 3,
+          "config": {
+            "hidden": 48,
+            "dropout": 0.3,
+            "rank": 4
+          },
+          "val_f1_seeds": [
+            0.2724890829694323,
+            0.49500998003992014
+          ],
+          "mean_val_f1": 0.3837495315046762,
+          "params": 19339
+        }
+      ],
+      "best": {
+        "trial": 2,
+        "config": {
+          "hidden": 64,
+          "dropout": 0.4,
+          "rank": 8
+        },
+        "val_f1_seeds": [
+          0.5240274599542334,
+          0.5436187399030694
+        ],
+        "mean_val_f1": 0.5338230999286514,
+        "params": 30171
+      }
+    },
+    "mlp": {
+      "n_trials": 6,
+      "n_seeds": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "epochs": 100,
+      "selection_metric": "validation_f1_tuned_on_validation",
+      "trajectory": [
+        {
+          "trial": 1,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.2
+          },
+          "val_f1_seeds": [
+            0.6117850953206239,
+            0.5873340143003064
+          ],
+          "mean_val_f1": 0.5995595548104651,
+          "params": 6434
+        },
+        {
+          "trial": 3,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.1
+          },
+          "val_f1_seeds": [
+            0.5857385398981324,
+            0.5761511216056671
+          ],
+          "mean_val_f1": 0.5809448307518997,
+          "params": 14914
+        },
+        {
+          "trial": 0,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.5780445969125214,
+            0.5579598145285936
+          ],
+          "mean_val_f1": 0.5680022057205575,
+          "params": 14914
+        },
+        {
+          "trial": 5,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.5310734463276836,
+            0.5286065286065286
+          ],
+          "mean_val_f1": 0.529839987467106,
+          "params": 6434
+        },
+        {
+          "trial": 2,
+          "config": {
+            "hidden": 128,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.34814814814814815,
+            0.6176753121998079
+          ],
+          "mean_val_f1": 0.48291173017397804,
+          "params": 38018
+        },
+        {
+          "trial": 4,
+          "config": {
+            "hidden": 96,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.5072208524128214,
+            0.4432234432234432
+          ],
+          "mean_val_f1": 0.4752221478181323,
+          "params": 25442
+        }
+      ],
+      "best": {
+        "trial": 1,
+        "config": {
+          "hidden": 32,
+          "dropout": 0.2
+        },
+        "val_f1_seeds": [
+          0.6117850953206239,
+          0.5873340143003064
+        ],
+        "mean_val_f1": 0.5995595548104651,
+        "params": 6434
+      }
+    },
+    "gcn": {
+      "n_trials": 6,
+      "n_seeds": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "epochs": 100,
+      "selection_metric": "validation_f1_tuned_on_validation",
+      "trajectory": [
+        {
+          "trial": 2,
+          "config": {
+            "hidden": 128,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.34776119402985073,
+            0.44647619047619047
+          ],
+          "mean_val_f1": 0.3971186922530206,
+          "params": 38018
+        },
+        {
+          "trial": 4,
+          "config": {
+            "hidden": 96,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.400988351570773,
+            0.3054704595185996
+          ],
+          "mean_val_f1": 0.3532294055446863,
+          "params": 25442
+        },
+        {
+          "trial": 5,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.2555473372781065,
+            0.35306628855015953
+          ],
+          "mean_val_f1": 0.30430681291413303,
+          "params": 6434
+        },
+        {
+          "trial": 1,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.2
+          },
+          "val_f1_seeds": [
+            0.25441953708766174,
+            0.3450920245398773
+          ],
+          "mean_val_f1": 0.2997557808137695,
+          "params": 6434
+        },
+        {
+          "trial": 3,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.1
+          },
+          "val_f1_seeds": [
+            0.2898379970544919,
+            0.27302363488182557
+          ],
+          "mean_val_f1": 0.2814308159681588,
+          "params": 14914
+        },
+        {
+          "trial": 0,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.2889079965606191,
+            0.27389558232931727
+          ],
+          "mean_val_f1": 0.2814017894449682,
+          "params": 14914
+        }
+      ],
+      "best": {
+        "trial": 2,
+        "config": {
+          "hidden": 128,
+          "dropout": 0.4
+        },
+        "val_f1_seeds": [
+          0.34776119402985073,
+          0.44647619047619047
+        ],
+        "mean_val_f1": 0.3971186922530206,
+        "params": 38018
+      }
+    },
+    "gat": {
+      "n_trials": 6,
+      "n_seeds": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "epochs": 100,
+      "selection_metric": "validation_f1_tuned_on_validation",
+      "trajectory": [
+        {
+          "trial": 3,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.1
+          },
+          "val_f1_seeds": [
+            0.4105199516324063,
+            0.42919609821728893
+          ],
+          "mean_val_f1": 0.4198580249248476,
+          "params": 15170
+        },
+        {
+          "trial": 4,
+          "config": {
+            "hidden": 96,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.4046498754497647,
+            0.25660377358490566
+          ],
+          "mean_val_f1": 0.33062682451733516,
+          "params": 25826
+        },
+        {
+          "trial": 0,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.23795476892822026,
+            0.3456850316918576
+          ],
+          "mean_val_f1": 0.2918199003100389,
+          "params": 15170
+        },
+        {
+          "trial": 2,
+          "config": {
+            "hidden": 128,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.25692454632282713,
+            0.2520351676978183
+          ],
+          "mean_val_f1": 0.2544798570103227,
+          "params": 38530
+        },
+        {
+          "trial": 5,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.25135135135135134,
+            0.24565217391304348
+          ],
+          "mean_val_f1": 0.24850176263219742,
+          "params": 6562
+        },
+        {
+          "trial": 1,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.2
+          },
+          "val_f1_seeds": [
+            0.24832428981806576,
+            0.24254618620815804
+          ],
+          "mean_val_f1": 0.2454352380131119,
+          "params": 6562
+        }
+      ],
+      "best": {
+        "trial": 3,
+        "config": {
+          "hidden": 64,
+          "dropout": 0.1
+        },
+        "val_f1_seeds": [
+          0.4105199516324063,
+          0.42919609821728893
+        ],
+        "mean_val_f1": 0.4198580249248476,
+        "params": 15170
+      }
+    },
+    "graphsage": {
+      "n_trials": 6,
+      "n_seeds": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "epochs": 100,
+      "selection_metric": "validation_f1_tuned_on_validation",
+      "trajectory": [
+        {
+          "trial": 1,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.2
+          },
+          "val_f1_seeds": [
+            0.5570815450643777,
+            0.481021897810219
+          ],
+          "mean_val_f1": 0.5190517214372983,
+          "params": 12802
+        },
+        {
+          "trial": 0,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.5049884881043745,
+            0.5224
+          ],
+          "mean_val_f1": 0.5136942440521872,
+          "params": 29698
+        },
+        {
+          "trial": 3,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.1
+          },
+          "val_f1_seeds": [
+            0.5025125628140703,
+            0.5237078171721486
+          ],
+          "mean_val_f1": 0.5131101899931094,
+          "params": 29698
+        },
+        {
+          "trial": 5,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.526355421686747,
+            0.46230820547031354
+          ],
+          "mean_val_f1": 0.4943318135785303,
+          "params": 12802
+        },
+        {
+          "trial": 4,
+          "config": {
+            "hidden": 96,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.32498307379823965,
+            0.5310015898251192
+          ],
+          "mean_val_f1": 0.42799233181167945,
+          "params": 50690
+        },
+        {
+          "trial": 2,
+          "config": {
+            "hidden": 128,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.3860971524288107,
+            0.46640053226879574
+          ],
+          "mean_val_f1": 0.4262488423488032,
+          "params": 75778
+        }
+      ],
+      "best": {
+        "trial": 1,
+        "config": {
+          "hidden": 32,
+          "dropout": 0.2
+        },
+        "val_f1_seeds": [
+          0.5570815450643777,
+          0.481021897810219
+        ],
+        "mean_val_f1": 0.5190517214372983,
+        "params": 12802
+      }
+    },
+    "sgc": {
+      "n_trials": 6,
+      "n_seeds": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "epochs": 100,
+      "selection_metric": "validation_f1_tuned_on_validation",
+      "trajectory": [
+        {
+          "trial": 0,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.24361126655474724,
+            0.2792743265530511
+          ],
+          "mean_val_f1": 0.2614427965538992,
+          "params": 332
+        },
+        {
+          "trial": 1,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.2
+          },
+          "val_f1_seeds": [
+            0.24361126655474724,
+            0.2792743265530511
+          ],
+          "mean_val_f1": 0.2614427965538992,
+          "params": 332
+        },
+        {
+          "trial": 2,
+          "config": {
+            "hidden": 128,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.24361126655474724,
+            0.2792743265530511
+          ],
+          "mean_val_f1": 0.2614427965538992,
+          "params": 332
+        },
+        {
+          "trial": 3,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.1
+          },
+          "val_f1_seeds": [
+            0.24361126655474724,
+            0.2792743265530511
+          ],
+          "mean_val_f1": 0.2614427965538992,
+          "params": 332
+        },
+        {
+          "trial": 4,
+          "config": {
+            "hidden": 96,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.24361126655474724,
+            0.2792743265530511
+          ],
+          "mean_val_f1": 0.2614427965538992,
+          "params": 332
+        },
+        {
+          "trial": 5,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.24361126655474724,
+            0.2792743265530511
+          ],
+          "mean_val_f1": 0.2614427965538992,
+          "params": 332
+        }
+      ],
+      "best": {
+        "trial": 0,
+        "config": {
+          "hidden": 64,
+          "dropout": 0.3
+        },
+        "val_f1_seeds": [
+          0.24361126655474724,
+          0.2792743265530511
+        ],
+        "mean_val_f1": 0.2614427965538992,
+        "params": 332
+      }
+    },
+    "dsgat": {
+      "n_trials": 6,
+      "n_seeds": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "epochs": 100,
+      "selection_metric": "validation_f1_tuned_on_validation",
+      "trajectory": [
+        {
+          "trial": 4,
+          "config": {
+            "hidden": 96,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.2897447380206001,
+            0.35328
+          ],
+          "mean_val_f1": 0.3215123690103,
+          "params": 25826
+        },
+        {
+          "trial": 1,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.2
+          },
+          "val_f1_seeds": [
+            0.31656642974302895,
+            0.27597327804653304
+          ],
+          "mean_val_f1": 0.296269853894781,
+          "params": 6562
+        },
+        {
+          "trial": 5,
+          "config": {
+            "hidden": 32,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.31656642974302895,
+            0.27597327804653304
+          ],
+          "mean_val_f1": 0.296269853894781,
+          "params": 6562
+        },
+        {
+          "trial": 2,
+          "config": {
+            "hidden": 128,
+            "dropout": 0.4
+          },
+          "val_f1_seeds": [
+            0.27781269641734757,
+            0.31375026321330807
+          ],
+          "mean_val_f1": 0.2957814798153278,
+          "params": 38530
+        },
+        {
+          "trial": 0,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.3
+          },
+          "val_f1_seeds": [
+            0.27468933943754087,
+            0.2867068933991589
+          ],
+          "mean_val_f1": 0.28069811641834985,
+          "params": 15170
+        },
+        {
+          "trial": 3,
+          "config": {
+            "hidden": 64,
+            "dropout": 0.1
+          },
+          "val_f1_seeds": [
+            0.27468933943754087,
+            0.2867068933991589
+          ],
+          "mean_val_f1": 0.28069811641834985,
+          "params": 15170
+        }
+      ],
+      "best": {
+        "trial": 4,
+        "config": {
+          "hidden": 96,
+          "dropout": 0.3
+        },
+        "val_f1_seeds": [
+          0.2897447380206001,
+          0.35328
+        ],
+        "mean_val_f1": 0.3215123690103,
+        "params": 25826
+      }
+    }
+  }
+}

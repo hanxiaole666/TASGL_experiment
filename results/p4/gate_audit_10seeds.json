@@ -1,0 +1,486 @@
+{
+  "schema": "p4_gate_audit_v1",
+  "rows": [
+    {
+      "seed": 0,
+      "epochs": 38,
+      "early_stopped": true,
+      "best_val_f1": 0.5242463958060288,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 1.0,
+            "gate_w2_norm": 0.0325704850256443,
+            "gate_w2_absmax": 0.007596960291266441,
+            "gate_w1_norm": 2.8582963943481445,
+            "gate_bias": 1.9936710596084595,
+            "log_tau": 0.00627657026052475,
+            "tau": 0.5015691374137435
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 1.0,
+            "gate_w2_norm": 0.031047863885760307,
+            "gate_w2_absmax": 0.007281949277967215,
+            "gate_w1_norm": 2.8227829933166504,
+            "gate_bias": 1.9922950267791748,
+            "log_tau": 0.00767582468688488,
+            "tau": 0.5019189467499762
+          }
+        ],
+        "min_active_edge_ratio": 1.0,
+        "max_gate_w2_norm": 0.0325704850256443,
+        "primary_pass": false,
+        "secondary_pass": false,
+        "converged": false
+      },
+      "admission": {
+        "admit": false,
+        "classification": "gate_collapsed_open",
+        "action": "该种子上门控未收敛, 稀疏性主张不成立; 主分析仍须保留该种子, 另做敏感性分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 1,
+      "epochs": 200,
+      "early_stopped": false,
+      "best_val_f1": 0.7531270572745227,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.761639416217804,
+            "gate_w2_norm": 0.25832346081733704,
+            "gate_w2_absmax": 0.11463441699743271,
+            "gate_w1_norm": 3.8888981342315674,
+            "gate_bias": 1.9435486793518066,
+            "log_tau": 0.049116846174001694,
+            "tau": 0.5122767435419874
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.8355614542961121,
+            "gate_w2_norm": 0.24430395662784576,
+            "gate_w2_absmax": 0.1291196048259735,
+            "gate_w1_norm": 3.602510452270508,
+            "gate_bias": 1.9178727865219116,
+            "log_tau": 0.080250583589077,
+            "tau": 0.5200518856126167
+          }
+        ],
+        "min_active_edge_ratio": 0.761639416217804,
+        "max_gate_w2_norm": 0.25832346081733704,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 2,
+      "epochs": 122,
+      "early_stopped": true,
+      "best_val_f1": 0.7007299270072993,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.553433895111084,
+            "gate_w2_norm": 0.2264920026063919,
+            "gate_w2_absmax": 0.06208651140332222,
+            "gate_w1_norm": 3.5073795318603516,
+            "gate_bias": 1.9472448825836182,
+            "log_tau": 0.04897534102201462,
+            "tau": 0.5122413885200647
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.8303514122962952,
+            "gate_w2_norm": 0.18967297673225403,
+            "gate_w2_absmax": 0.052294518798589706,
+            "gate_w1_norm": 3.388068914413452,
+            "gate_bias": 1.940388560295105,
+            "log_tau": 0.057914961129426956,
+            "tau": 0.5144746946591985
+          }
+        ],
+        "min_active_edge_ratio": 0.553433895111084,
+        "max_gate_w2_norm": 0.2264920026063919,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 3,
+      "epochs": 200,
+      "early_stopped": false,
+      "best_val_f1": 0.7719063545150502,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.9996799826622009,
+            "gate_w2_norm": 0.0542304664850235,
+            "gate_w2_absmax": 0.03074568510055542,
+            "gate_w1_norm": 3.160672426223755,
+            "gate_bias": 1.9778218269348145,
+            "log_tau": 0.024669935926795006,
+            "tau": 0.5061671712035559
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.8217554688453674,
+            "gate_w2_norm": 0.357324481010437,
+            "gate_w2_absmax": 0.19659537076950073,
+            "gate_w1_norm": 3.8839058876037598,
+            "gate_bias": 1.9209344387054443,
+            "log_tau": 0.07421593368053436,
+            "tau": 0.5185454718224648
+          }
+        ],
+        "min_active_edge_ratio": 0.8217554688453674,
+        "max_gate_w2_norm": 0.357324481010437,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 4,
+      "epochs": 36,
+      "early_stopped": true,
+      "best_val_f1": 0.5780089153046062,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 1.0,
+            "gate_w2_norm": 0.023476149886846542,
+            "gate_w2_absmax": 0.005752360913902521,
+            "gate_w1_norm": 2.84122896194458,
+            "gate_bias": 1.9944864511489868,
+            "log_tau": 0.005495421122759581,
+            "tau": 0.5013738518232043
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 1.0,
+            "gate_w2_norm": 0.021524589508771896,
+            "gate_w2_absmax": 0.00587551761418581,
+            "gate_w1_norm": 2.8720970153808594,
+            "gate_bias": 1.9942020177841187,
+            "log_tau": 0.0057917144149541855,
+            "tau": 0.5014479245563144
+          }
+        ],
+        "min_active_edge_ratio": 1.0,
+        "max_gate_w2_norm": 0.023476149886846542,
+        "primary_pass": false,
+        "secondary_pass": false,
+        "converged": false
+      },
+      "admission": {
+        "admit": false,
+        "classification": "gate_collapsed_open",
+        "action": "该种子上门控未收敛, 稀疏性主张不成立; 主分析仍须保留该种子, 另做敏感性分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 5,
+      "epochs": 200,
+      "early_stopped": false,
+      "best_val_f1": 0.7490144546649146,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.7917390465736389,
+            "gate_w2_norm": 0.3415358066558838,
+            "gate_w2_absmax": 0.11926521360874176,
+            "gate_w1_norm": 3.7534234523773193,
+            "gate_bias": 1.9274483919143677,
+            "log_tau": 0.06695345789194107,
+            "tau": 0.5167321144277871
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.7610676288604736,
+            "gate_w2_norm": 0.24829018115997314,
+            "gate_w2_absmax": 0.13969960808753967,
+            "gate_w1_norm": 3.593926429748535,
+            "gate_bias": 1.9382861852645874,
+            "log_tau": 0.059897951781749725,
+            "tau": 0.5149700124729442
+          }
+        ],
+        "min_active_edge_ratio": 0.7610676288604736,
+        "max_gate_w2_norm": 0.3415358066558838,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 6,
+      "epochs": 181,
+      "early_stopped": true,
+      "best_val_f1": 0.779891304347826,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.44381600618362427,
+            "gate_w2_norm": 0.2608237564563751,
+            "gate_w2_absmax": 0.14151239395141602,
+            "gate_w1_norm": 3.549973249435425,
+            "gate_bias": 1.9302098751068115,
+            "log_tau": 0.06478860974311829,
+            "tau": 0.5161914890977237
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.8709329962730408,
+            "gate_w2_norm": 0.3620334565639496,
+            "gate_w2_absmax": 0.17276360094547272,
+            "gate_w1_norm": 3.55623722076416,
+            "gate_bias": 1.92451810836792,
+            "log_tau": 0.07294908910989761,
+            "tau": 0.5182291890028701
+          }
+        ],
+        "min_active_edge_ratio": 0.44381600618362427,
+        "max_gate_w2_norm": 0.3620334565639496,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 7,
+      "epochs": 200,
+      "early_stopped": false,
+      "best_val_f1": 0.7860082304526749,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.7521388530731201,
+            "gate_w2_norm": 0.3398335874080658,
+            "gate_w2_absmax": 0.14951664209365845,
+            "gate_w1_norm": 3.753511667251587,
+            "gate_bias": 1.9179104566574097,
+            "log_tau": 0.07987329363822937,
+            "tau": 0.519957714113612
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.7886219620704651,
+            "gate_w2_norm": 0.23072172701358795,
+            "gate_w2_absmax": 0.08506447076797485,
+            "gate_w1_norm": 3.493450164794922,
+            "gate_bias": 1.9436712265014648,
+            "log_tau": 0.052983663976192474,
+            "tau": 0.5132428181266424
+          }
+        ],
+        "min_active_edge_ratio": 0.7521388530731201,
+        "max_gate_w2_norm": 0.3398335874080658,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 8,
+      "epochs": 180,
+      "early_stopped": true,
+      "best_val_f1": 0.7828454731109599,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.3118879497051239,
+            "gate_w2_norm": 0.2521902620792389,
+            "gate_w2_absmax": 0.07883217930793762,
+            "gate_w1_norm": 3.503262519836426,
+            "gate_bias": 1.933273196220398,
+            "log_tau": 0.06365631520748138,
+            "tau": 0.5159087071568607
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.8563205599784851,
+            "gate_w2_norm": 0.3798007369041443,
+            "gate_w2_absmax": 0.1615721732378006,
+            "gate_w1_norm": 3.7385387420654297,
+            "gate_bias": 1.9131759405136108,
+            "log_tau": 0.08352962881326675,
+            "tau": 0.5208702739431672
+          }
+        ],
+        "min_active_edge_ratio": 0.3118879497051239,
+        "max_gate_w2_norm": 0.3798007369041443,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    },
+    {
+      "seed": 9,
+      "epochs": 200,
+      "early_stopped": false,
+      "best_val_f1": 0.7771043771043771,
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 0.7183802127838135,
+            "gate_w2_norm": 0.265045702457428,
+            "gate_w2_absmax": 0.14179833233356476,
+            "gate_w1_norm": 3.6287593841552734,
+            "gate_bias": 1.9274895191192627,
+            "log_tau": 0.06995801627635956,
+            "tau": 0.5174823745748045
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 0.8526018261909485,
+            "gate_w2_norm": 0.30144309997558594,
+            "gate_w2_absmax": 0.1162724643945694,
+            "gate_w1_norm": 3.783778190612793,
+            "gate_bias": 1.92133367061615,
+            "log_tau": 0.07529844343662262,
+            "tau": 0.5188157214971786
+          }
+        ],
+        "min_active_edge_ratio": 0.7183802127838135,
+        "max_gate_w2_norm": 0.30144309997558594,
+        "primary_pass": true,
+        "secondary_pass": true,
+        "converged": true
+      },
+      "admission": {
+        "admit": true,
+        "classification": "gate_converged",
+        "action": "可纳入主分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      }
+    }
+  ],
+  "dual_track": null
+}

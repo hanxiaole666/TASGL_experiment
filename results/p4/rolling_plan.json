@@ -1,0 +1,68 @@
+{
+  "plan": {
+    "schema": "p4_strict_rolling_v1",
+    "train_window": [
+      1,
+      25
+    ],
+    "val_window": [
+      26,
+      34
+    ],
+    "test_window": [
+      35,
+      49
+    ],
+    "n_train": 24200,
+    "n_val": 5694,
+    "n_test": 16670,
+    "pos_rate_train": 0.0965702479338843,
+    "pos_rate_val": 0.1975763962065332,
+    "pos_rate_test": 0.06496700659868027,
+    "sufficient_labeled": true,
+    "graph_cutoff": 34,
+    "induction_rule": "节点与边同时裁剪到 time<=val_end; 标准化器仅在 train 窗可见节点上拟合",
+    "fingerprint": "b5dadce4090f6940ed7a2d99ff16bce423fd9f86a3fac46e7044d0ac809721f7"
+  },
+  "leakage": {
+    "schema": "p4_no_future_leakage_v1",
+    "cutoff": 34,
+    "train_end": 25,
+    "checks": {
+      "all_nodes_within_cutoff": true,
+      "no_future_edge_endpoint": true,
+      "scaler_fit_indices_within_train": true
+    },
+    "scaler_check_mode": "checked_via_time_steps",
+    "passed": true,
+    "note": "全图前向 (transductive) 会把未来节点的特征带入聚合, 必须在报告中与严格 inductive 分开陈述"
+  },
+  "exposure": {
+    "window": [
+      35,
+      49
+    ],
+    "exposure": "previously_observed",
+    "usable_for_confirmation": false,
+    "overlaps": [
+      {
+        "name": "final_test",
+        "window": [
+          35,
+          49
+        ],
+        "usage": [
+          "v2 E1/E2 主结果",
+          "v3 protocol5 五种子确认",
+          "v3 protocol6 开发汇总",
+          "p0 develop/hpo/calibration 冻结预测",
+          "p1 攻击矩阵与案例队列"
+        ],
+        "prior_exposure": true
+      }
+    ],
+    "consequence": "该窗口不得作为独立确认证据, 只能作为exploratory_reconfirmation"
+  },
+  "n_nodes_induced": 136265,
+  "n_edges_induced": 313686
+}

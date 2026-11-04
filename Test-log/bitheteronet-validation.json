@@ -1,0 +1,189 @@
+{
+  "data_dir": "D:\\TASGL_experiment\\Data\\bitheteronet",
+  "network_access": false,
+  "pickle_deserialized": false,
+  "validation_scope": "physical_integrity_and_release_array_layout",
+  "layout_profile": "ellipticpp_separated_time_and_label_v1",
+  "column_semantics_fully_verified": false,
+  "schema_references": {
+    "bitheteronet_repository_tree": "https://github.com/KellyGong/BitHeteroNet/tree/cda502c8139209184d78b934bbe98aabdd4949c6",
+    "ellipticpp_paper": "https://doi.org/10.1145/3580305.3599803",
+    "ellipticpp_repository": "https://github.com/git-disl/EllipticPlusPlus"
+  },
+  "files": {
+    "address_attrs.npy": {
+      "path": "D:\\TASGL_experiment\\Data\\bitheteronet\\address_attrs.npy",
+      "exists": true,
+      "expected_shape": [
+        822942,
+        55
+      ],
+      "expected_layout_shape": [
+        822942,
+        55
+      ],
+      "documented_shape": [
+        822942,
+        54
+      ],
+      "layout_note": "55=28 交易相关+27 时间相关；class 单独存放",
+      "semantic_status": "upstream_schema_consistent_column_order_unverified",
+      "physical_complete": true,
+      "layout_shape_consistent": true,
+      "documented_shape_consistent": false,
+      "valid": true,
+      "status": "valid_layout_documented_shape_mismatch",
+      "error": null,
+      "actual_bytes": 362094608,
+      "actual_shape": [
+        822942,
+        55
+      ],
+      "dtype": "float64",
+      "header_data_offset": 128,
+      "header_implied_file_bytes": 362094608,
+      "documented_shape_implied_file_bytes": 355511072
+    },
+    "address_classes.npy": {
+      "path": "D:\\TASGL_experiment\\Data\\bitheteronet\\address_classes.npy",
+      "exists": true,
+      "expected_shape": [
+        822942
+      ],
+      "expected_layout_shape": [
+        822942
+      ],
+      "documented_shape": [
+        822942
+      ],
+      "layout_note": null,
+      "semantic_status": null,
+      "physical_complete": true,
+      "layout_shape_consistent": true,
+      "documented_shape_consistent": true,
+      "valid": true,
+      "status": "valid",
+      "error": null,
+      "actual_bytes": 6583664,
+      "actual_shape": [
+        822942
+      ],
+      "dtype": "int64",
+      "header_data_offset": 128,
+      "header_implied_file_bytes": 6583664,
+      "documented_shape_implied_file_bytes": 6583664
+    },
+    "data.pkl": {
+      "path": "D:\\TASGL_experiment\\Data\\bitheteronet\\data.pkl",
+      "exists": true,
+      "expected_shape": null,
+      "expected_layout_shape": null,
+      "documented_shape": null,
+      "layout_note": null,
+      "semantic_status": null,
+      "physical_complete": null,
+      "layout_shape_consistent": null,
+      "documented_shape_consistent": null,
+      "valid": true,
+      "status": "valid",
+      "error": null,
+      "actual_bytes": 63782343
+    },
+    "tx_attrs.npy": {
+      "path": "D:\\TASGL_experiment\\Data\\bitheteronet\\tx_attrs.npy",
+      "exists": true,
+      "expected_shape": [
+        202804,
+        182
+      ],
+      "expected_layout_shape": [
+        202804,
+        182
+      ],
+      "documented_shape": [
+        202804,
+        183
+      ],
+      "layout_note": "182=183 交易列-Time step；时间步单独存放",
+      "semantic_status": "upstream_schema_consistent_column_order_unverified",
+      "physical_complete": true,
+      "layout_shape_consistent": true,
+      "documented_shape_consistent": false,
+      "valid": true,
+      "status": "valid_layout_documented_shape_mismatch",
+      "error": null,
+      "actual_bytes": 295282752,
+      "actual_shape": [
+        202804,
+        182
+      ],
+      "dtype": "float64",
+      "header_data_offset": 128,
+      "header_implied_file_bytes": 295282752,
+      "documented_shape_implied_file_bytes": 296905184
+    },
+    "tx_classes.npy": {
+      "path": "D:\\TASGL_experiment\\Data\\bitheteronet\\tx_classes.npy",
+      "exists": true,
+      "expected_shape": [
+        202804
+      ],
+      "expected_layout_shape": [
+        202804
+      ],
+      "documented_shape": [
+        202804
+      ],
+      "layout_note": null,
+      "semantic_status": null,
+      "physical_complete": true,
+      "layout_shape_consistent": true,
+      "documented_shape_consistent": true,
+      "valid": true,
+      "status": "valid",
+      "error": null,
+      "actual_bytes": 1622560,
+      "actual_shape": [
+        202804
+      ],
+      "dtype": "int64",
+      "header_data_offset": 128,
+      "header_implied_file_bytes": 1622560,
+      "documented_shape_implied_file_bytes": 1622560
+    },
+    "tx_time_step.npy": {
+      "path": "D:\\TASGL_experiment\\Data\\bitheteronet\\tx_time_step.npy",
+      "exists": true,
+      "expected_shape": [
+        202804
+      ],
+      "expected_layout_shape": [
+        202804
+      ],
+      "documented_shape": [
+        202804
+      ],
+      "layout_note": null,
+      "semantic_status": null,
+      "physical_complete": true,
+      "layout_shape_consistent": true,
+      "documented_shape_consistent": true,
+      "valid": true,
+      "status": "valid",
+      "error": null,
+      "actual_bytes": 1622560,
+      "actual_shape": [
+        202804
+      ],
+      "dtype": "int64",
+      "header_data_offset": 128,
+      "header_implied_file_bytes": 1622560,
+      "documented_shape_implied_file_bytes": 1622560
+    }
+  },
+  "invalid": [],
+  "documentation_mismatch": [
+    "address_attrs.npy",
+    "tx_attrs.npy"
+  ]
+}

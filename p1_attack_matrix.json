@@ -1,0 +1,103 @@
+{
+  "protocol": "p1_nonoracle_attack_matrix_v1",
+  "attack_seeds": [0, 1, 2],
+  "feature_noise_scope": "evaluation_nodes_only",
+  "nonpositive_baseline_rule": "inconclusive",
+  "oracle_boundary": "Historical licit-label-guided injection remains a separate oracle upper-bound diagnostic and is never executed by this non-oracle matrix.",
+  "attacks": [
+    {
+      "name": "edge_delete_random_10",
+      "capability": "edge_delete",
+      "selection": "random",
+      "knowledge": "black_box",
+      "goal": "untargeted_availability_degradation",
+      "budget_type": "edge_fraction",
+      "budget": 0.10,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    },
+    {
+      "name": "edge_delete_random_50",
+      "capability": "edge_delete",
+      "selection": "random",
+      "knowledge": "black_box",
+      "goal": "untargeted_availability_degradation",
+      "budget_type": "edge_fraction",
+      "budget": 0.50,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    },
+    {
+      "name": "edge_delete_confidence_50",
+      "capability": "edge_delete",
+      "selection": "confidence_targeted",
+      "knowledge": "gray_box",
+      "goal": "suppress_high_confidence_illicit_predictions",
+      "budget_type": "edge_fraction",
+      "budget": 0.50,
+      "target_quantile": 0.50,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    },
+    {
+      "name": "edge_inject_random_10",
+      "capability": "edge_inject",
+      "selection": "random",
+      "knowledge": "black_box",
+      "goal": "untargeted_structure_pollution",
+      "budget_type": "edge_fraction",
+      "budget": 0.10,
+      "max_time_gap": 5,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    },
+    {
+      "name": "edge_inject_degree_10",
+      "capability": "edge_inject",
+      "selection": "degree_targeted",
+      "knowledge": "gray_box",
+      "goal": "hub_mediated_structure_pollution",
+      "budget_type": "edge_fraction",
+      "budget": 0.10,
+      "max_time_gap": 5,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    },
+    {
+      "name": "edge_inject_confidence_10",
+      "capability": "edge_inject",
+      "selection": "confidence_targeted",
+      "knowledge": "gray_box",
+      "goal": "suppress_high_confidence_illicit_predictions",
+      "budget_type": "edge_fraction",
+      "budget": 0.10,
+      "target_quantile": 0.50,
+      "max_time_gap": 5,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    },
+    {
+      "name": "feature_noise_all_03",
+      "capability": "feature_noise",
+      "selection": "all_evaluation",
+      "knowledge": "black_box",
+      "goal": "untargeted_feature_degradation",
+      "budget_type": "feature_std",
+      "budget": 0.30,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    },
+    {
+      "name": "feature_noise_confidence_05",
+      "capability": "feature_noise",
+      "selection": "confidence_targeted",
+      "knowledge": "gray_box",
+      "goal": "suppress_high_confidence_illicit_predictions",
+      "budget_type": "feature_std",
+      "budget": 0.50,
+      "target_quantile": 0.50,
+      "target_scope": "evaluation_incident",
+      "oracle_labels": false
+    }
+  ]
+}

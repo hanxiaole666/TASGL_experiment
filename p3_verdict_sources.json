@@ -1,0 +1,55 @@
+{
+  "schema": "p3_verdict_sources_v1",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "H1": {
+    "evaluation": "results/p0/independent_tasgl/evaluation.json",
+    "hpo_winners": "results/p0/hpo/hpo_winners.json",
+    "hpo_model": "tasgl",
+    "teacher_params_offline": null,
+    "calibrator_params": 2
+  },
+  "H2": {
+    "efficiency": "results/p1/efficiency/tasgl/deployment_benchmark.json",
+    "key": "mean_latency_ms",
+    "latency_includes_calibration": true,
+    "batch_size": 1,
+    "warmup": 10,
+    "repeats": 100,
+    "device": "cuda"
+  },
+  "H3": {
+    "tasgl_clean": "results/p0/independent_tasgl/evaluation.json",
+    "tasgl_attacked": "results/p1/attacks/delete_50/tasgl/evaluation.json",
+    "baselines": {
+      "gcn": {
+        "clean": "results/p0/independent_gcn/evaluation.json",
+        "attacked": "results/p1/attacks/delete_50/gcn/evaluation.json",
+        "attack_family": "random_edge_deletion",
+        "budget": 0.5,
+        "attack_seed_nested": [0, 1, 2]
+      },
+      "gat": {
+        "clean": "results/p0/independent_gat/evaluation.json",
+        "attacked": "results/p1/attacks/delete_50/gat/evaluation.json",
+        "attack_family": "random_edge_deletion",
+        "budget": 0.5,
+        "attack_seed_nested": [0, 1, 2]
+      }
+    }
+  },
+  "H4": {
+    "reference": "results/p0/rolling/reference/evaluation.json",
+    "short": "results/p0/rolling/short/evaluation.json",
+    "rolling_strictness": "strict_inductive_future_nodes_edges_excluded"
+  },
+  "H5": {
+    "calibration": "results/p2/calibration/calibration_quality.json",
+    "baseline": "results/p0/calibration/graphsage_edl/calibration_quality.json",
+    "ece_key": "ece_overall"
+  },
+  "notes": [
+    "路径不存在时对应假设为 incomplete_missing_*，不得用其他轮次或旧协议数值代替",
+    "H3 的 relative_drop_ratio 由干净与攻击后评估的均值 F1 推导，程序不接收手工填写的比值",
+    "H5 必须同时给出 ece 与 baseline_ece；只优于基线但 >0.05 仍为不确定"
+  ]
+}

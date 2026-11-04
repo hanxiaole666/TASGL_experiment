@@ -1,0 +1,67 @@
+{
+  "protocol": "p2_hpo_fairness_audit_v1",
+  "spec_sha256": "57ef2ea682cb21db15601d0005cefc37bdb6d556d0e8f68ce8706e043fb742cb",
+  "fair": true,
+  "violations": [],
+  "per_model": {
+    "tasgl": {
+      "present": true,
+      "trials_per_seed": 6,
+      "n_seeds": 2,
+      "search_cost_runs": 12,
+      "selection": "max_validation_f1_then_lowest_trial",
+      "missing_seeds": []
+    },
+    "mlp": {
+      "present": true,
+      "trials_per_seed": 6,
+      "n_seeds": 2,
+      "search_cost_runs": 12,
+      "selection": "max_validation_f1_then_lowest_trial",
+      "missing_seeds": []
+    },
+    "gcn": {
+      "present": true,
+      "trials_per_seed": 6,
+      "n_seeds": 2,
+      "search_cost_runs": 12,
+      "selection": "max_validation_f1_then_lowest_trial",
+      "missing_seeds": []
+    },
+    "gat": {
+      "present": true,
+      "trials_per_seed": 6,
+      "n_seeds": 2,
+      "search_cost_runs": 12,
+      "selection": "max_validation_f1_then_lowest_trial",
+      "missing_seeds": []
+    },
+    "graphsage": {
+      "present": true,
+      "trials_per_seed": 6,
+      "n_seeds": 2,
+      "search_cost_runs": 12,
+      "selection": "max_validation_f1_then_lowest_trial",
+      "missing_seeds": []
+    },
+    "sgc": {
+      "present": true,
+      "trials_per_seed": 6,
+      "n_seeds": 2,
+      "search_cost_runs": 12,
+      "selection": "max_validation_f1_then_lowest_trial",
+      "missing_seeds": []
+    },
+    "dsgat": {
+      "present": true,
+      "trials_per_seed": 6,
+      "n_seeds": 2,
+      "search_cost_runs": 12,
+      "selection": "max_validation_f1_then_lowest_trial",
+      "missing_seeds": []
+    }
+  },
+  "extra_runs": [],
+  "note": "不相等预算下的精度对比不能称为公平基线比较",
+  "declared_models_missing": []
+}

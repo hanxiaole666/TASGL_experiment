@@ -1,0 +1,10 @@
+============================================================
+[开始] python3 exp_uncertainty.py
+[开始时间] 2026-10-27 15:01:32.879
+[uncertainty] 当前协议及 seed=0 的结果已存在: results/uncertainty_results.json, 跳过 (加 --overwrite 可重跑)
+[结束时间] 2026-10-27 15:01:39.008 (退出码=0)
+============================================================
+[开始] python3 exp_uncertainty.py
+[开始时间] 2026-10-27 20:34:49.184
+[uncertainty] 当前协议及 seed=0 的结果已存在: results/uncertainty_results.json, 跳过 (加 --overwrite 可重跑)
+[结束时间] 2026-10-27 20:34:55.595 (退出码=0)

@@ -1,0 +1,46 @@
+{
+  "protocol": "p0_independent_dgraphfin_v1",
+  "dataset": {
+    "name": "dgraphfin",
+    "root": "./data/dgraphfin"
+  },
+  "model_name": "neighbor_graphsage_official_split",
+  "predictions": {
+    "path_pattern": "results/p0/second_dataset/dgraphfin/graphsage/seed{seed}/test_predictions.npz",
+    "contains_labels": false
+  },
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "threshold": {
+    "source": "calibration_artifact",
+    "selection_data": "official_valid_mask_only",
+    "test_reoptimization": false
+  },
+  "calibration": {
+    "source": "artifact",
+    "path_pattern": "results/p0/second_dataset/dgraphfin/graphsage/seed{seed}/calibration.json",
+    "fitting_data": "official_valid_mask_only"
+  },
+  "statistics": {
+    "test": "wilcoxon_exact_two_sided",
+    "paired_unit": "seed",
+    "alpha": 0.05,
+    "sample_sd_ddof": 1,
+    "confidence_interval": "two_sided_student_t_95",
+    "effect_size": "cohen_dz",
+    "multiple_comparison": "Holm"
+  },
+  "exclusions": {
+    "seed_replacement_after_test": false,
+    "failed_seed_must_remain_incomplete": true,
+    "minimum_labeled_test_nodes_per_seed": 1,
+    "prediction_missing_policy": "fail_not_skip"
+  },
+  "evaluation": {
+    "mask_key": "test_mask",
+    "positive_label": "1=high-risk borrower",
+    "single_locked_configuration": true,
+    "time_boundary": "official split; not strict node rolling",
+    "prior_test_exposure": false,
+    "exposure_note": "No DGraph-Fin test metric was used in this project before this P0 queue; the operator must preserve this independence"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "tasgl_vs_mlp": {
+    "statistic": 6.0,
+    "p_value": 0.8125,
+    "significant": false
+  },
+  "tasgl_vs_gcn": {
+    "statistic": 0.0,
+    "p_value": 0.0625,
+    "significant": false
+  },
+  "tasgl_vs_gat": {
+    "statistic": 0.0,
+    "p_value": 0.0625,
+    "significant": false
+  },
+  "tasgl_vs_graphsage": {
+    "statistic": 6.0,
+    "p_value": 0.8125,
+    "significant": false
+  },
+  "tasgl_vs_sgc": {
+    "statistic": 0.0,
+    "p_value": 0.0625,
+    "significant": false
+  },
+  "tasgl_vs_dsgat": {
+    "statistic": 0.0,
+    "p_value": 0.0625,
+    "significant": false
+  }
+}

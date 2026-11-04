@@ -1,0 +1,4 @@
+[P4][final] tasgl: F1=0.5069±0.1074
+[P4][final] graphsage: F1=0.5269±0.0234
+[P4][final] mlp: F1=0.4929±0.1263
+saved results/p4/final_comparison.json

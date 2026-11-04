@@ -1,0 +1,22 @@
+{
+  "schema": "p2_hpo_budget_v1",
+  "note": "P4 实际执行的等预算搜索预算; 模型列表限于 build_model 支持的模型, 与 p2_hpo_budget.json 的 8 模型声明不同, 因此单独预注册以免审计时出现'缺模型'误报",
+  "models": ["tasgl", "mlp", "gcn", "gat", "graphsage", "sgc", "dsgat"],
+  "trials_per_seed": 6,
+  "seeds": [0, 1],
+  "epochs": 100,
+  "patience": 30,
+  "selection": "max_validation_f1_then_lowest_trial",
+  "train_window": [1, 29],
+  "validation_window": [30, 34],
+  "test_labels_used": false,
+  "shared_grid": true,
+  "identical_budget_requirement": true,
+  "search_space_note": "每个模型 6 个候选配置 (隐层宽度 / dropout / 低秩 rank), 格子对每个模型大小相同; 选择只用验证窗 F1, 并列时取参数量更小者",
+  "fairness_rule": [
+    "每个模型获得完全相同的试验数、种子数、epoch 上限与早停耐心",
+    "选择只使用验证窗 F1, 不得使用测试标签",
+    "预注册预算之外的任何运行都会使公平对比失效",
+    "不相等预算下的精度差异不得写成模型优越性"
+  ]
+}

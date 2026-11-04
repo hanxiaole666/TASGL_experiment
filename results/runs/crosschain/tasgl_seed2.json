@@ -1,0 +1,8 @@
+{
+  "seed": 2,
+  "source_f1": 0.4913986537023186,
+  "target_f1": 0.0025,
+  "target_pr_auc": 0.16660426494452354,
+  "threshold": 0.92,
+  "protocol": 4
+}

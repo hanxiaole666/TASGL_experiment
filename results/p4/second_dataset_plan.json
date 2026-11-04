@@ -1,0 +1,73 @@
+{
+  "dataset": {
+    "schema": "p4_bitheteronet_v1",
+    "n_transactions": 202804,
+    "n_features": 182,
+    "n_edges_undirected": 1342830,
+    "max_group": 20,
+    "n_labeled": 46045,
+    "n_illicit": 4545,
+    "n_licit": 41500,
+    "illicit_rate_labeled": 0.09870778586165707,
+    "time_steps": [
+      1,
+      49
+    ],
+    "label_map": {
+      "0": "licit",
+      "1": "illicit",
+      "2": "unknown"
+    },
+    "edge_rule": "两笔交易共享同一地址(输入或输出)则连边; 单地址关联交易数 > 20 时跳过组内连边",
+    "edge_rule_limitation": "会低估交易所/混币器等枢纽地址处的连边密度",
+    "prior_exposure": false,
+    "prior_exposure_note": "本数据集在本项目中从未用于任何开发/选择/调参",
+    "fingerprint": "62da051072613e7c06a12e1d"
+  },
+  "split": {
+    "schema": "p4_strict_rolling_v1",
+    "train_window": [
+      1,
+      29
+    ],
+    "val_window": [
+      30,
+      34
+    ],
+    "test_window": [
+      35,
+      49
+    ],
+    "n_train": 26227,
+    "n_val": 3472,
+    "n_test": 16346,
+    "pos_rate_train": 0.10946734281465666,
+    "pos_rate_val": 0.17021889400921658,
+    "pos_rate_test": 0.06625474122109384,
+    "sufficient_labeled": true,
+    "graph_cutoff": 34,
+    "induction_rule": "节点与边同时裁剪到 time<=val_end; 标准化器仅在 train 窗可见节点上拟合",
+    "fingerprint": "be94c826145696daf67bf162df6e27a12e1f9dfe49db4ce1e89cf686adc2c106"
+  },
+  "alignment": {
+    "schema": "p4_semantic_alignment_v1",
+    "datasets": [
+      "elliptic",
+      "bitheteronet"
+    ],
+    "checks": {
+      "same_task": true,
+      "same_label_polarity": true,
+      "positive_rate_within_2x": true,
+      "same_time_granularity": true
+    },
+    "positive_rate": {
+      "elliptic": 0.09760759384932566,
+      "bitheteronet": 0.09870778586165707
+    },
+    "feature_space_aligned": false,
+    "feature_space_note": "不使用跨数据集 PCA 投影; 每个数据集使用自己的原生特征, 标准化器只在该数据集训练窗内拟合",
+    "aligned": true,
+    "note": "对齐发生在任务/标签/时间协议层面; 特征空间不做投影对齐, 因此该结果只能支持\"同一方法在第二个语义对齐数据集上的独立确认\", 不能支持\"跨数据集迁移\""
+  }
+}

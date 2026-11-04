@@ -1,0 +1,58 @@
+{
+  "schema": "p4_threshold_justification_v1",
+  "rule": "basis=arbitrary 的门限一律撤回; 撤回后若无可推导替代, 该假设改为\"报告区间估计, 不设通过/证伪硬门限\"",
+  "hypotheses": {
+    "H1_f1": {
+      "original_value": 0.73,
+      "original_basis": "arbitrary",
+      "why_arbitrary": "设计方案未给出 0.73 的任何来源: 既非基线锚定, 也非运维要求, 也非文献惯例; 等预算 HPO 修复后实测最强基线 MLP F1=0.4970, 0.73 高出 0.2330, 在本任务上不可达。",
+      "verdict": "unjustified_withdrawn",
+      "replacement": "derive_f1_floor(best_equal_budget_baseline_f1, sd, n_seeds)",
+      "replacement_basis": "derived",
+      "replacement_note": "非劣性锚点: TASGL 只需\"不劣于等预算最强基线 超过一个统计可分辨的余量\", 而不是达到一个绝对数"
+    },
+    "H1_params": {
+      "original_value": 20000,
+      "original_basis": "operational",
+      "why": "80 KB fp32 权重预算反推 (=20000×4B), 但目标设备未写明",
+      "verdict": "justified_conditional",
+      "replacement": "derive_params_budget(memory_kb)",
+      "condition": "必须在论文中写明目标设备与其内存预算来源"
+    },
+    "H2_latency": {
+      "original_value": 8.0,
+      "original_basis": "arbitrary",
+      "why_arbitrary": "8 ms 无业务来源; 更严重的是口径未定义: 现有 measure_efficiency 测的是\"整图一次前向\" (实测 33.3 ms / 203769 节点 = 0.16 µs/节点), 与\"单笔交易 8 ms\"不是一个量, 无法比较。",
+      "verdict": "unjustified_withdrawn",
+      "replacement": "derive_latency_budget(target_qps, semantics)",
+      "replacement_basis": "operational",
+      "replacement_note": "先声明目标 QPS 与口径, 再换算门限"
+    },
+    "H3_ratio": {
+      "original_value": 0.6,
+      "original_basis": "arbitrary",
+      "why_arbitrary": "0.60 / 1.00 的切点无推导, 且存在灰区, 硬切会把噪声判成结论",
+      "verdict": "unjustified_withdrawn",
+      "replacement": "报告 relative_drop_ratio 的点估计 + 95%CI (bootstrap over seeds), 不设通过/证伪硬门限",
+      "replacement_basis": "derived"
+    },
+    "H4_attack": {
+      "original_value": 0.05,
+      "original_basis": "arbitrary",
+      "why_arbitrary": "5% / 8% 无告警成本模型支撑; 且当前攻击实验是 oracle 注入式, 不是真实自适应攻击",
+      "verdict": "unjustified_withdrawn",
+      "replacement": "derive_attack_tolerance(capacity, base_alerts)",
+      "replacement_basis": "operational",
+      "replacement_note": "在补齐非 oracle 自适应攻击矩阵之前, H4 判为 not_testable"
+    },
+    "H5_ece": {
+      "original_value": 0.05,
+      "original_basis": "literature",
+      "why": "Guo et al. 2017 的 15 分箱 ECE 惯例, 有出处但作用对象错了",
+      "verdict": "justified_after_repair",
+      "replacement": "derive_ece_ceiling(apply_to=\"positive_class_ece\")",
+      "replacement_basis": "literature",
+      "repair": "0.05 必须作用于类别质量加权的正类 ECE; 整体 ECE 在不平衡下退化, 不得单独使用"
+    }
+  }
+}

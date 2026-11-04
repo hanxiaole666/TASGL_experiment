@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "protocol": 4,
+    "alignment": "independent_pca",
+    "semantic_alignment": false,
+    "interpretation": "diagnostic_only_not_transfer_evidence",
+    "out_dim": 32,
+    "target_labels_used_for_training": false,
+    "target_features_used_transductively": true,
+    "source_nodes": 203769,
+    "target_nodes": 9841,
+    "knn_k": 8
+  },
+  "tasgl": [
+    {
+      "seed": 0,
+      "source_f1": 0.39946018893387314,
+      "target_f1": 0.0009153318077803204,
+      "target_pr_auc": 0.17709402743018365,
+      "threshold": 0.74,
+      "protocol": 4
+    },
+    {
+      "seed": 1,
+      "source_f1": 0.4380234505862647,
+      "target_f1": 0.31000202880908906,
+      "target_pr_auc": 0.19297652236710508,
+      "threshold": 0.88,
+      "protocol": 4
+    },
+    {
+      "seed": 2,
+      "source_f1": 0.4913986537023186,
+      "target_f1": 0.0025,
+      "target_pr_auc": 0.16660426494452354,
+      "threshold": 0.92,
+      "protocol": 4
+    }
+  ],
+  "gcn": [
+    {
+      "seed": 0,
+      "source_f1": 0.3731231231231231,
+      "target_f1": 0.42139347923179993,
+      "target_pr_auc": 0.22998790816389167,
+      "threshold": 0.5,
+      "protocol": 4
+    },
+    {
+      "seed": 1,
+      "source_f1": 0.34838709677419355,
+      "target_f1": 0.450721908349027,
+      "target_pr_auc": 0.2618104398512084,
+      "threshold": 0.5,
+      "protocol": 4
+    },
+    {
+      "seed": 2,
+      "source_f1": 0.4042909822326517,
+      "target_f1": 0.48017241379310344,
+      "target_pr_auc": 0.37823874016061265,
+      "threshold": 0.5,
+      "protocol": 4
+    }
+  ]
+}

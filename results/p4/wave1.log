@@ -1,0 +1,93 @@
+=== [1/3] HPO search ===
+Tue Nov  3 08:41:48     2026
+models.py:31: UserWarning: index_reduce() is in beta and the API may change at any time. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\cuda\Indexing.cu:1191.)
+  max_v.index_reduce_(0, index, src, 'amax', include_self=False)
+[P4][hpo] tasgl trial 0 {'hidden': 48, 'dropout': 0.3, 'rank': 8} val_f1=0.4606
+[P4][hpo] tasgl trial 1 {'hidden': 32, 'dropout': 0.2, 'rank': 8} val_f1=0.5329
+[P4][hpo] tasgl trial 2 {'hidden': 64, 'dropout': 0.4, 'rank': 8} val_f1=0.5338
+[P4][hpo] tasgl trial 3 {'hidden': 48, 'dropout': 0.3, 'rank': 4} val_f1=0.3837
+[P4][hpo] tasgl trial 4 {'hidden': 48, 'dropout': 0.1, 'rank': 16} val_f1=0.5261
+[P4][hpo] tasgl trial 5 {'hidden': 32, 'dropout': 0.4, 'rank': 4} val_f1=0.4440
+[P4][hpo] mlp trial 0 {'hidden': 64, 'dropout': 0.3} val_f1=0.5680
+[P4][hpo] mlp trial 1 {'hidden': 32, 'dropout': 0.2} val_f1=0.5996
+[P4][hpo] mlp trial 2 {'hidden': 128, 'dropout': 0.4} val_f1=0.4829
+[P4][hpo] mlp trial 3 {'hidden': 64, 'dropout': 0.1} val_f1=0.5809
+[P4][hpo] mlp trial 4 {'hidden': 96, 'dropout': 0.3} val_f1=0.4752
+[P4][hpo] mlp trial 5 {'hidden': 32, 'dropout': 0.4} val_f1=0.5298
+[P4][hpo] gcn trial 0 {'hidden': 64, 'dropout': 0.3} val_f1=0.2814
+[P4][hpo] gcn trial 1 {'hidden': 32, 'dropout': 0.2} val_f1=0.2998
+[P4][hpo] gcn trial 2 {'hidden': 128, 'dropout': 0.4} val_f1=0.3971
+[P4][hpo] gcn trial 3 {'hidden': 64, 'dropout': 0.1} val_f1=0.2814
+[P4][hpo] gcn trial 4 {'hidden': 96, 'dropout': 0.3} val_f1=0.3532
+[P4][hpo] gcn trial 5 {'hidden': 32, 'dropout': 0.4} val_f1=0.3043
+[P4][hpo] gat trial 0 {'hidden': 64, 'dropout': 0.3} val_f1=0.2918
+[P4][hpo] gat trial 1 {'hidden': 32, 'dropout': 0.2} val_f1=0.2454
+[P4][hpo] gat trial 2 {'hidden': 128, 'dropout': 0.4} val_f1=0.2545
+[P4][hpo] gat trial 3 {'hidden': 64, 'dropout': 0.1} val_f1=0.4199
+[P4][hpo] gat trial 4 {'hidden': 96, 'dropout': 0.3} val_f1=0.3306
+[P4][hpo] gat trial 5 {'hidden': 32, 'dropout': 0.4} val_f1=0.2485
+[P4][hpo] graphsage trial 0 {'hidden': 64, 'dropout': 0.3} val_f1=0.5137
+[P4][hpo] graphsage trial 1 {'hidden': 32, 'dropout': 0.2} val_f1=0.5191
+[P4][hpo] graphsage trial 2 {'hidden': 128, 'dropout': 0.4} val_f1=0.4262
+[P4][hpo] graphsage trial 3 {'hidden': 64, 'dropout': 0.1} val_f1=0.5131
+[P4][hpo] graphsage trial 4 {'hidden': 96, 'dropout': 0.3} val_f1=0.4280
+[P4][hpo] graphsage trial 5 {'hidden': 32, 'dropout': 0.4} val_f1=0.4943
+[P4][hpo] sgc trial 0 {'hidden': 64, 'dropout': 0.3} val_f1=0.2614
+[P4][hpo] sgc trial 1 {'hidden': 32, 'dropout': 0.2} val_f1=0.2614
+[P4][hpo] sgc trial 2 {'hidden': 128, 'dropout': 0.4} val_f1=0.2614
+[P4][hpo] sgc trial 3 {'hidden': 64, 'dropout': 0.1} val_f1=0.2614
+[P4][hpo] sgc trial 4 {'hidden': 96, 'dropout': 0.3} val_f1=0.2614
+[P4][hpo] sgc trial 5 {'hidden': 32, 'dropout': 0.4} val_f1=0.2614
+[P4][hpo] dsgat trial 0 {'hidden': 64, 'dropout': 0.3} val_f1=0.2807
+[P4][hpo] dsgat trial 1 {'hidden': 32, 'dropout': 0.2} val_f1=0.2963
+[P4][hpo] dsgat trial 2 {'hidden': 128, 'dropout': 0.4} val_f1=0.2958
+[P4][hpo] dsgat trial 3 {'hidden': 64, 'dropout': 0.1} val_f1=0.2807
+[P4][hpo] dsgat trial 4 {'hidden': 96, 'dropout': 0.3} val_f1=0.3215
+[P4][hpo] dsgat trial 5 {'hidden': 32, 'dropout': 0.4} val_f1=0.2963
+saved results/p4/hpo_search.json
+hpo rc=0
+Tue Nov  3 09:02:11     2026
+=== [2/3] final 10-seed ===
+[P4][final] tasgl: F1=0.5081±0.1088
+[P4][final] graphsage: F1=0.4394±0.0820
+[P4][final] mlp: F1=0.4970±0.0734
+saved results/p4/final_comparison.json
+final rc=0
+Tue Nov  3 09:17:37     2026
+=== [3/3] BitHeNet confirmation ===
+[BitHeNet] 地址组 822942, 超上限跳过 976, 无向边 1342830
+Traceback (most recent call last):
+  File "p4_experiments.py", line 1074, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "p4_experiments.py", line 1070, in main
+    return args.func(args)
+           ^^^^^^^^^^^^^^^
+  File "p4_experiments.py", line 253, in cmd_second_dataset
+    m, tr = train_with_audit(m, data, masks,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "p4_experiments.py", line 343, in train_with_audit
+    loss, parts = lf(logits, aux['h'], data['y'], ent, masks[0])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "losses.py", line 130, in forward
+    l_con = self.con(h, targets, entropy, mask)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "losses.py", line 85, in forward
+    sim_pn = z[pos] @ z[neg].T                          # [P, N]
+             ~~~~~~~^~~~~~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 6.00 GiB of which 0 bytes is free. Of the allocated memory 5.02 GiB is allocated by PyTorch, and 293.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+second rc=1
+Tue Nov  3 09:18:05     2026
+=== WAVE1 DONE ===

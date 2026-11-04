@@ -1,0 +1,40 @@
+{
+  "schema": "p5_determinism_probe_v1",
+  "dataset": "elliptic",
+  "model": "tasgl",
+  "epochs": 60,
+  "run1": {
+    "seed": 0,
+    "f1": 0.4017910447761194,
+    "threshold": 0.54,
+    "params": 19595,
+    "epochs": 38,
+    "probs_sha256": "eceb41716cece28c5c0a89c8",
+    "n_scored": 16670
+  },
+  "run2": {
+    "seed": 0,
+    "f1": 0.4017910447761194,
+    "threshold": 0.54,
+    "params": 19595,
+    "epochs": 38,
+    "probs_sha256": "425d2851bc019e15cd983d6b",
+    "n_scored": 16670
+  },
+  "control_other_seed": {
+    "seed": 1,
+    "f1": 0.4575246579700923,
+    "threshold": 0.88,
+    "params": 19595,
+    "epochs": 60,
+    "probs_sha256": "2beba8e5912a7148f283e509",
+    "n_scored": 16670
+  },
+  "same_seed_bitwise_identical": false,
+  "max_prob_abs_diff_same_seed": 1.7881393432617188e-07,
+  "same_seed_equivalent_at_1e-6": true,
+  "f1_abs_diff_same_seed": 0.0,
+  "control_differs": true,
+  "verdict": "bitwise_different_metric_stable",
+  "note": "同一进程内连续两次训练同一种子; 若逐位不一致, 说明该栈上存在未受控的非确定性来源, 逐种子数值不能在跨运行意义上复用"
+}

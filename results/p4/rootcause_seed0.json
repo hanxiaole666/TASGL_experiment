@@ -1,0 +1,288 @@
+{
+  "schema": "p4_rootcause_v1",
+  "seeds": [
+    0
+  ],
+  "epochs": 200,
+  "per_seed": [
+    {
+      "seed": 0,
+      "train": {
+        "epochs": 38,
+        "best_val_f1": 0.5242463958060288,
+        "early_stopped": true,
+        "val_history": [
+          0.29041769041769044,
+          0.29331344767586376,
+          0.3074866310160428,
+          0.35019973368841545,
+          0.393859649122807,
+          0.45172031076581576,
+          0.5053560176433523,
+          0.5242463958060288,
+          0.5214007782101168,
+          0.5127250155183116,
+          0.49616971125515613,
+          0.47513812154696133,
+          0.46361746361746364,
+          0.4838709677419355,
+          0.4896073903002309,
+          0.48404255319148937,
+          0.47659939888364106,
+          0.4743049705139006,
+          0.47000413736036406,
+          0.4668304668304668,
+          0.4668564457096381,
+          0.46958637469586373,
+          0.4714983713355049,
+          0.47658175842235007,
+          0.4811281625881377,
+          0.48576214405360135,
+          0.4917337855023315,
+          0.49550706033376124,
+          0.5015158077089649,
+          0.5056768558951965,
+          0.5083406496927129,
+          0.5087719298245614,
+          0.5078534031413613,
+          0.5067362016514559,
+          0.5043103448275862,
+          0.5004277159965783,
+          0.49766056997022545,
+          0.49471458773784355
+        ]
+      },
+      "gate": {
+        "schema": "p4_gate_convergence_report_v1",
+        "criteria": {
+          "schema": "p4_gate_convergence_v1",
+          "primary_min_active_ratio_upper": 0.98,
+          "secondary_min_gate_w2_norm": 0.05,
+          "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "active_edge_ratio": 1.0,
+            "gate_w2_norm": 0.0325704850256443,
+            "gate_w2_absmax": 0.007596959825605154,
+            "gate_w1_norm": 2.8582963943481445,
+            "gate_bias": 1.9936710596084595,
+            "log_tau": 0.00627657026052475,
+            "tau": 0.5015691374137435
+          },
+          {
+            "layer": 2,
+            "active_edge_ratio": 1.0,
+            "gate_w2_norm": 0.031047862023115158,
+            "gate_w2_absmax": 0.007281950209289789,
+            "gate_w1_norm": 2.8227829933166504,
+            "gate_bias": 1.9922950267791748,
+            "log_tau": 0.00767582468688488,
+            "tau": 0.5019189467499762
+          }
+        ],
+        "min_active_edge_ratio": 1.0,
+        "max_gate_w2_norm": 0.0325704850256443,
+        "primary_pass": false,
+        "secondary_pass": false,
+        "converged": false
+      },
+      "admission": {
+        "admit": false,
+        "classification": "gate_collapsed_open",
+        "action": "该种子上门控未收敛, 稀疏性主张不成立; 主分析仍须保留该种子, 另做敏感性分析",
+        "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+      },
+      "cells": {
+        "g=hard|s=deterministic|T=1|t=tuned_same": {
+          "tuned_threshold": 0.54,
+          "tuned_same": {
+            "threshold": 0.54,
+            "f1": 0.4017910447761194,
+            "precision": 0.2968681076312307,
+            "recall": 0.6214219759926131,
+            "predicted_positive_rate": 0.13599280143971207,
+            "mean_p_positive": 0.36386251562140937,
+            "mean_entropy": 0.5930257194710581,
+            "average_precision": 0.2662024348680237,
+            "roc_auc": 0.8421928186598191
+          },
+          "fixed": {
+            "threshold": 0.5,
+            "f1": 0.3372708757637475,
+            "precision": 0.21635746015155474,
+            "recall": 0.7645429362880887,
+            "predicted_positive_rate": 0.2295740851829634,
+            "mean_p_positive": 0.36386251562140937,
+            "mean_entropy": 0.5930257194710581,
+            "average_precision": 0.2662024348680237,
+            "roc_auc": 0.8421928186598191
+          }
+        },
+        "g=hard|s=mc_dropout|T=10|t=tuned_same": {
+          "tuned_threshold": 0.52,
+          "tuned_same": {
+            "threshold": 0.52,
+            "f1": 0.32926829268292684,
+            "precision": 0.22068531908204966,
+            "recall": 0.6481994459833795,
+            "predicted_positive_rate": 0.19082183563287342,
+            "mean_p_positive": 0.3855491538871434,
+            "mean_entropy": 0.6188949653949893,
+            "average_precision": 0.22927514743654492,
+            "roc_auc": 0.8204022802106616
+          },
+          "fixed": {
+            "threshold": 0.5,
+            "f1": 0.30558812035951544,
+            "precision": 0.19380421313506815,
+            "recall": 0.7220683287165282,
+            "predicted_positive_rate": 0.24205158968206358,
+            "mean_p_positive": 0.3855491538871434,
+            "mean_entropy": 0.6188949653949893,
+            "average_precision": 0.22927514743654492,
+            "roc_auc": 0.8204022802106616
+          }
+        },
+        "g=soft|s=deterministic|T=1|t=tuned_same": {
+          "tuned_threshold": 0.54,
+          "tuned_same": {
+            "threshold": 0.54,
+            "f1": 0.4017910447761194,
+            "precision": 0.2968681076312307,
+            "recall": 0.6214219759926131,
+            "predicted_positive_rate": 0.13599280143971207,
+            "mean_p_positive": 0.3638625159547608,
+            "mean_entropy": 0.5930257197805036,
+            "average_precision": 0.2662025837731241,
+            "roc_auc": 0.8421929075185829
+          },
+          "fixed": {
+            "threshold": 0.5,
+            "f1": 0.3372708757637475,
+            "precision": 0.21635746015155474,
+            "recall": 0.7645429362880887,
+            "predicted_positive_rate": 0.2295740851829634,
+            "mean_p_positive": 0.3638625159547608,
+            "mean_entropy": 0.5930257197805036,
+            "average_precision": 0.2662025837731241,
+            "roc_auc": 0.8421929075185829
+          }
+        },
+        "g=soft|s=mc_dropout|T=10|t=tuned_same": {
+          "tuned_threshold": 0.5,
+          "tuned_same": {
+            "threshold": 0.5,
+            "f1": 0.3065637065637066,
+            "precision": 0.19380034171344887,
+            "recall": 0.7331486611265005,
+            "predicted_positive_rate": 0.24577084583083383,
+            "mean_p_positive": 0.3861501518036577,
+            "mean_entropy": 0.6191790983299783,
+            "average_precision": 0.23275337123399406,
+            "roc_auc": 0.8263381048712314
+          },
+          "fixed": {
+            "threshold": 0.5,
+            "f1": 0.3065637065637066,
+            "precision": 0.19380034171344887,
+            "recall": 0.7331486611265005,
+            "predicted_positive_rate": 0.24577084583083383,
+            "mean_p_positive": 0.3861501518036577,
+            "mean_entropy": 0.6191790983299783,
+            "average_precision": 0.23275337123399406,
+            "roc_auc": 0.8263381048712314
+          }
+        }
+      },
+      "attribution_tuned": {
+        "path": [
+          "g=hard|s=deterministic|T=1|t=tuned_same",
+          "g=hard|s=mc_dropout|T=10|t=tuned_same",
+          "g=soft|s=mc_dropout|T=10|t=tuned_same"
+        ],
+        "metric": "f1",
+        "steps": [
+          {
+            "from_key": "g=hard|s=deterministic|T=1|t=tuned_same",
+            "to_key": "g=hard|s=mc_dropout|T=10|t=tuned_same",
+            "delta": -0.07252275209319253,
+            "from_value": 0.4017910447761194,
+            "to_value": 0.32926829268292684,
+            "status": "ok",
+            "share": 0.7615749159282839
+          },
+          {
+            "from_key": "g=hard|s=mc_dropout|T=10|t=tuned_same",
+            "to_key": "g=soft|s=mc_dropout|T=10|t=tuned_same",
+            "delta": -0.02270458611922027,
+            "from_value": 0.32926829268292684,
+            "to_value": 0.3065637065637066,
+            "status": "ok",
+            "share": 0.23842508407171614
+          }
+        ],
+        "total_delta": -0.0952273382124128,
+        "abs_total": 0.0952273382124128
+      },
+      "attribution_fixed_0.5": {
+        "path": [
+          "g=hard|s=deterministic|T=1|t=tuned_same",
+          "g=hard|s=mc_dropout|T=10|t=tuned_same",
+          "g=soft|s=mc_dropout|T=10|t=tuned_same"
+        ],
+        "metric": "f1",
+        "steps": [
+          {
+            "from_key": "g=hard|s=deterministic|T=1|t=tuned_same",
+            "to_key": "g=hard|s=mc_dropout|T=10|t=tuned_same",
+            "delta": -0.031682755404232044,
+            "from_value": 0.3372708757637475,
+            "to_value": 0.30558812035951544,
+            "status": "ok",
+            "share": 0.9701275032306137
+          },
+          {
+            "from_key": "g=hard|s=mc_dropout|T=10|t=tuned_same",
+            "to_key": "g=soft|s=mc_dropout|T=10|t=tuned_same",
+            "delta": 0.0009755862041911367,
+            "from_value": 0.30558812035951544,
+            "to_value": 0.3065637065637066,
+            "status": "ok",
+            "share": 0.029872496769386334
+          }
+        ],
+        "total_delta": -0.030707169200040907,
+        "abs_total": 0.03265834160842318
+      },
+      "reproduce": {
+        "reproduced": true,
+        "key": "g=soft|s=mc_dropout|T=10|t=tuned_same",
+        "metric": "f1",
+        "observed": 0.3049,
+        "recomputed": 0.3065637065637066,
+        "abs_diff": 0.0016637065637065684,
+        "tol": 0.01
+      }
+    }
+  ],
+  "dual_track": {
+    "schema": "p4_dual_track_v1",
+    "key": "f1",
+    "primary_all_seeds": {
+      "n": 1,
+      "mean": 0.4017910447761194,
+      "sd": null
+    },
+    "sensitivity_admitted": {
+      "n": 0,
+      "mean": null,
+      "sd": null
+    },
+    "rejected": 1,
+    "stability_tolerance": 0.02008955323880597,
+    "conclusion_stable": null,
+    "verdict": "insufficient_data"
+  }
+}

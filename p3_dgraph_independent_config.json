@@ -1,0 +1,46 @@
+{
+  "protocol": "p3_independent_dgraphfin_v1",
+  "dataset": {
+    "name": "dgraphfin",
+    "root": "D:/TASGL_experiment/Data/dgraphfin"
+  },
+  "model_name": "feature_mlp_official_split_p3",
+  "predictions": {
+    "path_pattern": "results/p3/second_dataset/mlp/seed{seed}/test_predictions.npz",
+    "contains_labels": false
+  },
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "threshold": {
+    "source": "calibration_artifact",
+    "selection_data": "official_valid_mask_only",
+    "test_reoptimization": false
+  },
+  "calibration": {
+    "source": "artifact",
+    "path_pattern": "results/p3/second_dataset/mlp/seed{seed}/calibration.json",
+    "fitting_data": "official_valid_mask_only"
+  },
+  "statistics": {
+    "test": "wilcoxon_exact_two_sided",
+    "paired_unit": "seed",
+    "alpha": 0.05,
+    "sample_sd_ddof": 1,
+    "confidence_interval": "two_sided_student_t_95",
+    "effect_size": "cohen_dz",
+    "multiple_comparison": "Holm"
+  },
+  "exclusions": {
+    "seed_replacement_after_test": false,
+    "failed_seed_must_remain_incomplete": true,
+    "minimum_labeled_test_nodes_per_seed": 1,
+    "prediction_missing_policy": "fail_not_skip"
+  },
+  "evaluation": {
+    "mask_key": "test_mask",
+    "positive_label": "1=high-risk borrower",
+    "single_locked_configuration": true,
+    "time_boundary": "official split; edge timestamps only; not strict node rolling",
+    "prior_test_exposure": false,
+    "exposure_note": "本项目此前未查看过 DGraph-Fin 测试指标；执行者须保持该独立性"
+  }
+}

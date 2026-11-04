@@ -1,0 +1,21 @@
+{
+  "schema": "p4_threshold_anchors_v1",
+  "note": "H1-H5 可推导锚点的输入。每个值都必须写明来源; 无来源的锚点不得写入。",
+  "best_baseline_f1": 0.497,
+  "best_baseline_name": "MLP",
+  "best_baseline_f1_source": "results/p4/final_comparison.json / MLP 十种子均值 (等预算 HPO 修复后的最强基线; GraphSAGE 0.4394, MLP 0.4970)",
+  "baseline_sd": 0.0734,
+  "baseline_sd_source": "results/p4/final_comparison.json / MLP 十种子样本 SD (ddof=1)",
+  "n_seeds": 10,
+  "alpha": 0.05,
+  "power": 0.8,
+  "operational_margin": 0.0,
+  "memory_kb": 80,
+  "memory_kb_source": "边缘设备 fp32 权重预算假设; 论文中必须写明目标设备与预算来源, 否则该门限降级为未证实",
+  "target_qps": 7,
+  "target_qps_source": "比特币主网持续吞吐约 3-7 笔/秒; 取上界 7 笔/秒作为筛查吞吐目标",
+  "latency_semantics": "per_node_screening",
+  "alert_capacity_per_day": null,
+  "base_alerts_per_day": null,
+  "alert_capacity_source": "尚未获得告警队列容量; 因此 H4 判为 not_testable, 不设通过/证伪门限"
+}

@@ -1,0 +1,41 @@
+============================================================
+[开始] python3 Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py seeds --action register --output_dir results/p2/seeds
+[开始时间] 2026-11-02 17:01:04.242
+[P2-1] 已注册 20 个种子; sha256=fe8725b28ac5e029
+[P2-1] 精确双侧 Wilcoxon 最小可达 p = 0.000002
+[结束时间] 2026-11-02 17:01:12.799 (退出码=0)
+============================================================
+[开始] python3 Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py thresholds --action register --output_dir results/p2/thresholds
+[开始时间] 2026-11-02 17:01:13.181
+[P2-2] 门限表已注册; lock_id=539ee5a915584273c6b2ef2b; table_sha256=70a562cade3b30dc
+[P2-2] 注册后不得再修改阈值；修改即视为新的探索版本
+[结束时间] 2026-11-02 17:01:21.547 (退出码=0)
+============================================================
+[开始] python3 Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py windows --action audit --output_dir results/p2/windows
+[开始时间] 2026-11-02 17:01:21.913
+Traceback (most recent call last):
+  File "Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py", line 602, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py", line 598, in main
+    return int(args.func(args) or 0)
+               ^^^^^^^^^^^^^^^
+  File "Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py", line 239, in cmd_windows
+    raw = load_elliptic_raw(args.data_dir,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p0_data.py", line 25, in load_elliptic_raw
+    raise FileNotFoundError(f'Elliptic 文件不存在: {path}')
+FileNotFoundError: Elliptic 文件不存在: ./data/elliptic\elliptic_txs_features.csv
+[结束时间] 2026-11-02 17:01:30.258 (退出码=1)
+[错误] p2_experiments 失败，详见 Test-log\p2_experiments-log-20261102.txt
+============================================================
+[开始] python3 Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py report
+[开始时间] 2026-11-02 17:01:30.637
+[P2] 追溯矩阵已写入 Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\results\p2\traceability\traceability_matrix.json (5 项缺口)
+[结束时间] 2026-11-02 17:01:39.014 (退出码=0)
+============================================================
+[开始] python3 Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p2_experiments.py windows --action audit --output_dir results/p2/windows
+[开始时间] 2026-11-02 17:02:14.146
+[P2-3][SKIP] 数据目录不存在: ./data/elliptic；跳过逐窗重算
+[P2-3] 主数据集独立窗口可用=False; 逐数据集={'dgraphfin': True, 'elliptic': False}; rolling 无污染=None
+[结束时间] 2026-11-02 17:02:22.693 (退出码=0)

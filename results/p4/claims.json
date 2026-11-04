@@ -1,0 +1,145 @@
+{
+  "schema": "p4_weaken_claims_v1",
+  "claims": [
+    {
+      "id": "C1",
+      "kind": "dominated",
+      "a": "TASGL",
+      "b": "GraphSAGE",
+      "metric": "F1",
+      "source": "摘要/引言/结论/台账 EVD-02 EVD-03",
+      "evidence": {
+        "n_seeds": 5,
+        "equal_budget_hpo": false,
+        "paired_p_holm": null,
+        "effect_size": null,
+        "ci": null,
+        "independent": false,
+        "exploratory_declared": false
+      },
+      "schema": "p4_claim_adjudication_v1",
+      "status": "unverifiable",
+      "satisfied": [],
+      "missing": [
+        "n_seeds>=10",
+        "equal_budget_hpo",
+        "paired_test_holm",
+        "effect_size_reported",
+        "ci_excludes_zero",
+        "independent_or_declared_exploratory"
+      ],
+      "missing_text": "预注册 >=10 个种子 (或功效分析给出更少种子数); 每个基线完成等预算、仅用验证集的超参搜索; 配对检验并做 Holm 多重比较校正; 报告效应量 (Cohen dz) 与置信区间; 差值的 95% 置信区间不包含 0; 在未参与开发的独立划分上确认, 或明确声明为探索性复核",
+      "weakened_text": "在本实验设定的等预算比较下, TASGL 与 GraphSAGE 的 F1 差异未达到预注册的统计判据 (预注册 >=10 个种子 (或功效分析给出更少种子数); 每个基线完成等预算、仅用验证集的超参搜索; 配对检验并做 Holm 多重比较校正; 报告效应量 (Cohen dz) 与置信区间; 差值的 95% 置信区间不包含 0; 在未参与开发的独立划分上确认, 或明确声明为探索性复核); 只能表述为\"在当前设置下未观察到 TASGL 对 GraphSAGE 的统计显著优势\", 不得表述为\"支配\"。",
+      "retraction_required": true
+    },
+    {
+      "id": "C2",
+      "kind": "below",
+      "a": "TASGL",
+      "b": "MLP",
+      "metric": "F1",
+      "source": "摘要/台账第 20 行",
+      "evidence": {
+        "n_seeds": 5,
+        "equal_budget_hpo": false,
+        "paired_p_holm": null,
+        "effect_size": null,
+        "ci": null
+      },
+      "schema": "p4_claim_adjudication_v1",
+      "status": "unverifiable",
+      "satisfied": [],
+      "missing": [
+        "n_seeds>=10",
+        "paired_test_holm",
+        "effect_size_reported",
+        "ci_excludes_zero"
+      ],
+      "missing_text": "预注册 >=10 个种子 (或功效分析给出更少种子数); 配对检验并做 Holm 多重比较校正; 报告效应量 (Cohen dz) 与置信区间; 差值的 95% 置信区间不包含 0",
+      "weakened_text": "TASGL 的 F1 低于 MLP, 但 预注册 >=10 个种子 (或功效分析给出更少种子数); 配对检验并做 Holm 多重比较校正; 报告效应量 (Cohen dz) 与置信区间; 差值的 95% 置信区间不包含 0; 只能表述为\"点估计较低, 差异未达统计显著\"。",
+      "retraction_required": true
+    },
+    {
+      "id": "C3",
+      "kind": "dominated",
+      "a": "TASGL",
+      "b": "MLP",
+      "metric": "latency_ms",
+      "source": "台账 EVD-03 延迟视图",
+      "evidence": {
+        "n_seeds": 5,
+        "equal_budget_hpo": false,
+        "measurement_protocol": false,
+        "environment_fingerprint": true,
+        "full_chain_cost": false
+      },
+      "schema": "p4_claim_adjudication_v1",
+      "status": "unverifiable",
+      "satisfied": [],
+      "missing": [
+        "n_seeds>=10",
+        "equal_budget_hpo",
+        "paired_test_holm",
+        "effect_size_reported",
+        "ci_excludes_zero",
+        "independent_or_declared_exploratory"
+      ],
+      "missing_text": "预注册 >=10 个种子 (或功效分析给出更少种子数); 每个基线完成等预算、仅用验证集的超参搜索; 配对检验并做 Holm 多重比较校正; 报告效应量 (Cohen dz) 与置信区间; 差值的 95% 置信区间不包含 0; 在未参与开发的独立划分上确认, 或明确声明为探索性复核",
+      "weakened_text": "在本实验设定的等预算比较下, TASGL 与 MLP 的 latency_ms 差异未达到预注册的统计判据 (预注册 >=10 个种子 (或功效分析给出更少种子数); 每个基线完成等预算、仅用验证集的超参搜索; 配对检验并做 Holm 多重比较校正; 报告效应量 (Cohen dz) 与置信区间; 差值的 95% 置信区间不包含 0; 在未参与开发的独立划分上确认, 或明确声明为探索性复核); 只能表述为\"在当前设置下未观察到 TASGL 对 MLP 的统计显著优势\", 不得表述为\"支配\"。",
+      "retraction_required": true
+    },
+    {
+      "id": "C4",
+      "kind": "calibrated",
+      "a": "graphless_kd student",
+      "b": "EDL proxy",
+      "metric": "ECE",
+      "source": "协议 5 锁定探索性确认",
+      "evidence": {
+        "positive_class_ece": null,
+        "classwise_ece": null,
+        "beyond_overall_ece": false
+      },
+      "schema": "p4_claim_adjudication_v1",
+      "status": "unverifiable",
+      "satisfied": [],
+      "missing": [
+        "positive_class_ece",
+        "classwise_ece",
+        "not_overall_ece_only"
+      ],
+      "missing_text": "报告正类 ECE (类别质量加权); 报告分类别 ECE 分解; 不能只用整体 ECE (不平衡下会退化)",
+      "weakened_text": "当前仅报告整体 ECE, 缺少 报告正类 ECE (类别质量加权); 报告分类别 ECE 分解; 不能只用整体 ECE (不平衡下会退化); 不得表述为\"校准良好\"。",
+      "retraction_required": true
+    },
+    {
+      "id": "C5",
+      "kind": "robust_to",
+      "a": "TASGL",
+      "b": "edge deletion attack",
+      "metric": "F1",
+      "source": "E5 删边鲁棒性",
+      "evidence": {
+        "non_oracle_attack": false,
+        "attacker_model_declared": false,
+        "n_attack_repetitions": null,
+        "clean_to_attack_transition": false
+      },
+      "schema": "p4_claim_adjudication_v1",
+      "status": "unverifiable",
+      "satisfied": [],
+      "missing": [
+        "non_oracle_attack",
+        "attacker_model_declared",
+        "n_attack_repetitions",
+        "clean_to_attack_transition"
+      ],
+      "missing_text": "真实非 oracle 自适应攻击 (而非标签注入式 oracle); 声明攻击者知识/目标/成本; 声明攻击种子与重复次数; 报告 clean->attack 的指标转移, 而非单一攻击态",
+      "weakened_text": "当前攻击实验为 oracle 注入式, 缺少 真实非 oracle 自适应攻击 (而非标签注入式 oracle); 声明攻击者知识/目标/成本; 声明攻击种子与重复次数; 报告 clean->attack 的指标转移, 而非单一攻击态; 不得表述为\"对自适应攻击鲁棒\"。",
+      "retraction_required": true
+    }
+  ],
+  "n_claims": 5,
+  "n_requiring_retraction": 5,
+  "all_supported": false
+}

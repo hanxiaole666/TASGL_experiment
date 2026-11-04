@@ -1,0 +1,321 @@
+{
+  "schema": "p4_second_dataset_v1",
+  "dataset": {
+    "schema": "p4_bitheteronet_v1",
+    "n_transactions": 202804,
+    "n_features": 182,
+    "n_edges_undirected": 1342830,
+    "max_group": 20,
+    "n_labeled": 46045,
+    "n_illicit": 4545,
+    "n_licit": 41500,
+    "illicit_rate_labeled": 0.09870778586165707,
+    "time_steps": [
+      1,
+      49
+    ],
+    "label_map": {
+      "0": "licit",
+      "1": "illicit",
+      "2": "unknown"
+    },
+    "edge_rule": "两笔交易共享同一地址(输入或输出)则连边; 单地址关联交易数 > 20 时跳过组内连边",
+    "edge_rule_limitation": "会低估交易所/混币器等枢纽地址处的连边密度",
+    "prior_exposure": false,
+    "prior_exposure_note": "本数据集在本项目中从未用于任何开发/选择/调参",
+    "fingerprint": "62da051072613e7c06a12e1d"
+  },
+  "split": {
+    "schema": "p4_strict_rolling_v1",
+    "train_window": [
+      1,
+      29
+    ],
+    "val_window": [
+      30,
+      34
+    ],
+    "test_window": [
+      35,
+      49
+    ],
+    "n_train": 26227,
+    "n_val": 3472,
+    "n_test": 16346,
+    "pos_rate_train": 0.10946734281465666,
+    "pos_rate_val": 0.17021889400921658,
+    "pos_rate_test": 0.06625474122109384,
+    "sufficient_labeled": true,
+    "graph_cutoff": 34,
+    "induction_rule": "节点与边同时裁剪到 time<=val_end; 标准化器仅在 train 窗可见节点上拟合",
+    "fingerprint": "be94c826145696daf67bf162df6e27a12e1f9dfe49db4ce1e89cf686adc2c106"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "models": {
+    "mlp": {
+      "rows": [
+        {
+          "seed": 0,
+          "f1": 0.42022324359816154,
+          "precision": 0.32603158430973,
+          "recall": 0.5909510618651893,
+          "pr_auc": 0.4188276487994626,
+          "threshold": 0.8200000000000001,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.073,
+          "epochs": 120
+        },
+        {
+          "seed": 1,
+          "f1": 0.3168523676880223,
+          "precision": 0.2543320290665176,
+          "recall": 0.420129270544783,
+          "pr_auc": 0.23026530333021206,
+          "threshold": 0.5,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.08,
+          "epochs": 33
+        },
+        {
+          "seed": 2,
+          "f1": 0.4418356456776948,
+          "precision": 0.359375,
+          "recall": 0.5734072022160664,
+          "pr_auc": 0.35885209698462234,
+          "threshold": 0.86,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.062,
+          "epochs": 120
+        },
+        {
+          "seed": 3,
+          "f1": 0.33032886723507915,
+          "precision": 0.2243547319655857,
+          "recall": 0.6260387811634349,
+          "pr_auc": 0.20002470640816875,
+          "threshold": 0.5,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.075,
+          "epochs": 33
+        },
+        {
+          "seed": 4,
+          "f1": 0.4359886201991465,
+          "precision": 0.3545401966454598,
+          "recall": 0.5660203139427517,
+          "pr_auc": 0.3541472777923764,
+          "threshold": 0.8200000000000001,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.074,
+          "epochs": 120
+        },
+        {
+          "seed": 5,
+          "f1": 0.41308658294778583,
+          "precision": 0.32166752444673186,
+          "recall": 0.577100646352724,
+          "pr_auc": 0.3334210664018408,
+          "threshold": 0.8,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.189,
+          "epochs": 120
+        },
+        {
+          "seed": 6,
+          "f1": 0.4723275208491281,
+          "precision": 0.4006430868167203,
+          "recall": 0.5752539242843951,
+          "pr_auc": 0.4770844089540622,
+          "threshold": 0.8400000000000001,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.084,
+          "epochs": 120
+        },
+        {
+          "seed": 7,
+          "f1": 0.3687549563838224,
+          "precision": 0.3231410701876303,
+          "recall": 0.4293628808864266,
+          "pr_auc": 0.2689192570623285,
+          "threshold": 0.5,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.066,
+          "epochs": 31
+        },
+        {
+          "seed": 8,
+          "f1": 0.4546448087431694,
+          "precision": 0.37545126353790614,
+          "recall": 0.5761772853185596,
+          "pr_auc": 0.4510249446095821,
+          "threshold": 0.8400000000000001,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.073,
+          "epochs": 120
+        },
+        {
+          "seed": 9,
+          "f1": 0.4345825115055884,
+          "precision": 0.3374170495150587,
+          "recall": 0.6103416435826408,
+          "pr_auc": 0.41399397218251577,
+          "threshold": 0.78,
+          "ece": null,
+          "params": 16002,
+          "latency_ms": 4.08,
+          "epochs": 120
+        }
+      ],
+      "mean_f1": 0.40886251248275984,
+      "sd_f1": 0.052701805514213496
+    },
+    "graphsage": {
+      "rows": [
+        {
+          "seed": 0,
+          "f1": 0.3791226384886327,
+          "precision": 0.2901960784313726,
+          "recall": 0.5466297322253001,
+          "pr_auc": 0.28324454052422565,
+          "threshold": 0.5,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 36.725,
+          "epochs": 33
+        },
+        {
+          "seed": 1,
+          "f1": 0.5669366364935684,
+          "precision": 0.5856299212598425,
+          "recall": 0.5493998153277931,
+          "pr_auc": 0.5651440522935948,
+          "threshold": 0.92,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 36.784,
+          "epochs": 120
+        },
+        {
+          "seed": 2,
+          "f1": 0.5499243570347958,
+          "precision": 0.4657270980140935,
+          "recall": 0.6712834718374885,
+          "pr_auc": 0.585442768544443,
+          "threshold": 0.78,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 36.809,
+          "epochs": 120
+        },
+        {
+          "seed": 3,
+          "f1": 0.2748135398737808,
+          "precision": 0.19933416562630046,
+          "recall": 0.4422899353647276,
+          "pr_auc": 0.15913060703254026,
+          "threshold": 0.52,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 36.837,
+          "epochs": 31
+        },
+        {
+          "seed": 4,
+          "f1": 0.595460614152203,
+          "precision": 0.5747422680412371,
+          "recall": 0.6177285318559557,
+          "pr_auc": 0.6151537417231524,
+          "threshold": 0.88,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 36.729,
+          "epochs": 120
+        },
+        {
+          "seed": 5,
+          "f1": 0.5703764320785597,
+          "precision": 0.5121234386480529,
+          "recall": 0.6435826408125577,
+          "pr_auc": 0.5667861330903697,
+          "threshold": 0.8200000000000001,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 154.149,
+          "epochs": 120
+        },
+        {
+          "seed": 6,
+          "f1": 0.28602620087336245,
+          "precision": 0.2030220844633863,
+          "recall": 0.4838411819021237,
+          "pr_auc": 0.20893921377403663,
+          "threshold": 0.54,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 162.159,
+          "epochs": 32
+        },
+        {
+          "seed": 7,
+          "f1": 0.2761811982464686,
+          "precision": 0.18756202447899437,
+          "recall": 0.5235457063711911,
+          "pr_auc": 0.19241309048059196,
+          "threshold": 0.5,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 372.789,
+          "epochs": 33
+        },
+        {
+          "seed": 8,
+          "f1": 0.6097560975609756,
+          "precision": 0.6463288521199586,
+          "recall": 0.577100646352724,
+          "pr_auc": 0.6502965220263314,
+          "threshold": 0.9,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 131.092,
+          "epochs": 120
+        },
+        {
+          "seed": 9,
+          "f1": 0.5990821860659157,
+          "precision": 0.5464231354642314,
+          "recall": 0.6629732225300092,
+          "pr_auc": 0.6164748684648501,
+          "threshold": 0.8,
+          "ece": null,
+          "params": 31874,
+          "latency_ms": 117.191,
+          "epochs": 120
+        }
+      ],
+      "mean_f1": 0.47076799008682624,
+      "sd_f1": 0.14740609944029165
+    }
+  },
+  "evidence_class": "confirmatory_independent",
+  "independence_basis": "BitHeNet 在本项目中从未用于任何开发/选择/调参 (prior_exposure=false); 本结果为一次性锁定评估"
+}

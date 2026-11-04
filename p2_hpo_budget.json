@@ -1,0 +1,22 @@
+{
+  "schema": "p2_hpo_budget_v1",
+  "models": ["tasgl", "mlp", "gcn", "gat", "graphsage", "sgc", "sign",
+             "temporal_graphsage"],
+  "trials_per_seed": 4,
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "epochs": 150,
+  "patience": 25,
+  "early_stopping_metric": "validation_f1_default_threshold",
+  "selection": "max_validation_f1_then_lowest_trial",
+  "train_window": [1, 29],
+  "validation_window": [30, 34],
+  "test_labels_used": false,
+  "shared_grid": true,
+  "identical_budget_requirement": true,
+  "fairness_rule": [
+    "每个模型获得完全相同的试验数、种子数、epoch 上限与早停耐心",
+    "选择只使用验证窗 F1，且并列时取最小 trial 序号，不得使用测试标签",
+    "预注册预算之外的任何运行都会使公平对比失效，必须换目录重跑",
+    "不相等预算下的精度差异不得写成模型优越性"
+  ]
+}

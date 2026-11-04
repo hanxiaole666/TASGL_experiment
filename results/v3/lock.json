@@ -1,0 +1,79 @@
+{
+  "protocol": 5,
+  "lock_id": "91f1beb52cbad975",
+  "created_utc": "2026-10-27T01:27:37.835982+00:00",
+  "evidence_status": "locked exploratory confirmation; test 35-49 previously observed",
+  "selection_summary_sha256": "5fee110eee9749c2c06a4fb13dbf632307fec0657a71058b26f1a1309d8ab4aa",
+  "config_sha256": "ea509d23b5e7d2d2fd3a6bcbe00d98b887211c8e3cef88847c85119a4e88749d",
+  "config": {
+    "hidden": 48,
+    "hops": 0,
+    "dropout": 0.2,
+    "lr": 0.001,
+    "wd": 0.0001,
+    "class_weight_power": 0.5,
+    "focal_gamma": 0.0,
+    "edge_drop": 0.0,
+    "robust_ce_weight": 0.0,
+    "consistency_weight": 0.0,
+    "kd_weight": 0.5,
+    "temporal_weight": 0.02,
+    "teacher": "graphsage",
+    "calibration": "temp_bias",
+    "name": "graphless_kd"
+  },
+  "selection": {
+    "selection_seeds": [
+      0,
+      1
+    ],
+    "reference_schedule": [
+      29,
+      30,
+      32,
+      33,
+      34
+    ],
+    "short_schedule": [
+      24,
+      25,
+      29,
+      33,
+      34
+    ],
+    "test_labels_35_49_used": false
+  },
+  "final": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "reference_schedule": [
+      34,
+      30,
+      34,
+      35,
+      49
+    ],
+    "short_schedule": [
+      25,
+      21,
+      25,
+      35,
+      49
+    ],
+    "edge_drop": 0.5,
+    "targets": {
+      "H1_f1": 0.73,
+      "H1_params": 20000,
+      "H2_latency_ms": 8.0,
+      "H3_baseline_fraction": 0.6,
+      "H4_loss_pass": 0.05,
+      "H4_loss_falsify": 0.08,
+      "H5_ece": 0.05
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "protocol": 6,
+  "metadata": {
+    "schedule": {
+      "phase": "select",
+      "seed": 0,
+      "train_end": 24,
+      "val_start": 25,
+      "val_end": 29,
+      "test_start": 33,
+      "test_end": 34
+    },
+    "config": {
+      "hidden": 48,
+      "hops": 1,
+      "dropout": 0.2,
+      "lr": 0.001,
+      "wd": 0.0001,
+      "class_weight_power": 0.5,
+      "focal_gamma": 0.0,
+      "edge_drop": 0.4,
+      "robust_ce_weight": 0.5,
+      "consistency_weight": 0.2,
+      "kd_weight": 0.0,
+      "temporal_weight": 0.02,
+      "teacher": "graphsage",
+      "calibration": "temp_bias",
+      "name": "lite_robust"
+    },
+    "lock_id": null
+  },
+  "config": {
+    "hidden": 48,
+    "hops": 1,
+    "dropout": 0.2,
+    "lr": 0.001,
+    "wd": 0.0001,
+    "class_weight_power": 0.5,
+    "focal_gamma": 0.0,
+    "edge_drop": 0.4,
+    "robust_ce_weight": 0.5,
+    "consistency_weight": 0.2,
+    "kd_weight": 0.0,
+    "temporal_weight": 0.02,
+    "teacher": "graphsage",
+    "calibration": "temp_bias",
+    "name": "lite_robust"
+  },
+  "seed": 0,
+  "complete": true,
+  "calibrator": {
+    "method": "temp_bias",
+    "temperature": 0.9200990200042725,
+    "bias": -1.299289584159851
+  },
+  "validation_f1": 0.9185072183609009,
+  "clean": {
+    "f1": 0.5024154589371981,
+    "precision": 0.35374149659863946,
+    "recall": 0.8666666666666667,
+    "pr_auc": 0.7461865722875131,
+    "recall_at_fpr_1pct": 0.5833333333333334,
+    "ece": 0.03428053188772879,
+    "brier": 0.06678775520878805,
+    "nll": 0.21387387812137604,
+    "selective_auc": 0.5336827771164072,
+    "threshold": 0.4200000464916229
+  },
+  "clean_uncalibrated": {
+    "f1": 0.4153846153846154,
+    "precision": 0.27,
+    "recall": 0.9,
+    "pr_auc": 0.7461865722875131,
+    "recall_at_fpr_1pct": 0.5833333333333334,
+    "ece": 0.06501200913634758,
+    "brier": 0.10714501956918542,
+    "nll": 0.3525952696800232,
+    "selective_auc": 0.26439637293330764,
+    "threshold": 0.4200000464916229
+  },
+  "edge_drop50": {
+    "f1": 0.5,
+    "precision": 0.35135135135135137,
+    "recall": 0.8666666666666667,
+    "pr_auc": 0.7305547107087342,
+    "recall_at_fpr_1pct": 0.5833333333333334,
+    "ece": 0.03925467217068296,
+    "brier": 0.07057337411606456,
+    "nll": 0.2236817181110382,
+    "selective_auc": 0.47923834626537426,
+    "threshold": 0.4200000464916229
+  },
+  "params_model": 13151,
+  "params": 13153,
+  "teacher_params_excluded": false
+}

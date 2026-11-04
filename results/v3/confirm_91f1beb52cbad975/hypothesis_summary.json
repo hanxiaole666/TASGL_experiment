@@ -1,0 +1,82 @@
+{
+  "protocol": 5,
+  "lock_id": "91f1beb52cbad975",
+  "evidence_status": "locked exploratory confirmation; test 35-49 previously observed",
+  "config": {
+    "hidden": 48,
+    "hops": 0,
+    "dropout": 0.2,
+    "lr": 0.001,
+    "wd": 0.0001,
+    "class_weight_power": 0.5,
+    "focal_gamma": 0.0,
+    "edge_drop": 0.0,
+    "robust_ce_weight": 0.0,
+    "consistency_weight": 0.0,
+    "kd_weight": 0.5,
+    "temporal_weight": 0.02,
+    "teacher": "graphsage",
+    "calibration": "temp_bias",
+    "name": "graphless_kd"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "hypotheses": {
+    "H1": {
+      "f1_mean": 0.5185268354119786,
+      "params": 10849,
+      "status": "falsified",
+      "evidence_complete": true
+    },
+    "H2": {
+      "latency_ms_mean": 6.494400000000001,
+      "status": "pass",
+      "evidence_complete": true
+    },
+    "H4": {
+      "reference_f1": 0.5185268354119786,
+      "short_f1": 0.4538807432773887,
+      "relative_loss_ratio_of_means": 0.12467260654547896,
+      "status": "falsified",
+      "evidence_complete": true
+    },
+    "H5": {
+      "ece_mean": 0.021623655998857003,
+      "edl_same_backbone_ece_mean": 0.02983852958350247,
+      "brier_mean": 0.05751285934919929,
+      "nll_mean": 0.21414828300476074,
+      "status": "pass",
+      "evidence_complete": true
+    },
+    "H3": {
+      "tasgl_clean_f1": 0.5185268354119786,
+      "tasgl_edge_drop50_f1": 0.5185268354119786,
+      "tasgl_relative_drop": 0.0,
+      "per_baseline": {
+        "gcn": {
+          "clean_f1": 0.4065197828179638,
+          "edge_drop50_f1": 0.40211366708616386,
+          "relative_drop": 0.010838625616832439,
+          "target_tasgl_drop": 0.006503175370099463,
+          "status": "pass"
+        },
+        "gat": {
+          "clean_f1": 0.3983205102138191,
+          "edge_drop50_f1": 0.3359920813831779,
+          "relative_drop": 0.15647808042117442,
+          "target_tasgl_drop": 0.09388684825270464,
+          "status": "pass"
+        }
+      },
+      "status": "pass",
+      "evidence_complete": true
+    }
+  },
+  "all_pass": false,
+  "note": "all_pass=false 时必须如实报告；不得根据本文件继续调参并重称确认"
+}

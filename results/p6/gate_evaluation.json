@@ -1,0 +1,681 @@
+{
+  "schema": "p6_gate_evaluation_v1",
+  "rules": "results/p4/thresholds/register.json",
+  "registration_version": "p4_threshold_table_v2",
+  "controls": {
+    "schema": "p6_positive_control_v1",
+    "registration_version": "p4_threshold_table_v2",
+    "controls": [
+      {
+        "name": "control_all_pass",
+        "expected": {
+          "H1": "pass",
+          "H2": "pass",
+          "H5": "pass"
+        },
+        "observed": {
+          "H1": "pass",
+          "H2": "pass",
+          "H5": "pass"
+        },
+        "control_ok": true,
+        "all_pass": true,
+        "why": "every sub-condition is satisfied; a gate that only rejects would fail this case",
+        "metrics": {
+          "mean_f1": 0.44197200000000003,
+          "deploy_params": 20380,
+          "mean_latency_ms": 71.4285714285,
+          "positive_class_ece": 0.025,
+          "baseline_positive_class_ece": 0.045000000000000005
+        }
+      },
+      {
+        "name": "control_h1_f1_below_floor",
+        "expected": {
+          "H1": "falsified",
+          "H2": "pass",
+          "H5": "pass"
+        },
+        "observed": {
+          "H1": "falsified",
+          "H2": "pass",
+          "H5": "pass"
+        },
+        "control_ok": true,
+        "all_pass": false,
+        "why": "accuracy below the non-inferiority anchor",
+        "metrics": {
+          "mean_f1": 0.421972,
+          "deploy_params": 20380,
+          "mean_latency_ms": 71.4285714285,
+          "positive_class_ece": 0.025,
+          "baseline_positive_class_ece": 0.045000000000000005
+        }
+      },
+      {
+        "name": "control_h1_params_over_budget",
+        "expected": {
+          "H1": "falsified",
+          "H2": "pass",
+          "H5": "pass"
+        },
+        "observed": {
+          "H1": "falsified",
+          "H2": "pass",
+          "H5": "pass"
+        },
+        "control_ok": true,
+        "all_pass": false,
+        "why": "size over the memory-derived budget",
+        "metrics": {
+          "mean_f1": 0.44197200000000003,
+          "deploy_params": 20481,
+          "mean_latency_ms": 71.4285714285,
+          "positive_class_ece": 0.025,
+          "baseline_positive_class_ece": 0.045000000000000005
+        }
+      },
+      {
+        "name": "control_h2_too_slow",
+        "expected": {
+          "H1": "pass",
+          "H2": "falsified",
+          "H5": "pass"
+        },
+        "observed": {
+          "H1": "pass",
+          "H2": "falsified",
+          "H5": "pass"
+        },
+        "control_ok": true,
+        "all_pass": false,
+        "why": "per-transaction latency over the throughput budget",
+        "metrics": {
+          "mean_f1": 0.44197200000000003,
+          "deploy_params": 20380,
+          "mean_latency_ms": 214.28571428550003,
+          "positive_class_ece": 0.025,
+          "baseline_positive_class_ece": 0.045000000000000005
+        }
+      },
+      {
+        "name": "control_h5_over_ceiling_better_than_baseline",
+        "expected": {
+          "H1": "pass",
+          "H2": "pass",
+          "H5": "inconclusive"
+        },
+        "observed": {
+          "H1": "pass",
+          "H2": "pass",
+          "H5": "inconclusive"
+        },
+        "control_ok": true,
+        "all_pass": false,
+        "why": "over the absolute ceiling but still better than the same-backbone baseline: the ceiling alone cannot separate a bad model from a hard task, so the registered label is inconclusive rather than falsified",
+        "metrics": {
+          "mean_f1": 0.44197200000000003,
+          "deploy_params": 20380,
+          "mean_latency_ms": 71.4285714285,
+          "positive_class_ece": 0.07500000000000001,
+          "baseline_positive_class_ece": 0.2
+        }
+      },
+      {
+        "name": "control_h5_worse_than_baseline",
+        "expected": {
+          "H1": "pass",
+          "H2": "pass",
+          "H5": "falsified"
+        },
+        "observed": {
+          "H1": "pass",
+          "H2": "pass",
+          "H5": "falsified"
+        },
+        "control_ok": true,
+        "all_pass": false,
+        "why": "under the ceiling but worse than the same-backbone baseline",
+        "metrics": {
+          "mean_f1": 0.44197200000000003,
+          "deploy_params": 20380,
+          "mean_latency_ms": 71.4285714285,
+          "positive_class_ece": 0.045000000000000005,
+          "baseline_positive_class_ece": 0.025
+        }
+      },
+      {
+        "name": "control_incomplete_missing_latency",
+        "expected": {
+          "H1": "pass",
+          "H2": "incomplete",
+          "H5": "pass"
+        },
+        "observed": {
+          "H1": "pass",
+          "H2": "incomplete",
+          "H5": "pass"
+        },
+        "control_ok": true,
+        "all_pass": false,
+        "why": "a missing measurement must degrade to incomplete, never to pass",
+        "metrics": {
+          "mean_f1": 0.44197200000000003,
+          "deploy_params": 20380,
+          "mean_latency_ms": null,
+          "positive_class_ece": 0.025,
+          "baseline_positive_class_ece": 0.045000000000000005
+        }
+      }
+    ],
+    "n_controls": 7,
+    "n_ok": 7,
+    "verdict": "positive control passes: the gate admits a qualified candidate"
+  },
+  "candidates": {
+    "elliptic/tasgl": {
+      "schema": "p6_gate_eval_v1",
+      "hypotheses": {
+        "H1": {
+          "hypothesis": "H1",
+          "status": "falsified",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "mean_f1",
+              "op": ">=",
+              "threshold": 0.431972,
+              "compare_to_metric": null,
+              "rhs": 0.431972,
+              "observed": 0.5080868880689675,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            },
+            {
+              "metric": "deploy_params",
+              "op": "<=",
+              "threshold": 20480,
+              "compare_to_metric": null,
+              "rhs": 20480,
+              "observed": 30171,
+              "passed": false,
+              "status": "falsified",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H2": {
+          "hypothesis": "H2",
+          "status": "pass",
+          "n_subconditions": 1,
+          "subconditions": [
+            {
+              "metric": "mean_latency_ms",
+              "op": "<=",
+              "threshold": 142.857142857,
+              "compare_to_metric": null,
+              "rhs": 142.857142857,
+              "observed": 7.361546666894962,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H3": {
+          "hypothesis": "H3",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H4": {
+          "hypothesis": "H4",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H5": {
+          "hypothesis": "H5",
+          "status": "falsified",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "positive_class_ece",
+              "op": "<=",
+              "threshold": 0.05,
+              "compare_to_metric": null,
+              "rhs": 0.05,
+              "observed": 0.3817679198293178,
+              "passed": false,
+              "status": "inconclusive_above_absolute_ceiling",
+              "label_on_fail": "inconclusive_above_absolute_ceiling"
+            },
+            {
+              "metric": "positive_class_ece",
+              "op": "<",
+              "threshold": null,
+              "compare_to_metric": "baseline_positive_class_ece",
+              "rhs": 0.26955949462359635,
+              "observed": 0.3817679198293178,
+              "passed": false,
+              "status": "falsified",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H6": {
+          "hypothesis": "H6",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        }
+      },
+      "registration_version": "p4_threshold_table_v2",
+      "gated_hypotheses": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "decidable_gates": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "all_pass": false,
+      "all_pass_rule": "all_pass is true only when every gated hypothesis is pass; not_gated hypotheses do not enter the conjunction; incomplete is not pass",
+      "dataset": "Elliptic",
+      "model": "tasgl",
+      "metrics": {
+        "mean_f1": 0.5080868880689675,
+        "deploy_params": 30171,
+        "mean_latency_ms": 7.361546666894962,
+        "positive_class_ece": 0.3817679198293178,
+        "baseline_positive_class_ece": 0.26955949462359635
+      }
+    },
+    "elliptic/graphsage": {
+      "schema": "p6_gate_eval_v1",
+      "hypotheses": {
+        "H1": {
+          "hypothesis": "H1",
+          "status": "pass",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "mean_f1",
+              "op": ">=",
+              "threshold": 0.431972,
+              "compare_to_metric": null,
+              "rhs": 0.431972,
+              "observed": 0.43944709097267853,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            },
+            {
+              "metric": "deploy_params",
+              "op": "<=",
+              "threshold": 20480,
+              "compare_to_metric": null,
+              "rhs": 20480,
+              "observed": 12802,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H2": {
+          "hypothesis": "H2",
+          "status": "pass",
+          "n_subconditions": 1,
+          "subconditions": [
+            {
+              "metric": "mean_latency_ms",
+              "op": "<=",
+              "threshold": 142.857142857,
+              "compare_to_metric": null,
+              "rhs": 142.857142857,
+              "observed": 4.027104999840958,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H3": {
+          "hypothesis": "H3",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H4": {
+          "hypothesis": "H4",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H5": {
+          "hypothesis": "H5",
+          "status": "incomplete",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "positive_class_ece",
+              "op": "<=",
+              "threshold": 0.05,
+              "compare_to_metric": null,
+              "rhs": 0.05,
+              "observed": null,
+              "passed": null,
+              "status": "incomplete_missing_metric",
+              "label_on_fail": "inconclusive_above_absolute_ceiling"
+            },
+            {
+              "metric": "positive_class_ece",
+              "op": "<",
+              "threshold": null,
+              "compare_to_metric": "baseline_positive_class_ece",
+              "rhs": null,
+              "observed": null,
+              "passed": null,
+              "status": "incomplete_missing_metric",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H6": {
+          "hypothesis": "H6",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        }
+      },
+      "registration_version": "p4_threshold_table_v2",
+      "gated_hypotheses": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "decidable_gates": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "all_pass": false,
+      "all_pass_rule": "all_pass is true only when every gated hypothesis is pass; not_gated hypotheses do not enter the conjunction; incomplete is not pass",
+      "dataset": "Elliptic",
+      "model": "graphsage",
+      "metrics": {
+        "mean_f1": 0.43944709097267853,
+        "deploy_params": 12802,
+        "mean_latency_ms": 4.027104999840958,
+        "positive_class_ece": null,
+        "baseline_positive_class_ece": null
+      }
+    },
+    "elliptic/mlp": {
+      "schema": "p6_gate_eval_v1",
+      "hypotheses": {
+        "H1": {
+          "hypothesis": "H1",
+          "status": "pass",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "mean_f1",
+              "op": ">=",
+              "threshold": 0.431972,
+              "compare_to_metric": null,
+              "rhs": 0.431972,
+              "observed": 0.4970006865942593,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            },
+            {
+              "metric": "deploy_params",
+              "op": "<=",
+              "threshold": 20480,
+              "compare_to_metric": null,
+              "rhs": 20480,
+              "observed": 6434,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H2": {
+          "hypothesis": "H2",
+          "status": "pass",
+          "n_subconditions": 1,
+          "subconditions": [
+            {
+              "metric": "mean_latency_ms",
+              "op": "<=",
+              "threshold": 142.857142857,
+              "compare_to_metric": null,
+              "rhs": 142.857142857,
+              "observed": 0.7393549999202756,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H3": {
+          "hypothesis": "H3",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H4": {
+          "hypothesis": "H4",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H5": {
+          "hypothesis": "H5",
+          "status": "incomplete",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "positive_class_ece",
+              "op": "<=",
+              "threshold": 0.05,
+              "compare_to_metric": null,
+              "rhs": 0.05,
+              "observed": null,
+              "passed": null,
+              "status": "incomplete_missing_metric",
+              "label_on_fail": "inconclusive_above_absolute_ceiling"
+            },
+            {
+              "metric": "positive_class_ece",
+              "op": "<",
+              "threshold": null,
+              "compare_to_metric": "baseline_positive_class_ece",
+              "rhs": null,
+              "observed": null,
+              "passed": null,
+              "status": "incomplete_missing_metric",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H6": {
+          "hypothesis": "H6",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        }
+      },
+      "registration_version": "p4_threshold_table_v2",
+      "gated_hypotheses": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "decidable_gates": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "all_pass": false,
+      "all_pass_rule": "all_pass is true only when every gated hypothesis is pass; not_gated hypotheses do not enter the conjunction; incomplete is not pass",
+      "dataset": "Elliptic",
+      "model": "mlp",
+      "metrics": {
+        "mean_f1": 0.4970006865942593,
+        "deploy_params": 6434,
+        "mean_latency_ms": 0.7393549999202756,
+        "positive_class_ece": null,
+        "baseline_positive_class_ece": null
+      }
+    },
+    "bitheteronet/tasgl": {
+      "schema": "p6_gate_eval_v1",
+      "hypotheses": {
+        "H1": {
+          "hypothesis": "H1",
+          "status": "pass",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "mean_f1",
+              "op": ">=",
+              "threshold": 0.431972,
+              "compare_to_metric": null,
+              "rhs": 0.431972,
+              "observed": 0.5592560845035257,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            },
+            {
+              "metric": "deploy_params",
+              "op": "<=",
+              "threshold": 20480,
+              "compare_to_metric": null,
+              "rhs": 20480,
+              "observed": 20411,
+              "passed": true,
+              "status": "pass",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H2": {
+          "hypothesis": "H2",
+          "status": "incomplete",
+          "n_subconditions": 1,
+          "subconditions": [
+            {
+              "metric": "mean_latency_ms",
+              "op": "<=",
+              "threshold": 142.857142857,
+              "compare_to_metric": null,
+              "rhs": 142.857142857,
+              "observed": null,
+              "passed": null,
+              "status": "incomplete_missing_metric",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H3": {
+          "hypothesis": "H3",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H4": {
+          "hypothesis": "H4",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        },
+        "H5": {
+          "hypothesis": "H5",
+          "status": "incomplete",
+          "n_subconditions": 2,
+          "subconditions": [
+            {
+              "metric": "positive_class_ece",
+              "op": "<=",
+              "threshold": 0.05,
+              "compare_to_metric": null,
+              "rhs": 0.05,
+              "observed": null,
+              "passed": null,
+              "status": "incomplete_missing_metric",
+              "label_on_fail": "inconclusive_above_absolute_ceiling"
+            },
+            {
+              "metric": "positive_class_ece",
+              "op": "<",
+              "threshold": null,
+              "compare_to_metric": "baseline_positive_class_ece",
+              "rhs": null,
+              "observed": null,
+              "passed": null,
+              "status": "incomplete_missing_metric",
+              "label_on_fail": "falsified"
+            }
+          ]
+        },
+        "H6": {
+          "hypothesis": "H6",
+          "status": "not_gated",
+          "n_subconditions": 0,
+          "subconditions": [],
+          "note": "carries no pass/fail gate; reported, not judged"
+        }
+      },
+      "registration_version": "p4_threshold_table_v2",
+      "gated_hypotheses": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "decidable_gates": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "all_pass": false,
+      "all_pass_rule": "all_pass is true only when every gated hypothesis is pass; not_gated hypotheses do not enter the conjunction; incomplete is not pass",
+      "dataset": "BitHeNet",
+      "model": "tasgl",
+      "metrics": {
+        "mean_f1": 0.5592560845035257,
+        "deploy_params": 20411,
+        "mean_latency_ms": null,
+        "positive_class_ece": null,
+        "baseline_positive_class_ece": null
+      },
+      "note": "gate values borrowed from Elliptic; per-transaction latency and positive-class ECE were not measured on this dataset"
+    }
+  },
+  "verdict": [
+    "positive control passes (7/7)",
+    "bitheteronet/tasgl: {'H1': 'pass', 'H2': 'incomplete', 'H5': 'incomplete'} all_pass=False",
+    "elliptic/graphsage: {'H1': 'pass', 'H2': 'pass', 'H5': 'incomplete'} all_pass=False",
+    "elliptic/mlp: {'H1': 'pass', 'H2': 'pass', 'H5': 'incomplete'} all_pass=False",
+    "elliptic/tasgl: {'H1': 'falsified', 'H2': 'pass', 'H5': 'falsified'} all_pass=False"
+  ]
+}

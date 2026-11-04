@@ -1,0 +1,862 @@
+{
+  "schema": "p4_final_comparison_v1",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "models": {
+    "tasgl": {
+      "config": {
+        "hidden": 64,
+        "dropout": 0.4,
+        "rank": 8
+      },
+      "rows": [
+        {
+          "seed": 0,
+          "f1": 0.5683060109289617,
+          "precision": 0.5216049382716049,
+          "recall": 0.6241920590951062,
+          "threshold": 0.9400000000000001,
+          "params": 30171,
+          "latency_ms": 45.243,
+          "epochs": 200,
+          "early_stopped": false,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 0.5114292502403259,
+                "gate_w2_norm": 0.19400359690189362,
+                "gate_w2_absmax": 0.0457170233130455,
+                "gate_w1_norm": 3.9180939197540283,
+                "gate_bias": 1.9526423215866089,
+                "log_tau": 0.04482056573033333,
+                "tau": 0.5112032659910537
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 0.8419747948646545,
+                "gate_w2_norm": 0.22396719455718994,
+                "gate_w2_absmax": 0.08817938715219498,
+                "gate_w1_norm": 4.1375861167907715,
+                "gate_bias": 1.9556130170822144,
+                "log_tau": 0.04105311632156372,
+                "tau": 0.510261837881351
+              }
+            ],
+            "min_active_edge_ratio": 0.5114292502403259,
+            "max_gate_w2_norm": 0.22396719455718994,
+            "primary_pass": true,
+            "secondary_pass": true,
+            "converged": true
+          },
+          "admission": {
+            "admit": true,
+            "classification": "gate_converged",
+            "action": "可纳入主分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 1,
+          "f1": 0.5722266560255387,
+          "precision": 0.5038650737877723,
+          "recall": 0.6620498614958449,
+          "threshold": 0.9,
+          "params": 30171,
+          "latency_ms": 45.562,
+          "epochs": 200,
+          "early_stopped": false,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 0.34277698397636414,
+                "gate_w2_norm": 0.2092667669057846,
+                "gate_w2_absmax": 0.0529576912522316,
+                "gate_w1_norm": 4.123870372772217,
+                "gate_bias": 1.9456230401992798,
+                "log_tau": 0.047566723078489304,
+                "tau": 0.5118894391072025
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 0.8504000306129456,
+                "gate_w2_norm": 0.25049421191215515,
+                "gate_w2_absmax": 0.1375913918018341,
+                "gate_w1_norm": 4.14235782623291,
+                "gate_bias": 1.9349886178970337,
+                "log_tau": 0.061689041554927826,
+                "tau": 0.515417371416273
+              }
+            ],
+            "min_active_edge_ratio": 0.34277698397636414,
+            "max_gate_w2_norm": 0.25049421191215515,
+            "primary_pass": true,
+            "secondary_pass": true,
+            "converged": true
+          },
+          "admission": {
+            "admit": true,
+            "classification": "gate_converged",
+            "action": "可纳入主分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 2,
+          "f1": 0.5463244889082209,
+          "precision": 0.5164473684210527,
+          "recall": 0.579870729455217,
+          "threshold": 0.9600000000000001,
+          "params": 30171,
+          "latency_ms": 46.326,
+          "epochs": 200,
+          "early_stopped": false,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 0.7842653393745422,
+                "gate_w2_norm": 0.2075631320476532,
+                "gate_w2_absmax": 0.05184388533234596,
+                "gate_w1_norm": 4.32728910446167,
+                "gate_bias": 1.954493761062622,
+                "log_tau": 0.04097218066453934,
+                "tau": 0.5102416124732628
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 0.8987881541252136,
+                "gate_w2_norm": 0.22978071868419647,
+                "gate_w2_absmax": 0.1410026103258133,
+                "gate_w1_norm": 4.071951866149902,
+                "gate_bias": 1.945865273475647,
+                "log_tau": 0.05112830549478531,
+                "tau": 0.5127792926287142
+              }
+            ],
+            "min_active_edge_ratio": 0.7842653393745422,
+            "max_gate_w2_norm": 0.22978071868419647,
+            "primary_pass": true,
+            "secondary_pass": true,
+            "converged": true
+          },
+          "admission": {
+            "admit": true,
+            "classification": "gate_converged",
+            "action": "可纳入主分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 3,
+          "f1": 0.5496932515337424,
+          "precision": 0.4933920704845815,
+          "recall": 0.6204986149584487,
+          "threshold": 0.9400000000000001,
+          "params": 30171,
+          "latency_ms": 45.012,
+          "epochs": 200,
+          "early_stopped": false,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 0.5800196528434753,
+                "gate_w2_norm": 0.22212471067905426,
+                "gate_w2_absmax": 0.09823049604892731,
+                "gate_w1_norm": 4.193187236785889,
+                "gate_bias": 1.9473464488983154,
+                "log_tau": 0.04854623228311539,
+                "tau": 0.512134175076433
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 0.9316933751106262,
+                "gate_w2_norm": 0.2982735335826874,
+                "gate_w2_absmax": 0.18358029425144196,
+                "gate_w1_norm": 4.261479377746582,
+                "gate_bias": 1.9226574897766113,
+                "log_tau": 0.07454065978527069,
+                "tau": 0.5186265411752021
+              }
+            ],
+            "min_active_edge_ratio": 0.5800196528434753,
+            "max_gate_w2_norm": 0.2982735335826874,
+            "primary_pass": true,
+            "secondary_pass": true,
+            "converged": true
+          },
+          "admission": {
+            "admit": true,
+            "classification": "gate_converged",
+            "action": "可纳入主分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 4,
+          "f1": 0.5503522585992541,
+          "precision": 0.4992481203007519,
+          "recall": 0.6131117266851339,
+          "threshold": 0.9400000000000001,
+          "params": 30171,
+          "latency_ms": 45.542,
+          "epochs": 178,
+          "early_stopped": true,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 0.7290605902671814,
+                "gate_w2_norm": 0.22850878536701202,
+                "gate_w2_absmax": 0.060292862355709076,
+                "gate_w1_norm": 4.0810227394104,
+                "gate_bias": 1.9473903179168701,
+                "log_tau": 0.048329029232263565,
+                "tau": 0.5120799061514906
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 0.8640374541282654,
+                "gate_w2_norm": 0.23947875201702118,
+                "gate_w2_absmax": 0.11160139739513397,
+                "gate_w1_norm": 4.129580974578857,
+                "gate_bias": 1.943200707435608,
+                "log_tau": 0.053950972855091095,
+                "tau": 0.5134844725928388
+              }
+            ],
+            "min_active_edge_ratio": 0.7290605902671814,
+            "max_gate_w2_norm": 0.23947875201702118,
+            "primary_pass": true,
+            "secondary_pass": true,
+            "converged": true
+          },
+          "admission": {
+            "admit": true,
+            "classification": "gate_converged",
+            "action": "可纳入主分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 5,
+          "f1": 0.6023310023310023,
+          "precision": 0.608286252354049,
+          "recall": 0.5964912280701754,
+          "threshold": 0.9400000000000001,
+          "params": 30171,
+          "latency_ms": 45.875,
+          "epochs": 200,
+          "early_stopped": false,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 0.8692646026611328,
+                "gate_w2_norm": 0.21137355268001556,
+                "gate_w2_absmax": 0.07373280078172684,
+                "gate_w1_norm": 4.6116943359375,
+                "gate_bias": 1.9401323795318604,
+                "log_tau": 0.05508647859096527,
+                "tau": 0.5137681381827821
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 0.8761003613471985,
+                "gate_w2_norm": 0.22397753596305847,
+                "gate_w2_absmax": 0.11785198003053665,
+                "gate_w1_norm": 4.0394511222839355,
+                "gate_bias": 1.9389877319335938,
+                "log_tau": 0.056106165051460266,
+                "tau": 0.514022862906281
+              }
+            ],
+            "min_active_edge_ratio": 0.8692646026611328,
+            "max_gate_w2_norm": 0.22397753596305847,
+            "primary_pass": true,
+            "secondary_pass": true,
+            "converged": true
+          },
+          "admission": {
+            "admit": true,
+            "classification": "gate_converged",
+            "action": "可纳入主分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 6,
+          "f1": 0.3649199022535976,
+          "precision": 0.25846153846153846,
+          "recall": 0.6204986149584487,
+          "threshold": 0.52,
+          "params": 30171,
+          "latency_ms": 45.194,
+          "epochs": 35,
+          "early_stopped": true,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 1.0,
+                "gate_w2_norm": 0.020348556339740753,
+                "gate_w2_absmax": 0.004657987970858812,
+                "gate_w1_norm": 3.2652506828308105,
+                "gate_bias": 1.9958635568618774,
+                "log_tau": 0.004131050780415535,
+                "tau": 0.5010327612263819
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 1.0,
+                "gate_w2_norm": 0.02552766539156437,
+                "gate_w2_absmax": 0.004988975822925568,
+                "gate_w1_norm": 3.299999952316284,
+                "gate_bias": 1.9953373670578003,
+                "log_tau": 0.0046500712633132935,
+                "tau": 0.5011625157210569
+              }
+            ],
+            "min_active_edge_ratio": 1.0,
+            "max_gate_w2_norm": 0.02552766539156437,
+            "primary_pass": false,
+            "secondary_pass": false,
+            "converged": false
+          },
+          "admission": {
+            "admit": false,
+            "classification": "gate_collapsed_open",
+            "action": "该种子上门控未收敛, 稀疏性主张不成立; 主分析仍须保留该种子, 另做敏感性分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 7,
+          "f1": 0.615580016934801,
+          "precision": 0.5684128225175918,
+          "recall": 0.6712834718374885,
+          "threshold": 0.92,
+          "params": 30171,
+          "latency_ms": 45.186,
+          "epochs": 200,
+          "early_stopped": false,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 0.7233257293701172,
+                "gate_w2_norm": 0.22872939705848694,
+                "gate_w2_absmax": 0.11256802827119827,
+                "gate_w1_norm": 4.195505142211914,
+                "gate_bias": 1.9444177150726318,
+                "log_tau": 0.05061442404985428,
+                "tau": 0.5126509053493256
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 0.8857950568199158,
+                "gate_w2_norm": 0.30524730682373047,
+                "gate_w2_absmax": 0.10608715564012527,
+                "gate_w1_norm": 4.1221022605896,
+                "gate_bias": 1.9332879781723022,
+                "log_tau": 0.06150481477379799,
+                "tau": 0.5153713583802778
+              }
+            ],
+            "min_active_edge_ratio": 0.7233257293701172,
+            "max_gate_w2_norm": 0.30524730682373047,
+            "primary_pass": true,
+            "secondary_pass": true,
+            "converged": true
+          },
+          "admission": {
+            "admit": true,
+            "classification": "gate_converged",
+            "action": "可纳入主分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 8,
+          "f1": 0.4122029088329195,
+          "precision": 0.3346774193548387,
+          "recall": 0.5364727608494921,
+          "threshold": 0.54,
+          "params": 30171,
+          "latency_ms": 45.19,
+          "epochs": 38,
+          "early_stopped": true,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 1.0,
+                "gate_w2_norm": 0.03574641793966293,
+                "gate_w2_absmax": 0.007828508503735065,
+                "gate_w1_norm": 3.302640199661255,
+                "gate_bias": 1.9925422668457031,
+                "log_tau": 0.0074325804598629475,
+                "tau": 0.501858136560848
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 1.0,
+                "gate_w2_norm": 0.04091733694076538,
+                "gate_w2_absmax": 0.00791992712765932,
+                "gate_w1_norm": 3.283895492553711,
+                "gate_bias": 1.9923486709594727,
+                "log_tau": 0.007593165617436171,
+                "tau": 0.5018982822837282
+              }
+            ],
+            "min_active_edge_ratio": 1.0,
+            "max_gate_w2_norm": 0.04091733694076538,
+            "primary_pass": false,
+            "secondary_pass": false,
+            "converged": false
+          },
+          "admission": {
+            "admit": false,
+            "classification": "gate_collapsed_open",
+            "action": "该种子上门控未收敛, 稀疏性主张不成立; 主分析仍须保留该种子, 另做敏感性分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        },
+        {
+          "seed": 9,
+          "f1": 0.298932384341637,
+          "precision": 0.19328641039523553,
+          "recall": 0.6592797783933518,
+          "threshold": 0.5,
+          "params": 30171,
+          "latency_ms": 45.652,
+          "epochs": 36,
+          "early_stopped": true,
+          "gate": {
+            "schema": "p4_gate_convergence_report_v1",
+            "criteria": {
+              "schema": "p4_gate_convergence_v1",
+              "primary_min_active_ratio_upper": 0.98,
+              "secondary_min_gate_w2_norm": 0.05,
+              "note": "门控初始化 bias=2.0 / W2=0 / tau=0.5 使 a=sigmoid(2.0)=0.881>tau, 训练初期全部边活跃。若训练未在门控收敛前结束, 模型退化为稠密图注意力, TASGL 的稀疏性主张在该种子上不成立。"
+            },
+            "layers": [
+              {
+                "layer": 1,
+                "active_edge_ratio": 1.0,
+                "gate_w2_norm": 0.02609654702246189,
+                "gate_w2_absmax": 0.005919865798205137,
+                "gate_w1_norm": 3.2723097801208496,
+                "gate_bias": 1.994236946105957,
+                "log_tau": 0.0057375868782401085,
+                "tau": 0.5014343927845563
+              },
+              {
+                "layer": 2,
+                "active_edge_ratio": 1.0,
+                "gate_w2_norm": 0.02676178514957428,
+                "gate_w2_absmax": 0.006012072321027517,
+                "gate_w1_norm": 3.3075687885284424,
+                "gate_bias": 1.994011402130127,
+                "log_tau": 0.005983686074614525,
+                "tau": 0.5014959170552763
+              }
+            ],
+            "min_active_edge_ratio": 1.0,
+            "max_gate_w2_norm": 0.02676178514957428,
+            "primary_pass": false,
+            "secondary_pass": false,
+            "converged": false
+          },
+          "admission": {
+            "admit": false,
+            "classification": "gate_collapsed_open",
+            "action": "该种子上门控未收敛, 稀疏性主张不成立; 主分析仍须保留该种子, 另做敏感性分析",
+            "criteria_hash": "8da968f2e427e7444fa1df6a39c00a89bc063678dfebe6c54a1f9b07627281d0"
+          }
+        }
+      ],
+      "mean_f1": 0.5080868880689675,
+      "sd_f1": 0.10882844465474734
+    },
+    "graphsage": {
+      "config": {
+        "hidden": 32,
+        "dropout": 0.2
+      },
+      "rows": [
+        {
+          "seed": 0,
+          "f1": 0.5291700903861956,
+          "precision": 0.47668393782383417,
+          "recall": 0.5946445060018467,
+          "threshold": 0.9,
+          "params": 12802,
+          "latency_ms": 25.584,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 1,
+          "f1": 0.4530531845042679,
+          "precision": 0.3515028018339277,
+          "recall": 0.6371191135734072,
+          "threshold": 0.9,
+          "params": 12802,
+          "latency_ms": 26.118,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 2,
+          "f1": 0.4752688172043011,
+          "precision": 0.3884007029876977,
+          "recall": 0.6121883656509696,
+          "threshold": 0.92,
+          "params": 12802,
+          "latency_ms": 26.229,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 3,
+          "f1": 0.479136690647482,
+          "precision": 0.3924572775486152,
+          "recall": 0.6149584487534626,
+          "threshold": 0.9,
+          "params": 12802,
+          "latency_ms": 25.887,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 4,
+          "f1": 0.49144981412639405,
+          "precision": 0.41132545115121344,
+          "recall": 0.6103416435826408,
+          "threshold": 0.92,
+          "params": 12802,
+          "latency_ms": 25.627,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 5,
+          "f1": 0.298238747553816,
+          "precision": 0.25883152173913043,
+          "recall": 0.3518005540166205,
+          "threshold": 0.6,
+          "params": 12802,
+          "latency_ms": 25.857,
+          "epochs": 39,
+          "early_stopped": true
+        },
+        {
+          "seed": 6,
+          "f1": 0.35348837209302325,
+          "precision": 0.2885514018691589,
+          "recall": 0.45614035087719296,
+          "threshold": 0.64,
+          "params": 12802,
+          "latency_ms": 25.318,
+          "epochs": 45,
+          "early_stopped": true
+        },
+        {
+          "seed": 7,
+          "f1": 0.5009074410163339,
+          "precision": 0.4126794258373206,
+          "recall": 0.6371191135734072,
+          "threshold": 0.92,
+          "params": 12802,
+          "latency_ms": 25.698,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 8,
+          "f1": 0.48893428668709565,
+          "precision": 0.38727076591154264,
+          "recall": 0.6629732225300092,
+          "threshold": 0.92,
+          "params": 12802,
+          "latency_ms": 25.292,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 9,
+          "f1": 0.32482346550787616,
+          "precision": 0.23008849557522124,
+          "recall": 0.5521698984302862,
+          "threshold": 0.5,
+          "params": 12802,
+          "latency_ms": 25.341,
+          "epochs": 38,
+          "early_stopped": true
+        }
+      ],
+      "mean_f1": 0.43944709097267853,
+      "sd_f1": 0.08198354597607564
+    },
+    "mlp": {
+      "config": {
+        "hidden": 32,
+        "dropout": 0.2
+      },
+      "rows": [
+        {
+          "seed": 0,
+          "f1": 0.4842832469775475,
+          "precision": 0.3868653421633554,
+          "recall": 0.6472760849492152,
+          "threshold": 0.92,
+          "params": 6434,
+          "latency_ms": 2.149,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 1,
+          "f1": 0.5873340143003064,
+          "precision": 0.6571428571428571,
+          "recall": 0.530932594644506,
+          "threshold": 0.64,
+          "params": 6434,
+          "latency_ms": 2.172,
+          "epochs": 66,
+          "early_stopped": true
+        },
+        {
+          "seed": 2,
+          "f1": 0.5022388059701492,
+          "precision": 0.42141515341264874,
+          "recall": 0.6214219759926131,
+          "threshold": 0.92,
+          "params": 6434,
+          "latency_ms": 2.173,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 3,
+          "f1": 0.5243500549249359,
+          "precision": 0.4344660194174757,
+          "recall": 0.6611265004616805,
+          "threshold": 0.92,
+          "params": 6434,
+          "latency_ms": 2.092,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 4,
+          "f1": 0.6252173913043478,
+          "precision": 0.590797041906327,
+          "recall": 0.6638965835641736,
+          "threshold": 0.66,
+          "params": 6434,
+          "latency_ms": 2.123,
+          "epochs": 71,
+          "early_stopped": true
+        },
+        {
+          "seed": 5,
+          "f1": 0.4857142857142857,
+          "precision": 0.3745618427641462,
+          "recall": 0.6906740535549399,
+          "threshold": 0.92,
+          "params": 6434,
+          "latency_ms": 2.214,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 6,
+          "f1": 0.487740225314778,
+          "precision": 0.38036175710594317,
+          "recall": 0.6795937211449676,
+          "threshold": 0.9,
+          "params": 6434,
+          "latency_ms": 2.359,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 7,
+          "f1": 0.3863283272915588,
+          "precision": 0.26844188557034904,
+          "recall": 0.6888273314866112,
+          "threshold": 0.5,
+          "params": 6434,
+          "latency_ms": 2.167,
+          "epochs": 35,
+          "early_stopped": true
+        },
+        {
+          "seed": 8,
+          "f1": 0.4921535893155259,
+          "precision": 0.3854602510460251,
+          "recall": 0.6805170821791321,
+          "threshold": 0.92,
+          "params": 6434,
+          "latency_ms": 2.102,
+          "epochs": 200,
+          "early_stopped": false
+        },
+        {
+          "seed": 9,
+          "f1": 0.3946469248291572,
+          "precision": 0.28530259365994237,
+          "recall": 0.6398891966759003,
+          "threshold": 0.5,
+          "params": 6434,
+          "latency_ms": 2.132,
+          "epochs": 38,
+          "early_stopped": true
+        }
+      ],
+      "mean_f1": 0.4970006865942593,
+      "sd_f1": 0.07340760600563359
+    }
+  },
+  "paired": {
+    "graphsage": {
+      "schema": "p4_paired_report_v1",
+      "n": 10,
+      "alpha": 0.05,
+      "mean_a": 0.5080868880689675,
+      "mean_b": 0.43944709097267853,
+      "mean_diff": 0.06863979709628897,
+      "sd_diff": 0.10242991385096926,
+      "se_diff": 0.03239118283038917,
+      "ci95": [
+        -0.004634149154982128,
+        0.14191374334756007
+      ],
+      "bootstrap_ci95": [
+        0.013695228490838193,
+        0.1332247170021634
+      ],
+      "cohen_dz": 0.6701147596019329,
+      "t_stat": 2.119088934038296,
+      "t_p": 0.06313095490701502,
+      "wilcoxon_stat": 9.0,
+      "wilcoxon_p": 0.064453125,
+      "sign_test_p": 0.109375,
+      "positive_diff_count": 8,
+      "mde_at_power80": 0.10053436572132662,
+      "ci_excludes_zero": false,
+      "min_attainable_wilcoxon_p": 0.001953125,
+      "wilcoxon_can_reach_alpha": true,
+      "status": "ok",
+      "caveat": "n<10 时配对检验的最小可达 p 值大于 0.05, 统计效力不足, 任何\"无显著差异\"都只是\"未检测到\""
+    },
+    "mlp": {
+      "schema": "p4_paired_report_v1",
+      "n": 10,
+      "alpha": 0.05,
+      "mean_a": 0.5080868880689675,
+      "mean_b": 0.4970006865942593,
+      "mean_diff": 0.011086201474708273,
+      "sd_diff": 0.11107737232322235,
+      "se_diff": 0.03512574930479315,
+      "ci95": [
+        -0.06837376391378361,
+        0.09054616686320016
+      ],
+      "bootstrap_ci95": [
+        -0.048386677914924556,
+        0.0785201742464016
+      ],
+      "cohen_dz": 0.09980611930977899,
+      "t_stat": 0.31561466144141404,
+      "t_p": 0.7594909391452648,
+      "wilcoxon_stat": 26.0,
+      "wilcoxon_p": 0.921875,
+      "sign_test_p": 1.0,
+      "positive_diff_count": 5,
+      "mde_at_power80": 0.1090217960034058,
+      "ci_excludes_zero": false,
+      "min_attainable_wilcoxon_p": 0.001953125,
+      "wilcoxon_can_reach_alpha": true,
+      "status": "ok",
+      "caveat": "n<10 时配对检验的最小可达 p 值大于 0.05, 统计效力不足, 任何\"无显著差异\"都只是\"未检测到\""
+    }
+  }
+}

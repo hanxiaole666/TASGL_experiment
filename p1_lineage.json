@@ -1,0 +1,61 @@
+{
+  "protocol": "p1_dataset_lineage_v1",
+  "datasets": {
+    "elliptic": {
+      "dataset_reference": "Weber et al., Anti-Money Laundering in Bitcoin, arXiv:1908.02591",
+      "implemented_access": "https://data.pyg.org/datasets/elliptic",
+      "files": ["elliptic_txs_features.csv", "elliptic_txs_classes.csv", "elliptic_txs_edgelist.csv"],
+      "account_required": false,
+      "resume_supported": true
+    },
+    "ethereum_fraud": {
+      "implemented_access": "https://github.com/JuliaAI/Imbalance.jl",
+      "path": "docs/src/examples/fraud_detection/transactions.csv",
+      "source_role": "public mirror of the Ethereum fraud dataset",
+      "account_required": false,
+      "resume_supported": true
+    },
+    "dgraphfin": {
+      "dataset_reference": "Huang et al., DGraph, NeurIPS 2022",
+      "implemented_access": "https://dgraph.oss-cn-shanghai.aliyuncs.com/DGraphFin.zip",
+      "account_required": false,
+      "resume_supported": true
+    },
+    "bitheteronet": {
+      "dataset_reference": "Gong et al., BitHeteroNet, WWW 2026, DOI:10.1145/3774904.3792882",
+      "official_repository": "https://github.com/KellyGong/BitHeteroNet",
+      "implemented_access": "author-fixed Google Drive file IDs with fallback access channels",
+      "independent_academic_mirrors": false,
+      "absolute_download_success_guaranteed": false,
+      "data_pickle_policy": "static format inspection only; never pickle.load",
+      "layout_profile": "ellipticpp_separated_time_and_label_v1",
+      "release_array_shapes": {
+        "address_attrs.npy": [822942, 55],
+        "tx_attrs.npy": [202804, 182]
+      },
+      "readme_documented_shapes": {
+        "address_attrs.npy": [822942, 54],
+        "tx_attrs.npy": [202804, 183]
+      },
+      "column_semantics_fully_verified": false,
+      "layout_boundary": "Physical integrity and release layout only; column order, filtering rules, and training semantics are not independently verified.",
+      "schema_references": {
+        "bitheteronet_repository_tree": "https://github.com/KellyGong/BitHeteroNet/tree/cda502c8139209184d78b934bbe98aabdd4949c6",
+        "ellipticpp_paper": "https://doi.org/10.1145/3580305.3599803",
+        "ellipticpp_repository": "https://github.com/git-disl/EllipticPlusPlus"
+      },
+      "account_required": false,
+      "resume_supported": true
+    },
+    "dexposure": {
+      "dataset_reference": "Wu et al., DeXposure, arXiv:2511.22314",
+      "implemented_access": "https://github.com/dthinkr/DeXposure",
+      "task_boundary": "credit exposure and temporal link benchmarks; not automatically an illicit-node classification dataset",
+      "account_required": false,
+      "resume_supported": true
+    }
+  },
+  "raw_result_policy": "copy without content transformation, hash, and mark read-only in anonymous staging",
+  "code_policy": "hash computation code and preserve per-seed resumption records",
+  "unsafe_deserialization_policy": "network-downloaded data.pkl is never deserialized"
+}

@@ -1,0 +1,1 @@
+{"conflicts":[{"classification":"contaminated_prior_exposure","range":[35,49],"window":"final_test"}],"declared_utc":"2026-11-02T09:01:46.964509+00:00","evidence_class":"exploratory_reconfirmation_previously_observed","independent_window_available":false,"note":"Elliptic 1–49 已被历史实验查看；若请求区间与已暴露区间重叠，不得声称独立确认，只能称为探索性再确认","requested_range":[43,49]}

@@ -1,0 +1,77 @@
+=== [try 1] BitHeNet with tuned config ===
+Tue Nov  3 09:21:27     2026
+data_loader.py:113: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\cb\pytorch_1000000000000\work\c10/cuda/CUDAAllocatorConfig.h:30.)
+  'x': torch.tensor(X, dtype=torch.float32).to(device),
+[BitHeNet] 地址组 822942, 超上限跳过 976, 无向边 1342830
+Traceback (most recent call last):
+  File "p4_experiments.py", line 1074, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "p4_experiments.py", line 1070, in main
+    return args.func(args)
+           ^^^^^^^^^^^^^^^
+  File "p4_experiments.py", line 253, in cmd_second_dataset
+    m, tr = train_with_audit(m, data, masks,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "p4_experiments.py", line 343, in train_with_audit
+    loss, parts = lf(logits, aux['h'], data['y'], ent, masks[0])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "losses.py", line 130, in forward
+    l_con = self.con(h, targets, entropy, mask)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "losses.py", line 85, in forward
+    sim_pn = z[pos] @ z[neg].T                          # [P, N]
+             ~~~~~~~^~~~~~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 6.00 GiB of which 0 bytes is free. Of the allocated memory 5.02 GiB is allocated by PyTorch, and 293.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+try1 rc=1
+=== [try 2] fallback: default config ===
+Tue Nov  3 09:21:56     2026
+data_loader.py:113: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\cb\pytorch_1000000000000\work\c10/cuda/CUDAAllocatorConfig.h:30.)
+  'x': torch.tensor(X, dtype=torch.float32).to(device),
+[BitHeNet] 地址组 822942, 超上限跳过 976, 无向边 1342830
+[P4][2nd] tasgl seed 0: F1=0.5383 thr=0.82
+[P4][2nd] tasgl seed 1: F1=0.5861 thr=0.72
+[P4][2nd] tasgl seed 2: F1=0.5254 thr=0.78
+[P4][2nd] tasgl seed 3: F1=0.5748 thr=0.78
+[P4][2nd] tasgl seed 4: F1=0.5570 thr=0.82
+[P4][2nd] tasgl seed 5: F1=0.5961 thr=0.78
+[P4][2nd] tasgl seed 6: F1=0.5800 thr=0.80
+[P4][2nd] tasgl seed 7: F1=0.5721 thr=0.78
+[P4][2nd] tasgl seed 8: F1=0.5242 thr=0.78
+[P4][2nd] tasgl seed 9: F1=0.5421 thr=0.74
+[P4][2nd] graphsage seed 0: F1=0.3791 thr=0.50
+[P4][2nd] graphsage seed 1: F1=0.5673 thr=0.92
+[P4][2nd] graphsage seed 2: F1=0.5495 thr=0.78
+[P4][2nd] graphsage seed 3: F1=0.2748 thr=0.52
+[P4][2nd] graphsage seed 4: F1=0.5959 thr=0.88
+[P4][2nd] graphsage seed 5: F1=0.5704 thr=0.82
+[P4][2nd] graphsage seed 6: F1=0.2860 thr=0.54
+[P4][2nd] graphsage seed 7: F1=0.2762 thr=0.50
+[P4][2nd] graphsage seed 8: F1=0.6088 thr=0.90
+[P4][2nd] graphsage seed 9: F1=0.5991 thr=0.80
+[P4][2nd] mlp seed 0: F1=0.4202 thr=0.82
+[P4][2nd] mlp seed 1: F1=0.3169 thr=0.50
+[P4][2nd] mlp seed 2: F1=0.4418 thr=0.86
+[P4][2nd] mlp seed 3: F1=0.3303 thr=0.50
+[P4][2nd] mlp seed 4: F1=0.4360 thr=0.82
+[P4][2nd] mlp seed 5: F1=0.4131 thr=0.80
+[P4][2nd] mlp seed 6: F1=0.4723 thr=0.84
+[P4][2nd] mlp seed 7: F1=0.3688 thr=0.50
+[P4][2nd] mlp seed 8: F1=0.4546 thr=0.84
+[P4][2nd] mlp seed 9: F1=0.4346 thr=0.78
+saved results/p4/second_dataset_confirm.json
+try2 rc=0
+Tue Nov  3 09:51:04     2026
+=== WAVE2 DONE ===

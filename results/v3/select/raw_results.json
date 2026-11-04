@@ -1,0 +1,2872 @@
+{
+  "lite_h48": {
+    "reference": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h48"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h48"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.944962203502655,
+          "bias": -1.6297160387039185
+        },
+        "validation_f1": 0.8968609571456909,
+        "clean": {
+          "f1": 0.6344827586206897,
+          "precision": 0.5411764705882353,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7942075765639399,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.01745107632800623,
+          "brier": 0.03259056791819243,
+          "nll": 0.11109215766191483,
+          "selective_auc": 0.7196718415683933,
+          "threshold": 0.30000004172325134
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5360824742268041,
+          "precision": 0.3880597014925373,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7942075765639399,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.021846303256485785,
+          "brier": 0.05275913254884572,
+          "nll": 0.17589591443538666,
+          "selective_auc": 0.2988147627859307,
+          "threshold": 0.30000004172325134
+        },
+        "edge_drop50": {
+          "f1": 0.6064516129032258,
+          "precision": 0.49473684210526314,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.7991450604302851,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.012186391458351736,
+          "brier": 0.033140060201305395,
+          "nll": 0.10872092843055725,
+          "selective_auc": 0.66053310319525,
+          "threshold": 0.30000004172325134
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 15455,
+          "model_size_mb": 0.059,
+          "latency_ms": 15.808,
+          "peak_mem_mb": 479.4,
+          "throughput": 12890421.9,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h48"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h48"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9762312173843384,
+          "bias": -1.8272734880447388
+        },
+        "validation_f1": 0.8584995269775391,
+        "clean": {
+          "f1": 0.6764705882352942,
+          "precision": 0.6052631578947368,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7698119065094591,
+          "recall_at_fpr_1pct": 0.6,
+          "ece": 0.012986712126552337,
+          "brier": 0.034166774932706735,
+          "nll": 0.11400074511766434,
+          "selective_auc": 0.740914335035355,
+          "threshold": 0.4800000488758087
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5578947368421052,
+          "precision": 0.4076923076923077,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.7698119065094591,
+          "recall_at_fpr_1pct": 0.6,
+          "ece": 0.02291289788659144,
+          "brier": 0.06430546733750911,
+          "nll": 0.21932615339756012,
+          "selective_auc": 0.3379652330829409,
+          "threshold": 0.4800000488758087
+        },
+        "edge_drop50": {
+          "f1": 0.6618705035971223,
+          "precision": 0.5822784810126582,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.6912161681583778,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.008190545888625436,
+          "brier": 0.03632220388085341,
+          "nll": 0.12416425347328186,
+          "selective_auc": 0.7343056034348516,
+          "threshold": 0.4800000488758087
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 15455,
+          "model_size_mb": 0.059,
+          "latency_ms": 15.987,
+          "peak_mem_mb": 479.4,
+          "throughput": 12746144.4,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      }
+    ],
+    "short": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h48"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h48"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9886934757232666,
+          "bias": -1.2267661094665527
+        },
+        "validation_f1": 0.9175019264221191,
+        "clean": {
+          "f1": 0.5185185185185185,
+          "precision": 0.3798449612403101,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7342123903944661,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.0442688622235254,
+          "brier": 0.07007157414563707,
+          "nll": 0.22122588753700256,
+          "selective_auc": 0.5678018968859587,
+          "threshold": 0.5399999618530273
+        },
+        "clean_uncalibrated": {
+          "f1": 0.43983402489626555,
+          "precision": 0.292817679558011,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.7342123903944661,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.07226665536230081,
+          "brier": 0.11033961052853038,
+          "nll": 0.36546024680137634,
+          "selective_auc": 0.36438302957515045,
+          "threshold": 0.5399999618530273
+        },
+        "edge_drop50": {
+          "f1": 0.5230769230769231,
+          "precision": 0.37777777777777777,
+          "recall": 0.85,
+          "pr_auc": 0.74098268596061,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.03781600471071622,
+          "brier": 0.06974753631553972,
+          "nll": 0.21693003177642822,
+          "selective_auc": 0.5160959719431095,
+          "threshold": 0.5399999618530273
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h48"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h48"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 1.0112742185592651,
+          "bias": -1.2709256410598755
+        },
+        "validation_f1": 0.9160892963409424,
+        "clean": {
+          "f1": 0.5425531914893617,
+          "precision": 0.3984375,
+          "recall": 0.85,
+          "pr_auc": 0.715523040600816,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.036429978314802734,
+          "brier": 0.06567689640289409,
+          "nll": 0.21373775601387024,
+          "selective_auc": 0.5177112498272902,
+          "threshold": 0.4800000488758087
+        },
+        "clean_uncalibrated": {
+          "f1": 0.4425531914893617,
+          "precision": 0.29714285714285715,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.715523040600816,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.06291348066290049,
+          "brier": 0.10305827748398103,
+          "nll": 0.35762861371040344,
+          "selective_auc": 0.3243761292860231,
+          "threshold": 0.4800000488758087
+        },
+        "edge_drop50": {
+          "f1": 0.5252525252525253,
+          "precision": 0.37681159420289856,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.6730084669644257,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.03256134826019715,
+          "brier": 0.06918682332368103,
+          "nll": 0.2212647795677185,
+          "selective_auc": 0.5303582897422414,
+          "threshold": 0.4800000488758087
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false
+      }
+    ]
+  },
+  "lite_h32": {
+    "reference": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 32,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.25,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.15,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h32"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 32,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.25,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.15,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h32"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9517223238945007,
+          "bias": -1.8970924615859985
+        },
+        "validation_f1": 0.8739495873451233,
+        "clean": {
+          "f1": 0.6962962962962963,
+          "precision": 0.6266666666666667,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.8101488219573071,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.008829660931890488,
+          "brier": 0.031501550640909745,
+          "nll": 0.10714006423950195,
+          "selective_auc": 0.7628333873964942,
+          "threshold": 0.46000003814697266
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5527638190954773,
+          "precision": 0.39568345323741005,
+          "recall": 0.9166666666666666,
+          "pr_auc": 0.8101488219573071,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.015179703051076264,
+          "brier": 0.0634675192461499,
+          "nll": 0.2160242646932602,
+          "selective_auc": 0.2820032483613668,
+          "threshold": 0.46000003814697266
+        },
+        "edge_drop50": {
+          "f1": 0.6388888888888888,
+          "precision": 0.5476190476190477,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7934872381245084,
+          "recall_at_fpr_1pct": 0.65,
+          "ece": 0.01857812540551107,
+          "brier": 0.03449561867803331,
+          "nll": 0.11532372981309891,
+          "selective_auc": 0.7266166040458493,
+          "threshold": 0.46000003814697266
+        },
+        "params_model": 8879,
+        "params": 8881,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 8879,
+          "model_size_mb": 0.034,
+          "latency_ms": 11.599,
+          "peak_mem_mb": 376.5,
+          "throughput": 17568505.3,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 32,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.25,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.15,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h32"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 32,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.25,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.15,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h32"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 1.0017764568328857,
+          "bias": -1.6197946071624756
+        },
+        "validation_f1": 0.8836363554000854,
+        "clean": {
+          "f1": 0.6486486486486487,
+          "precision": 0.5454545454545454,
+          "recall": 0.8,
+          "pr_auc": 0.7726911392583684,
+          "recall_at_fpr_1pct": 0.6833333333333333,
+          "ece": 0.016417145978456747,
+          "brier": 0.03263544644154353,
+          "nll": 0.11221170425415039,
+          "selective_auc": 0.6976758057403218,
+          "threshold": 0.36000004410743713
+        },
+        "clean_uncalibrated": {
+          "f1": 0.538860103626943,
+          "precision": 0.39097744360902253,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7726911392583684,
+          "recall_at_fpr_1pct": 0.6833333333333333,
+          "ece": 0.021650172614153414,
+          "brier": 0.05595798299387411,
+          "nll": 0.196011021733284,
+          "selective_auc": 0.1323641073898036,
+          "threshold": 0.36000004410743713
+        },
+        "edge_drop50": {
+          "f1": 0.6621621621621622,
+          "precision": 0.5568181818181818,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7310760269725294,
+          "recall_at_fpr_1pct": 0.5666666666666667,
+          "ece": 0.015872905880337494,
+          "brier": 0.034553110434789217,
+          "nll": 0.11880388855934143,
+          "selective_auc": 0.6919601355746866,
+          "threshold": 0.36000004410743713
+        },
+        "params_model": 8879,
+        "params": 8881,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 8879,
+          "model_size_mb": 0.034,
+          "latency_ms": 11.667,
+          "peak_mem_mb": 376.5,
+          "throughput": 17465930.9,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      }
+    ],
+    "short": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 32,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.25,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.15,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h32"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 32,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.25,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.15,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h32"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.8793836832046509,
+          "bias": -1.3458666801452637
+        },
+        "validation_f1": 0.9195940494537354,
+        "clean": {
+          "f1": 0.5666666666666667,
+          "precision": 0.425,
+          "recall": 0.85,
+          "pr_auc": 0.7164008779965328,
+          "recall_at_fpr_1pct": 0.55,
+          "ece": 0.032479839718990294,
+          "brier": 0.07051476361797154,
+          "nll": 0.2288239598274231,
+          "selective_auc": 0.532018197238074,
+          "threshold": 0.5600000023841858
+        },
+        "clean_uncalibrated": {
+          "f1": 0.4472573839662447,
+          "precision": 0.2994350282485876,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.7164008779965328,
+          "recall_at_fpr_1pct": 0.55,
+          "ece": 0.047076981686149155,
+          "brier": 0.11553214031967914,
+          "nll": 0.38467568159103394,
+          "selective_auc": 0.36957939497982734,
+          "threshold": 0.5600000023841858
+        },
+        "edge_drop50": {
+          "f1": 0.52,
+          "precision": 0.37142857142857144,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7264223096317983,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.043105633500729656,
+          "brier": 0.083214580506872,
+          "nll": 0.26293936371803284,
+          "selective_auc": 0.4978822613037854,
+          "threshold": 0.5600000023841858
+        },
+        "params_model": 8879,
+        "params": 8881,
+        "teacher_params_excluded": false
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 32,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.25,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.15,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_h32"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 32,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.25,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.15,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_h32"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9826477766036987,
+          "bias": -1.2690625190734863
+        },
+        "validation_f1": 0.909375011920929,
+        "clean": {
+          "f1": 0.5764705882352941,
+          "precision": 0.44545454545454544,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7140531416953981,
+          "recall_at_fpr_1pct": 0.6,
+          "ece": 0.03442191061365051,
+          "brier": 0.06163631250697877,
+          "nll": 0.20068643987178802,
+          "selective_auc": 0.42611036708944106,
+          "threshold": 0.5799999833106995
+        },
+        "clean_uncalibrated": {
+          "f1": 0.47619047619047616,
+          "precision": 0.3333333333333333,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.7140531416953981,
+          "recall_at_fpr_1pct": 0.6,
+          "ece": 0.05141730737486644,
+          "brier": 0.09877585989874597,
+          "nll": 0.33545127511024475,
+          "selective_auc": 0.19950923558445535,
+          "threshold": 0.5799999833106995
+        },
+        "edge_drop50": {
+          "f1": 0.5748502994011976,
+          "precision": 0.4485981308411215,
+          "recall": 0.8,
+          "pr_auc": 0.6599494585724033,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.022923717127185515,
+          "brier": 0.06069513500750844,
+          "nll": 0.2004019320011139,
+          "selective_auc": 0.4543412808506141,
+          "threshold": 0.5799999833106995
+        },
+        "params_model": 8879,
+        "params": 8881,
+        "teacher_params_excluded": false
+      }
+    ]
+  },
+  "lite_kd": {
+    "reference": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.3,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.3,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_kd"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.7617528438568115,
+          "bias": -2.1833386421203613
+        },
+        "validation_f1": 0.8767123222351074,
+        "clean": {
+          "f1": 0.6715328467153284,
+          "precision": 0.5974025974025974,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7840532126314176,
+          "recall_at_fpr_1pct": 0.75,
+          "ece": 0.013255299072884117,
+          "brier": 0.03104811369446052,
+          "nll": 0.11463721096515656,
+          "selective_auc": 0.7758745861002871,
+          "threshold": 0.46000003814697266
+        },
+        "clean_uncalibrated": {
+          "f1": 0.4657534246575342,
+          "precision": 0.32075471698113206,
+          "recall": 0.85,
+          "pr_auc": 0.7840532126314176,
+          "recall_at_fpr_1pct": 0.75,
+          "ece": 0.039063045419908446,
+          "brier": 0.07741617488226932,
+          "nll": 0.24110156297683716,
+          "selective_auc": 0.43873056048261233,
+          "threshold": 0.46000003814697266
+        },
+        "edge_drop50": {
+          "f1": 0.6524822695035462,
+          "precision": 0.5679012345679012,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7702065722281676,
+          "recall_at_fpr_1pct": 0.7,
+          "ece": 0.01895854656416998,
+          "brier": 0.03481332600051638,
+          "nll": 0.12666073441505432,
+          "selective_auc": 0.7772198791627684,
+          "threshold": 0.46000003814697266
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": true,
+        "efficiency": {
+          "params": 13151,
+          "model_size_mb": 0.05,
+          "latency_ms": 11.27,
+          "peak_mem_mb": 404.0,
+          "throughput": 18080792.8,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.3,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.3,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_kd"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9483234882354736,
+          "bias": -2.1110682487487793
+        },
+        "validation_f1": 0.8884688019752502,
+        "clean": {
+          "f1": 0.7213114754098361,
+          "precision": 0.7096774193548387,
+          "recall": 0.7333333333333333,
+          "pr_auc": 0.7756134968617407,
+          "recall_at_fpr_1pct": 0.6833333333333333,
+          "ece": 0.01102827695124316,
+          "brier": 0.02721079656993129,
+          "nll": 0.0965852215886116,
+          "selective_auc": 0.7855179377524352,
+          "threshold": 0.5399999618530273
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5934065934065934,
+          "precision": 0.4426229508196721,
+          "recall": 0.9,
+          "pr_auc": 0.7756134968617407,
+          "recall_at_fpr_1pct": 0.6833333333333333,
+          "ece": 0.028077064136580947,
+          "brier": 0.057749699571385586,
+          "nll": 0.18632352352142334,
+          "selective_auc": 0.35454046299774755,
+          "threshold": 0.5399999618530273
+        },
+        "edge_drop50": {
+          "f1": 0.6825396825396826,
+          "precision": 0.6515151515151515,
+          "recall": 0.7166666666666667,
+          "pr_auc": 0.7000454378595544,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.015037933278782063,
+          "brier": 0.031336654277913406,
+          "nll": 0.1129927709698677,
+          "selective_auc": 0.7787981458379252,
+          "threshold": 0.5399999618530273
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": true,
+        "efficiency": {
+          "params": 13151,
+          "model_size_mb": 0.05,
+          "latency_ms": 11.297,
+          "peak_mem_mb": 403.9,
+          "throughput": 18037025.7,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      }
+    ],
+    "short": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.3,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.3,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_kd"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9478079676628113,
+          "bias": -1.3042049407958984
+        },
+        "validation_f1": 0.9190031290054321,
+        "clean": {
+          "f1": 0.5649717514124294,
+          "precision": 0.42735042735042733,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.7470226501632072,
+          "recall_at_fpr_1pct": 0.5666666666666667,
+          "ece": 0.032190206908780675,
+          "brier": 0.062349153564377605,
+          "nll": 0.19737042486667633,
+          "selective_auc": 0.5547034138702339,
+          "threshold": 0.5799999833106995
+        },
+        "clean_uncalibrated": {
+          "f1": 0.4840182648401826,
+          "precision": 0.3333333333333333,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.7470226501632072,
+          "recall_at_fpr_1pct": 0.5666666666666667,
+          "ece": 0.060761984422117096,
+          "brier": 0.10319407008460593,
+          "nll": 0.33291491866111755,
+          "selective_auc": 0.3311540872185995,
+          "threshold": 0.5799999833106995
+        },
+        "edge_drop50": {
+          "f1": 0.547486033519553,
+          "precision": 0.4117647058823529,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7054547100161448,
+          "recall_at_fpr_1pct": 0.48333333333333334,
+          "ece": 0.030512465592707552,
+          "brier": 0.06682786855124817,
+          "nll": 0.21176253259181976,
+          "selective_auc": 0.4773459090949029,
+          "threshold": 0.5799999833106995
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": true
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.3,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.3,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_kd"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 1.0298444032669067,
+          "bias": -1.356104850769043
+        },
+        "validation_f1": 0.9065636992454529,
+        "clean": {
+          "f1": 0.5568181818181818,
+          "precision": 0.4224137931034483,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7444345586205209,
+          "recall_at_fpr_1pct": 0.6666666666666666,
+          "ece": 0.032602979361262795,
+          "brier": 0.059614608788161806,
+          "nll": 0.18234843015670776,
+          "selective_auc": 0.6116885726342285,
+          "threshold": 0.5600000023841858
+        },
+        "clean_uncalibrated": {
+          "f1": 0.4649122807017544,
+          "precision": 0.31547619047619047,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.7444345586205209,
+          "recall_at_fpr_1pct": 0.6666666666666666,
+          "ece": 0.07409306699760787,
+          "brier": 0.10545606821567913,
+          "nll": 0.3366941809654236,
+          "selective_auc": 0.3270436726287749,
+          "threshold": 0.5600000023841858
+        },
+        "edge_drop50": {
+          "f1": 0.5319148936170213,
+          "precision": 0.390625,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.6836556609318544,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.030946030402283317,
+          "brier": 0.06949450521303825,
+          "nll": 0.21594519913196564,
+          "selective_auc": 0.5892273873512617,
+          "threshold": 0.5600000023841858
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": true
+      }
+    ]
+  },
+  "graphless_kd": {
+    "reference": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 0,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.0,
+            "robust_ce_weight": 0.0,
+            "consistency_weight": 0.0,
+            "kd_weight": 0.5,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "graphless_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 0,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.0,
+          "robust_ce_weight": 0.0,
+          "consistency_weight": 0.0,
+          "kd_weight": 0.5,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "graphless_kd"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.7977056503295898,
+          "bias": -1.5078303813934326
+        },
+        "validation_f1": 0.8528584837913513,
+        "clean": {
+          "f1": 0.7092198581560284,
+          "precision": 0.6172839506172839,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.7990386855772776,
+          "recall_at_fpr_1pct": 0.7166666666666667,
+          "ece": 0.01235496966659271,
+          "brier": 0.03341245679679787,
+          "nll": 0.11241311579942703,
+          "selective_auc": 0.6763251928174964,
+          "threshold": 0.5
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5306122448979592,
+          "precision": 0.38235294117647056,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7990386855772776,
+          "recall_at_fpr_1pct": 0.7166666666666667,
+          "ece": 0.02305957344536003,
+          "brier": 0.0626872149973202,
+          "nll": 0.19702714681625366,
+          "selective_auc": 0.4600553456913486,
+          "threshold": 0.5
+        },
+        "edge_drop50": {
+          "f1": 0.7092198581560284,
+          "precision": 0.6172839506172839,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.7990386855772776,
+          "recall_at_fpr_1pct": 0.7166666666666667,
+          "ece": 0.01235496966659271,
+          "brier": 0.03341245679679787,
+          "nll": 0.11241311579942703,
+          "selective_auc": 0.6763251928174964,
+          "threshold": 0.5
+        },
+        "params_model": 10847,
+        "params": 10849,
+        "teacher_params_excluded": true,
+        "efficiency": {
+          "params": 10847,
+          "model_size_mb": 0.041,
+          "latency_ms": 6.632,
+          "peak_mem_mb": 322.6,
+          "throughput": 30723877.1,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 0,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.0,
+            "robust_ce_weight": 0.0,
+            "consistency_weight": 0.0,
+            "kd_weight": 0.5,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "graphless_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 0,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.0,
+          "robust_ce_weight": 0.0,
+          "consistency_weight": 0.0,
+          "kd_weight": 0.5,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "graphless_kd"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.784801721572876,
+          "bias": -1.8919247388839722
+        },
+        "validation_f1": 0.8926553726196289,
+        "clean": {
+          "f1": 0.6861313868613139,
+          "precision": 0.6103896103896104,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.7771723457102578,
+          "recall_at_fpr_1pct": 0.7,
+          "ece": 0.017474474143782375,
+          "brier": 0.03464429265623162,
+          "nll": 0.11828979104757309,
+          "selective_auc": 0.6371966202810886,
+          "threshold": 0.5199999809265137
+        },
+        "clean_uncalibrated": {
+          "f1": 0.538860103626943,
+          "precision": 0.39097744360902253,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7771723457102578,
+          "recall_at_fpr_1pct": 0.7,
+          "ece": 0.03350884869507663,
+          "brier": 0.0675877980297584,
+          "nll": 0.21282191574573517,
+          "selective_auc": 0.31727833402008543,
+          "threshold": 0.5199999809265137
+        },
+        "edge_drop50": {
+          "f1": 0.6861313868613139,
+          "precision": 0.6103896103896104,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.7771723457102578,
+          "recall_at_fpr_1pct": 0.7,
+          "ece": 0.017474474143782375,
+          "brier": 0.03464429265623162,
+          "nll": 0.11828979104757309,
+          "selective_auc": 0.6371966202810886,
+          "threshold": 0.5199999809265137
+        },
+        "params_model": 10847,
+        "params": 10849,
+        "teacher_params_excluded": true,
+        "efficiency": {
+          "params": 10847,
+          "model_size_mb": 0.041,
+          "latency_ms": 6.582,
+          "peak_mem_mb": 322.6,
+          "throughput": 30956627.0,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      }
+    ],
+    "short": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 0,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.0,
+            "robust_ce_weight": 0.0,
+            "consistency_weight": 0.0,
+            "kd_weight": 0.5,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "graphless_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 0,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.0,
+          "robust_ce_weight": 0.0,
+          "consistency_weight": 0.0,
+          "kd_weight": 0.5,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "graphless_kd"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9193495512008667,
+          "bias": -1.2002887725830078
+        },
+        "validation_f1": 0.8859784007072449,
+        "clean": {
+          "f1": 0.47115384615384615,
+          "precision": 0.3310810810810811,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.690164612019648,
+          "recall_at_fpr_1pct": 0.45,
+          "ece": 0.03835508738601556,
+          "brier": 0.0813089260742519,
+          "nll": 0.24676041305065155,
+          "selective_auc": 0.5507856956620961,
+          "threshold": 0.5399999618530273
+        },
+        "clean_uncalibrated": {
+          "f1": 0.3870967741935484,
+          "precision": 0.2465753424657534,
+          "recall": 0.9,
+          "pr_auc": 0.690164612019648,
+          "recall_at_fpr_1pct": 0.45,
+          "ece": 0.09075881734053956,
+          "brier": 0.13517853183168171,
+          "nll": 0.414596289396286,
+          "selective_auc": 0.4053540195594704,
+          "threshold": 0.5399999618530273
+        },
+        "edge_drop50": {
+          "f1": 0.47115384615384615,
+          "precision": 0.3310810810810811,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.690164612019648,
+          "recall_at_fpr_1pct": 0.45,
+          "ece": 0.03835508738601556,
+          "brier": 0.0813089260742519,
+          "nll": 0.24676041305065155,
+          "selective_auc": 0.5507856956620961,
+          "threshold": 0.5399999618530273
+        },
+        "params_model": 10847,
+        "params": 10849,
+        "teacher_params_excluded": true
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 0,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.0,
+            "robust_ce_weight": 0.0,
+            "consistency_weight": 0.0,
+            "kd_weight": 0.5,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "graphless_kd"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 0,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.0,
+          "robust_ce_weight": 0.0,
+          "consistency_weight": 0.0,
+          "kd_weight": 0.5,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "graphless_kd"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9316002130508423,
+          "bias": -1.2575647830963135
+        },
+        "validation_f1": 0.8983708024024963,
+        "clean": {
+          "f1": 0.5714285714285714,
+          "precision": 0.43478260869565216,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.668957096970537,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.029479326625748172,
+          "brier": 0.06732919641474427,
+          "nll": 0.2132498323917389,
+          "selective_auc": 0.43168395858584446,
+          "threshold": 0.5600000023841858
+        },
+        "clean_uncalibrated": {
+          "f1": 0.41106719367588934,
+          "precision": 0.2694300518134715,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.668957096970537,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.07574564474147737,
+          "brier": 0.11627978857391846,
+          "nll": 0.3629697859287262,
+          "selective_auc": 0.32770649000562535,
+          "threshold": 0.5600000023841858
+        },
+        "edge_drop50": {
+          "f1": 0.5714285714285714,
+          "precision": 0.43478260869565216,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.668957096970537,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.029479326625748172,
+          "brier": 0.06732919641474427,
+          "nll": 0.2132498323917389,
+          "selective_auc": 0.43168395858584446,
+          "threshold": 0.5600000023841858
+        },
+        "params_model": 10847,
+        "params": 10849,
+        "teacher_params_excluded": true
+      }
+    ]
+  },
+  "lite_robust": {
+    "reference": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.4,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.2,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_robust"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.4,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.2,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_robust"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9045193195343018,
+          "bias": -1.868990421295166
+        },
+        "validation_f1": 0.8927536010742188,
+        "clean": {
+          "f1": 0.7022900763358778,
+          "precision": 0.647887323943662,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.8014537336325527,
+          "recall_at_fpr_1pct": 0.65,
+          "ece": 0.01227628617356515,
+          "brier": 0.03324301286786931,
+          "nll": 0.11383827775716782,
+          "selective_auc": 0.7292147616078026,
+          "threshold": 0.5799999833106995
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5792349726775956,
+          "precision": 0.43089430894308944,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.8014537336325527,
+          "recall_at_fpr_1pct": 0.65,
+          "ece": 0.027725080503579445,
+          "brier": 0.06387983228223168,
+          "nll": 0.2115347981452942,
+          "selective_auc": 0.3666972358275529,
+          "threshold": 0.5799999833106995
+        },
+        "edge_drop50": {
+          "f1": 0.6666666666666666,
+          "precision": 0.6231884057971014,
+          "recall": 0.7166666666666667,
+          "pr_auc": 0.7800621237779564,
+          "recall_at_fpr_1pct": 0.65,
+          "ece": 0.01812038349307234,
+          "brier": 0.03528254232798541,
+          "nll": 0.11904235184192657,
+          "selective_auc": 0.7252231465315576,
+          "threshold": 0.5799999833106995
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 13151,
+          "model_size_mb": 0.05,
+          "latency_ms": 11.22,
+          "peak_mem_mb": 403.4,
+          "throughput": 18161245.7,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.4,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.2,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_robust"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.4,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.2,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_robust"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.8685504198074341,
+          "bias": -1.594792127609253
+        },
+        "validation_f1": 0.8989990949630737,
+        "clean": {
+          "f1": 0.6573426573426573,
+          "precision": 0.5662650602409639,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.7297663937540039,
+          "recall_at_fpr_1pct": 0.5166666666666667,
+          "ece": 0.021457710026697174,
+          "brier": 0.03282040296297291,
+          "nll": 0.1186094582080841,
+          "selective_auc": 0.6927980385795728,
+          "threshold": 0.3400000333786011
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5578947368421052,
+          "precision": 0.4076923076923077,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.7297663937540039,
+          "recall_at_fpr_1pct": 0.5166666666666667,
+          "ece": 0.01902287450295615,
+          "brier": 0.04991223810300639,
+          "nll": 0.17655527591705322,
+          "selective_auc": 0.2749910510113855,
+          "threshold": 0.3400000333786011
+        },
+        "edge_drop50": {
+          "f1": 0.6573426573426573,
+          "precision": 0.5662650602409639,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.6454791902483377,
+          "recall_at_fpr_1pct": 0.48333333333333334,
+          "ece": 0.020572001527542835,
+          "brier": 0.03558065847125145,
+          "nll": 0.1274118423461914,
+          "selective_auc": 0.7395641711229947,
+          "threshold": 0.3400000333786011
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 13151,
+          "model_size_mb": 0.05,
+          "latency_ms": 11.274,
+          "peak_mem_mb": 403.4,
+          "throughput": 18073986.8,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      }
+    ],
+    "short": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.4,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.2,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_robust"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.4,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.2,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_robust"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9200989007949829,
+          "bias": -1.2992894649505615
+        },
+        "validation_f1": 0.9185072183609009,
+        "clean": {
+          "f1": 0.5024154589371981,
+          "precision": 0.35374149659863946,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7461865722875131,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.034280537062609036,
+          "brier": 0.06678776489921179,
+          "nll": 0.21387392282485962,
+          "selective_auc": 0.5336827771164072,
+          "threshold": 0.4200000464916229
+        },
+        "clean_uncalibrated": {
+          "f1": 0.4153846153846154,
+          "precision": 0.27,
+          "recall": 0.9,
+          "pr_auc": 0.7461865722875131,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.06501200645538553,
+          "brier": 0.10714501803882123,
+          "nll": 0.3525952696800232,
+          "selective_auc": 0.26439637293330764,
+          "threshold": 0.4200000464916229
+        },
+        "edge_drop50": {
+          "f1": 0.5,
+          "precision": 0.35135135135135137,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7305547107087342,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.03925467516338478,
+          "brier": 0.07057338461031475,
+          "nll": 0.22368177771568298,
+          "selective_auc": 0.47923834626537426,
+          "threshold": 0.4200000464916229
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": false
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 1,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.4,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.2,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_robust"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 1,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.4,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.2,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_robust"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9483859539031982,
+          "bias": -1.2112324237823486
+        },
+        "validation_f1": 0.9153317809104919,
+        "clean": {
+          "f1": 0.5181347150259067,
+          "precision": 0.37593984962406013,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.6999115447152129,
+          "recall_at_fpr_1pct": 0.5666666666666667,
+          "ece": 0.03207605484888644,
+          "brier": 0.065652147135989,
+          "nll": 0.21189917623996735,
+          "selective_auc": 0.5250724847535548,
+          "threshold": 0.4800000488758087
+        },
+        "clean_uncalibrated": {
+          "f1": 0.43621399176954734,
+          "precision": 0.2896174863387978,
+          "recall": 0.8833333333333333,
+          "pr_auc": 0.6999115447152129,
+          "recall_at_fpr_1pct": 0.5666666666666667,
+          "ece": 0.06117485575845548,
+          "brier": 0.10460994543495884,
+          "nll": 0.3457801938056946,
+          "selective_auc": 0.3232257999890625,
+          "threshold": 0.4800000488758087
+        },
+        "edge_drop50": {
+          "f1": 0.51,
+          "precision": 0.36428571428571427,
+          "recall": 0.85,
+          "pr_auc": 0.6610681119780212,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.03592335248841405,
+          "brier": 0.07000194978667913,
+          "nll": 0.22514966130256653,
+          "selective_auc": 0.533872896113589,
+          "threshold": 0.4800000488758087
+        },
+        "params_model": 13151,
+        "params": 13153,
+        "teacher_params_excluded": false
+      }
+    ]
+  },
+  "lite_unweighted": {
+    "reference": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.0,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_unweighted"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.0,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_unweighted"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.957999050617218,
+          "bias": -0.8386774659156799
+        },
+        "validation_f1": 0.8996350169181824,
+        "clean": {
+          "f1": 0.6274509803921569,
+          "precision": 0.5161290322580645,
+          "recall": 0.8,
+          "pr_auc": 0.7691716600635641,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.015028347841865314,
+          "brier": 0.03373485010903499,
+          "nll": 0.11529257148504257,
+          "selective_auc": 0.7207361974273737,
+          "threshold": 0.320000022649765
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5813953488372093,
+          "precision": 0.44642857142857145,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.7691716600635641,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.017544158769451926,
+          "brier": 0.04284397749943947,
+          "nll": 0.14415879547595978,
+          "selective_auc": 0.4334228815234427,
+          "threshold": 0.320000022649765
+        },
+        "edge_drop50": {
+          "f1": 0.6025641025641025,
+          "precision": 0.4895833333333333,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.7465718393648035,
+          "recall_at_fpr_1pct": 0.6,
+          "ece": 0.014487691005403487,
+          "brier": 0.03487140442985198,
+          "nll": 0.11911001056432724,
+          "selective_auc": 0.6864754249870915,
+          "threshold": 0.320000022649765
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 15455,
+          "model_size_mb": 0.059,
+          "latency_ms": 16.034,
+          "peak_mem_mb": 479.4,
+          "throughput": 12708674.0,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.0,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_unweighted"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.0,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_unweighted"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.7350016236305237,
+          "bias": -1.3865337371826172
+        },
+        "validation_f1": 0.8738404512405396,
+        "clean": {
+          "f1": 0.624113475177305,
+          "precision": 0.5432098765432098,
+          "recall": 0.7333333333333333,
+          "pr_auc": 0.7007849534338737,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.013936956058486242,
+          "brier": 0.0354808767211248,
+          "nll": 0.1273595690727234,
+          "selective_auc": 0.7796474007842977,
+          "threshold": 0.4200000464916229
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5106382978723404,
+          "precision": 0.375,
+          "recall": 0.8,
+          "pr_auc": 0.7007849534338737,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.03140228145042726,
+          "brier": 0.05839283019332061,
+          "nll": 0.19771914184093475,
+          "selective_auc": 0.3711767362770441,
+          "threshold": 0.4200000464916229
+        },
+        "edge_drop50": {
+          "f1": 0.5508982035928144,
+          "precision": 0.42990654205607476,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.6079077467765241,
+          "recall_at_fpr_1pct": 0.4666666666666667,
+          "ece": 0.016916610955194433,
+          "brier": 0.04955165478054832,
+          "nll": 0.16975001990795135,
+          "selective_auc": 0.7067308756222915,
+          "threshold": 0.4200000464916229
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 15455,
+          "model_size_mb": 0.059,
+          "latency_ms": 16.086,
+          "peak_mem_mb": 479.4,
+          "throughput": 12667122.6,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      }
+    ],
+    "short": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.0,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_unweighted"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.0,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_unweighted"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9275155663490295,
+          "bias": -0.06244142726063728
+        },
+        "validation_f1": 0.9193798303604126,
+        "clean": {
+          "f1": 0.5568181818181818,
+          "precision": 0.4224137931034483,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7165310500623661,
+          "recall_at_fpr_1pct": 0.65,
+          "ece": 0.03507628644111265,
+          "brier": 0.06429309003683183,
+          "nll": 0.2125081717967987,
+          "selective_auc": 0.38068598266511167,
+          "threshold": 0.5199999809265137
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5568181818181818,
+          "precision": 0.4224137931034483,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7165310500623661,
+          "recall_at_fpr_1pct": 0.65,
+          "ece": 0.034125045503033746,
+          "brier": 0.06506890082134595,
+          "nll": 0.21305601298809052,
+          "selective_auc": 0.3830469155540121,
+          "threshold": 0.5199999809265137
+        },
+        "edge_drop50": {
+          "f1": 0.5396825396825397,
+          "precision": 0.3953488372093023,
+          "recall": 0.85,
+          "pr_auc": 0.7026104441657961,
+          "recall_at_fpr_1pct": 0.6333333333333333,
+          "ece": 0.033279894847251405,
+          "brier": 0.06779333664818916,
+          "nll": 0.22182652354240417,
+          "selective_auc": 0.3377676080448877,
+          "threshold": 0.5199999809265137
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.0,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp_bias",
+            "name": "lite_unweighted"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.0,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp_bias",
+          "name": "lite_unweighted"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp_bias",
+          "temperature": 0.9739834666252136,
+          "bias": -0.3036281168460846
+        },
+        "validation_f1": 0.9153069257736206,
+        "clean": {
+          "f1": 0.547486033519553,
+          "precision": 0.4117647058823529,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7051350463980514,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.027646361908653286,
+          "brier": 0.06075997414383957,
+          "nll": 0.20448791980743408,
+          "selective_auc": 0.4226483676703033,
+          "threshold": 0.46000003814697266
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5416666666666666,
+          "precision": 0.3939393939393939,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.7051350463980514,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.02813403090173725,
+          "brier": 0.06734296599279123,
+          "nll": 0.22831963002681732,
+          "selective_auc": 0.3446685219382243,
+          "threshold": 0.46000003814697266
+        },
+        "edge_drop50": {
+          "f1": 0.5073170731707317,
+          "precision": 0.3586206896551724,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.6642226685599514,
+          "recall_at_fpr_1pct": 0.5666666666666667,
+          "ece": 0.038606041582558474,
+          "brier": 0.07386210419021119,
+          "nll": 0.24162979423999786,
+          "selective_auc": 0.40443840943774423,
+          "threshold": 0.46000003814697266
+        },
+        "params_model": 15455,
+        "params": 15457,
+        "teacher_params_excluded": false
+      }
+    ]
+  },
+  "lite_temp": {
+    "reference": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp",
+            "name": "lite_temp"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp",
+          "name": "lite_temp"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp",
+          "temperature": 0.9804781675338745,
+          "bias": 0.0
+        },
+        "validation_f1": 0.8968609571456909,
+        "clean": {
+          "f1": 0.6344827586206897,
+          "precision": 0.5411764705882353,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7942075765639399,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.023108148362846068,
+          "brier": 0.05290926756791592,
+          "nll": 0.17677031457424164,
+          "selective_auc": 0.29659456382956073,
+          "threshold": 0.6800000071525574
+        },
+        "clean_uncalibrated": {
+          "f1": 0.6344827586206897,
+          "precision": 0.5411764705882353,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7942075765639399,
+          "recall_at_fpr_1pct": 0.6166666666666667,
+          "ece": 0.02184627663390909,
+          "brier": 0.05275913073517814,
+          "nll": 0.17589594423770905,
+          "selective_auc": 0.29659456382956073,
+          "threshold": 0.6800000071525574
+        },
+        "edge_drop50": {
+          "f1": 0.6064516129032258,
+          "precision": 0.49473684210526314,
+          "recall": 0.7833333333333333,
+          "pr_auc": 0.7991450604302851,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.021915591224466943,
+          "brier": 0.058205924735315294,
+          "nll": 0.18935754895210266,
+          "selective_auc": 0.3041283170147146,
+          "threshold": 0.6800000071525574
+        },
+        "params_model": 15455,
+        "params": 15456,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 15455,
+          "model_size_mb": 0.059,
+          "latency_ms": 16.044,
+          "peak_mem_mb": 479.4,
+          "throughput": 12700496.7,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 29,
+            "val_start": 30,
+            "val_end": 32,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp",
+            "name": "lite_temp"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp",
+          "name": "lite_temp"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp",
+          "temperature": 1.0124380588531494,
+          "bias": 0.0
+        },
+        "validation_f1": 0.8584995269775391,
+        "clean": {
+          "f1": 0.6764705882352942,
+          "precision": 0.6052631578947368,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7698119065094591,
+          "recall_at_fpr_1pct": 0.6,
+          "ece": 0.02201374392629165,
+          "brier": 0.06424550660512097,
+          "nll": 0.2188204675912857,
+          "selective_auc": 0.32782798998382107,
+          "threshold": 0.8400000333786011
+        },
+        "clean_uncalibrated": {
+          "f1": 0.6715328467153284,
+          "precision": 0.5974025974025974,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.7698119065094591,
+          "recall_at_fpr_1pct": 0.6,
+          "ece": 0.022912890778924597,
+          "brier": 0.06430546225156944,
+          "nll": 0.21932610869407654,
+          "selective_auc": 0.3288015794742562,
+          "threshold": 0.8400000333786011
+        },
+        "edge_drop50": {
+          "f1": 0.6571428571428571,
+          "precision": 0.575,
+          "recall": 0.7666666666666667,
+          "pr_auc": 0.6912161681583778,
+          "recall_at_fpr_1pct": 0.5833333333333334,
+          "ece": 0.02664216037325282,
+          "brier": 0.07888377686756004,
+          "nll": 0.25921937823295593,
+          "selective_auc": 0.3159686761362381,
+          "threshold": 0.8400000333786011
+        },
+        "params_model": 15455,
+        "params": 15456,
+        "teacher_params_excluded": false,
+        "efficiency": {
+          "params": 15455,
+          "model_size_mb": 0.059,
+          "latency_ms": 15.994,
+          "peak_mem_mb": 479.4,
+          "throughput": 12740140.4,
+          "active_edge_ratio": null,
+          "calibration_included": true,
+          "graph_preprocessing": "row normalization cached after warmup; sparse propagation measured every forward"
+        }
+      }
+    ],
+    "short": [
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 0,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp",
+            "name": "lite_temp"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp",
+          "name": "lite_temp"
+        },
+        "seed": 0,
+        "complete": true,
+        "calibrator": {
+          "method": "temp",
+          "temperature": 1.024046540260315,
+          "bias": 0.0
+        },
+        "validation_f1": 0.9180834889411926,
+        "clean": {
+          "f1": 0.5212765957446809,
+          "precision": 0.3828125,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7342123903944661,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.07118220932812867,
+          "brier": 0.10982768346883258,
+          "nll": 0.3614194095134735,
+          "selective_auc": 0.35642360122840205,
+          "threshold": 0.800000011920929
+        },
+        "clean_uncalibrated": {
+          "f1": 0.5185185185185185,
+          "precision": 0.3798449612403101,
+          "recall": 0.8166666666666667,
+          "pr_auc": 0.7342123903944661,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.07226665436473353,
+          "brier": 0.11033961270237222,
+          "nll": 0.36546027660369873,
+          "selective_auc": 0.35678690047298073,
+          "threshold": 0.800000011920929
+        },
+        "edge_drop50": {
+          "f1": 0.5208333333333334,
+          "precision": 0.3787878787878788,
+          "recall": 0.8333333333333334,
+          "pr_auc": 0.74098268596061,
+          "recall_at_fpr_1pct": 0.5333333333333333,
+          "ece": 0.07624348904547827,
+          "brier": 0.11241904929304962,
+          "nll": 0.36524853110313416,
+          "selective_auc": 0.3124008124352701,
+          "threshold": 0.800000011920929
+        },
+        "params_model": 15455,
+        "params": 15456,
+        "teacher_params_excluded": false
+      },
+      {
+        "protocol": 5,
+        "metadata": {
+          "schedule": {
+            "phase": "select",
+            "seed": 1,
+            "train_end": 24,
+            "val_start": 25,
+            "val_end": 29,
+            "test_start": 33,
+            "test_end": 34
+          },
+          "config": {
+            "hidden": 48,
+            "hops": 2,
+            "dropout": 0.2,
+            "lr": 0.001,
+            "wd": 0.0001,
+            "class_weight_power": 0.5,
+            "focal_gamma": 0.0,
+            "edge_drop": 0.15,
+            "robust_ce_weight": 0.5,
+            "consistency_weight": 0.1,
+            "kd_weight": 0.0,
+            "temporal_weight": 0.02,
+            "teacher": "graphsage",
+            "calibration": "temp",
+            "name": "lite_temp"
+          },
+          "lock_id": null
+        },
+        "config": {
+          "hidden": 48,
+          "hops": 2,
+          "dropout": 0.2,
+          "lr": 0.001,
+          "wd": 0.0001,
+          "class_weight_power": 0.5,
+          "focal_gamma": 0.0,
+          "edge_drop": 0.15,
+          "robust_ce_weight": 0.5,
+          "consistency_weight": 0.1,
+          "kd_weight": 0.0,
+          "temporal_weight": 0.02,
+          "teacher": "graphsage",
+          "calibration": "temp",
+          "name": "lite_temp"
+        },
+        "seed": 1,
+        "complete": true,
+        "calibrator": {
+          "method": "temp",
+          "temperature": 1.0125656127929688,
+          "bias": 0.0
+        },
+        "validation_f1": 0.9169231057167053,
+        "clean": {
+          "f1": 0.53125,
+          "precision": 0.38636363636363635,
+          "recall": 0.85,
+          "pr_auc": 0.715523040600816,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.061876262019867706,
+          "brier": 0.10284853609233838,
+          "nll": 0.35550010204315186,
+          "selective_auc": 0.3195012589964522,
+          "threshold": 0.7599999904632568
+        },
+        "clean_uncalibrated": {
+          "f1": 0.53125,
+          "precision": 0.38636363636363635,
+          "recall": 0.85,
+          "pr_auc": 0.715523040600816,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.06291348515195325,
+          "brier": 0.10305827504671143,
+          "nll": 0.35762861371040344,
+          "selective_auc": 0.3195012589964522,
+          "threshold": 0.7599999904632568
+        },
+        "edge_drop50": {
+          "f1": 0.5226130653266332,
+          "precision": 0.37410071942446044,
+          "recall": 0.8666666666666667,
+          "pr_auc": 0.6730084669644257,
+          "recall_at_fpr_1pct": 0.5,
+          "ece": 0.0703259068054135,
+          "brier": 0.1128991325230791,
+          "nll": 0.3784915804862976,
+          "selective_auc": 0.33509289465107983,
+          "threshold": 0.7599999904632568
+        },
+        "params_model": 15455,
+        "params": 15456,
+        "teacher_params_excluded": false
+      }
+    ]
+  }
+}

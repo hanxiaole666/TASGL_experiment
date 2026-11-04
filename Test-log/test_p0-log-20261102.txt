@@ -1,0 +1,49 @@
+============================================================
+[开始] python3 test_p0.py -v
+[开始时间] 2026-11-02 13:19:50.557
+test_shape_truncation_html_and_no_pickle_execution (__main__.TestBitHeteroNetValidation.test_shape_truncation_html_and_no_pickle_execution) ... ok
+test_windows_shell_logging_pause_and_result_isolation (__main__.TestLaunchersAndIsolation.test_windows_shell_logging_pause_and_result_isolation) ... ok
+test_lock_evaluate_and_one_shot_guard (__main__.TestP01IndependentLock.test_lock_evaluate_and_one_shot_guard) ... ok
+test_lock_id_and_artifact_tamper_rejected (__main__.TestP01IndependentLock.test_lock_id_and_artifact_tamper_rejected) ... ok
+test_prediction_file_cannot_contain_labels (__main__.TestP01IndependentLock.test_prediction_file_cannot_contain_labels) ... ok
+test_failed_accuracy_cannot_be_compensated (__main__.TestP02DevelopmentGate.test_failed_accuracy_cannot_be_compensated) ... ok
+test_backbone_calibration_window_export (__main__.TestP03Calibration.test_backbone_calibration_window_export) ... ok
+test_fit_select_eval_and_reliability_outputs (__main__.TestP03Calibration.test_fit_select_eval_and_reliability_outputs) ... ok
+test_all_hpo_models_forward_and_shared_grid (__main__.TestP04EqualBudgetAndModels.test_all_hpo_models_forward_and_shared_grid) ... models.py:31: UserWarning: index_reduce() is in beta and the API may change at any time. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\TensorAdvancedIndexing.cpp:1515.)
+  max_v.index_reduce_(0, index, src, 'amax', include_self=False)
+ok
+test_hpo_train_winner_and_frozen_prediction_integration (__main__.TestP04EqualBudgetAndModels.test_hpo_train_winner_and_frozen_prediction_integration) ... ok
+test_exact_wilcoxon_power_sd_and_incomplete (__main__.TestP05Statistics.test_exact_wilcoxon_power_sd_and_incomplete) ... ok
+test_minibatch_graphsage_freezes_unlabeled_predictions (__main__.TestP06SecondDataset.test_minibatch_graphsage_freezes_unlabeled_predictions) ... ok
+test_future_isolation_and_full_rolling_smoke (__main__.TestP07StrictRolling.test_future_isolation_and_full_rolling_smoke) ... ok
+test_zero_and_few_shot_separation (__main__.TestP08SemanticAlignment.test_zero_and_few_shot_separation) ... ok
+test_legacy_and_compact_execution_and_dense_equivalence (__main__.TestP09RealSparsity.test_legacy_and_compact_execution_and_dense_equivalence) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 10.538s
+
+OK
+[bitheteronet] 检测到物理完整但发布布局未知的文件, 不自动重下或删除: ['tx_attrs.npy']
+[bitheteronet] 请先核对版本/列语义；仅 --validate_only 诊断, 不按本地实际 shape 自动放行
+[P0-1] lock_id=4154839e287e503eb1009a55; artifacts=5
+[P0-1][seed=0] F1=0.2857 ECE=0.5482
+[P0-1][seed=1] F1=0.2857 ECE=0.5482
+[P0-1] 完成锁定评估: <tmp>\tasgl_p0_test_dn3d1xcc\independent\evaluation.json
+[P0-1] 该锁已完成最终评估；禁止覆盖或借重跑挑选结果。
+[P0-3] seed=0 同骨干 fit/select/eval 导出完成: {'fit': 4, 'select': 2, 'eval': 4}
+[P0-3] winner=temperature; 输出=<tmp>\tasgl_p0_test_dmfma7lr\calibration
+[P0-4] mlp_trial0_seed0; cfg={'lr': 0.005, 'wd': 0.0, 'hidden': 32, 'hops': 2, 'model': 'mlp', 'trial': 0, 'dropout': 0.3, 'early_stopping': 'validation_f1', 'patience': 'shared_cli'}
+[P0-4] mlp winners 已保存（未计算测试指标）
+[P0-4] sign_trial0_seed0; cfg={'lr': 0.005, 'wd': 0.0, 'hidden': 32, 'hops': 2, 'model': 'sign', 'trial': 0, 'dropout': 0.3, 'early_stopping': 'validation_f1', 'patience': 'shared_cli'}
+[P0-4] sign winners 已保存（未计算测试指标）
+[P0-4] temporal_graphsage_trial0_seed0; cfg={'lr': 0.005, 'wd': 0.0, 'hidden': 32, 'hops': 2, 'model': 'temporal_graphsage', 'trial': 0, 'dropout': 0.3, 'early_stopping': 'validation_f1', 'patience': 'shared_cli'}
+[P0-4] temporal_graphsage winners 已保存（未计算测试指标）
+[P0-4] seed=0 已冻结无标签预测与验证集校准器
+[P0-6][seed=0] epoch=0 loss=0.77934 val_f1=0.2105
+[P0-6][seed=0] epoch=1 loss=0.73314 val_f1=0.2105
+[P0-6] seed=0 无标签测试预测已冻结；未计算最终指标
+[P0-7][seed=0] epoch=1 loss=0.72087
+[P0-7] seed=0 严格滚动预测已冻结；未计算测试指标
+[P0-8] mode=zero_shot; 显式语义对齐完成；未把对齐结果冒充迁移性能
+[P0-8] mode=few_shot; 显式语义对齐完成；未把对齐结果冒充迁移性能
+[结束时间] 2026-11-02 13:20:31.802 (退出码=0)

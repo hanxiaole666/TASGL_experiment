@@ -1,0 +1,76 @@
+[
+  {
+    "id": "C1",
+    "kind": "dominated",
+    "a": "TASGL",
+    "b": "GraphSAGE",
+    "metric": "F1",
+    "source": "摘要/引言/结论/台账 EVD-02 EVD-03",
+    "evidence": {
+      "n_seeds": 5,
+      "equal_budget_hpo": false,
+      "paired_p_holm": null,
+      "effect_size": null,
+      "ci": null,
+      "independent": false,
+      "exploratory_declared": false
+    }
+  },
+  {
+    "id": "C2",
+    "kind": "below",
+    "a": "TASGL",
+    "b": "MLP",
+    "metric": "F1",
+    "source": "摘要/台账第 20 行",
+    "evidence": {
+      "n_seeds": 5,
+      "equal_budget_hpo": false,
+      "paired_p_holm": null,
+      "effect_size": null,
+      "ci": null
+    }
+  },
+  {
+    "id": "C3",
+    "kind": "dominated",
+    "a": "TASGL",
+    "b": "MLP",
+    "metric": "latency_ms",
+    "source": "台账 EVD-03 延迟视图",
+    "evidence": {
+      "n_seeds": 5,
+      "equal_budget_hpo": false,
+      "measurement_protocol": false,
+      "environment_fingerprint": true,
+      "full_chain_cost": false
+    }
+  },
+  {
+    "id": "C4",
+    "kind": "calibrated",
+    "a": "graphless_kd student",
+    "b": "EDL proxy",
+    "metric": "ECE",
+    "source": "协议 5 锁定探索性确认",
+    "evidence": {
+      "positive_class_ece": null,
+      "classwise_ece": null,
+      "beyond_overall_ece": false
+    }
+  },
+  {
+    "id": "C5",
+    "kind": "robust_to",
+    "a": "TASGL",
+    "b": "edge deletion attack",
+    "metric": "F1",
+    "source": "E5 删边鲁棒性",
+    "evidence": {
+      "non_oracle_attack": false,
+      "attacker_model_declared": false,
+      "n_attack_repetitions": null,
+      "clean_to_attack_transition": false
+    }
+  }
+]

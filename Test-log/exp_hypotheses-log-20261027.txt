@@ -1,0 +1,271 @@
+============================================================
+[开始] python3 exp_hypotheses.py --phase select --selection_seeds 0 1
+[开始时间] 2026-10-27 09:00:38.908
+device=cuda; phase=select; protocol=5
+Traceback (most recent call last):
+  File "exp_hypotheses.py", line 489, in <module>
+    main()
+  File "exp_hypotheses.py", line 478, in main
+    lock = run_select(data, device, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "exp_hypotheses.py", line 271, in run_select
+    ref = run_student(cfg, seed, (29, 30, 32, 33, 34), data,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "exp_hypotheses.py", line 148, in run_student
+    model, best_val = train_lite(
+                      ^^^^^^^^^^^
+  File "v3_engine.py", line 206, in train_lite
+    loss.backward()
+  File "<site-packages>\torch\_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "<site-packages>\torch\autograd\__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 154.68 GiB. GPU 0 has a total capacity of 6.00 GiB of which 3.34 GiB is free. Of the allocated memory 950.94 MiB is allocated by PyTorch, and 41.06 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[结束时间] 2026-10-27 09:01:11.622 (退出码=1)
+[错误] exp_hypotheses 失败，详见 Test-log\exp_hypotheses-log-20261027.txt
+============================================================
+[开始] python3 exp_hypotheses.py --phase select --selection_seeds 0 1
+[开始时间] 2026-10-27 09:19:23.803
+device=cuda; phase=select; protocol=5
+[v3][lite_h48_seed0_train29] F1=0.6345 ECE=0.0175 drop50=0.6065 params=15,457
+[v3][lite_h48_seed0_train24] F1=0.5185 ECE=0.0443 drop50=0.5231 params=15,457
+[v3][lite_h48_seed1_train29] F1=0.6765 ECE=0.0130 drop50=0.6619 params=15,457
+[v3][lite_h48_seed1_train24] F1=0.5426 ECE=0.0364 drop50=0.5253 params=15,457
+[select] {"name": "lite_h48", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.015218894227279282, "brier": 0.033378671425449584, "latency_ms": 15.8975, "params": 15457, "edge_drop50_f1": 0.634161058250174, "edge_drop50_rel_drop": 0.032519258185561714, "short_f1": 0.5305358550039401, "extrapolation_loss": 0.19061062504427537, "selection_score": 1.2302452945996254}
+[v3][lite_h32_seed0_train29] F1=0.6963 ECE=0.0088 drop50=0.6389 params=8,881
+[v3][lite_h32_seed0_train24] F1=0.5667 ECE=0.0325 drop50=0.5200 params=8,881
+[v3][lite_h32_seed1_train29] F1=0.6486 ECE=0.0164 drop50=0.6622 params=8,881
+[v3][lite_h32_seed1_train24] F1=0.5765 ECE=0.0344 drop50=0.5749 params=8,881
+[select] {"name": "lite_h32", "f1": 0.6724724724724724, "pr_auc": 0.7914199806078377, "ece": 0.012623403455173618, "brier": 0.032068498541226634, "latency_ms": 11.633, "params": 8881, "edge_drop50_f1": 0.6505255255255256, "edge_drop50_rel_drop": 0.03263620125037203, "short_f1": 0.5715686274509804, "extrapolation_loss": 0.15004903420135546, "selection_score": 0.6333180269583726}
+[v3][lite_kd_seed0_train29] F1=0.6715 ECE=0.0133 drop50=0.6525 params=13,153
+[v3][lite_kd_seed0_train24] F1=0.5650 ECE=0.0322 drop50=0.5475 params=13,153
+[v3][lite_kd_seed1_train29] F1=0.7213 ECE=0.0110 drop50=0.6825 params=13,153
+[v3][lite_kd_seed1_train24] F1=0.5568 ECE=0.0326 drop50=0.5319 params=13,153
+[select] {"name": "lite_kd", "f1": 0.6964221610625823, "pr_auc": 0.7798333547465792, "ece": 0.012141788012063639, "brier": 0.029129455132195906, "latency_ms": 11.2835, "params": 13153, "edge_drop50_f1": 0.6675109760216144, "edge_drop50_rel_drop": 0.04151387858889498, "short_f1": 0.5608949666153056, "extrapolation_loss": 0.19460494226733527, "selection_score": 0.601354343246571}
+[v3][graphless_kd_seed0_train29] F1=0.7092 ECE=0.0124 drop50=0.7092 params=10,849
+[v3][graphless_kd_seed0_train24] F1=0.4712 ECE=0.0384 drop50=0.4712 params=10,849
+[v3][graphless_kd_seed1_train29] F1=0.6861 ECE=0.0175 drop50=0.6861 params=10,849
+[v3][graphless_kd_seed1_train24] F1=0.5714 ECE=0.0295 drop50=0.5714 params=10,849
+[select] {"name": "graphless_kd", "f1": 0.6976756225086711, "pr_auc": 0.7881055156437677, "ece": 0.014914721905187542, "brier": 0.034028374726514744, "latency_ms": 6.606999999999999, "params": 10849, "edge_drop50_f1": 0.6976756225086711, "edge_drop50_rel_drop": 0.0, "short_f1": 0.5212912087912087, "extrapolation_loss": 0.25281722340136686, "selection_score": 0.24740612394506215}
+[v3][lite_robust_seed0_train29] F1=0.7023 ECE=0.0123 drop50=0.6667 params=13,153
+[v3][lite_robust_seed0_train24] F1=0.5024 ECE=0.0343 drop50=0.5000 params=13,153
+[v3][lite_robust_seed1_train29] F1=0.6573 ECE=0.0215 drop50=0.6573 params=13,153
+[v3][lite_robust_seed1_train24] F1=0.5181 ECE=0.0321 drop50=0.5100 params=13,153
+[select] {"name": "lite_robust", "f1": 0.6798163668392676, "pr_auc": 0.7656100636932783, "ece": 0.01686699810013116, "brier": 0.03303170791542111, "latency_ms": 11.247, "params": 13153, "edge_drop50_f1": 0.662004662004662, "edge_drop50_rel_drop": 0.026200759062949865, "short_f1": 0.5102750869815524, "extrapolation_loss": 0.24939275976243253, "selection_score": 0.6743438933555006}
+[v3][lite_unweighted_seed0_train29] F1=0.6275 ECE=0.0150 drop50=0.6026 params=15,457
+[v3][lite_unweighted_seed0_train24] F1=0.5568 ECE=0.0351 drop50=0.5397 params=15,457
+[v3][lite_unweighted_seed1_train29] F1=0.6241 ECE=0.0139 drop50=0.5509 params=15,457
+[v3][lite_unweighted_seed1_train24] F1=0.5475 ECE=0.0276 drop50=0.5073 params=15,457
+[select] {"name": "lite_unweighted", "f1": 0.6257822277847309, "pr_auc": 0.7349783067487189, "ece": 0.014482651950175777, "brier": 0.0346078634150799, "latency_ms": 16.06, "params": 15457, "edge_drop50_f1": 0.5767311530784585, "edge_drop50_rel_drop": 0.07838361738062338, "short_f1": 0.5521521076688674, "extrapolation_loss": 0.11766093194514997, "selection_score": 1.2466988986257543}
+[v3][lite_temp_seed0_train29] F1=0.6345 ECE=0.0231 drop50=0.6065 params=15,456
+[v3][lite_temp_seed0_train24] F1=0.5213 ECE=0.0712 drop50=0.5208 params=15,456
+[v3][lite_temp_seed1_train29] F1=0.6765 ECE=0.0220 drop50=0.6571 params=15,456
+[v3][lite_temp_seed1_train24] F1=0.5312 ECE=0.0619 drop50=0.5226 params=15,456
+[select] {"name": "lite_temp", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.02256094614456886, "brier": 0.05857738708651845, "latency_ms": 16.019, "params": 15456, "edge_drop50_f1": 0.6317972350230414, "edge_drop50_rel_drop": 0.03612552416413625, "short_f1": 0.5262632978723405, "extrapolation_loss": 0.19712886940719843, "selection_score": 1.2519511604625482}
+[select] 锁定 graphless_kd; lock=results/v3/lock.json; id=91f1beb52cbad975
+[结束时间] 2026-10-27 09:27:38.576 (退出码=0)
+============================================================
+[开始] python3 exp_hypotheses.py --phase confirm --seeds 0 1 2 3 4
+[开始时间] 2026-10-27 09:27:38.745
+models.py:31: UserWarning: index_reduce() is in beta and the API may change at any time. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\cuda\Indexing.cu:1191.)
+  max_v.index_reduce_(0, index, src, 'amax', include_self=False)
+device=cuda; phase=confirm; protocol=5
+[v3][graphless_kd_seed0_train34] F1=0.5112 ECE=0.0192 drop50=0.5112 params=10,849
+[v3][graphless_kd_seed0_train25] F1=0.4585 ECE=0.0384 drop50=0.4585 params=10,849
+[v3][graphless_kd_seed1_train34] F1=0.5401 ECE=0.0206 drop50=0.5401 params=10,849
+[v3][graphless_kd_seed1_train25] F1=0.5370 ECE=0.0558 drop50=0.5370 params=10,849
+[v3][graphless_kd_seed2_train34] F1=0.5387 ECE=0.0162 drop50=0.5387 params=10,849
+[v3][graphless_kd_seed2_train25] F1=0.4476 ECE=0.0462 drop50=0.4476 params=10,849
+[v3][graphless_kd_seed3_train34] F1=0.4974 ECE=0.0268 drop50=0.4974 params=10,849
+[v3][graphless_kd_seed3_train25] F1=0.3893 ECE=0.0120 drop50=0.3893 params=10,849
+[v3][graphless_kd_seed4_train34] F1=0.5052 ECE=0.0253 drop50=0.5052 params=10,849
+[v3][graphless_kd_seed4_train25] F1=0.4370 ECE=0.0117 drop50=0.4370 params=10,849
+[v3][gcn_seed0_train34] F1=0.4170 drop50=0.4081
+[v3][gcn_seed1_train34] F1=0.4219 drop50=0.3965
+[v3][gcn_seed2_train34] F1=0.3988 drop50=0.3904
+[v3][gcn_seed3_train34] F1=0.4103 drop50=0.4208
+[v3][gcn_seed4_train34] F1=0.3847 drop50=0.3948
+[v3][gat_seed0_train34] F1=0.4110 drop50=0.3450
+[v3][gat_seed1_train34] F1=0.4109 drop50=0.3361
+[v3][gat_seed2_train34] F1=0.3933 drop50=0.3482
+[v3][gat_seed3_train34] F1=0.3875 drop50=0.3289
+[v3][gat_seed4_train34] F1=0.3889 drop50=0.3217
+{
+  "H1": {
+    "f1_mean": 0.5185268354119786,
+    "params": 10849,
+    "status": "falsified",
+    "evidence_complete": true
+  },
+  "H2": {
+    "latency_ms_mean": 6.494400000000001,
+    "status": "pass",
+    "evidence_complete": true
+  },
+  "H4": {
+    "reference_f1": 0.5185268354119786,
+    "short_f1": 0.4538807432773887,
+    "relative_loss_ratio_of_means": 0.12467260654547896,
+    "status": "falsified",
+    "evidence_complete": true
+  },
+  "H5": {
+    "ece_mean": 0.021623655998857003,
+    "edl_same_backbone_ece_mean": 0.02983852958350247,
+    "brier_mean": 0.05751285934919929,
+    "nll_mean": 0.21414828300476074,
+    "status": "pass",
+    "evidence_complete": true
+  },
+  "H3": {
+    "tasgl_clean_f1": 0.5185268354119786,
+    "tasgl_edge_drop50_f1": 0.5185268354119786,
+    "tasgl_relative_drop": 0.0,
+    "per_baseline": {
+      "gcn": {
+        "clean_f1": 0.4065197828179638,
+        "edge_drop50_f1": 0.40211366708616386,
+        "relative_drop": 0.010838625616832439,
+        "target_tasgl_drop": 0.006503175370099463,
+        "status": "pass"
+      },
+      "gat": {
+        "clean_f1": 0.3983205102138191,
+        "edge_drop50_f1": 0.3359920813831779,
+        "relative_drop": 0.15647808042117442,
+        "target_tasgl_drop": 0.09388684825270464,
+        "status": "pass"
+      }
+    },
+    "status": "pass",
+    "evidence_complete": true
+  }
+}
+[confirm] all_pass=False; 输出=results/v3\confirm_91f1beb52cbad975
+[结束时间] 2026-10-27 09:34:50.446 (退出码=0)
+============================================================
+[开始] python3 exp_hypotheses.py --phase select --selection_seeds 0 1
+[开始时间] 2026-10-27 11:10:49.016
+device=cuda; phase=select; protocol=6
+[v3][lite_h48_seed0_train29] F1=0.6345 ECE=0.0175 drop50=0.6065 params=15,457
+[v3][lite_h48_seed0_train24] F1=0.5185 ECE=0.0443 drop50=0.5231 params=15,457
+[v3][lite_h48_seed1_train29] F1=0.6765 ECE=0.0130 drop50=0.6619 params=15,457
+[v3][lite_h48_seed1_train24] F1=0.5426 ECE=0.0364 drop50=0.5253 params=15,457
+[select] {"name": "lite_h48", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.015220378887952624, "brier": 0.033377400823338184, "latency_ms": 16.224, "params": 15457, "edge_drop50_f1": 0.634161058250174, "edge_drop50_rel_drop": 0.032519258185561714, "short_f1": 0.5305358550039401, "extrapolation_loss": 0.19061062504427537, "selection_score": 1.2710581210996252, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_h32_seed0_train29] F1=0.6963 ECE=0.0088 drop50=0.6389 params=8,881
+[v3][lite_h32_seed0_train24] F1=0.5667 ECE=0.0325 drop50=0.5200 params=8,881
+[v3][lite_h32_seed1_train29] F1=0.6486 ECE=0.0164 drop50=0.6622 params=8,881
+[v3][lite_h32_seed1_train24] F1=0.5765 ECE=0.0344 drop50=0.5749 params=8,881
+[select] {"name": "lite_h32", "f1": 0.6724724724724724, "pr_auc": 0.7914199806078377, "ece": 0.012620796718357995, "brier": 0.03206819896720167, "latency_ms": 11.575, "params": 8881, "edge_drop50_f1": 0.6505255255255256, "edge_drop50_rel_drop": 0.03263620125037203, "short_f1": 0.5715686274509804, "extrapolation_loss": 0.15004903420135546, "selection_score": 0.6260679689583727, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_kd_seed0_train29] F1=0.6667 ECE=0.0151 drop50=0.6338 params=13,153
+[v3][lite_kd_seed0_train24] F1=0.5714 ECE=0.0303 drop50=0.5506 params=13,153
+[v3][lite_kd_seed1_train29] F1=0.7040 ECE=0.0086 drop50=0.6870 params=13,153
+[v3][lite_kd_seed1_train24] F1=0.5525 ECE=0.0321 drop50=0.5285 params=13,153
+[select] {"name": "lite_kd", "f1": 0.6853333333333333, "pr_auc": 0.7826352945811388, "ece": 0.01186042310179028, "brier": 0.02896171939016491, "latency_ms": 11.7285, "params": 13153, "edge_drop50_f1": 0.6604128588323837, "edge_drop50_rel_drop": 0.036362560069479126, "short_f1": 0.5619573796369377, "extrapolation_loss": 0.18002327873987692, "selection_score": 0.6575993885184158, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][graphless_kd_seed0_train29] F1=0.7059 ECE=0.0094 drop50=0.7059 params=10,849
+[v3][graphless_kd_seed0_train24] F1=0.5241 ECE=0.0384 drop50=0.5241 params=10,849
+[v3][graphless_kd_seed1_train29] F1=0.6963 ECE=0.0172 drop50=0.6963 params=10,849
+[v3][graphless_kd_seed1_train24] F1=0.5780 ECE=0.0269 drop50=0.5780 params=10,849
+[select] {"name": "graphless_kd", "f1": 0.7010893246187364, "pr_auc": 0.792842179225791, "ece": 0.013281803624899318, "brier": 0.03405051248035108, "latency_ms": 6.2465, "params": 10849, "edge_drop50_f1": 0.7010893246187364, "edge_drop50_rel_drop": 0.0, "short_f1": 0.5510494266019598, "extrapolation_loss": 0.2140096742998772, "selection_score": 0.20391849638109893, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": true, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_robust_seed0_train29] F1=0.7023 ECE=0.0123 drop50=0.6667 params=13,153
+[v3][lite_robust_seed0_train24] F1=0.5024 ECE=0.0343 drop50=0.5000 params=13,153
+[v3][lite_robust_seed1_train29] F1=0.6573 ECE=0.0215 drop50=0.6573 params=13,153
+[v3][lite_robust_seed1_train24] F1=0.5181 ECE=0.0321 drop50=0.5100 params=13,153
+[select] {"name": "lite_robust", "f1": 0.6798163668392676, "pr_auc": 0.7656100636932783, "ece": 0.016866329854751765, "brier": 0.03303199907256917, "latency_ms": 11.0485, "params": 13153, "edge_drop50_f1": 0.662004662004662, "edge_drop50_rel_drop": 0.026200759062949865, "short_f1": 0.5102750869815524, "extrapolation_loss": 0.24939275976243253, "selection_score": 0.6495311948555007, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_unweighted_seed0_train29] F1=0.6275 ECE=0.0150 drop50=0.6026 params=15,457
+[v3][lite_unweighted_seed0_train24] F1=0.5568 ECE=0.0351 drop50=0.5397 params=15,457
+[v3][lite_unweighted_seed1_train29] F1=0.6241 ECE=0.0139 drop50=0.5509 params=15,457
+[v3][lite_unweighted_seed1_train24] F1=0.5799 ECE=0.0276 drop50=0.5319 params=15,457
+[select] {"name": "lite_unweighted", "f1": 0.6257822277847309, "pr_auc": 0.7349783067487189, "ece": 0.01448102625842871, "brier": 0.03460912671859513, "latency_ms": 15.634, "params": 15457, "edge_drop50_f1": 0.5767311530784585, "edge_drop50_rel_drop": 0.07838361738062338, "short_f1": 0.5683499193114577, "extrapolation_loss": 0.09177682894029054, "selection_score": 1.1675643696208948, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": false, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H3_absolute_drop_proxy", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_temp_seed0_train29] F1=0.6345 ECE=0.0231 drop50=0.6065 params=15,456
+[v3][lite_temp_seed0_train24] F1=0.5213 ECE=0.0712 drop50=0.5208 params=15,456
+[v3][lite_temp_seed1_train29] F1=0.6765 ECE=0.0220 drop50=0.6571 params=15,456
+[v3][lite_temp_seed1_train24] F1=0.5312 ECE=0.0619 drop50=0.5226 params=15,456
+[select] {"name": "lite_temp", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.022560144474566224, "brier": 0.05857710885162906, "latency_ms": 15.609, "params": 15456, "edge_drop50_f1": 0.6317972350230414, "edge_drop50_rel_drop": 0.03612552416413625, "short_f1": 0.5262632978723405, "extrapolation_loss": 0.19712886940719843, "selection_score": 1.2007007504625484, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[select] 协议停止：没有候选同时通过全部开发硬门槛；开发结果已保存，未生成新锁，禁止进入确认
+[结束时间] 2026-10-27 11:19:05.071 (退出码=2)
+[错误] exp_hypotheses 失败，详见 Test-log\exp_hypotheses-log-20261027.txt
+============================================================
+[开始] python3 exp_hypotheses.py --phase select --selection_seeds 0 1
+[开始时间] 2026-10-27 15:07:35.805
+device=cuda; phase=select; protocol=6
+[v3][lite_h48_seed0_train29] 已完成，跳过
+[v3][lite_h48_seed0_train24] 已完成，跳过
+[v3][lite_h48_seed1_train29] 已完成，跳过
+[v3][lite_h48_seed1_train24] 已完成，跳过
+[select] {"name": "lite_h48", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.015220378887952624, "brier": 0.033377400823338184, "latency_ms": 16.224, "params": 15457, "edge_drop50_f1": 0.634161058250174, "edge_drop50_rel_drop": 0.032519258185561714, "short_f1": 0.5305358550039401, "extrapolation_loss": 0.19061062504427537, "selection_score": 1.2710581210996252, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_h32_seed0_train29] 已完成，跳过
+[v3][lite_h32_seed0_train24] 已完成，跳过
+[v3][lite_h32_seed1_train29] 已完成，跳过
+[v3][lite_h32_seed1_train24] 已完成，跳过
+[select] {"name": "lite_h32", "f1": 0.6724724724724724, "pr_auc": 0.7914199806078377, "ece": 0.012620796718357995, "brier": 0.03206819896720167, "latency_ms": 11.575, "params": 8881, "edge_drop50_f1": 0.6505255255255256, "edge_drop50_rel_drop": 0.03263620125037203, "short_f1": 0.5715686274509804, "extrapolation_loss": 0.15004903420135546, "selection_score": 0.6260679689583727, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_kd_seed0_train29] 已完成，跳过
+[v3][lite_kd_seed0_train24] 已完成，跳过
+[v3][lite_kd_seed1_train29] 已完成，跳过
+[v3][lite_kd_seed1_train24] 已完成，跳过
+[select] {"name": "lite_kd", "f1": 0.6853333333333333, "pr_auc": 0.7826352945811388, "ece": 0.01186042310179028, "brier": 0.02896171939016491, "latency_ms": 11.7285, "params": 13153, "edge_drop50_f1": 0.6604128588323837, "edge_drop50_rel_drop": 0.036362560069479126, "short_f1": 0.5619573796369377, "extrapolation_loss": 0.18002327873987692, "selection_score": 0.6575993885184158, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][graphless_kd_seed0_train29] 已完成，跳过
+[v3][graphless_kd_seed0_train24] 已完成，跳过
+[v3][graphless_kd_seed1_train29] 已完成，跳过
+[v3][graphless_kd_seed1_train24] 已完成，跳过
+[select] {"name": "graphless_kd", "f1": 0.7010893246187364, "pr_auc": 0.792842179225791, "ece": 0.013281803624899318, "brier": 0.03405051248035108, "latency_ms": 6.2465, "params": 10849, "edge_drop50_f1": 0.7010893246187364, "edge_drop50_rel_drop": 0.0, "short_f1": 0.5510494266019598, "extrapolation_loss": 0.2140096742998772, "selection_score": 0.20391849638109893, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": true, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_robust_seed0_train29] 已完成，跳过
+[v3][lite_robust_seed0_train24] 已完成，跳过
+[v3][lite_robust_seed1_train29] 已完成，跳过
+[v3][lite_robust_seed1_train24] 已完成，跳过
+[select] {"name": "lite_robust", "f1": 0.6798163668392676, "pr_auc": 0.7656100636932783, "ece": 0.016866329854751765, "brier": 0.03303199907256917, "latency_ms": 11.0485, "params": 13153, "edge_drop50_f1": 0.662004662004662, "edge_drop50_rel_drop": 0.026200759062949865, "short_f1": 0.5102750869815524, "extrapolation_loss": 0.24939275976243253, "selection_score": 0.6495311948555007, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_unweighted_seed0_train29] 已完成，跳过
+[v3][lite_unweighted_seed0_train24] 已完成，跳过
+[v3][lite_unweighted_seed1_train29] 已完成，跳过
+[v3][lite_unweighted_seed1_train24] 已完成，跳过
+[select] {"name": "lite_unweighted", "f1": 0.6257822277847309, "pr_auc": 0.7349783067487189, "ece": 0.01448102625842871, "brier": 0.03460912671859513, "latency_ms": 15.634, "params": 15457, "edge_drop50_f1": 0.5767311530784585, "edge_drop50_rel_drop": 0.07838361738062338, "short_f1": 0.5683499193114577, "extrapolation_loss": 0.09177682894029054, "selection_score": 1.1675643696208948, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": false, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H3_absolute_drop_proxy", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_temp_seed0_train29] 已完成，跳过
+[v3][lite_temp_seed0_train24] 已完成，跳过
+[v3][lite_temp_seed1_train29] 已完成，跳过
+[v3][lite_temp_seed1_train24] 已完成，跳过
+[select] {"name": "lite_temp", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.022560144474566224, "brier": 0.05857710885162906, "latency_ms": 15.609, "params": 15456, "edge_drop50_f1": 0.6317972350230414, "edge_drop50_rel_drop": 0.03612552416413625, "short_f1": 0.5262632978723405, "extrapolation_loss": 0.19712886940719843, "selection_score": 1.2007007504625484, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[select] 协议停止：没有候选同时通过全部开发硬门槛；开发结果已保存，未生成新锁，禁止进入确认
+[结束时间] 2026-10-27 15:07:54.143 (退出码=2)
+[错误] exp_hypotheses 失败，详见 Test-log\exp_hypotheses-log-20261027.txt
+============================================================
+[开始] python3 exp_hypotheses.py --phase select --selection_seeds 0 1
+[开始时间] 2026-10-27 20:28:25.111
+device=cuda; phase=select; protocol=6
+[v3][lite_h48_seed0_train29] 已完成，跳过
+[v3][lite_h48_seed0_train24] 已完成，跳过
+[v3][lite_h48_seed1_train29] 已完成，跳过
+[v3][lite_h48_seed1_train24] 已完成，跳过
+[select] {"name": "lite_h48", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.015220378887952624, "brier": 0.033377400823338184, "latency_ms": 16.224, "params": 15457, "edge_drop50_f1": 0.634161058250174, "edge_drop50_rel_drop": 0.032519258185561714, "short_f1": 0.5305358550039401, "extrapolation_loss": 0.19061062504427537, "selection_score": 1.2710581210996252, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_h32_seed0_train29] 已完成，跳过
+[v3][lite_h32_seed0_train24] 已完成，跳过
+[v3][lite_h32_seed1_train29] 已完成，跳过
+[v3][lite_h32_seed1_train24] 已完成，跳过
+[select] {"name": "lite_h32", "f1": 0.6724724724724724, "pr_auc": 0.7914199806078377, "ece": 0.012620796718357995, "brier": 0.03206819896720167, "latency_ms": 11.575, "params": 8881, "edge_drop50_f1": 0.6505255255255256, "edge_drop50_rel_drop": 0.03263620125037203, "short_f1": 0.5715686274509804, "extrapolation_loss": 0.15004903420135546, "selection_score": 0.6260679689583727, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_kd_seed0_train29] 已完成，跳过
+[v3][lite_kd_seed0_train24] 已完成，跳过
+[v3][lite_kd_seed1_train29] 已完成，跳过
+[v3][lite_kd_seed1_train24] 已完成，跳过
+[select] {"name": "lite_kd", "f1": 0.6853333333333333, "pr_auc": 0.7826352945811388, "ece": 0.01186042310179028, "brier": 0.02896171939016491, "latency_ms": 11.7285, "params": 13153, "edge_drop50_f1": 0.6604128588323837, "edge_drop50_rel_drop": 0.036362560069479126, "short_f1": 0.5619573796369377, "extrapolation_loss": 0.18002327873987692, "selection_score": 0.6575993885184158, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][graphless_kd_seed0_train29] 已完成，跳过
+[v3][graphless_kd_seed0_train24] 已完成，跳过
+[v3][graphless_kd_seed1_train29] 已完成，跳过
+[v3][graphless_kd_seed1_train24] 已完成，跳过
+[select] {"name": "graphless_kd", "f1": 0.7010893246187364, "pr_auc": 0.792842179225791, "ece": 0.013281803624899318, "brier": 0.03405051248035108, "latency_ms": 6.2465, "params": 10849, "edge_drop50_f1": 0.7010893246187364, "edge_drop50_rel_drop": 0.0, "short_f1": 0.5510494266019598, "extrapolation_loss": 0.2140096742998772, "selection_score": 0.20391849638109893, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": true, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_robust_seed0_train29] 已完成，跳过
+[v3][lite_robust_seed0_train24] 已完成，跳过
+[v3][lite_robust_seed1_train29] 已完成，跳过
+[v3][lite_robust_seed1_train24] 已完成，跳过
+[select] {"name": "lite_robust", "f1": 0.6798163668392676, "pr_auc": 0.7656100636932783, "ece": 0.016866329854751765, "brier": 0.03303199907256917, "latency_ms": 11.0485, "params": 13153, "edge_drop50_f1": 0.662004662004662, "edge_drop50_rel_drop": 0.026200759062949865, "short_f1": 0.5102750869815524, "extrapolation_loss": 0.24939275976243253, "selection_score": 0.6495311948555007, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_unweighted_seed0_train29] 已完成，跳过
+[v3][lite_unweighted_seed0_train24] 已完成，跳过
+[v3][lite_unweighted_seed1_train29] 已完成，跳过
+[v3][lite_unweighted_seed1_train24] 已完成，跳过
+[select] {"name": "lite_unweighted", "f1": 0.6257822277847309, "pr_auc": 0.7349783067487189, "ece": 0.01448102625842871, "brier": 0.03460912671859513, "latency_ms": 15.634, "params": 15457, "edge_drop50_f1": 0.5767311530784585, "edge_drop50_rel_drop": 0.07838361738062338, "short_f1": 0.5683499193114577, "extrapolation_loss": 0.09177682894029054, "selection_score": 1.1675643696208948, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": false, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H3_absolute_drop_proxy", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[v3][lite_temp_seed0_train29] 已完成，跳过
+[v3][lite_temp_seed0_train24] 已完成，跳过
+[v3][lite_temp_seed1_train29] 已完成，跳过
+[v3][lite_temp_seed1_train24] 已完成，跳过
+[select] {"name": "lite_temp", "f1": 0.655476673427992, "pr_auc": 0.7820097415366996, "ece": 0.022560144474566224, "brier": 0.05857710885162906, "latency_ms": 15.609, "params": 15456, "edge_drop50_f1": 0.6317972350230414, "edge_drop50_rel_drop": 0.03612552416413625, "short_f1": 0.5262632978723405, "extrapolation_loss": 0.19712886940719843, "selection_score": 1.2007007504625484, "development_gates": {"H1_f1": false, "H1_params": true, "H2_latency": false, "H3_absolute_drop_proxy": true, "H4_extrapolation_proxy": false, "H5_ece_proxy": true}, "failed_gates": ["H1_f1", "H2_latency", "H4_extrapolation_proxy"], "h4_development_status": "falsified", "eligible": false}
+[select] 协议停止：没有候选同时通过全部开发硬门槛；开发结果已保存，未生成新锁，禁止进入确认
+[结束时间] 2026-10-27 20:28:45.506 (退出码=2)
+[错误] exp_hypotheses 失败，详见 Test-log\exp_hypotheses-log-20261027.txt

@@ -1,0 +1,83 @@
+=== [1] BitHeNet 20 seeds ===
+=== [1] BitHeNet 20 seeds ===
+[BitHeNet] 地址组 822942, 超上限跳过 976, 无向边 1342830
+Traceback (most recent call last):
+  File "p4_experiments.py", line 1091, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "p4_experiments.py", line 1087, in main
+    return args.func(args)
+           ^^^^^^^^^^^^^^^
+  File "p4_experiments.py", line 254, in cmd_second_dataset
+    m, tr = train_with_audit(m, data, masks,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "p4_experiments.py", line 351, in train_with_audit
+    loss, parts = lf(logits, aux['h'], data['y'], ent, masks[0])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "losses.py", line 130, in forward
+    l_con = self.con(h, targets, entropy, mask)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "losses.py", line 85, in forward
+    sim_pn = z[pos] @ z[neg].T                          # [P, N]
+             ~~~~~~~^~~~~~~~~~
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 6.00 GiB of which 0 bytes is free. Of the allocated memory 5.02 GiB is allocated by PyTorch, and 293.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+stage1 rc=1
+=== [2] H3/H4 ten-seed interval estimation ===
+[tasgl][seed 0] ref=0.5031 dropped=0.4221 drop_ratio=0.1610 short=0.3485 rel_loss=0.30738368423734735
+[tasgl][seed 1] ref=0.5166 dropped=0.5125 drop_ratio=0.0079 short=0.1761 rel_loss=0.6591572316549912
+[tasgl][seed 2] ref=0.5103 dropped=0.3858 drop_ratio=0.2440 short=0.2749 rel_loss=0.4613698717370424
+[tasgl][seed 3] ref=0.5888 dropped=0.5489 drop_ratio=0.0678 short=0.2537 rel_loss=0.5690946229757863
+[tasgl][seed 4] ref=0.5799 dropped=0.5637 drop_ratio=0.0279 short=0.3525 rel_loss=0.3921751936494438
+[tasgl][seed 5] ref=0.5453 dropped=0.4262 drop_ratio=0.2183 short=0.5150 rel_loss=0.05553982801939193
+[tasgl][seed 6] ref=0.3196 dropped=0.2581 drop_ratio=0.1924 short=0.3148 rel_loss=0.015040541448677976
+[tasgl][seed 7] ref=0.5307 dropped=0.4461 drop_ratio=0.1595 short=0.4234 rel_loss=0.20212959893934376
+[tasgl][seed 8] ref=0.5075 dropped=0.4419 drop_ratio=0.1293 short=0.3443 rel_loss=0.3215234102026556
+[tasgl][seed 9] ref=0.4346 dropped=0.4235 drop_ratio=0.0255 short=0.2982 rel_loss=0.3139150469159489
+[mlp][seed 0] ref=0.4052 dropped=0.4052 drop_ratio=0.0000 short=0.4703 rel_loss=-0.1606936410461059
+[mlp][seed 1] ref=0.4797 dropped=0.4797 drop_ratio=0.0000 short=0.2991 rel_loss=0.37651714824274374
+[mlp][seed 2] ref=0.4173 dropped=0.4173 drop_ratio=0.0000 short=0.4961 rel_loss=-0.18872219007834423
+[mlp][seed 3] ref=0.4505 dropped=0.4505 drop_ratio=0.0000 short=0.4734 rel_loss=-0.0507754983869634
+[mlp][seed 4] ref=0.4427 dropped=0.4427 drop_ratio=0.0000 short=0.4380 rel_loss=0.010708434890318488
+[mlp][seed 5] ref=0.4289 dropped=0.4289 drop_ratio=0.0000 short=0.1616 rel_loss=0.6232142434205568
+[mlp][seed 6] ref=0.4845 dropped=0.4845 drop_ratio=0.0000 short=0.5452 rel_loss=-0.1250807180679323
+[mlp][seed 7] ref=0.2443 dropped=0.2443 drop_ratio=0.0000 short=0.2503 rel_loss=-0.024443833395669065
+[mlp][seed 8] ref=0.4517 dropped=0.4517 drop_ratio=0.0000 short=0.3510 rel_loss=0.22290303256724722
+[mlp][seed 9] ref=0.2641 dropped=0.2641 drop_ratio=0.0000 short=0.2613 rel_loss=0.010658665302663805
+[graphsage][seed 0] ref=0.5429 dropped=0.5261 drop_ratio=0.0309 short=0.3730 rel_loss=0.3129869308343591
+[graphsage][seed 1] ref=0.5075 dropped=0.5203 drop_ratio=-0.0251 short=0.4209 rel_loss=0.1707008190672963
+[graphsage][seed 2] ref=0.5462 dropped=0.5327 drop_ratio=0.0247 short=0.4504 rel_loss=0.17549007698937424
+[graphsage][seed 3] ref=0.5173 dropped=0.4810 drop_ratio=0.0702 short=0.4014 rel_loss=0.22393805390619684
+[graphsage][seed 4] ref=0.5187 dropped=0.4409 drop_ratio=0.1499 short=0.1906 rel_loss=0.6325971500249178
+[graphsage][seed 5] ref=0.4969 dropped=0.4711 drop_ratio=0.0520 short=0.3137 rel_loss=0.3687974209026841
+[graphsage][seed 6] ref=0.5111 dropped=0.4977 drop_ratio=0.0262 short=0.2482 rel_loss=0.5144209036787319
+[graphsage][seed 7] ref=0.5245 dropped=0.5299 drop_ratio=-0.0103 short=0.3288 rel_loss=0.3731375499349889
+[graphsage][seed 8] ref=0.5326 dropped=0.5204 drop_ratio=0.0228 short=0.2532 rel_loss=0.524549405396863
+[graphsage][seed 9] ref=0.4714 dropped=0.4733 drop_ratio=-0.0041 short=0.3216 rel_loss=0.31788907632425434
+saved results/p4/h3_interval.json results/p4/h4_interval.json
+stage2 rc=0
+=== [3] DGraph-Fin probe (2 seeds) ===
+[DGraph-Fin] nodes=3700550 features=17 edges=4300999
+[DGraph-Fin] mask_kind={'train_mask': 'index_array', 'valid_mask': 'index_array', 'test_mask': 'index_array'} split_audit={"per_split": {"train": {"n_nodes": 857899, "n_labeled": 857899, "n_positive": 10857, "n_negative": 847042, "positive_rate": 0.0126553358845272}, "valid": {"n_nodes": 183862, "n_labeled": 183862, "n_positive": 2326, "n_negative": 181536, "positive_rate": 0.012650792442157706}, "test": {"n_nodes": 183840, "n_labeled": 0, "n_positive": 0, "n_negative": 0, "positive_rate": null}}, "overlaps": {"train_valid": 0, "train_test": 0, "valid_test": 0}, "disjoint": true, "train_and_valid_labels_only": true, "note": "官方边时间戳不等于节点到达时间，本划分不能称为严格节点 rolling"}
+[tasgl][seed 0] OOM
+[tasgl][seed 0] oom: CUDA out of memory. Tried to allocate 2.31 GiB. GPU 0 has a total capacity of 6.00 GiB of which 155.77 MiB is free. Of t
+[tasgl][seed 1] OOM
+[tasgl][seed 1] oom: CUDA out of memory. Tried to allocate 2.31 GiB. GPU 0 has a total capacity of 6.00 GiB of which 166.00 MiB is free. Of t
+[mlp][seed 0] ok
+[mlp][seed 1] ok
+[graphsage][seed 0] ok
+[graphsage][seed 1] ok
+saved results/p5/dgraphfin_probe.json
+stage3 rc=0
+=== WAVE1 DONE ===

@@ -1,0 +1,208 @@
+{
+  "schema": "p5_protocol_threshold_map_v1",
+  "sets": {
+    "V0": {
+      "label": "withdrawn V0",
+      "status": "withdrawn",
+      "arbitrary_count": 4,
+      "items": [
+        {
+          "key": "H1_f1",
+          "value": 0.73,
+          "verdict": "unjustified_withdrawn",
+          "why": "设计方案未给出 0.73 的任何来源: 既非基线锚定, 也非运维要求, 也非文献惯例; 等预算 HPO 修复后实测最强基线 MLP F1=0.4970, 0.73 高出 0.2330, 在本任务上不可达。"
+        },
+        {
+          "key": "H2_latency",
+          "value": 8.0,
+          "verdict": "unjustified_withdrawn",
+          "why": "8 ms 无业务来源; 更严重的是口径未定义: 现有 measure_efficiency 测的是\"整图一次前向\" (实测 33.3 ms / 203769 节点 = 0.16 µs/节点), 与\"单笔交易 8 ms\"不是一个量, 无法比较。"
+        },
+        {
+          "key": "H3_ratio",
+          "value": 0.6,
+          "verdict": "unjustified_withdrawn",
+          "why": "0.60 / 1.00 的切点无推导, 且存在灰区, 硬切会把噪声判成结论"
+        },
+        {
+          "key": "H4_attack",
+          "value": 0.05,
+          "verdict": "unjustified_withdrawn",
+          "why": "5% / 8% 无告警成本模型支撑; 且当前攻击实验是 oracle 注入式, 不是真实自适应攻击"
+        }
+      ]
+    },
+    "V2": {
+      "label": "registered V3 (Table~\\ref{tab:thr_new})",
+      "status": "registered",
+      "lock_id": "e10ba4b3df3a9392a943365a",
+      "version": "p4_threshold_table_v3",
+      "gates": {
+        "H1": [
+          {
+            "metric": "mean_f1",
+            "op": ">=",
+            "value": 0.431972
+          },
+          {
+            "metric": "deploy_params",
+            "op": "<=",
+            "value": 20480
+          }
+        ],
+        "H2": [
+          {
+            "metric": "mean_latency_ms",
+            "op": "<=",
+            "value": 142.857142857
+          }
+        ],
+        "H5": [
+          {
+            "metric": "positive_class_ece",
+            "op": "<=",
+            "value": 0.05
+          },
+          {
+            "metric": "positive_class_ece",
+            "op": "<",
+            "value": null
+          }
+        ]
+      },
+      "H6_status": "measured_no_gate",
+      "changelog": [
+        {
+          "version": "v1",
+          "change": "初版登记: H1–H5, 其中 H4 的判定规则栏误写入攻击描述",
+          "threshold_values": "H1 F1>=0.431972, params<=20480; H2 <=142.857142857 ms; H5 ECE<=0.05"
+        },
+        {
+          "version": "v2",
+          "change": "H4 重述为时间外推(区间估计); 攻击项拆出单列为 H6, 标为开放项, 不参与 all_pass",
+          "threshold_values_changed": false,
+          "note": "拆分只是修正误归档。H4 在 v1 与 v2 中都没有 gate, H1/H2/H5 的门限数值完全不变, 因此不改变任何已有判决"
+        },
+        {
+          "version": "v3",
+          "change": "H6 从 not_testable 升级为\"预登记测量协议 + 区间报告\": 在执行攻击矩阵之前锁定攻击清单、攻击者知识、配对单位与聚合方式",
+          "threshold_values_changed": false,
+          "note": "H6 仍然没有 gate: 告警容量锚点缺失, 任何通过线都会是任意值。H1/H2/H5 的门限数值一字未动, 因此不改变任何已有判决",
+          "registered_before_execution": true
+        }
+      ]
+    }
+  },
+  "protocol5": {
+    "lock_id": "91f1beb52cbad975",
+    "all_pass": false,
+    "thresholds_recorded_in_artifact": false,
+    "statuses": {
+      "H1": "falsified",
+      "H2": "pass",
+      "H4": "falsified",
+      "H5": "pass",
+      "H3": "pass"
+    }
+  },
+  "protocol6": {
+    "thresholds": {
+      "f1_min": 0.73,
+      "params_max": 20000,
+      "latency_ms_max": 8.0,
+      "edge_drop50_rel_drop_max": 0.05,
+      "extrapolation_loss_pass": 0.05,
+      "extrapolation_loss_falsify": 0.08,
+      "ece_max": 0.05
+    },
+    "winner": null,
+    "confirmation_authorized": false,
+    "n_rows": 7
+  },
+  "bitheteronet": {
+    "runs": [
+      {
+        "file": "second_dataset_20seeds.json",
+        "n_seeds_requested": 20,
+        "models": {
+          "tasgl": 20,
+          "graphsage": 20,
+          "mlp": 20
+        }
+      },
+      {
+        "file": "second_dataset_confirm.json",
+        "n_seeds_requested": 10,
+        "models": {
+          "tasgl": 10,
+          "graphsage": 10,
+          "mlp": 10
+        }
+      }
+    ]
+  },
+  "third_dataset": {
+    "status": "unknown",
+    "temporal": "non-temporal components only; it cannot test temporal extrapolation",
+    "rows": 0
+  },
+  "rows": [
+    {
+      "protocol": "3",
+      "scope": "Main result / ablation, 5 seeds",
+      "threshold_set": "withdrawn V0",
+      "rule_source": "early design document; audited as arbitrary (results/p4/threshold_justification.json)",
+      "consequence": "Kept for historical contrast only. V0 has no source, so no gate verdict from this protocol is reused.",
+      "verdict_reuse": "none"
+    },
+    {
+      "protocol": "4",
+      "scope": "Temporal / cross-chain diagnostics",
+      "threshold_set": "withdrawn V0",
+      "rule_source": "same source as protocol 3",
+      "consequence": "Descriptive only. Oracle edge injection means the relative drop cannot be read as adversarial robustness.",
+      "verdict_reuse": "none"
+    },
+    {
+      "protocol": "5",
+      "scope": "Locked exploratory confirmation (5 seeds)",
+      "threshold_set": "withdrawn V0",
+      "rule_source": "thresholds were never written to the artifact; the decision code is paper_evidence.py sha256=a1d8e2203f12560b8d9e6092",
+      "consequence": "The H2, H3 and H5 passes are passes under the withdrawn rule: H2 used a full-graph 8 ms budget and H5 used overall ECE. They are not comparable with the Table III verdicts.",
+      "verdict_reuse": "none"
+    },
+    {
+      "protocol": "6",
+      "scope": "Development gate audit (28 runs)",
+      "threshold_set": "withdrawn V0",
+      "rule_source": "results/v4/select/summary.json:development_targets (f1_min=0.73, latency_ms_max=8.0, params_max=20000)",
+      "consequence": "\"No eligible candidate\" is rule-dependent: the candidates failed f1_min=0.73, a withdrawn threshold, and the V0 full-graph 8 ms latency semantics. It must not be read as \"no candidate is eligible under the registered rule\".",
+      "verdict_reuse": "none"
+    },
+    {
+      "protocol": "P4 main",
+      "scope": "Elliptic, 10 seeds, equal budget",
+      "threshold_set": "registered V3 (Table~\\ref{tab:thr_new})",
+      "rule_source": "results/p4/thresholds/register.json lock_id=e10ba4b3df3a9392a943365a (p4_threshold_table_v3)",
+      "consequence": "The only result set in this paper judged under sourced thresholds. H1, H2 and H5 are gates; H3 and H4 are interval estimates.",
+      "verdict_reuse": "primary"
+    },
+    {
+      "protocol": "BitHeNet",
+      "scope": "Second dataset, independent",
+      "threshold_set": "borrowed V3",
+      "rule_source": "threshold values taken from the Elliptic anchor (e10ba4b3df3a9392a943365a); not re-derived on this dataset",
+      "consequence": "Any pass must be written as \"under a borrowed rule\". It is not a gate confirmation on this dataset, because the non-inferiority anchor came from baselines on another dataset.",
+      "verdict_reuse": "labelled_borrowed"
+    },
+    {
+      "protocol": "DGraph-Fin",
+      "scope": "Third-dataset probe",
+      "threshold_set": "n.a.",
+      "rule_source": "results/p5/dgraphfin_probe.json; edge_timestamp_only, no per-transaction time step",
+      "consequence": "With no per-transaction time step the TASGL temporal component is degenerate and no temporal split exists, so H4 does not apply. Only the non-temporal components can be tested here.",
+      "verdict_reuse": "none"
+    }
+  ],
+  "rule": "同一篇论文里不得出现\"旧规则 PASS\"与\"新规则 FALSIFIED\"并列而不标注门限版本的情况"
+}

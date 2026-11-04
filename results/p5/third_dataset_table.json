@@ -1,0 +1,82 @@
+{
+  "schema": "p5_third_dataset_table_v1",
+  "dataset": "dgraphfin",
+  "n_nodes": 3700550,
+  "n_features": 17,
+  "n_edges": 4300999,
+  "split": "official DGraph-Fin split (not a temporal split)",
+  "time_semantics": "edge_timestamp_only",
+  "temporal_component": "degenerate: no per-transaction time step, so all time gaps are zero",
+  "what_this_can_test": "non-temporal components only; it cannot test temporal extrapolation",
+  "rows": [
+    {
+      "model": "TASGL",
+      "seed": 0,
+      "status": "oom",
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "params": null,
+      "epochs": null,
+      "oom_alloc_gib": 2.31
+    },
+    {
+      "model": "TASGL",
+      "seed": 1,
+      "status": "oom",
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "params": null,
+      "epochs": null,
+      "oom_alloc_gib": 2.31
+    },
+    {
+      "model": "MLP",
+      "seed": 0,
+      "status": "ok",
+      "f1": 0.05233590663622196,
+      "precision": 0.028577082921037007,
+      "recall": 0.3104041272570937,
+      "params": 1698,
+      "epochs": 30,
+      "oom_alloc_gib": null
+    },
+    {
+      "model": "MLP",
+      "seed": 1,
+      "status": "ok",
+      "f1": 0.045014570428619546,
+      "precision": 0.023300941436866122,
+      "recall": 0.6607910576096303,
+      "params": 1698,
+      "epochs": 30,
+      "oom_alloc_gib": null
+    },
+    {
+      "model": "GraphSAGE",
+      "seed": 0,
+      "status": "ok",
+      "f1": 0.070298769771529,
+      "precision": 0.046277392132843334,
+      "recall": 0.1461736887360275,
+      "params": 3330,
+      "epochs": 30,
+      "oom_alloc_gib": null
+    },
+    {
+      "model": "GraphSAGE",
+      "seed": 1,
+      "status": "ok",
+      "f1": 0.06763103513056547,
+      "precision": 0.04326923076923077,
+      "recall": 0.15477214101461736,
+      "params": 3330,
+      "epochs": 30,
+      "oom_alloc_gib": null
+    }
+  ],
+  "positive_rate": 0.0126553358845272,
+  "carries_no_gate_result": true,
+  "why": "无逐交易时间步 => 时间分量退化且无法做时间划分; TASGL 在该规模上 OOM。因此本表不承载任何门限判决。"
+}

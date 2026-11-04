@@ -1,0 +1,110 @@
+============================================================
+[开始] python3 Doc\Kimi_Agent_CCF-A实验脚本-25\tasgl_experiment\p3_experiments.py second-dataset --action train --data_dir Data/dgraphfin --model mlp --seeds 0 1 2 3 4 5 6 7 8 9 --epochs 30 --device cuda --output_dir results/p3/second_dataset/mlp
+[开始时间] 2026-11-02 21:42:21.700
+[P3-2] 真实划分: train=857899 valid=183862 test=183840; 训练正类率=1.2655%
+[P3-2] seed=0 已完成，跳过
+[P3-2][seed=1] epoch=0 loss=1.20129 val_f1=0.0432
+[P3-2][seed=1] epoch=1 loss=1.19180 val_f1=0.0426
+[P3-2][seed=1] epoch=2 loss=1.18833 val_f1=0.0432
+[P3-2][seed=1] epoch=3 loss=1.18732 val_f1=0.0433
+[P3-2][seed=1] epoch=4 loss=1.18702 val_f1=0.0396
+[P3-2][seed=1] epoch=5 loss=1.18570 val_f1=0.0435
+[P3-2][seed=1] epoch=6 loss=1.18660 val_f1=0.0431
+[P3-2][seed=1] epoch=7 loss=1.18500 val_f1=0.0423
+[P3-2][seed=1] epoch=8 loss=1.18699 val_f1=0.0425
+[P3-2][seed=1] epoch=9 loss=1.18493 val_f1=0.0428
+[P3-2][seed=1] epoch=10 loss=1.18455 val_f1=0.0431
+[P3-2] seed=1 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=2] epoch=0 loss=1.20192 val_f1=0.0425
+[P3-2][seed=2] epoch=1 loss=1.19048 val_f1=0.0428
+[P3-2][seed=2] epoch=2 loss=1.18665 val_f1=0.0430
+[P3-2][seed=2] epoch=3 loss=1.18779 val_f1=0.0417
+[P3-2][seed=2] epoch=4 loss=1.18791 val_f1=0.0434
+[P3-2][seed=2] epoch=5 loss=1.18601 val_f1=0.0429
+[P3-2][seed=2] epoch=6 loss=1.18700 val_f1=0.0424
+[P3-2][seed=2] epoch=7 loss=1.18549 val_f1=0.0429
+[P3-2][seed=2] epoch=8 loss=1.18606 val_f1=0.0445
+[P3-2][seed=2] epoch=9 loss=1.18619 val_f1=0.0423
+[P3-2][seed=2] epoch=10 loss=1.18435 val_f1=0.0433
+[P3-2][seed=2] epoch=11 loss=1.18394 val_f1=0.0419
+[P3-2][seed=2] epoch=12 loss=1.18394 val_f1=0.0433
+[P3-2][seed=2] epoch=13 loss=1.18481 val_f1=0.0416
+[P3-2] seed=2 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=3] epoch=0 loss=1.20422 val_f1=0.0424
+[P3-2][seed=3] epoch=1 loss=1.19217 val_f1=0.0421
+[P3-2][seed=3] epoch=2 loss=1.18988 val_f1=0.0425
+[P3-2][seed=3] epoch=3 loss=1.18837 val_f1=0.0417
+[P3-2][seed=3] epoch=4 loss=1.18767 val_f1=0.0417
+[P3-2][seed=3] epoch=5 loss=1.18619 val_f1=0.0432
+[P3-2][seed=3] epoch=6 loss=1.18840 val_f1=0.0434
+[P3-2][seed=3] epoch=7 loss=1.18495 val_f1=0.0429
+[P3-2][seed=3] epoch=8 loss=1.18635 val_f1=0.0423
+[P3-2][seed=3] epoch=9 loss=1.18563 val_f1=0.0428
+[P3-2][seed=3] epoch=10 loss=1.18563 val_f1=0.0427
+[P3-2][seed=3] epoch=11 loss=1.18474 val_f1=0.0430
+[P3-2] seed=3 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=4] epoch=0 loss=1.20334 val_f1=0.0431
+[P3-2][seed=4] epoch=1 loss=1.19393 val_f1=0.0428
+[P3-2][seed=4] epoch=2 loss=1.18806 val_f1=0.0428
+[P3-2][seed=4] epoch=3 loss=1.18901 val_f1=0.0421
+[P3-2][seed=4] epoch=4 loss=1.18676 val_f1=0.0434
+[P3-2][seed=4] epoch=5 loss=1.18586 val_f1=0.0434
+[P3-2][seed=4] epoch=6 loss=1.18492 val_f1=0.0432
+[P3-2][seed=4] epoch=7 loss=1.18540 val_f1=0.0422
+[P3-2][seed=4] epoch=8 loss=1.18438 val_f1=0.0418
+[P3-2][seed=4] epoch=9 loss=1.18526 val_f1=0.0411
+[P3-2][seed=4] epoch=10 loss=1.18414 val_f1=0.0430
+[P3-2] seed=4 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=5] epoch=0 loss=1.20186 val_f1=0.0429
+[P3-2][seed=5] epoch=1 loss=1.19122 val_f1=0.0430
+[P3-2][seed=5] epoch=2 loss=1.18886 val_f1=0.0427
+[P3-2][seed=5] epoch=3 loss=1.18795 val_f1=0.0422
+[P3-2][seed=5] epoch=4 loss=1.18748 val_f1=0.0422
+[P3-2][seed=5] epoch=5 loss=1.18833 val_f1=0.0421
+[P3-2][seed=5] epoch=6 loss=1.18661 val_f1=0.0426
+[P3-2] seed=5 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=6] epoch=0 loss=1.20196 val_f1=0.0428
+[P3-2][seed=6] epoch=1 loss=1.19223 val_f1=0.0422
+[P3-2][seed=6] epoch=2 loss=1.19039 val_f1=0.0428
+[P3-2][seed=6] epoch=3 loss=1.18775 val_f1=0.0424
+[P3-2][seed=6] epoch=4 loss=1.18665 val_f1=0.0428
+[P3-2][seed=6] epoch=5 loss=1.18625 val_f1=0.0430
+[P3-2][seed=6] epoch=6 loss=1.18630 val_f1=0.0425
+[P3-2][seed=6] epoch=7 loss=1.18771 val_f1=0.0425
+[P3-2][seed=6] epoch=8 loss=1.18546 val_f1=0.0442
+[P3-2][seed=6] epoch=9 loss=1.18536 val_f1=0.0430
+[P3-2][seed=6] epoch=10 loss=1.18445 val_f1=0.0432
+[P3-2][seed=6] epoch=11 loss=1.18516 val_f1=0.0432
+[P3-2][seed=6] epoch=12 loss=1.18224 val_f1=0.0432
+[P3-2][seed=6] epoch=13 loss=1.18519 val_f1=0.0425
+[P3-2] seed=6 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=7] epoch=0 loss=1.20193 val_f1=0.0432
+[P3-2][seed=7] epoch=1 loss=1.19142 val_f1=0.0427
+[P3-2][seed=7] epoch=2 loss=1.18849 val_f1=0.0421
+[P3-2][seed=7] epoch=3 loss=1.18891 val_f1=0.0424
+[P3-2][seed=7] epoch=4 loss=1.18860 val_f1=0.0429
+[P3-2][seed=7] epoch=5 loss=1.18613 val_f1=0.0426
+[P3-2] seed=7 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=8] epoch=0 loss=1.19951 val_f1=0.0424
+[P3-2][seed=8] epoch=1 loss=1.19199 val_f1=0.0433
+[P3-2][seed=8] epoch=2 loss=1.18935 val_f1=0.0427
+[P3-2][seed=8] epoch=3 loss=1.18724 val_f1=0.0436
+[P3-2][seed=8] epoch=4 loss=1.18781 val_f1=0.0437
+[P3-2][seed=8] epoch=5 loss=1.18656 val_f1=0.0434
+[P3-2][seed=8] epoch=6 loss=1.18610 val_f1=0.0424
+[P3-2][seed=8] epoch=7 loss=1.18545 val_f1=0.0426
+[P3-2][seed=8] epoch=8 loss=1.18596 val_f1=0.0433
+[P3-2][seed=8] epoch=9 loss=1.18477 val_f1=0.0432
+[P3-2] seed=8 无标签测试预测已冻结；未计算最终指标
+[P3-2][seed=9] epoch=0 loss=1.20294 val_f1=0.0431
+[P3-2][seed=9] epoch=1 loss=1.19022 val_f1=0.0428
+[P3-2][seed=9] epoch=2 loss=1.19009 val_f1=0.0430
+[P3-2][seed=9] epoch=3 loss=1.18747 val_f1=0.0427
+[P3-2][seed=9] epoch=4 loss=1.18804 val_f1=0.0434
+[P3-2][seed=9] epoch=5 loss=1.18789 val_f1=0.0425
+[P3-2][seed=9] epoch=6 loss=1.18458 val_f1=0.0428
+[P3-2][seed=9] epoch=7 loss=1.18539 val_f1=0.0428
+[P3-2][seed=9] epoch=8 loss=1.18440 val_f1=0.0431
+[P3-2][seed=9] epoch=9 loss=1.18487 val_f1=0.0427
+[P3-2] seed=9 无标签测试预测已冻结；未计算最终指标
+[结束时间] 2026-11-02 21:48:21.123 (退出码=0)

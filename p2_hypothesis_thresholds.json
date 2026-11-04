@@ -1,0 +1,127 @@
+{
+  "schema": "p2_hypothesis_threshold_table_v1",
+  "declared_seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "statistics_protocol": {
+    "paired_unit": "seed",
+    "test": "wilcoxon_exact_two_sided",
+    "alpha": 0.05,
+    "sample_sd_ddof": 1,
+    "multiple_comparison": "Holm",
+    "seed_pool_sha256_required": true
+  },
+  "registration_rule": "本表必须在读取任何最终测试指标之前注册；注册后修改阈值即视为新的探索版本，不得与同一轮确认混写",
+  "hypotheses": {
+    "H1": {
+      "statement": "5 种子（现预注册 20 种子）均值 F1 >= 0.73 且部署参数量 <= 20000",
+      "source": "TASGL_CCF-A实验设计方案.md 1.3 / 13.6",
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "metric": "mean_f1",
+          "pass_op": ">=",
+          "pass_value": 0.73,
+          "falsify_op": "<",
+          "falsify_value": 0.73,
+          "on_fail": "falsified",
+          "else": "falsified"
+        },
+        {
+          "metric": "deploy_params",
+          "pass_op": "<=",
+          "pass_value": 20000,
+          "falsify_op": ">",
+          "falsify_value": 20000,
+          "on_fail": "falsified",
+          "else": "falsified"
+        }
+      ],
+      "report_only": ["sample_sd_f1", "ci95_f1", "teacher_params_offline", "calibrator_params"]
+    },
+    "H2": {
+      "statement": "均值推理延迟 <= 8 ms，且测量包含稀疏传播与校准变换",
+      "source": "TASGL_CCF-A实验设计方案.md 1.3 / 13.6",
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "metric": "mean_latency_ms",
+          "pass_op": "<=",
+          "pass_value": 8.0,
+          "falsify_op": ">",
+          "falsify_value": 8.0,
+          "on_fail": "falsified",
+          "else": "falsified"
+        }
+      ],
+      "report_only": ["latency_includes_calibration", "batch_size", "warmup", "repeats", "device"]
+    },
+    "H3": {
+      "statement": "删边 50% 时 TASGL 的 F1 相对下降 <= 基线下降幅度的 60%",
+      "source": "TASGL_CCF-A实验设计方案.md 1.3 / 13.6",
+      "scope": "per_baseline",
+      "required_baselines": ["gcn", "gat"],
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "precondition": {
+            "metric": "baseline_relative_drop",
+            "op": ">",
+            "value": 0.0,
+            "else_status": "inconclusive_nonpositive_baseline_drop"
+          },
+          "metric": "relative_drop_ratio",
+          "pass_op": "<=",
+          "pass_value": 0.6,
+          "falsify_op": ">=",
+          "falsify_value": 1.0,
+          "on_fail": "falsified",
+          "else": "inconclusive_grey_zone_60_100"
+        }
+      ],
+      "report_only": ["attack_seed_nested", "attack_family", "budget"]
+    },
+    "H4": {
+      "statement": "时间外推（训练 <=25、固定测试）相对训练 <=34 的均值 F1 损失 <= 5%",
+      "source": "TASGL_CCF-A实验设计方案.md 1.3 / 13.6",
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "metric": "relative_f1_loss",
+          "pass_op": "<=",
+          "pass_value": 0.05,
+          "falsify_op": ">",
+          "falsify_value": 0.08,
+          "on_fail": "falsified",
+          "else": "inconclusive_grey_zone_5_8"
+        }
+      ],
+      "report_only": ["mean_f1_reference", "mean_f1_short", "per_seed_relative_loss", "rolling_strictness"]
+    },
+    "H5": {
+      "statement": "ECE <= 0.05 且低于同骨干 EDL 代理；只优于基线但 >0.05 为不确定",
+      "source": "TASGL_CCF-A实验设计方案.md 1.3 / 13.6",
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "metric": "ece",
+          "pass_op": "<=",
+          "pass_value": 0.05,
+          "falsify_op": ">",
+          "falsify_value": 0.05,
+          "on_fail": "inconclusive_above_absolute_ceiling",
+          "else": "inconclusive_above_absolute_ceiling"
+        },
+        {
+          "metric": "ece",
+          "pass_op": "<",
+          "compare_to_metric": "baseline_ece",
+          "on_fail": "falsified",
+          "else": "falsified"
+        }
+      ],
+      "report_only": ["positive_class_ece", "negative_class_ece", "sce_class_subset",
+                      "stratified_ece_max", "brier", "nll", "bins", "min_count",
+                      "strata_field", "calibration_window"]
+    }
+  },
+  "all_pass_rule": "仅当 H1-H5 全部为 pass 时 all_pass=true；inconclusive、falsified、incomplete_* 均不得写成达标"
+}

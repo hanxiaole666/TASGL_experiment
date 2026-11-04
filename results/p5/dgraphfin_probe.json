@@ -1,0 +1,154 @@
+{
+  "schema": "p4_third_dataset_v1",
+  "dataset": "dgraphfin",
+  "n_nodes": 3700550,
+  "n_features": 17,
+  "n_edges": 4300999,
+  "split": "official DGraph-Fin split (not a temporal split)",
+  "time_semantics": "edge_timestamp_only",
+  "temporal_component": "degenerate: no per-transaction time step, so all time gaps are zero",
+  "what_this_can_test": "non-temporal components only; it cannot test temporal extrapolation",
+  "models": {
+    "tasgl": {
+      "config": {
+        "hidden": 64,
+        "dropout": 0.4,
+        "rank": 8
+      },
+      "rows": [
+        {
+          "seed": 0,
+          "status": "oom: CUDA out of memory. Tried to allocate 2.31 GiB. GPU 0 has a total capacity of 6.00 GiB of which 155.77 MiB is free. Of t"
+        },
+        {
+          "seed": 1,
+          "status": "oom: CUDA out of memory. Tried to allocate 2.31 GiB. GPU 0 has a total capacity of 6.00 GiB of which 166.00 MiB is free. Of t"
+        }
+      ]
+    },
+    "mlp": {
+      "config": {
+        "hidden": 32,
+        "dropout": 0.2
+      },
+      "rows": [
+        {
+          "seed": 0,
+          "f1": 0.05233590663622196,
+          "precision": 0.028577082921037007,
+          "recall": 0.3104041272570937,
+          "threshold": 0.66,
+          "epochs": 30,
+          "params": 1698,
+          "status": "ok"
+        },
+        {
+          "seed": 1,
+          "f1": 0.045014570428619546,
+          "precision": 0.023300941436866122,
+          "recall": 0.6607910576096303,
+          "threshold": 0.56,
+          "epochs": 30,
+          "params": 1698,
+          "status": "ok"
+        }
+      ],
+      "mean_f1": 0.048675238532420756,
+      "sd_f1": 0.005176966479742267
+    },
+    "graphsage": {
+      "config": {
+        "hidden": 32,
+        "dropout": 0.2
+      },
+      "rows": [
+        {
+          "seed": 0,
+          "f1": 0.070298769771529,
+          "precision": 0.046277392132843334,
+          "recall": 0.1461736887360275,
+          "threshold": 0.7200000000000001,
+          "epochs": 30,
+          "params": 3330,
+          "status": "ok"
+        },
+        {
+          "seed": 1,
+          "f1": 0.06763103513056547,
+          "precision": 0.04326923076923077,
+          "recall": 0.15477214101461736,
+          "threshold": 0.7200000000000001,
+          "epochs": 30,
+          "params": 3330,
+          "status": "ok"
+        }
+      ],
+      "mean_f1": 0.06896490245104724,
+      "sd_f1": 0.0018863732550315768
+    }
+  },
+  "seeds": [
+    0,
+    1
+  ],
+  "environment": {
+    "schema": "p4_environment_fingerprint_v1",
+    "python_version": "3.11.5",
+    "os": "Windows 10",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "cpu": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "machine": "AMD64",
+    "numpy_version": "1.26.4",
+    "torch_version": "2.2.1",
+    "cuda_runtime": "11.8",
+    "cudnn": "8700",
+    "cuda_available": true,
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA GeForce RTX 2060",
+    "gpu_total_mem_mb": 6143.6,
+    "gpu_sm_count": 30,
+    "driver_version": "522.06",
+    "power_limit_w": "[N/A]",
+    "missing": [],
+    "complete": true,
+    "fingerprint": "bb60cfd42c6aee8a1868cc937c26a5995b70ff14f29a2f5ddba08f76013a96f6"
+  },
+  "mask_kind": {
+    "train_mask": "index_array",
+    "valid_mask": "index_array",
+    "test_mask": "index_array"
+  },
+  "split_audit": {
+    "per_split": {
+      "train": {
+        "n_nodes": 857899,
+        "n_labeled": 857899,
+        "n_positive": 10857,
+        "n_negative": 847042,
+        "positive_rate": 0.0126553358845272
+      },
+      "valid": {
+        "n_nodes": 183862,
+        "n_labeled": 183862,
+        "n_positive": 2326,
+        "n_negative": 181536,
+        "positive_rate": 0.012650792442157706
+      },
+      "test": {
+        "n_nodes": 183840,
+        "n_labeled": 0,
+        "n_positive": 0,
+        "n_negative": 0,
+        "positive_rate": null
+      }
+    },
+    "overlaps": {
+      "train_valid": 0,
+      "train_test": 0,
+      "valid_test": 0
+    },
+    "disjoint": true,
+    "train_and_valid_labels_only": true,
+    "note": "官方边时间戳不等于节点到达时间，本划分不能称为严格节点 rolling"
+  }
+}

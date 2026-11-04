@@ -1,0 +1,49 @@
+{
+  "schema": "p2_window_ledger_v1",
+  "dataset": "elliptic",
+  "time_semantics": "node_transaction_time_step",
+  "total_time_steps": 49,
+  "windows": {
+    "train_core": {
+      "range": [1, 29],
+      "dataset": "elliptic",
+      "role": "train",
+      "prior_exposure": true,
+      "used_for": ["v2 E1/E2", "v3 protocol5/6 参考训练", "p0 hpo", "p0 rolling"]
+    },
+    "validation": {
+      "range": [30, 34],
+      "dataset": "elliptic",
+      "role": "validation_calibration_selection",
+      "prior_exposure": true,
+      "used_for": ["早停", "阈值调优", "校准拟合", "开发评估"]
+    },
+    "final_test": {
+      "range": [35, 49],
+      "dataset": "elliptic",
+      "role": "final_evaluation",
+      "prior_exposure": true,
+      "used_for": ["v2 E1/E2 主结果", "v3 protocol5 五种子确认",
+                   "v3 protocol6 开发汇总", "p0 develop/hpo/calibration 冻结预测",
+                   "p1 攻击矩阵与案例队列"],
+      "exposure_note": "35-49 已在多轮开发中被查看，锁定重跑只能称为探索性再确认"
+    },
+    "second_dataset_dgraphfin_test": {
+      "range": null,
+      "dataset": "dgraphfin",
+      "role": "final_evaluation",
+      "prior_exposure": false,
+      "used_for": [],
+      "exposure_note": "DGraph-Fin 官方测试掩码；若执行者从未用于开发，可声明为独立队列，但须保持该状态"
+    }
+  },
+  "reserved_range": null,
+  "independent_window_available": false,
+  "strict_rolling": {
+    "future_nodes_edges_allowed": false,
+    "scaler_fit": "train_window_visible_nodes_only",
+    "label_ceiling_enforced": true,
+    "prediction_at_step_t_uses_only_time_le_t": true
+  },
+  "declaration_rule": "Elliptic 1-49 全部时间步均已参与开发；任何与已暴露区间重叠的窗口申请都会被拒绝声明为独立确认窗。真正独立确认需要未参与开发的独立数据集（如 DGraph-Fin 官方测试掩码）或预先保留的新划分。"
+}

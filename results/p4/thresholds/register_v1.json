@@ -1,0 +1,183 @@
+{
+  "table": {
+    "schema": "p2_hypothesis_threshold_table_v1",
+    "declared_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "statistics_protocol": {
+      "paired_unit": "seed",
+      "test": "wilcoxon_exact_two_sided",
+      "alpha": 0.05,
+      "sample_sd_ddof": 1,
+      "multiple_comparison": "Holm",
+      "seed_pool_sha256_required": true
+    },
+    "registration_rule": "本表必须在读取任何最终测试指标之前注册",
+    "justification_schema": "p4_threshold_justification_v1",
+    "hypotheses": {
+      "H1": {
+        "statement": "均值 F1 >= 0.4320 (等预算最强基线非劣性锚点) 且部署参数量 <= 20480",
+        "basis": "derived",
+        "derivation": {
+          "value": 0.431972074843503,
+          "baseline_f1": 0.497,
+          "margin": 0.06502792515649702,
+          "mde_component": 0.06502792515649702,
+          "operational_margin": 0.0,
+          "formula": "floor = baseline_f1 - max(MDE(n, sd), operational_margin)",
+          "basis": "derived"
+        },
+        "params_budget": {
+          "value": 20480,
+          "formula": "params_max = memory_budget_bytes / bytes_per_param",
+          "memory_kb": 80,
+          "dtype_bytes": 4,
+          "basis": "operational",
+          "requires": "必须写明目标设备的内存预算来源"
+        },
+        "requires_seed_completeness": true,
+        "gates": [
+          {
+            "metric": "mean_f1",
+            "pass_op": ">=",
+            "pass_value": 0.431972,
+            "falsify_op": "<",
+            "falsify_value": 0.431972,
+            "on_fail": "falsified",
+            "else": "falsified"
+          },
+          {
+            "metric": "deploy_params",
+            "pass_op": "<=",
+            "pass_value": 20480,
+            "falsify_op": ">",
+            "falsify_value": 20480,
+            "on_fail": "falsified",
+            "else": "falsified"
+          }
+        ],
+        "report_only": [
+          "sample_sd_f1",
+          "ci95_f1",
+          "cohen_dz",
+          "non_inferiority_margin"
+        ]
+      },
+      "H2": {
+        "statement": "per_node_screening 口径下延迟 <= 142.857 ms (目标 QPS=7)",
+        "basis": "operational",
+        "derivation": {
+          "value_ms": 142.85714285714286,
+          "target_qps": 7.0,
+          "semantics": "per_node_screening",
+          "formula": "budget = 1 / target_qps (per_node) 或 N / target_qps (full_graph)",
+          "basis": "operational",
+          "requires": "必须写明目标 QPS 的业务来源, 且口径必须与测量口径一致"
+        },
+        "requires_seed_completeness": true,
+        "gates": [
+          {
+            "metric": "mean_latency_ms",
+            "pass_op": "<=",
+            "pass_value": 142.857142857,
+            "falsify_op": ">",
+            "falsify_value": 142.857142857,
+            "on_fail": "falsified",
+            "else": "falsified"
+          }
+        ],
+        "report_only": [
+          "measurement_semantics",
+          "n_warmup",
+          "n_repeat",
+          "sync",
+          "environment_fingerprint",
+          "full_chain_seconds"
+        ]
+      },
+      "H3": {
+        "statement": "改为区间估计: 报告 relative_drop_ratio 点估计与 种子 bootstrap 95%CI, 不设 0.6/1.0 硬门限",
+        "basis": "derived",
+        "gate_removed": true,
+        "requires_seed_completeness": true,
+        "gates": [],
+        "report_only": [
+          "relative_drop_ratio",
+          "ci95",
+          "per_baseline"
+        ]
+      },
+      "H4": {
+        "statement": "H4 在非 oracle 自适应攻击矩阵补齐前判为 not_testable",
+        "basis": "operational",
+        "status": "not_testable",
+        "gates": [],
+        "report_only": [
+          "clean_f1",
+          "attack_f1",
+          "attacker_model"
+        ]
+      },
+      "H5": {
+        "statement": "positive_class_ece <= 0.05 且低于同骨干基线 的同类指标",
+        "basis": "literature",
+        "derivation": {
+          "value": 0.05,
+          "bin_count": 15,
+          "convention": "guo2017",
+          "apply_to": "positive_class_ece",
+          "basis": "literature",
+          "citation": "Guo, Pleiss, Sun & Weinberger, ICML 2017, §5",
+          "caveat": "整体 ECE 在正类占比 ~6.5% 时会退化到接近 0 (绝大多数样本落在\"预测≈0 / 真实≈0\"的箱内), 因此 0.05 必须作用于类别质量加权的正类 ECE"
+        },
+        "requires_seed_completeness": true,
+        "gates": [
+          {
+            "metric": "positive_class_ece",
+            "pass_op": "<=",
+            "pass_value": 0.05,
+            "falsify_op": ">",
+            "falsify_value": 0.05,
+            "on_fail": "inconclusive_above_absolute_ceiling",
+            "else": "inconclusive_above_absolute_ceiling"
+          },
+          {
+            "metric": "positive_class_ece",
+            "pass_op": "<",
+            "compare_to_metric": "baseline_positive_class_ece",
+            "on_fail": "falsified",
+            "else": "falsified"
+          }
+        ],
+        "report_only": [
+          "negative_class_ece",
+          "overall_ece",
+          "brier",
+          "nll",
+          "bins",
+          "weighting",
+          "calibration_window"
+        ]
+      }
+    },
+    "all_pass_rule": "仅当 H1–H5 全部为 pass 时 all_pass=true; inconclusive / falsified / incomplete_* / not_testable 均不得写成达标"
+  },
+  "lock": {
+    "schema": "p4_threshold_lock_v1",
+    "table_sha256": "852698eebe7c554a55d83972",
+    "declared_seeds_sha256": "a28bb79aa5ca8a5eb2dc5910",
+    "meta": {}
+  },
+  "lock_id": "852698eebe7c554a55d83972",
+  "table_path": "results/p4/thresholds\\thresholds.json",
+  "lock_path": "results/p4/thresholds\\thresholds.lock.json"
+}

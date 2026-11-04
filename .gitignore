@@ -1,0 +1,45 @@
+# TASGL_experiment — GitHub release ignore rules
+# See OPENSOURCE_MANIFEST.md for what IS published and why.
+
+# ---- Raw datasets (2.8 GB, third-party; obtain via download_data.py) ----
+Data/
+data/
+
+# ---- Manuscript / historical working trees (280 MB) ----
+# Contains internal drafts, submission packages and prior snapshots of the
+# same source tree. Not part of the public code release.
+Doc/
+
+# ---- Python / IDE caches ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/
+.venv/
+venv/
+
+# ---- Internal evidence-traceability tree and generated release snapshot ----
+# TASGL_github_release/ is a build artifact: publish its CONTENTS as the
+# repository root, do not push it as a nested copy of this working tree.
+TASGL论文证据追溯/
+TASGL_github_release/
+
+# ---- Model weights and binary checkpoints (~43 MB, not needed to
+#      reproduce any table; all reported numbers come from JSON/CSV) ----
+*.model
+*.pt
+*.ckpt
+*.npz
+
+# ---- Large intermediate case queues (~84 MB for 10 CSVs) ----
+results/p3/independent_dgraph/**/case_audit_queue.csv
+
+# ---- Generated LaTeX / preview intermediates ----
+*.aux
+*.out
+*.fls
+*.blg
+*_preview.png

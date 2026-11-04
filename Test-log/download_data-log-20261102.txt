@@ -1,0 +1,88 @@
+============================================================
+[开始] python3 download_data.py --dataset all
+[开始时间] 2026-11-02 13:13:42.975
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 数据集: ethereum ==========
+[ethereum] 已存在, 跳过: ./data\ethereum\transaction_dataset.csv
+
+========== 数据集: dgraphfin ==========
+[dgraphfin] 已存在, 跳过: ./data\dgraphfin\dgraphfin.npz
+
+========== 数据集: dexposure ==========
+[dexposure] 已存在, 跳过: ./data\dexposure\historical-network_week_2025-07-01.json
+
+========== 数据集: bitheteronet ==========
+
+[BHN-VALIDATE] address_attrs.npy: OK; status=valid_layout_documented_shape_mismatch
+  path=data\bitheteronet\address_attrs.npy
+  exists=True; actual_bytes=362094608
+  expected_layout_shape=(822942, 55); documented_shape=(822942, 54); actual_shape=[822942, 55]; dtype=float64
+  header_implied_file_bytes=362094608; documented_shape_implied_file_bytes=355511072
+  physical_complete=True; layout_shape_consistent=True; documented_shape_consistent=False
+  layout_note=55=28 交易相关+27 时间相关；class 单独存放
+
+[BHN-VALIDATE] address_classes.npy: OK; status=valid
+  path=data\bitheteronet\address_classes.npy
+  exists=True; actual_bytes=6583664
+  expected_layout_shape=(822942,); documented_shape=(822942,); actual_shape=[822942]; dtype=int64
+  header_implied_file_bytes=6583664; documented_shape_implied_file_bytes=6583664
+  physical_complete=True; layout_shape_consistent=True; documented_shape_consistent=True
+
+[BHN-VALIDATE] data.pkl: OK; status=valid
+  path=data\bitheteronet\data.pkl
+  exists=True; actual_bytes=63782343
+  expected_layout_shape=None; documented_shape=None; actual_shape=None; dtype=None
+
+[BHN-VALIDATE] tx_attrs.npy: OK; status=valid_layout_documented_shape_mismatch
+  path=data\bitheteronet\tx_attrs.npy
+  exists=True; actual_bytes=295282752
+  expected_layout_shape=(202804, 182); documented_shape=(202804, 183); actual_shape=[202804, 182]; dtype=float64
+  header_implied_file_bytes=295282752; documented_shape_implied_file_bytes=296905184
+  physical_complete=True; layout_shape_consistent=True; documented_shape_consistent=False
+  layout_note=182=183 交易列-Time step；时间步单独存放
+
+[BHN-VALIDATE] tx_classes.npy: OK; status=valid
+  path=data\bitheteronet\tx_classes.npy
+  exists=True; actual_bytes=1622560
+  expected_layout_shape=(202804,); documented_shape=(202804,); actual_shape=[202804]; dtype=int64
+  header_implied_file_bytes=1622560; documented_shape_implied_file_bytes=1622560
+  physical_complete=True; layout_shape_consistent=True; documented_shape_consistent=True
+
+[BHN-VALIDATE] tx_time_step.npy: OK; status=valid
+  path=data\bitheteronet\tx_time_step.npy
+  exists=True; actual_bytes=1622560
+  expected_layout_shape=(202804,); documented_shape=(202804,); actual_shape=[202804]; dtype=int64
+  header_implied_file_bytes=1622560; documented_shape_implied_file_bytes=1622560
+  physical_complete=True; layout_shape_consistent=True; documented_shape_consistent=True
+
+[BHN-VALIDATE] 无网络校验完成；data.pkl 未执行 pickle.load。
+[BHN-VALIDATE] valid 不代表逐列语义已独立核验。
+[BHN-VALIDATE] 文档形状不一致: ['address_attrs.npy', 'tx_attrs.npy']
+[BHN-VALIDATE] 待处理文件: []
+[bitheteronet] 6 个官方文件布局均已校验, 跳过: ./data\bitheteronet
+[bitheteronet] 文档形状差异保留警告；逐列语义未独立核验
+
+========== 下载汇总 ==========
+  elliptic: OK
+  ethereum: OK
+  dgraphfin: OK
+  dexposure: OK
+  bitheteronet: OK
+[结束时间] 2026-11-02 13:13:43.544 (退出码=0)
+============================================================
+[开始] python3 download_data.py --dataset elliptic
+[开始时间] 2026-11-02 13:17:21.822
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 下载汇总 ==========
+  elliptic: OK
+[结束时间] 2026-11-02 13:17:22.086 (退出码=0)

@@ -1,0 +1,65 @@
+{
+  "protocol": 5,
+  "metadata": {
+    "schedule": {
+      "phase": "confirm",
+      "seed": 3,
+      "train_end": 34,
+      "val_start": 30,
+      "val_end": 34,
+      "test_start": 35,
+      "test_end": 49
+    },
+    "baseline": "gcn",
+    "training_config": {
+      "hidden": 48,
+      "hops": 0,
+      "dropout": 0.2,
+      "lr": 0.001,
+      "wd": 0.0001,
+      "class_weight_power": 0.5,
+      "focal_gamma": 0.0,
+      "edge_drop": 0.0,
+      "robust_ce_weight": 0.0,
+      "consistency_weight": 0.0,
+      "kd_weight": 0.0,
+      "temporal_weight": 0.0,
+      "teacher": "graphsage",
+      "calibration": "temp_bias",
+      "name": "graphless_kd"
+    },
+    "lock_id": "91f1beb52cbad975"
+  },
+  "complete": true,
+  "seed": 3,
+  "clean": {
+    "f1": 0.4103130755064457,
+    "precision": 0.34129901960784315,
+    "recall": 0.5143120960295475,
+    "pr_auc": 0.3464263741843834,
+    "recall_at_fpr_1pct": 0.17082179132040629,
+    "ece": 0.017674174291614126,
+    "brier": 0.05927806819421413,
+    "nll": 0.2091367095708847,
+    "selective_auc": 0.664285536192965,
+    "threshold": 0.3800000250339508
+  },
+  "edge_drop50": {
+    "f1": 0.4207612456747405,
+    "precision": 0.3364692861095739,
+    "recall": 0.5614035087719298,
+    "pr_auc": 0.3683655267140789,
+    "recall_at_fpr_1pct": 0.20960295475530932,
+    "ece": 0.0234718121163632,
+    "brier": 0.06453681906596194,
+    "nll": 0.2536126375198364,
+    "selective_auc": 0.620020020398188,
+    "threshold": 0.3800000250339508
+  },
+  "calibrator": {
+    "method": "temp_bias",
+    "temperature": 0.8841840624809265,
+    "bias": -1.751308798789978
+  },
+  "params": 14914
+}

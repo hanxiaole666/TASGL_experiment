@@ -1,0 +1,10 @@
+[P4][gate] seed 0: epochs=38 active=1.0 w2=0.0325704850256443 -> gate_collapsed_open
+[P4][gate] seed 1: epochs=200 active=0.761639416217804 w2=0.25832346081733704 -> gate_converged
+[P4][gate] seed 2: epochs=122 active=0.553433895111084 w2=0.2264920026063919 -> gate_converged
+[P4][gate] seed 3: epochs=200 active=0.8217554688453674 w2=0.357324481010437 -> gate_converged
+[P4][gate] seed 4: epochs=36 active=1.0 w2=0.023476149886846542 -> gate_collapsed_open
+[P4][gate] seed 5: epochs=200 active=0.7610676288604736 w2=0.3415358066558838 -> gate_converged
+[P4][gate] seed 6: epochs=181 active=0.44381600618362427 w2=0.3620334565639496 -> gate_converged
+[P4][gate] seed 7: epochs=200 active=0.7521388530731201 w2=0.3398335874080658 -> gate_converged
+[P4][gate] seed 8: epochs=180 active=0.3118879497051239 w2=0.3798007369041443 -> gate_converged
+[P4][gate] seed 9: epochs=200 active=0.7183802127838135 w2=0.30144309997558594 -> gate_converged

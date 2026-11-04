@@ -1,0 +1,170 @@
+============================================================
+[开始] python3 download_data.py --dataset elliptic
+[开始时间] 2026-10-27 09:00:38.358
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 下载汇总 ==========
+  elliptic: OK
+[结束时间] 2026-10-27 09:00:38.746 (退出码=0)
+============================================================
+[开始] python3 download_data.py --dataset elliptic
+[开始时间] 2026-10-27 09:19:23.390
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 下载汇总 ==========
+  elliptic: OK
+[结束时间] 2026-10-27 09:19:23.642 (退出码=0)
+============================================================
+[开始] python3 download_data.py --dataset elliptic
+[开始时间] 2026-10-27 11:10:48.563
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 下载汇总 ==========
+  elliptic: OK
+[结束时间] 2026-10-27 11:10:48.844 (退出码=0)
+============================================================
+[开始] python3 download_data.py --dataset all
+[开始时间] 2026-10-27 14:58:15.777
+Retrying (1/2) in 0.2s: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000013DBAF1E750>, 'Connection to drive.google.com timed out. (connect timeout=20)'))
+Retrying (2/2) in 0.3s: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000013DBADE2690>, 'Connection to drive.google.com timed out. (connect timeout=20)'))
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 数据集: ethereum ==========
+[ethereum] 已存在, 跳过: ./data\ethereum\transaction_dataset.csv
+
+========== 数据集: dgraphfin ==========
+[dgraphfin] 已存在, 跳过: ./data\dgraphfin\dgraphfin.npz
+
+========== 数据集: dexposure ==========
+[dexposure] 已存在, 跳过: ./data\dexposure\historical-network_week_2025-07-01.json
+
+========== 数据集: bitheteronet ==========
+[bitheteronet] 使用作者官方固定文件 ID, 跳过文件夹列表解析
+[bitheteronet] 主通道 + 3 备用通道; 超时/格式错误自动切换
+[bitheteronet] address_attrs.npy <- Google UserContent 直链
+
+  下载中断 (<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>); 2s 后重试 [1/1], 已保留 0.0B 断点
+[bitheteronet] 通道失败, 自动切换: 下载失败(重试1次): https://drive.usercontent.google.com/download?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&export=download&confirm=t
+[bitheteronet] address_attrs.npy <- Google Drive 直链
+
+  下载中断 (<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>); 2s 后重试 [1/1], 已保留 0.0B 断点
+[bitheteronet] 通道失败, 自动切换: 下载失败(重试1次): https://drive.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+[bitheteronet] address_attrs.npy <- Google Docs 直链
+
+  下载中断 (<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>); 2s 后重试 [1/1], 已保留 0.0B 断点
+[bitheteronet] 通道失败, 自动切换: 下载失败(重试1次): https://docs.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+[bitheteronet] address_attrs.npy <- gdown 官方文件协议
+[bitheteronet] 通道失败, 自动切换: Download failed after 2 retries: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8
+[bitheteronet] 自动下载未完成, 待处理文件: ['address_attrs.npy', 'tx_attrs.npy']
+  address_attrs.npy [Google UserContent 直链]: 下载失败(重试1次): https://drive.usercontent.google.com/download?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&export=download&confirm=t
+  address_attrs.npy [Google Drive 直链]: 下载失败(重试1次): https://drive.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+  address_attrs.npy [Google Docs 直链]: 下载失败(重试1次): https://docs.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+  address_attrs.npy [gdown 官方文件协议]: Download failed after 2 retries: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8
+[bitheteronet] 手动步骤 (免账号):
+  1. 浏览器打开 https://drive.google.com/drive/folders/1ZGx0hQYyK7B5rU0G_gGqIu_wbqYbP4wY?usp=sharing
+  2. 下载全部 6 个文件到 ./data\bitheteronet/
+  3. 重跑本脚本; 已校验文件跳过, 未完成文件从 .part 续传
+
+========== 下载汇总 ==========
+  elliptic: OK
+  ethereum: OK
+  dgraphfin: OK
+  dexposure: OK
+  bitheteronet: 需手动处理
+提示: 失败项不影响其他数据集与后续 Elliptic 主实验。
+[结束时间] 2026-10-27 15:00:27.760 (退出码=0)
+============================================================
+[开始] python3 download_data.py --dataset elliptic
+[开始时间] 2026-10-27 15:07:35.217
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 下载汇总 ==========
+  elliptic: OK
+[结束时间] 2026-10-27 15:07:35.487 (退出码=0)
+============================================================
+[开始] python3 download_data.py --dataset elliptic
+[开始时间] 2026-10-27 20:28:24.528
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 下载汇总 ==========
+  elliptic: OK
+[结束时间] 2026-10-27 20:28:24.796 (退出码=0)
+============================================================
+[开始] python3 download_data.py --dataset all
+[开始时间] 2026-10-27 20:29:46.721
+Retrying (1/2) in 0.7s: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002778E243210>, 'Connection to drive.google.com timed out. (connect timeout=20)'))
+Retrying (2/2) in 1.7s: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000277A7172D10>, 'Connection to drive.google.com timed out. (connect timeout=20)'))
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 数据集: ethereum ==========
+[ethereum] 已存在, 跳过: ./data\ethereum\transaction_dataset.csv
+
+========== 数据集: dgraphfin ==========
+[dgraphfin] 已存在, 跳过: ./data\dgraphfin\dgraphfin.npz
+
+========== 数据集: dexposure ==========
+[dexposure] 已存在, 跳过: ./data\dexposure\historical-network_week_2025-07-01.json
+
+========== 数据集: bitheteronet ==========
+[bitheteronet] 使用作者官方固定文件 ID, 跳过文件夹列表解析
+[bitheteronet] 主通道 + 3 备用通道; 超时/格式错误自动切换
+[bitheteronet] address_attrs.npy <- Google UserContent 直链
+
+  下载中断 (<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>); 2s 后重试 [1/1], 已保留 0.0B 断点
+[bitheteronet] 通道失败, 自动切换: 下载失败(重试1次): https://drive.usercontent.google.com/download?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&export=download&confirm=t
+[bitheteronet] address_attrs.npy <- Google Drive 直链
+
+  下载中断 (<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>); 2s 后重试 [1/1], 已保留 0.0B 断点
+[bitheteronet] 通道失败, 自动切换: 下载失败(重试1次): https://drive.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+[bitheteronet] address_attrs.npy <- Google Docs 直链
+
+  下载中断 (<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>); 2s 后重试 [1/1], 已保留 0.0B 断点
+[bitheteronet] 通道失败, 自动切换: 下载失败(重试1次): https://docs.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+[bitheteronet] address_attrs.npy <- gdown 官方文件协议
+[bitheteronet] 通道失败, 自动切换: Download failed after 2 retries: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8
+[bitheteronet] 自动下载未完成, 待处理文件: ['address_attrs.npy', 'tx_attrs.npy']
+  address_attrs.npy [Google UserContent 直链]: 下载失败(重试1次): https://drive.usercontent.google.com/download?id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&export=download&confirm=t
+  address_attrs.npy [Google Drive 直链]: 下载失败(重试1次): https://drive.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+  address_attrs.npy [Google Docs 直链]: 下载失败(重试1次): https://docs.google.com/uc?export=download&id=1ihbv_1AxhSN8g0uLOL-KY6AW0VO3U5NP&confirm=t
+  address_attrs.npy [gdown 官方文件协议]: Download failed after 2 retries: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=1ihbv_1AxhSN8
+[bitheteronet] 手动步骤 (免账号):
+  1. 浏览器打开 https://drive.google.com/drive/folders/1ZGx0hQYyK7B5rU0G_gGqIu_wbqYbP4wY?usp=sharing
+  2. 下载全部 6 个文件到 ./data\bitheteronet/
+  3. 重跑本脚本; 已校验文件跳过, 未完成文件从 .part 续传
+
+========== 下载汇总 ==========
+  elliptic: OK
+  ethereum: OK
+  dgraphfin: OK
+  dexposure: OK
+  bitheteronet: 需手动处理
+提示: 失败项不影响其他数据集与后续 Elliptic 主实验。
+[结束时间] 2026-10-27 20:33:42.314 (退出码=0)

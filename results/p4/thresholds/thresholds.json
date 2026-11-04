@@ -1,0 +1,343 @@
+{
+  "schema": "p2_hypothesis_threshold_table_v1",
+  "declared_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "statistics_protocol": {
+    "paired_unit": "seed",
+    "test": "wilcoxon_exact_two_sided",
+    "alpha": 0.05,
+    "sample_sd_ddof": 1,
+    "multiple_comparison": "Holm",
+    "seed_pool_sha256_required": true
+  },
+  "registration_rule": "本表必须在读取任何最终测试指标之前注册",
+  "justification_schema": "p4_threshold_justification_v1",
+  "hypotheses": {
+    "H1": {
+      "statement": "均值 F1 >= 0.4320 (等预算最强基线非劣性锚点) 且部署参数量 <= 20480",
+      "basis": "derived",
+      "derivation": {
+        "value": 0.431972074843503,
+        "baseline_f1": 0.497,
+        "margin": 0.06502792515649702,
+        "mde_component": 0.06502792515649702,
+        "operational_margin": 0.0,
+        "formula": "floor = baseline_f1 - max(MDE(n, sd), operational_margin)",
+        "basis": "derived"
+      },
+      "params_budget": {
+        "value": 20480,
+        "formula": "params_max = memory_budget_bytes / bytes_per_param",
+        "memory_kb": 80,
+        "dtype_bytes": 4,
+        "basis": "operational",
+        "requires": "必须写明目标设备的内存预算来源"
+      },
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "metric": "mean_f1",
+          "pass_op": ">=",
+          "pass_value": 0.431972,
+          "falsify_op": "<",
+          "falsify_value": 0.431972,
+          "on_fail": "falsified",
+          "else": "falsified"
+        },
+        {
+          "metric": "deploy_params",
+          "pass_op": "<=",
+          "pass_value": 20480,
+          "falsify_op": ">",
+          "falsify_value": 20480,
+          "on_fail": "falsified",
+          "else": "falsified"
+        }
+      ],
+      "report_only": [
+        "sample_sd_f1",
+        "ci95_f1",
+        "cohen_dz",
+        "non_inferiority_margin"
+      ]
+    },
+    "H2": {
+      "statement": "per_node_screening 口径下延迟 <= 142.857 ms (目标 QPS=7)",
+      "basis": "operational",
+      "derivation": {
+        "value_ms": 142.85714285714286,
+        "target_qps": 7.0,
+        "semantics": "per_node_screening",
+        "formula": "budget = 1 / target_qps (per_node) 或 N / target_qps (full_graph)",
+        "basis": "operational",
+        "requires": "必须写明目标 QPS 的业务来源, 且口径必须与测量口径一致"
+      },
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "metric": "mean_latency_ms",
+          "pass_op": "<=",
+          "pass_value": 142.857142857,
+          "falsify_op": ">",
+          "falsify_value": 142.857142857,
+          "on_fail": "falsified",
+          "else": "falsified"
+        }
+      ],
+      "report_only": [
+        "measurement_semantics",
+        "n_warmup",
+        "n_repeat",
+        "sync",
+        "environment_fingerprint",
+        "full_chain_seconds"
+      ]
+    },
+    "H3": {
+      "statement": "改为区间估计: 报告 relative_drop_ratio 点估计与 种子 bootstrap 95%CI, 不设 0.6/1.0 硬门限",
+      "basis": "derived",
+      "gate_removed": true,
+      "requires_seed_completeness": true,
+      "gates": [],
+      "report_only": [
+        "relative_drop_ratio",
+        "ci95",
+        "per_baseline"
+      ]
+    },
+    "H4": {
+      "statement": "区间估计: 报告短训练窗相对参考训练窗的 F1 相对损失点估计与种子 bootstrap 95%CI, 不设硬门限",
+      "basis": "derived",
+      "gate_removed": true,
+      "quantity": "relative_loss = (f1_reference - f1_short) / f1_reference, 两套 schedule 使用同一评测区间",
+      "requires_seed_completeness": true,
+      "gates": [],
+      "report_only": [
+        "f1_reference",
+        "f1_short",
+        "relative_loss",
+        "ci95",
+        "train_schedule_short",
+        "train_schedule_reference",
+        "eval_interval"
+      ]
+    },
+    "H6": {
+      "statement": "区间报告: 在预登记的非 oracle 攻击矩阵 (8 个攻击 x 3 个攻击种子) 下报告 clean 与 attacked 的 illicit F1 及相对下降的点估计与 10-seed bootstrap 95%CI; 不设硬门限",
+      "basis": "operational",
+      "status": "measured_no_gate",
+      "gates": [],
+      "open_item": false,
+      "measurement_protocol": {
+        "schema": "p6_h6_measurement_protocol_v1",
+        "dataset": "elliptic",
+        "evaluation_window": [
+          35,
+          49
+        ],
+        "evaluation_window_role": "same test split as the main results; labels enter only the scoring step",
+        "attack_construction_inputs": [
+          "graph structure",
+          "node features",
+          "clean model predictions"
+        ],
+        "oracle_labels": false,
+        "threshold_protocol": "decision threshold tuned once on the clean validation split and frozen; no re-tuning on attacked data",
+        "paired_unit": "model seed",
+        "n_model_seeds": 10,
+        "attack_seeds": [
+          0,
+          1,
+          2
+        ],
+        "attack_seed_role": "nested repeat inside one model seed; not an independent unit and not counted as extra seeds",
+        "aggregation": "mean over attack seeds within a model seed, then bootstrap over model seeds",
+        "quantities": [
+          "clean_f1",
+          "attacked_f1",
+          "delta_f1",
+          "relative_drop_ratio"
+        ],
+        "relative_drop_ratio": "(clean_f1 - attacked_f1) / clean_f1; inconclusive when clean_f1 <= 0",
+        "interval": "bootstrap 95% CI over model seeds",
+        "declared_attacks": [
+          {
+            "name": "edge_delete_random_10",
+            "capability": "edge_delete",
+            "selection": "random",
+            "knowledge": "black_box",
+            "goal": "untargeted_availability_degradation",
+            "budget_type": "edge_fraction",
+            "budget": 0.1,
+            "oracle_labels": false
+          },
+          {
+            "name": "edge_delete_random_50",
+            "capability": "edge_delete",
+            "selection": "random",
+            "knowledge": "black_box",
+            "goal": "untargeted_availability_degradation",
+            "budget_type": "edge_fraction",
+            "budget": 0.5,
+            "oracle_labels": false
+          },
+          {
+            "name": "edge_delete_confidence_50",
+            "capability": "edge_delete",
+            "selection": "confidence_targeted",
+            "knowledge": "gray_box",
+            "goal": "suppress_high_confidence_illicit_predictions",
+            "budget_type": "edge_fraction",
+            "budget": 0.5,
+            "oracle_labels": false
+          },
+          {
+            "name": "edge_inject_random_10",
+            "capability": "edge_inject",
+            "selection": "random",
+            "knowledge": "black_box",
+            "goal": "untargeted_structure_pollution",
+            "budget_type": "edge_fraction",
+            "budget": 0.1,
+            "oracle_labels": false
+          },
+          {
+            "name": "edge_inject_degree_10",
+            "capability": "edge_inject",
+            "selection": "degree_targeted",
+            "knowledge": "gray_box",
+            "goal": "hub_mediated_structure_pollution",
+            "budget_type": "edge_fraction",
+            "budget": 0.1,
+            "oracle_labels": false
+          },
+          {
+            "name": "edge_inject_confidence_10",
+            "capability": "edge_inject",
+            "selection": "confidence_targeted",
+            "knowledge": "gray_box",
+            "goal": "suppress_high_confidence_illicit_predictions",
+            "budget_type": "edge_fraction",
+            "budget": 0.1,
+            "oracle_labels": false
+          },
+          {
+            "name": "feature_noise_all_03",
+            "capability": "feature_noise",
+            "selection": "all_evaluation",
+            "knowledge": "black_box",
+            "goal": "untargeted_feature_degradation",
+            "budget_type": "feature_std",
+            "budget": 0.3,
+            "oracle_labels": false
+          },
+          {
+            "name": "feature_noise_confidence_05",
+            "capability": "feature_noise",
+            "selection": "confidence_targeted",
+            "knowledge": "gray_box",
+            "goal": "suppress_high_confidence_illicit_predictions",
+            "budget_type": "feature_std",
+            "budget": 0.5,
+            "oracle_labels": false
+          }
+        ],
+        "attacker_knowledge_declared": [
+          "black_box",
+          "gray_box"
+        ],
+        "attacker_knowledge_not_declared": [
+          "white_box"
+        ],
+        "cost_declaration": "per attack: budget_type, budget, and the realised cost manifest (perturbed edge pairs or feature L2 norm)",
+        "gate": null,
+        "gate_reason": "alert_capacity_per_day is unknown, so derive_attack_tolerance returns no value; any pass or fail cut-off here would be an arbitrary number",
+        "attack_matrix_sha256": "a18ffe1f0873feb34e0367efb0bf62d03f45e114e56b2197816314d25d09eafc",
+        "attack_matrix_protocol": "p1_nonoracle_attack_matrix_v1"
+      },
+      "why_no_gate": "alert_capacity_per_day is unknown, so derive_attack_tolerance returns no value; any pass or fail cut-off here would be an arbitrary number",
+      "report_only": [
+        "clean_f1",
+        "attack_f1",
+        "relative_drop_ratio",
+        "ci95",
+        "attacker_model",
+        "oracle_free",
+        "attack_cost"
+      ]
+    },
+    "H5": {
+      "statement": "positive_class_ece <= 0.05 且低于同骨干基线 的同类指标",
+      "basis": "literature",
+      "derivation": {
+        "value": 0.05,
+        "bin_count": 15,
+        "convention": "guo2017",
+        "apply_to": "positive_class_ece",
+        "basis": "literature",
+        "citation": "Guo, Pleiss, Sun & Weinberger, ICML 2017, §5",
+        "caveat": "整体 ECE 在正类占比 ~6.5% 时会退化到接近 0 (绝大多数样本落在\"预测≈0 / 真实≈0\"的箱内), 因此 0.05 必须作用于类别质量加权的正类 ECE"
+      },
+      "requires_seed_completeness": true,
+      "gates": [
+        {
+          "metric": "positive_class_ece",
+          "pass_op": "<=",
+          "pass_value": 0.05,
+          "falsify_op": ">",
+          "falsify_value": 0.05,
+          "on_fail": "inconclusive_above_absolute_ceiling",
+          "else": "inconclusive_above_absolute_ceiling"
+        },
+        {
+          "metric": "positive_class_ece",
+          "pass_op": "<",
+          "compare_to_metric": "baseline_positive_class_ece",
+          "on_fail": "falsified",
+          "else": "falsified"
+        }
+      ],
+      "report_only": [
+        "negative_class_ece",
+        "overall_ece",
+        "brier",
+        "nll",
+        "bins",
+        "weighting",
+        "calibration_window"
+      ]
+    }
+  },
+  "all_pass_rule": "仅当 H1–H5 全部为 pass 时 all_pass=true; inconclusive / falsified / incomplete_* / not_testable 均不得写成达标; H6 已实测但无容限锚点, 只报区间, 不参与 all_pass 判定",
+  "registration_version": "p4_threshold_table_v3",
+  "registration_changelog": [
+    {
+      "version": "v1",
+      "change": "初版登记: H1–H5, 其中 H4 的判定规则栏误写入攻击描述",
+      "threshold_values": "H1 F1>=0.431972, params<=20480; H2 <=142.857142857 ms; H5 ECE<=0.05"
+    },
+    {
+      "version": "v2",
+      "change": "H4 重述为时间外推(区间估计); 攻击项拆出单列为 H6, 标为开放项, 不参与 all_pass",
+      "threshold_values_changed": false,
+      "note": "拆分只是修正误归档。H4 在 v1 与 v2 中都没有 gate, H1/H2/H5 的门限数值完全不变, 因此不改变任何已有判决"
+    },
+    {
+      "version": "v3",
+      "change": "H6 从 not_testable 升级为\"预登记测量协议 + 区间报告\": 在执行攻击矩阵之前锁定攻击清单、攻击者知识、配对单位与聚合方式",
+      "threshold_values_changed": false,
+      "note": "H6 仍然没有 gate: 告警容量锚点缺失, 任何通过线都会是任意值。H1/H2/H5 的门限数值一字未动, 因此不改变任何已有判决",
+      "registered_before_execution": true
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "schema": "p5_repro_audit_v1",
+  "current": "results/p4/second_dataset_20seeds.json",
+  "archive": "results/p4/second_dataset_confirm.json",
+  "current_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "archive_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "cross_execution": {
+    "graphsage": {
+      "n_seeds": 10,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "per_seed_abs_diff": {
+        "0": 0.0,
+        "1": 0.03451869280576192,
+        "2": 0.015965157417884845,
+        "3": 0.0,
+        "4": 0.006735681802586324,
+        "5": 0.008106813071352081,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.009756097560975618,
+        "9": 0.0033913121672998203
+      },
+      "mean_abs_diff": 0.007847375482586062,
+      "max_abs_diff": 0.03451869280576192,
+      "max_abs_diff_seed": 1,
+      "archive_mean_f1": 0.4707136778245865,
+      "current_mean_f1": 0.47031017838550293
+    },
+    "mlp": {
+      "n_seeds": 10,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "per_seed_abs_diff": {
+        "0": 0.008444775333549093,
+        "1": 0.0,
+        "2": 0.04799692625758001,
+        "3": 0.0,
+        "4": 0.02919810130100431,
+        "5": 0.0007359853382240544,
+        "6": 0.04265209581048823,
+        "7": 0.0,
+        "8": 0.004012435073084963,
+        "9": 0.00986193293885601
+      },
+      "mean_abs_diff": 0.014290225205278667,
+      "max_abs_diff": 0.04799692625758001,
+      "max_abs_diff_seed": 2,
+      "archive_mean_f1": 0.40886251248275984,
+      "current_mean_f1": 0.3990361159465792
+    },
+    "tasgl": {
+      "n_seeds": 10,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "per_seed_abs_diff": {
+        "0": 0.009351675910590718,
+        "1": 0.02517906205776499,
+        "2": 0.019423686643110782,
+        "3": 0.04293180649794559,
+        "4": 0.03251412986378899,
+        "5": 0.07208882295613073,
+        "6": 0.0030845247492909955,
+        "7": 0.09221076567707343,
+        "8": 0.0231074276587373,
+        "9": 0.13264829358453756
+      },
+      "mean_abs_diff": 0.04525401955989711,
+      "max_abs_diff": 0.13264829358453756,
+      "max_abs_diff_seed": 9,
+      "archive_mean_f1": 0.5596128250767716,
+      "current_mean_f1": 0.5729527910803388
+    }
+  },
+  "log_disagreement": [
+    {
+      "model": "tasgl",
+      "seed": 0,
+      "per_source": {
+        "(archived json)": 0.5383,
+        "second_dataset.log": 0.5484,
+        "second_dataset_tasgl.log": 0.5373
+      },
+      "n_sources": 3,
+      "n_distinct": 3,
+      "distinct_values": [
+        0.5373,
+        0.5383,
+        0.5484
+      ],
+      "spread": 0.011099999999999999,
+      "compared_at_decimals": 4,
+      "disagrees": true
+    },
+    {
+      "model": "tasgl",
+      "seed": 1,
+      "per_source": {
+        "(archived json)": 0.5861,
+        "second_dataset.log": 0.6092,
+        "second_dataset_tasgl.log": 0.5813
+      },
+      "n_sources": 3,
+      "n_distinct": 3,
+      "distinct_values": [
+        0.5813,
+        0.5861,
+        0.6092
+      ],
+      "spread": 0.027899999999999925,
+      "compared_at_decimals": 4,
+      "disagrees": true
+    }
+  ],
+  "determinism": {
+    "schema": "p5_determinism_probe_v1",
+    "dataset": "elliptic",
+    "model": "tasgl",
+    "epochs": 60,
+    "run1": {
+      "seed": 0,
+      "f1": 0.4017910447761194,
+      "threshold": 0.54,
+      "params": 19595,
+      "epochs": 38,
+      "probs_sha256": "eceb41716cece28c5c0a89c8",
+      "n_scored": 16670
+    },
+    "run2": {
+      "seed": 0,
+      "f1": 0.4017910447761194,
+      "threshold": 0.54,
+      "params": 19595,
+      "epochs": 38,
+      "probs_sha256": "425d2851bc019e15cd983d6b",
+      "n_scored": 16670
+    },
+    "control_other_seed": {
+      "seed": 1,
+      "f1": 0.4575246579700923,
+      "threshold": 0.88,
+      "params": 19595,
+      "epochs": 60,
+      "probs_sha256": "2beba8e5912a7148f283e509",
+      "n_scored": 16670
+    },
+    "same_seed_bitwise_identical": false,
+    "max_prob_abs_diff_same_seed": 1.7881393432617188e-07,
+    "same_seed_equivalent_at_1e-6": true,
+    "f1_abs_diff_same_seed": 0.0,
+    "control_differs": true,
+    "verdict": "bitwise_different_metric_stable",
+    "note": "同一进程内连续两次训练同一种子; 若逐位不一致, 说明该栈上存在未受控的非确定性来源, 逐种子数值不能在跨运行意义上复用"
+  },
+  "verdict": [
+    "graphsage: 跨执行 seeds 0-9 平均 |ΔF1| 0.0078, 最大 0.0345 (seed 1)",
+    "mlp: 跨执行 seeds 0-9 平均 |ΔF1| 0.0143, 最大 0.0480 (seed 2)",
+    "tasgl: 跨执行 seeds 0-9 平均 |ΔF1| 0.0453, 最大 0.1326 (seed 9)",
+    "执行内同种子两次: 最大概率偏差 1.7881393432617188e-07, F1 差 0.0, 判定 bitwise_different_metric_stable"
+  ]
+}

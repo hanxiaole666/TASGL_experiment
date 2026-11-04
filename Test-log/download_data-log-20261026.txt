@@ -1,0 +1,870 @@
+============================================================
+[开始] "python3" download_data.py --dataset all
+[开始时间] 2026-10-26 11:57:51
+
+========== ���ݼ�: elliptic ==========
+[elliptic] ���� elliptic_txs_features.csv <- https://data.pyg.org/datasets/elliptic/elliptic_txs_features.csv.zip
+
+  elliptic_txs_features.csv.zip: 1.0MB / 143.6MB  (0.61 MB/s)
+  elliptic_txs_features.csv.zip: 2.0MB / 143.6MB  (1.05 MB/s)
+  elliptic_txs_features.csv.zip: 3.0MB / 143.6MB  (1.26 MB/s)
+  elliptic_txs_features.csv.zip: 4.0MB / 143.6MB  (1.66 MB/s)
+  elliptic_txs_features.csv.zip: 5.0MB / 143.6MB  (1.93 MB/s)
+  elliptic_txs_features.csv.zip: 6.0MB / 143.6MB  (2.23 MB/s)
+  elliptic_txs_features.csv.zip: 7.0MB / 143.6MB  (2.40 MB/s)
+  elliptic_txs_features.csv.zip: 8.0MB / 143.6MB  (2.37 MB/s)
+  elliptic_txs_features.csv.zip: 9.0MB / 143.6MB  (2.60 MB/s)
+  elliptic_txs_features.csv.zip: 10.0MB / 143.6MB  (2.50 MB/s)
+  elliptic_txs_features.csv.zip: 11.0MB / 143.6MB  (2.68 MB/s)
+  elliptic_txs_features.csv.zip: 12.0MB / 143.6MB  (2.83 MB/s)
+  elliptic_txs_features.csv.zip: 13.0MB / 143.6MB  (3.05 MB/s)
+  elliptic_txs_features.csv.zip: 14.0MB / 143.6MB  (3.04 MB/s)
+  elliptic_txs_features.csv.zip: 15.0MB / 143.6MB  (3.11 MB/s)
+  elliptic_txs_features.csv.zip: 16.0MB / 143.6MB  (3.08 MB/s)
+  elliptic_txs_features.csv.zip: 17.0MB / 143.6MB  (3.19 MB/s)
+  elliptic_txs_features.csv.zip: 18.0MB / 143.6MB  (3.37 MB/s)
+  elliptic_txs_features.csv.zip: 19.0MB / 143.6MB  (3.31 MB/s)
+  elliptic_txs_features.csv.zip: 20.0MB / 143.6MB  (3.35 MB/s)
+  elliptic_txs_features.csv.zip: 21.0MB / 143.6MB  (3.49 MB/s)
+  elliptic_txs_features.csv.zip: 22.0MB / 143.6MB  (3.42 MB/s)
+  elliptic_txs_features.csv.zip: 23.0MB / 143.6MB  (3.47 MB/s)
+  elliptic_txs_features.csv.zip: 24.0MB / 143.6MB  (3.36 MB/s)
+  elliptic_txs_features.csv.zip: 25.0MB / 143.6MB  (3.47 MB/s)
+  elliptic_txs_features.csv.zip: 26.0MB / 143.6MB  (3.61 MB/s)
+  elliptic_txs_features.csv.zip: 27.0MB / 143.6MB  (3.67 MB/s)
+  elliptic_txs_features.csv.zip: 28.0MB / 143.6MB  (3.57 MB/s)
+  elliptic_txs_features.csv.zip: 29.0MB / 143.6MB  (3.67 MB/s)
+  elliptic_txs_features.csv.zip: 30.0MB / 143.6MB  (3.73 MB/s)
+  elliptic_txs_features.csv.zip: 31.0MB / 143.6MB  (3.58 MB/s)
+  elliptic_txs_features.csv.zip: 32.0MB / 143.6MB  (3.69 MB/s)
+  elliptic_txs_features.csv.zip: 33.0MB / 143.6MB  (3.78 MB/s)
+  elliptic_txs_features.csv.zip: 34.0MB / 143.6MB  (3.80 MB/s)
+  elliptic_txs_features.csv.zip: 35.0MB / 143.6MB  (3.75 MB/s)
+  elliptic_txs_features.csv.zip: 36.0MB / 143.6MB  (3.83 MB/s)
+  elliptic_txs_features.csv.zip: 37.0MB / 143.6MB  (3.76 MB/s)
+  elliptic_txs_features.csv.zip: 38.0MB / 143.6MB  (3.79 MB/s)
+  elliptic_txs_features.csv.zip: 39.0MB / 143.6MB  (3.87 MB/s)
+  elliptic_txs_features.csv.zip: 40.0MB / 143.6MB  (3.80 MB/s)
+  elliptic_txs_features.csv.zip: 41.0MB / 143.6MB  (3.85 MB/s)
+  elliptic_txs_features.csv.zip: 42.0MB / 143.6MB  (3.91 MB/s)
+  elliptic_txs_features.csv.zip: 43.0MB / 143.6MB  (3.77 MB/s)
+  elliptic_txs_features.csv.zip: 44.0MB / 143.6MB  (3.86 MB/s)
+  elliptic_txs_features.csv.zip: 45.0MB / 143.6MB  (3.92 MB/s)
+  elliptic_txs_features.csv.zip: 46.0MB / 143.6MB  (3.86 MB/s)
+  elliptic_txs_features.csv.zip: 47.0MB / 143.6MB  (3.88 MB/s)
+  elliptic_txs_features.csv.zip: 48.0MB / 143.6MB  (3.95 MB/s)
+  elliptic_txs_features.csv.zip: 49.0MB / 143.6MB  (3.97 MB/s)
+  elliptic_txs_features.csv.zip: 50.0MB / 143.6MB  (3.92 MB/s)
+  elliptic_txs_features.csv.zip: 51.0MB / 143.6MB  (3.96 MB/s)
+  elliptic_txs_features.csv.zip: 52.0MB / 143.6MB  (3.99 MB/s)
+  elliptic_txs_features.csv.zip: 53.0MB / 143.6MB  (3.94 MB/s)
+  elliptic_txs_features.csv.zip: 54.0MB / 143.6MB  (3.95 MB/s)
+  elliptic_txs_features.csv.zip: 55.0MB / 143.6MB  (4.01 MB/s)
+  elliptic_txs_features.csv.zip: 56.0MB / 143.6MB  (4.02 MB/s)
+  elliptic_txs_features.csv.zip: 57.0MB / 143.6MB  (3.97 MB/s)
+  elliptic_txs_features.csv.zip: 58.0MB / 143.6MB  (4.02 MB/s)
+  elliptic_txs_features.csv.zip: 59.0MB / 143.6MB  (3.99 MB/s)
+  elliptic_txs_features.csv.zip: 60.0MB / 143.6MB  (4.00 MB/s)
+  elliptic_txs_features.csv.zip: 61.0MB / 143.6MB  (4.05 MB/s)
+  elliptic_txs_features.csv.zip: 62.0MB / 143.6MB  (4.07 MB/s)
+  elliptic_txs_features.csv.zip: 63.0MB / 143.6MB  (4.00 MB/s)
+  elliptic_txs_features.csv.zip: 64.0MB / 143.6MB  (4.05 MB/s)
+  elliptic_txs_features.csv.zip: 65.0MB / 143.6MB  (4.10 MB/s)
+  elliptic_txs_features.csv.zip: 66.0MB / 143.6MB  (4.05 MB/s)
+  elliptic_txs_features.csv.zip: 67.0MB / 143.6MB  (4.08 MB/s)
+  elliptic_txs_features.csv.zip: 68.0MB / 143.6MB  (4.12 MB/s)
+  elliptic_txs_features.csv.zip: 69.0MB / 143.6MB  (4.16 MB/s)
+  elliptic_txs_features.csv.zip: 70.0MB / 143.6MB  (4.13 MB/s)
+  elliptic_txs_features.csv.zip: 71.0MB / 143.6MB  (4.15 MB/s)
+  elliptic_txs_features.csv.zip: 72.0MB / 143.6MB  (4.17 MB/s)
+  elliptic_txs_features.csv.zip: 73.0MB / 143.6MB  (4.22 MB/s)
+  elliptic_txs_features.csv.zip: 74.0MB / 143.6MB  (4.24 MB/s)
+  elliptic_txs_features.csv.zip: 75.0MB / 143.6MB  (4.03 MB/s)
+  elliptic_txs_features.csv.zip: 76.0MB / 143.6MB  (4.08 MB/s)
+  elliptic_txs_features.csv.zip: 77.0MB / 143.6MB  (4.13 MB/s)
+  elliptic_txs_features.csv.zip: 78.0MB / 143.6MB  (4.15 MB/s)
+  elliptic_txs_features.csv.zip: 79.0MB / 143.6MB  (4.12 MB/s)
+  elliptic_txs_features.csv.zip: 80.0MB / 143.6MB  (4.14 MB/s)
+  elliptic_txs_features.csv.zip: 81.0MB / 143.6MB  (4.19 MB/s)
+  elliptic_txs_features.csv.zip: 82.0MB / 143.6MB  (4.22 MB/s)
+  elliptic_txs_features.csv.zip: 83.0MB / 143.6MB  (4.24 MB/s)
+  elliptic_txs_features.csv.zip: 84.0MB / 143.6MB  (4.18 MB/s)
+  elliptic_txs_features.csv.zip: 85.0MB / 143.6MB  (4.22 MB/s)
+  elliptic_txs_features.csv.zip: 86.0MB / 143.6MB  (4.25 MB/s)
+  elliptic_txs_features.csv.zip: 87.0MB / 143.6MB  (4.20 MB/s)
+  elliptic_txs_features.csv.zip: 88.0MB / 143.6MB  (4.25 MB/s)
+  elliptic_txs_features.csv.zip: 89.0MB / 143.6MB  (4.28 MB/s)
+  elliptic_txs_features.csv.zip: 90.0MB / 143.6MB  (4.25 MB/s)
+  elliptic_txs_features.csv.zip: 91.0MB / 143.6MB  (4.26 MB/s)
+  elliptic_txs_features.csv.zip: 92.0MB / 143.6MB  (4.30 MB/s)
+  elliptic_txs_features.csv.zip: 93.0MB / 143.6MB  (4.32 MB/s)
+  elliptic_txs_features.csv.zip: 94.0MB / 143.6MB  (4.29 MB/s)
+  elliptic_txs_features.csv.zip: 95.0MB / 143.6MB  (4.32 MB/s)
+  elliptic_txs_features.csv.zip: 96.0MB / 143.6MB  (4.35 MB/s)
+  elliptic_txs_features.csv.zip: 97.0MB / 143.6MB  (4.37 MB/s)
+  elliptic_txs_features.csv.zip: 98.0MB / 143.6MB  (4.34 MB/s)
+  elliptic_txs_features.csv.zip: 99.0MB / 143.6MB  (4.37 MB/s)
+  elliptic_txs_features.csv.zip: 100.0MB / 143.6MB  (4.41 MB/s)
+  elliptic_txs_features.csv.zip: 101.0MB / 143.6MB  (4.44 MB/s)
+  elliptic_txs_features.csv.zip: 102.0MB / 143.6MB  (4.46 MB/s)
+  elliptic_txs_features.csv.zip: 103.0MB / 143.6MB  (4.43 MB/s)
+  elliptic_txs_features.csv.zip: 104.0MB / 143.6MB  (4.45 MB/s)
+  elliptic_txs_features.csv.zip: 105.0MB / 143.6MB  (4.48 MB/s)
+  elliptic_txs_features.csv.zip: 106.0MB / 143.6MB  (4.50 MB/s)
+  elliptic_txs_features.csv.zip: 107.0MB / 143.6MB  (4.43 MB/s)
+  elliptic_txs_features.csv.zip: 108.0MB / 143.6MB  (4.48 MB/s)
+  elliptic_txs_features.csv.zip: 109.0MB / 143.6MB  (4.52 MB/s)
+  elliptic_txs_features.csv.zip: 110.0MB / 143.6MB  (4.56 MB/s)
+  elliptic_txs_features.csv.zip: 111.0MB / 143.6MB  (4.58 MB/s)
+  elliptic_txs_features.csv.zip: 112.0MB / 143.6MB  (4.60 MB/s)
+  elliptic_txs_features.csv.zip: 113.0MB / 143.6MB  (4.58 MB/s)
+  elliptic_txs_features.csv.zip: 114.0MB / 143.6MB  (4.59 MB/s)
+  elliptic_txs_features.csv.zip: 115.0MB / 143.6MB  (4.62 MB/s)
+  elliptic_txs_features.csv.zip: 116.0MB / 143.6MB  (4.66 MB/s)
+  elliptic_txs_features.csv.zip: 117.0MB / 143.6MB  (4.68 MB/s)
+  elliptic_txs_features.csv.zip: 118.0MB / 143.6MB  (4.70 MB/s)
+  elliptic_txs_features.csv.zip: 119.0MB / 143.6MB  (4.65 MB/s)
+  elliptic_txs_features.csv.zip: 120.0MB / 143.6MB  (4.68 MB/s)
+  elliptic_txs_features.csv.zip: 121.0MB / 143.6MB  (4.72 MB/s)
+  elliptic_txs_features.csv.zip: 122.0MB / 143.6MB  (4.75 MB/s)
+  elliptic_txs_features.csv.zip: 123.0MB / 143.6MB  (4.70 MB/s)
+  elliptic_txs_features.csv.zip: 124.0MB / 143.6MB  (4.70 MB/s)
+  elliptic_txs_features.csv.zip: 125.0MB / 143.6MB  (4.74 MB/s)
+  elliptic_txs_features.csv.zip: 126.0MB / 143.6MB  (4.77 MB/s)
+  elliptic_txs_features.csv.zip: 127.0MB / 143.6MB  (4.81 MB/s)
+  elliptic_txs_features.csv.zip: 128.0MB / 143.6MB  (4.83 MB/s)
+  elliptic_txs_features.csv.zip: 129.0MB / 143.6MB  (4.85 MB/s)
+  elliptic_txs_features.csv.zip: 130.0MB / 143.6MB  (4.82 MB/s)
+  elliptic_txs_features.csv.zip: 131.0MB / 143.6MB  (4.82 MB/s)
+  elliptic_txs_features.csv.zip: 132.0MB / 143.6MB  (4.84 MB/s)
+  elliptic_txs_features.csv.zip: 133.0MB / 143.6MB  (4.87 MB/s)
+  elliptic_txs_features.csv.zip: 134.0MB / 143.6MB  (4.80 MB/s)
+  elliptic_txs_features.csv.zip: 135.0MB / 143.6MB  (4.83 MB/s)
+  elliptic_txs_features.csv.zip: 136.0MB / 143.6MB  (4.86 MB/s)
+  elliptic_txs_features.csv.zip: 137.0MB / 143.6MB  (4.90 MB/s)
+  elliptic_txs_features.csv.zip: 138.0MB / 143.6MB  (4.93 MB/s)
+  elliptic_txs_features.csv.zip: 139.0MB / 143.6MB  (4.95 MB/s)
+  elliptic_txs_features.csv.zip: 140.0MB / 143.6MB  (4.87 MB/s)
+  elliptic_txs_features.csv.zip: 141.0MB / 143.6MB  (4.91 MB/s)
+  elliptic_txs_features.csv.zip: 142.0MB / 143.6MB  (4.94 MB/s)
+  elliptic_txs_features.csv.zip: 143.0MB / 143.6MB  (4.98 MB/s)
+  elliptic_txs_features.csv.zip: 143.6MB / 143.6MB  (5.00 MB/s)
+[elliptic] ���: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] ���� elliptic_txs_classes.csv <- https://data.pyg.org/datasets/elliptic/elliptic_txs_classes.csv.zip
+
+  elliptic_txs_classes.csv.zip: 904.0KB / 904.0KB  (0.46 MB/s)
+[elliptic] ���: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] ���� elliptic_txs_edgelist.csv <- https://data.pyg.org/datasets/elliptic/elliptic_txs_edgelist.csv.zip
+
+  elliptic_txs_edgelist.csv.zip: 1.0MB / 1.6MB  (0.51 MB/s)
+  elliptic_txs_edgelist.csv.zip: 1.6MB / 1.6MB  (0.66 MB/s)
+[elliptic] ���: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== ���ݼ�: ethereum ==========
+[ethereum] ���� transaction_dataset.csv (Kaggle ethereum-frauddetection-dataset �Ĺ�������)
+
+  transaction_dataset.csv: 1.0MB / 2.7MB  (0.85 MB/s)
+  transaction_dataset.csv: 2.0MB / 2.7MB  (0.59 MB/s)
+  transaction_dataset.csv: 2.7MB / 2.7MB  (0.37 MB/s)
+[ethereum] ���: ./data\ethereum\transaction_dataset.csv
+
+========== ���ݼ�: dgraphfin ==========
+[dgraphfin] ���� DGraphFin.zip <- https://dgraph.oss-cn-shanghai.aliyuncs.com/DGraphFin.zip (Լ 144MB)
+
+  DGraphFin.zip: 1.0MB / 143.5MB  (3.55 MB/s)
+  DGraphFin.zip: 2.0MB / 143.5MB  (4.96 MB/s)
+  DGraphFin.zip: 3.0MB / 143.5MB  (5.95 MB/s)
+  DGraphFin.zip: 4.0MB / 143.5MB  (6.50 MB/s)
+  DGraphFin.zip: 5.0MB / 143.5MB  (6.80 MB/s)
+  DGraphFin.zip: 6.0MB / 143.5MB  (7.15 MB/s)
+  DGraphFin.zip: 7.0MB / 143.5MB  (7.18 MB/s)
+  DGraphFin.zip: 8.0MB / 143.5MB  (7.23 MB/s)
+  DGraphFin.zip: 9.0MB / 143.5MB  (7.50 MB/s)
+  DGraphFin.zip: 10.0MB / 143.5MB  (7.28 MB/s)
+  DGraphFin.zip: 11.0MB / 143.5MB  (7.46 MB/s)
+  DGraphFin.zip: 12.0MB / 143.5MB  (7.38 MB/s)
+  DGraphFin.zip: 13.0MB / 143.5MB  (7.15 MB/s)
+  DGraphFin.zip: 14.0MB / 143.5MB  (7.03 MB/s)
+  DGraphFin.zip: 15.0MB / 143.5MB  (7.25 MB/s)
+  DGraphFin.zip: 16.0MB / 143.5MB  (7.36 MB/s)
+  DGraphFin.zip: 17.0MB / 143.5MB  (7.41 MB/s)
+  DGraphFin.zip: 18.0MB / 143.5MB  (7.46 MB/s)
+  DGraphFin.zip: 19.0MB / 143.5MB  (7.54 MB/s)
+  DGraphFin.zip: 20.0MB / 143.5MB  (7.63 MB/s)
+  DGraphFin.zip: 21.0MB / 143.5MB  (7.75 MB/s)
+  DGraphFin.zip: 22.0MB / 143.5MB  (7.74 MB/s)
+  DGraphFin.zip: 23.0MB / 143.5MB  (7.78 MB/s)
+  DGraphFin.zip: 24.0MB / 143.5MB  (7.85 MB/s)
+  DGraphFin.zip: 25.0MB / 143.5MB  (7.89 MB/s)
+  DGraphFin.zip: 26.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 27.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 28.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 29.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 30.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 31.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 32.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 33.0MB / 143.5MB  (8.11 MB/s)
+  DGraphFin.zip: 34.0MB / 143.5MB  (7.97 MB/s)
+  DGraphFin.zip: 35.0MB / 143.5MB  (8.02 MB/s)
+  DGraphFin.zip: 36.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 37.0MB / 143.5MB  (7.93 MB/s)
+  DGraphFin.zip: 38.0MB / 143.5MB  (7.94 MB/s)
+  DGraphFin.zip: 39.0MB / 143.5MB  (7.97 MB/s)
+  DGraphFin.zip: 40.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 41.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 42.0MB / 143.5MB  (7.91 MB/s)
+  DGraphFin.zip: 43.0MB / 143.5MB  (7.92 MB/s)
+  DGraphFin.zip: 44.0MB / 143.5MB  (7.94 MB/s)
+  DGraphFin.zip: 45.0MB / 143.5MB  (7.89 MB/s)
+  DGraphFin.zip: 46.0MB / 143.5MB  (7.89 MB/s)
+  DGraphFin.zip: 47.0MB / 143.5MB  (7.94 MB/s)
+  DGraphFin.zip: 48.0MB / 143.5MB  (7.96 MB/s)
+  DGraphFin.zip: 49.0MB / 143.5MB  (7.96 MB/s)
+  DGraphFin.zip: 50.0MB / 143.5MB  (7.96 MB/s)
+  DGraphFin.zip: 51.0MB / 143.5MB  (7.97 MB/s)
+  DGraphFin.zip: 52.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 53.0MB / 143.5MB  (8.02 MB/s)
+  DGraphFin.zip: 54.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 55.0MB / 143.5MB  (8.06 MB/s)
+  DGraphFin.zip: 56.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 57.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 58.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 59.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 60.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 61.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 62.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 63.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 64.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 65.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 66.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 67.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 68.0MB / 143.5MB  (8.02 MB/s)
+  DGraphFin.zip: 69.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 70.0MB / 143.5MB  (8.01 MB/s)
+  DGraphFin.zip: 71.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 72.0MB / 143.5MB  (8.01 MB/s)
+  DGraphFin.zip: 73.0MB / 143.5MB  (8.02 MB/s)
+  DGraphFin.zip: 74.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 75.0MB / 143.5MB  (8.06 MB/s)
+  DGraphFin.zip: 76.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 77.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 78.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 79.0MB / 143.5MB  (8.11 MB/s)
+  DGraphFin.zip: 80.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 81.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 82.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 83.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 84.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 85.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 86.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 87.0MB / 143.5MB  (8.01 MB/s)
+  DGraphFin.zip: 88.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 89.0MB / 143.5MB  (8.01 MB/s)
+  DGraphFin.zip: 90.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 91.0MB / 143.5MB  (8.02 MB/s)
+  DGraphFin.zip: 92.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 93.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 94.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 95.0MB / 143.5MB  (7.99 MB/s)
+  DGraphFin.zip: 96.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 97.0MB / 143.5MB  (8.01 MB/s)
+  DGraphFin.zip: 98.0MB / 143.5MB  (8.02 MB/s)
+  DGraphFin.zip: 99.0MB / 143.5MB  (8.01 MB/s)
+  DGraphFin.zip: 100.0MB / 143.5MB  (8.00 MB/s)
+  DGraphFin.zip: 101.0MB / 143.5MB  (8.02 MB/s)
+  DGraphFin.zip: 102.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 103.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 104.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 105.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 106.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 107.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 108.0MB / 143.5MB  (8.06 MB/s)
+  DGraphFin.zip: 109.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 110.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 111.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 112.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 113.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 114.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 115.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 116.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 117.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 118.0MB / 143.5MB  (8.04 MB/s)
+  DGraphFin.zip: 119.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 120.0MB / 143.5MB  (8.06 MB/s)
+  DGraphFin.zip: 121.0MB / 143.5MB  (8.06 MB/s)
+  DGraphFin.zip: 122.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 123.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 124.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 125.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 126.0MB / 143.5MB  (8.11 MB/s)
+  DGraphFin.zip: 127.0MB / 143.5MB  (8.08 MB/s)
+  DGraphFin.zip: 128.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 129.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 130.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 131.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 132.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 133.0MB / 143.5MB  (8.10 MB/s)
+  DGraphFin.zip: 134.0MB / 143.5MB  (8.10 MB/s)
+  DGraphFin.zip: 135.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 136.0MB / 143.5MB  (8.10 MB/s)
+  DGraphFin.zip: 137.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 138.0MB / 143.5MB  (8.09 MB/s)
+  DGraphFin.zip: 139.0MB / 143.5MB  (8.07 MB/s)
+  DGraphFin.zip: 140.0MB / 143.5MB  (8.06 MB/s)
+  DGraphFin.zip: 141.0MB / 143.5MB  (8.06 MB/s)
+  DGraphFin.zip: 142.0MB / 143.5MB  (8.05 MB/s)
+  DGraphFin.zip: 143.0MB / 143.5MB  (8.03 MB/s)
+  DGraphFin.zip: 143.5MB / 143.5MB  (8.04 MB/s)
+[dgraphfin] ���: ./data\dgraphfin\dgraphfin.npz
+
+========== ���ݼ�: dexposure ==========
+[dexposure] ���� historical-network_week_2025-07-01.json (���ٲ��Կ���, Լ 75MB)
+
+  historical-network_week_2025-07-01.json: 1.0MB / 75.2MB  (0.04 MB/s)
+  historical-network_week_2025-07-01.json: 2.0MB / 75.2MB  (0.04 MB/s)
+  historical-network_week_2025-07-01.json: 3.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 4.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 5.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 6.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 7.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 8.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 9.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 10.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 11.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 12.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 13.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 14.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 15.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 16.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 17.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 18.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 19.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 20.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 21.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 22.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 23.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 24.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 25.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 26.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 27.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 28.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 29.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 30.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 31.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 32.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 33.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 34.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 35.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 36.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 37.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 38.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 39.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 40.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 41.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 42.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 43.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 44.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 45.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 46.0MB / 75.2MB  (0.03 MB/s)
+  historical-network_week_2025-07-01.json: 47.0MB / 75.2MB  (0.02 MB/s)
+  historical-network_week_2025-07-01.json: 48.0MB / 75.2MB  (0.02 MB/s)
+  historical-network_week_2025-07-01.json: 49.0MB / 75.2MB  (0.02 MB/s)
+  historical-network_week_2025-07-01.json: 50.0MB / 75.2MB  (0.02 MB/s)
+  historical-network_week_2025-07-01.json: 51.0MB / 75.2MB  (0.02 MB/s)
+  �����ж� (The read operation timed out); 2s ������ [1/2], �ѱ��� 0.0B �ϵ�
+
+  �����ж� (<urlopen error _ssl.c:989: The handshake operation timed out>); 4s ������ [2/2], �ѱ��� 51.0MB �ϵ�
+  ͨ��ʧ��, �л���һͨ��: https://raw.githubusercontent.com/dthinkr/DeXposure/main/data/historical-network_week_2025-07-01.json
+
+  �����ж� (HTTP Error 404: Not Found); 2s ������ [1/2], �ѱ��� 51.0MB �ϵ�
+
+  �����ж� (HTTP Error 404: Not Found); 4s ������ [2/2], �ѱ��� 51.0MB �ϵ�
+  ͨ��ʧ��, �л���һͨ��: https://media.githubusercontent.com/media/dthinkr/DeXposure/main/data/historical-network_week_2025-07-01.json
+  ���� GitHub API ͨ�� (base64)...
+[dexposure] ʧ��: GitHub ȫ��ͨ��ʧ��:
+����ʧ��(����2��): https://raw.githubusercontent.com/dthinkr/DeXposure/main/data/historical-network_week_2025-07-01.json
+����ʧ��(����2��): https://media.githubusercontent.com/media/dthinkr/DeXposure/main/data/historical-network_week_2025-07-01.json
+IncompleteRead(34340864 bytes read)
+
+========== ���ݼ�: bitheteronet ==========
+[bitheteronet] �Զ�����δ���: Remote end closed connection without response
+[bitheteronet] �ֶ����� (���˺�):
+  1. �� https://github.com/KellyGong/BitHeteroNet �� README, ��� Google Drive ����
+  2. ���ز���ѹ�� ./data\bitheteronet/, ȷ������ address_attrs.npy ���ļ�
+  3. ���ܱ��ű������Զ�����
+
+========== ���ػ��� ==========
+  elliptic: OK
+  ethereum: OK
+  dgraphfin: OK
+  dexposure: ���ֶ�����
+  bitheteronet: ���ֶ�����
+��ʾ: ʧ���Ӱ���������ݼ������ Elliptic ��ʵ�顣
+[结束时间] 2026-10-26 12:55:58 (退出码=0)
+============================================================
+[开始] "python3" download_data.py --dataset all
+[开始时间] 2026-10-26 13:09:55
+
+========== 数据集: elliptic ==========
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_features.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_classes.csv
+[elliptic] 已存在, 跳过: ./data\elliptic\elliptic_txs_edgelist.csv
+
+========== 数据集: ethereum ==========
+[ethereum] 已存在, 跳过: ./data\ethereum\transaction_dataset.csv
+
+========== 数据集: dgraphfin ==========
+[dgraphfin] 已存在, 跳过: ./data\dgraphfin\dgraphfin.npz
+
+========== 数据集: dexposure ==========
+[dexposure] 下载 historical-network_week_2025-07-01.json (快速测试快照, 约 75MB)
+
+  historical-network_week_2025-07-01.json: 52.0MB / 75.2MB  (2.20 MB/s)
+  下载中断 (The read operation timed out); 2s 后重试 [1/2], 已保留 51.0MB 断点
+
+  historical-network_week_2025-07-01.json: 53.0MB / 75.2MB  (2.33 MB/s)
+  historical-network_week_2025-07-01.json: 54.0MB / 75.2MB  (1.17 MB/s)
+  historical-network_week_2025-07-01.json: 55.0MB / 75.2MB  (0.73 MB/s)
+  historical-network_week_2025-07-01.json: 56.0MB / 75.2MB  (0.55 MB/s)
+  historical-network_week_2025-07-01.json: 57.0MB / 75.2MB  (0.44 MB/s)
+  historical-network_week_2025-07-01.json: 58.0MB / 75.2MB  (0.37 MB/s)
+  historical-network_week_2025-07-01.json: 59.0MB / 75.2MB  (0.32 MB/s)
+  historical-network_week_2025-07-01.json: 60.0MB / 75.2MB  (0.29 MB/s)
+  historical-network_week_2025-07-01.json: 61.0MB / 75.2MB  (0.27 MB/s)
+  historical-network_week_2025-07-01.json: 62.0MB / 75.2MB  (0.25 MB/s)
+  historical-network_week_2025-07-01.json: 63.0MB / 75.2MB  (0.22 MB/s)
+  historical-network_week_2025-07-01.json: 64.0MB / 75.2MB  (0.21 MB/s)
+  historical-network_week_2025-07-01.json: 65.0MB / 75.2MB  (0.19 MB/s)
+  historical-network_week_2025-07-01.json: 66.0MB / 75.2MB  (0.18 MB/s)
+  historical-network_week_2025-07-01.json: 67.0MB / 75.2MB  (0.17 MB/s)
+  historical-network_week_2025-07-01.json: 68.0MB / 75.2MB  (0.16 MB/s)
+  historical-network_week_2025-07-01.json: 69.0MB / 75.2MB  (0.16 MB/s)
+  historical-network_week_2025-07-01.json: 70.0MB / 75.2MB  (0.15 MB/s)
+  historical-network_week_2025-07-01.json: 71.0MB / 75.2MB  (0.14 MB/s)
+  historical-network_week_2025-07-01.json: 72.0MB / 75.2MB  (0.14 MB/s)
+  historical-network_week_2025-07-01.json: 73.0MB / 75.2MB  (0.13 MB/s)
+  historical-network_week_2025-07-01.json: 74.0MB / 75.2MB  (0.13 MB/s)
+  historical-network_week_2025-07-01.json: 75.0MB / 75.2MB  (0.13 MB/s)
+  historical-network_week_2025-07-01.json: 75.2MB / 75.2MB  (0.12 MB/s)
+[dexposure] 完成: ./data\dexposure\historical-network_week_2025-07-01.json
+
+========== 数据集: bitheteronet ==========
+[bitheteronet] 官方数据链接: https://drive.google.com/drive/folders/1ZGx0hQYyK7B5rU0G_gGqIu_wbqYbP4wY?usp=sharing
+[bitheteronet] 自动下载未完成: 未安装 gdown (pip install gdown)
+[bitheteronet] 手动步骤 (免账号):
+  1. 浏览器打开 https://drive.google.com/drive/folders/1ZGx0hQYyK7B5rU0G_gGqIu_wbqYbP4wY?usp=sharing
+  2. 下载全部文件并解压到 ./data\bitheteronet/, 确保包含 address_attrs.npy 等文件
+  3. 重跑本脚本即可自动跳过
+
+========== 下载汇总 ==========
+  elliptic: OK
+  ethereum: OK
+  dgraphfin: OK
+  dexposure: OK
+  bitheteronet: 需手动处理
+提示: 失败项不影响其他数据集与后续 Elliptic 主实验。
+[结束时间] 2026-10-26 13:23:21 (退出码=0)
+============================================================
+[开始] "python3" download_data.py --dataset all
+[开始时间] 周一 2026/10/26 14:30:59.31
+
+ 
+ = = = = = = = = = =   pencƖ:   e l l i p t i c   = = = = = = = = = = 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ f e a t u r e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ c l a s s e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ e d g e l i s t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   e t h e r e u m   = = = = = = = = = = 
+ 
+ [ e t h e r e u m ]   �]X[(W,   �Ǐ:   . / d a t a \ e t h e r e u m \ t r a n s a c t i o n _ d a t a s e t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d g r a p h f i n   = = = = = = = = = = 
+ 
+ [ d g r a p h f i n ]   �]X[(W,   �Ǐ:   . / d a t a \ d g r a p h f i n \ d g r a p h f i n . n p z 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d e x p o s u r e   = = = = = = = = = = 
+ 
+ [ d e x p o s u r e ]   �]X[(W,   �Ǐ:   . / d a t a \ d e x p o s u r e \ h i s t o r i c a l - n e t w o r k _ w e e k _ 2 0 2 5 - 0 7 - 0 1 . j s o n 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   b i t h e t e r o n e t   = = = = = = = = = = 
+ 
+ [ b i t h e t e r o n e t ]   �[�epenc���c:   h t t p s : / / d r i v e . g o o g l e . c o m / d r i v e / f o l d e r s / 1 Z G x 0 h Q Y y K 7 B 5 r U 0 G _ g G q I u _ w b q Y b P 4 w Y ? u s p = s h a r i n g 
+ 
+ [ b i t h e t e r o n e t ]   ꁨRN}�*g�[b:   *g�[ň  g d o w n   ( p i p   i n s t a l l   g d o w n ) 
+ 
+ [ b i t h e t e r o n e t ]   Kb�Rek��  ( MQ&��S) : 
+ 
+     1 .   OmȉhVSb _  h t t p s : / / d r i v e . g o o g l e . c o m / d r i v e / f o l d e r s / 1 Z G x 0 h Q Y y K 7 B 5 r U 0 G _ g G q I u _ w b q Y b P 4 w Y ? u s p = s h a r i n g 
+ 
+     2 .   N}�hQ萇e�Nv^㉋S0R  . / d a t a \ b i t h e t e r o n e t / ,   nx�OS+T  a d d r e s s _ a t t r s . n p y   I{�e�N
+ 
+     3 .   ͑э,g�,gsS�SꁨR�Ǐ
+ 
+ 
+ 
+ = = = = = = = = = =   N}�Gl;`  = = = = = = = = = = 
+ 
+     e l l i p t i c :   O K 
+ 
+     e t h e r e u m :   O K 
+ 
+     d g r a p h f i n :   O K 
+ 
+     d e x p o s u r e :   O K 
+ 
+     b i t h e t e r o n e t :    �Kb�RYt
+ 
+ �c:y:   1Y%�y�
+Nq_�TvQ�NpencƖNT�~  E l l i p t i c   ;N�[��0
+ 
+ [结束时间] 周一 2026/10/26 14:31:21.99 (退出码=0)
+============================================================
+[开始] "python3" download_data.py --dataset all
+[开始时间] 周一 2026/10/26 18:25:35.84
+p y t h o n . e x e   :   R e t r i e v i n g   f o l d e r   c o n t e n t s 
+ 
+ A t   l i n e : 1   c h a r : 5 
+ 
+ +   &   {   &   ' C : \ U s e r s \ a p p l e \ a n a c o n d a 3 \ p y t h o n . e x e '   ' d o w n l o a d _ d a t a . p y '   - - d a t a   . . . 
+ 
+ +           ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+ 
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( R e t r i e v i n g   f o l d e r   c o n t e n t s : S t r i n g )   [ ] ,   R e m o t e E x c e p t i o n 
+ 
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r 
+ 
+   
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   e l l i p t i c   = = = = = = = = = = 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ f e a t u r e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ c l a s s e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ e d g e l i s t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   e t h e r e u m   = = = = = = = = = = 
+ 
+ [ e t h e r e u m ]   �]X[(W,   �Ǐ:   . / d a t a \ e t h e r e u m \ t r a n s a c t i o n _ d a t a s e t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d g r a p h f i n   = = = = = = = = = = 
+ 
+ [ d g r a p h f i n ]   �]X[(W,   �Ǐ:   . / d a t a \ d g r a p h f i n \ d g r a p h f i n . n p z 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d e x p o s u r e   = = = = = = = = = = 
+ 
+ [ d e x p o s u r e ]   �]X[(W,   �Ǐ:   . / d a t a \ d e x p o s u r e \ h i s t o r i c a l - n e t w o r k _ w e e k _ 2 0 2 5 - 0 7 - 0 1 . j s o n 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   b i t h e t e r o n e t   = = = = = = = = = = 
+ 
+ [ b i t h e t e r o n e t ]   �[�epenc���c:   h t t p s : / / d r i v e . g o o g l e . c o m / d r i v e / f o l d e r s / 1 Z G x 0 h Q Y y K 7 B 5 r U 0 G _ g G q I u _ w b q Y b P 4 w Y ? u s p = s h a r i n g 
+ 
+ [ b i t h e t e r o n e t ]   ꁨRN}�*g�[b:   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / e m b e d d e d f o l d e r v i e w ? i d = 1 Z G x 0 h Q Y y K 7 B 5 r U 0 G _ g G q I u _ w b q Y b P 4 w Y   ( C a u s e d   b y   C o n n e c t T i m e o u t E r r o r ( < u r l l i b 3 . c o n n e c t i o n . H T T P S 
+ 
+ [ b i t h e t e r o n e t ]   Kb�Rek��  ( MQ&��S) : 
+ 
+     1 .   OmȉhVSb _  h t t p s : / / d r i v e . g o o g l e . c o m / d r i v e / f o l d e r s / 1 Z G x 0 h Q Y y K 7 B 5 r U 0 G _ g G q I u _ w b q Y b P 4 w Y ? u s p = s h a r i n g 
+ 
+     2 .   N}�hQ萇e�Nv^㉋S0R  . / d a t a \ b i t h e t e r o n e t / ,   nx�OS+T  a d d r e s s _ a t t r s . n p y   I{�e�N
+ 
+     3 .   ͑э,g�,gsS�SꁨR�Ǐ
+ 
+ 
+ 
+ = = = = = = = = = =   N}�Gl;`  = = = = = = = = = = 
+ 
+     e l l i p t i c :   O K 
+ 
+     e t h e r e u m :   O K 
+ 
+     d g r a p h f i n :   O K 
+ 
+     d e x p o s u r e :   O K 
+ 
+     b i t h e t e r o n e t :    �Kb�RYt
+ 
+ �c:y:   1Y%�y�
+Nq_�TvQ�NpencƖNT�~  E l l i p t i c   ;N�[��0
+ 
+ [结束时间] 周一 2026/10/26 18:26:20.53 (退出码=0)
+============================================================
+[开始] "python3" download_data.py --dataset all
+[开始时间] 周一 2026/10/26 20:42:09.28
+p y t h o n . e x e   :   R e t r y i n g   ( 1 / 2 )   i n   0 . 3 s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u c ? i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A 
+ 
+ W 0 V O 3 U 5 N P   ( C a u s e d   b y   C o n n e c t T i m e o u t E r r o r ( < u r l l i b 3 . c o n n e c t i o n . H T T P S C o n n e c t i o n   o b j e c t   a t   0 x 0 0 0 0 0 1 C 7 5 E 5 A 4 D 9 0 > ,   ' C o n n e c t i o n   t o   d r i v e . g o o g l e . c o m   t i m e d   o u t .   ( c o n 
+ 
+ n e c t   t i m e o u t = 2 0 ) ' ) ) 
+ 
+ A t   l i n e : 1   c h a r : 5 
+ 
+ +   &   {   &   ' C : \ U s e r s \ a p p l e \ a n a c o n d a 3 \ p y t h o n . e x e '   ' d o w n l o a d _ d a t a . p y '   - - d a t a   . . . 
+ 
+ +           ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+ 
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( R e t r y i n g   ( 1 / 2 )   . . .   t i m e o u t = 2 0 ) ' ) ) : S t r i n g )   [ ] ,   R e m o t e E x c e p t i o n 
+ 
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r 
+ 
+   
+ 
+ R e t r y i n g   ( 2 / 2 )   i n   0 . 2 s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u c ? i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P   ( C a 
+ 
+ u s e d   b y   C o n n e c t T i m e o u t E r r o r ( < u r l l i b 3 . c o n n e c t i o n . H T T P S C o n n e c t i o n   o b j e c t   a t   0 x 0 0 0 0 0 1 C 7 5 E 7 5 0 C 5 0 > ,   ' C o n n e c t i o n   t o   d r i v e . g o o g l e . c o m   t i m e d   o u t .   ( c o n n e c t   t i m e o u t = 
+ 
+ 2 0 ) ' ) ) 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   e l l i p t i c   = = = = = = = = = = 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ f e a t u r e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ c l a s s e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ e d g e l i s t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   e t h e r e u m   = = = = = = = = = = 
+ 
+ [ e t h e r e u m ]   �]X[(W,   �Ǐ:   . / d a t a \ e t h e r e u m \ t r a n s a c t i o n _ d a t a s e t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d g r a p h f i n   = = = = = = = = = = 
+ 
+ [ d g r a p h f i n ]   �]X[(W,   �Ǐ:   . / d a t a \ d g r a p h f i n \ d g r a p h f i n . n p z 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d e x p o s u r e   = = = = = = = = = = 
+ 
+ [ d e x p o s u r e ]   �]X[(W,   �Ǐ:   . / d a t a \ d e x p o s u r e \ h i s t o r i c a l - n e t w o r k _ w e e k _ 2 0 2 5 - 0 7 - 0 1 . j s o n 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   b i t h e t e r o n e t   = = = = = = = = = = 
+ 
+ [ b i t h e t e r o n e t ]   O(u\O��[�e�V�[�e�N  I D ,   �Ǐ�e�N9YRh�㉐g
+ 
+ [ b i t h e t e r o n e t ]   ;N�S�  +   3   Y(u�S�;   ���e/ <h_��ꁨRRbc
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   G o o g l e   U s e r C o n t e n t   �v��
+ 
+ 
+ 
+     N}�-N�e  ( < u r l o p e n   e r r o r   [ W i n E r r o r   1 0 0 6 0 ]   1u�Nޏ�c�e(W N�k�e��T�l	gcknxT{
+Ybޏ�c�v;N:g�l	g�S�^�ޏ�c\Ջ1Y%�0> ) ;   2 s   T͑Ջ  [ 1 / 1 ] ,   �]�OYu  0 . 0 B   �e�p
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . u s e r c o n t e n t . g o o g l e . c o m / d o w n l o a d ? i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & e x p o r t = d o w n l o a d & c o n f i r m = t 
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   G o o g l e   D r i v e   �v��
+ 
+ 
+ 
+     N}�-N�e  ( < u r l o p e n   e r r o r   [ W i n E r r o r   1 0 0 6 0 ]   1u�Nޏ�c�e(W N�k�e��T�l	gcknxT{
+Ybޏ�c�v;N:g�l	g�S�^�ޏ�c\Ջ1Y%�0> ) ;   2 s   T͑Ջ  [ 1 / 1 ] ,   �]�OYu  0 . 0 B   �e�p
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   G o o g l e   D o c s   �v��
+ 
+ 
+ 
+     N}�-N�e  ( < u r l o p e n   e r r o r   [ W i n E r r o r   1 0 0 6 0 ]   1u�Nޏ�c�e(W N�k�e��T�l	gcknxT{
+Ybޏ�c�v;N:g�l	g�S�^�ޏ�c\Ջ1Y%�0> ) ;   2 s   T͑Ջ  [ 1 / 1 ] ,   �]�OYu  0 . 0 B   �e�p
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d o c s . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   g d o w n   �[�e�e�NOS��
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   D o w n l o a d   f a i l e d   a f t e r   2   r e t r i e s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u c ? i d = 1 i h b v _ 1 A x h S N 8 
+ 
+ [ b i t h e t e r o n e t ]   ꁨRN}�*g�[b,   �_Yt�e�N:   [ ' a d d r e s s _ a t t r s . n p y ' ,   ' a d d r e s s _ c l a s s e s . n p y ' ,   ' d a t a . p k l ' ,   ' t x _ a t t r s . n p y ' ,   ' t x _ c l a s s e s . n p y ' ,   ' t x _ t i m e _ s t e p . n p y ' ] 
+ 
+     a d d r e s s _ a t t r s . n p y   [ G o o g l e   U s e r C o n t e n t   �v��] :   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . u s e r c o n t e n t . g o o g l e . c o m / d o w n l o a d ? i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & e x p o r t = d o w n l o a d & c o n f i r m = t 
+ 
+     a d d r e s s _ a t t r s . n p y   [ G o o g l e   D r i v e   �v��] :   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+     a d d r e s s _ a t t r s . n p y   [ G o o g l e   D o c s   �v��] :   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d o c s . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+     a d d r e s s _ a t t r s . n p y   [ g d o w n   �[�e�e�NOS��] :   D o w n l o a d   f a i l e d   a f t e r   2   r e t r i e s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u c ? i d = 1 i h b v _ 1 A x h S N 8 
+ 
+ [ b i t h e t e r o n e t ]   Kb�Rek��  ( MQ&��S) : 
+ 
+     1 .   OmȉhVSb _  h t t p s : / / d r i v e . g o o g l e . c o m / d r i v e / f o l d e r s / 1 Z G x 0 h Q Y y K 7 B 5 r U 0 G _ g G q I u _ w b q Y b P 4 w Y ? u s p = s h a r i n g 
+ 
+     2 .   N}�hQ�  6   *N�e�N0R  . / d a t a \ b i t h e t e r o n e t / 
+ 
+     3 .   ͑э,g�,g;   �]!h���e�N�Ǐ,   *g�[b�e�N�N  . p a r t   �~ O
+ 
+ 
+ 
+ = = = = = = = = = =   N}�Gl;`  = = = = = = = = = = 
+ 
+     e l l i p t i c :   O K 
+ 
+     e t h e r e u m :   O K 
+ 
+     d g r a p h f i n :   O K 
+ 
+     d e x p o s u r e :   O K 
+ 
+     b i t h e t e r o n e t :    �Kb�RYt
+ 
+ �c:y:   1Y%�y�
+Nq_�TvQ�NpencƖNT�~  E l l i p t i c   ;N�[��0
+ 
+ [结束时间] 周一 2026/10/26 20:46:03.68 (退出码=0)
+============================================================
+[开始] "python3" download_data.py --dataset all
+[开始时间] 周一 2026/10/26 23:31:32.28
+p y t h o n . e x e   :   R e t r y i n g   ( 1 / 2 )   i n   0 . 3 s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u 
+ 
+ c ? i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P   ( C a u s e d   b y   C o n n e c t T i m e o u t E r r o r ( < u r l l i b 3 . c o n n e c t i o n . H T T P S C o n n e c t i o n   o b j e c t   a t   0 x 0 0 0 0 0 1 B B 
+ 
+ F A 6 A F C 9 0 > ,   ' C o n n e c t i o n   t o   d r i v e . g o o g l e . c o m   t i m e d   o u t .   ( c o n n e c t   t i m e o u t = 2 0 ) ' ) ) 
+ 
+ A t   l i n e : 1   c h a r : 5 
+ 
+ +   &   {   &   ' C : \ U s e r s \ a p p l e \ a n a c o n d a 3 \ p y t h o n . e x e '   ' d o w n l o a d _ d a t a . p y '   - - d a t a   . . . 
+ 
+ +           ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+ 
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( R e t r y i n g   ( 1 / 2 )   . . .   t i m e o u t = 2 0 ) ' ) ) : S t r i n g )   [ ] ,   R e m o t e E x c e p t i o n 
+ 
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r 
+ 
+   
+ 
+ R e t r y i n g   ( 2 / 2 )   i n   0 . 3 s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u c ? i d = 1 i h b v _ 1 A 
+ 
+ x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P   ( C a u s e d   b y   C o n n e c t T i m e o u t E r r o r ( < u r l l i b 3 . c o n n e c t i o n . H T T P S C o n n e c t i o n   o b j e c t   a t   0 x 0 0 0 0 0 1 B B F A 6 B 0 E 1 0 > ,   ' C 
+ 
+ o n n e c t i o n   t o   d r i v e . g o o g l e . c o m   t i m e d   o u t .   ( c o n n e c t   t i m e o u t = 2 0 ) ' ) ) 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   e l l i p t i c   = = = = = = = = = = 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ f e a t u r e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ c l a s s e s . c s v 
+ 
+ [ e l l i p t i c ]   �]X[(W,   �Ǐ:   . / d a t a \ e l l i p t i c \ e l l i p t i c _ t x s _ e d g e l i s t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   e t h e r e u m   = = = = = = = = = = 
+ 
+ [ e t h e r e u m ]   �]X[(W,   �Ǐ:   . / d a t a \ e t h e r e u m \ t r a n s a c t i o n _ d a t a s e t . c s v 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d g r a p h f i n   = = = = = = = = = = 
+ 
+ [ d g r a p h f i n ]   �]X[(W,   �Ǐ:   . / d a t a \ d g r a p h f i n \ d g r a p h f i n . n p z 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   d e x p o s u r e   = = = = = = = = = = 
+ 
+ [ d e x p o s u r e ]   �]X[(W,   �Ǐ:   . / d a t a \ d e x p o s u r e \ h i s t o r i c a l - n e t w o r k _ w e e k _ 2 0 2 5 - 0 7 - 0 1 . j s o n 
+ 
+ 
+ 
+ = = = = = = = = = =   pencƖ:   b i t h e t e r o n e t   = = = = = = = = = = 
+ 
+ [ b i t h e t e r o n e t ]   O(u\O��[�e�V�[�e�N  I D ,   �Ǐ�e�N9YRh�㉐g
+ 
+ [ b i t h e t e r o n e t ]   ;N�S�  +   3   Y(u�S�;   ���e/ <h_��ꁨRRbc
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   G o o g l e   U s e r C o n t e n t   �v��
+ 
+ 
+ 
+     N}�-N�e  ( < u r l o p e n   e r r o r   [ W i n E r r o r   1 0 0 6 0 ]   1u�Nޏ�c�e(W N�k�e��T�l	gcknxT{
+Ybޏ�c�v;N:g�l	g�S�^�ޏ�c\Ջ1Y%�0> ) ;   2 s   T͑Ջ  [ 1 / 1 ] ,   �]�OYu  0 . 0 B   �e�p
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . u s e r c o n t e n t . g o o g l e . c o m / d o w n l o a d ? i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & e x p o r t = d o w n l o a d & c o n f i r m = t 
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   G o o g l e   D r i v e   �v��
+ 
+ 
+ 
+     N}�-N�e  ( < u r l o p e n   e r r o r   [ W i n E r r o r   1 0 0 6 0 ]   1u�Nޏ�c�e(W N�k�e��T�l	gcknxT{
+Ybޏ�c�v;N:g�l	g�S�^�ޏ�c\Ջ1Y%�0> ) ;   2 s   T͑Ջ  [ 1 / 1 ] ,   �]�OYu  0 . 0 B   �e�p
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   G o o g l e   D o c s   �v��
+ 
+ 
+ 
+     N}�-N�e  ( < u r l o p e n   e r r o r   [ W i n E r r o r   1 0 0 6 0 ]   1u�Nޏ�c�e(W N�k�e��T�l	gcknxT{
+Ybޏ�c�v;N:g�l	g�S�^�ޏ�c\Ջ1Y%�0> ) ;   2 s   T͑Ջ  [ 1 / 1 ] ,   �]�OYu  0 . 0 B   �e�p
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d o c s . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+ [ b i t h e t e r o n e t ]   a d d r e s s _ a t t r s . n p y   < -   g d o w n   �[�e�e�NOS��
+ 
+ [ b i t h e t e r o n e t ]   �S�1Y%�,   ꁨRRbc:   D o w n l o a d   f a i l e d   a f t e r   2   r e t r i e s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u c ? i d = 1 i h b v _ 1 A x h S N 8 
+ 
+ [ b i t h e t e r o n e t ]   ꁨRN}�*g�[b,   �_Yt�e�N:   [ ' a d d r e s s _ a t t r s . n p y ' ,   ' a d d r e s s _ c l a s s e s . n p y ' ,   ' d a t a . p k l ' ,   ' t x _ a t t r s . n p y ' ,   ' t x _ c l a s s e s . n p y ' ,   ' t x _ t i m e _ s t e p . n p y ' ] 
+ 
+     a d d r e s s _ a t t r s . n p y   [ G o o g l e   U s e r C o n t e n t   �v��] :   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . u s e r c o n t e n t . g o o g l e . c o m / d o w n l o a d ? i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & e x p o r t = d o w n l o a d & c o n f i r m = t 
+ 
+     a d d r e s s _ a t t r s . n p y   [ G o o g l e   D r i v e   �v��] :   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d r i v e . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+     a d d r e s s _ a t t r s . n p y   [ G o o g l e   D o c s   �v��] :   N}�1Y%�( ͑Ջ1 !k) :   h t t p s : / / d o c s . g o o g l e . c o m / u c ? e x p o r t = d o w n l o a d & i d = 1 i h b v _ 1 A x h S N 8 g 0 u L O L - K Y 6 A W 0 V O 3 U 5 N P & c o n f i r m = t 
+ 
+     a d d r e s s _ a t t r s . n p y   [ g d o w n   �[�e�e�NOS��] :   D o w n l o a d   f a i l e d   a f t e r   2   r e t r i e s :   H T T P S C o n n e c t i o n P o o l ( h o s t = ' d r i v e . g o o g l e . c o m ' ,   p o r t = 4 4 3 ) :   M a x   r e t r i e s   e x c e e d e d   w i t h   u r l :   / u c ? i d = 1 i h b v _ 1 A x h S N 8 
+ 
+ [ b i t h e t e r o n e t ]   Kb�Rek��  ( MQ&��S) : 
+ 
+     1 .   OmȉhVSb _  h t t p s : / / d r i v e . g o o g l e . c o m / d r i v e / f o l d e r s / 1 Z G x 0 h Q Y y K 7 B 5 r U 0 G _ g G q I u _ w b q Y b P 4 w Y ? u s p = s h a r i n g 
+ 
+     2 .   N}�hQ�  6   *N�e�N0R  . / d a t a \ b i t h e t e r o n e t / 
+ 
+     3 .   ͑э,g�,g;   �]!h���e�N�Ǐ,   *g�[b�e�N�N  . p a r t   �~ O
+ 
+ 
+ 
+ = = = = = = = = = =   N}�Gl;`  = = = = = = = = = = 
+ 
+     e l l i p t i c :   O K 
+ 
+     e t h e r e u m :   O K 
+ 
+     d g r a p h f i n :   O K 
+ 
+     d e x p o s u r e :   O K 
+ 
+     b i t h e t e r o n e t :    �Kb�RYt
+ 
+ �c:y:   1Y%�y�
+Nq_�TvQ�NpencƖNT�~  E l l i p t i c   ;N�[��0
+ 
+ [结束时间] 周一 2026/10/26 23:35:19.73 (退出码=0)
