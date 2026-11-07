@@ -1,6 +1,6 @@
 # TASGL Experiment Suite — Public Code and Data Release
 
-> **Status:** aligned with the 2026-11-04 camera-ready IEEE TDSC submission.
+> **Status:** aligned with the 2026-11-04 camera-ready ***Journal submission.
 > **This README is the English version.** The section-by-section Chinese
 > counterpart is [`README.cn.md`](README.cn.md); both carry the same section
 > numbers, numbers, commands and caveats.
@@ -37,24 +37,6 @@ Shandong 250200, China (`hanxiaoleop@163.com`), ORCID [0009-0009-9611-2368](http
 ---
 
 ## 2. Version anchor
-
-Every number quoted in this README is the number in the final manuscript,
-not a number from an earlier draft. The authoritative anchors are:
-
-| Anchor | Value |
-| --- | --- |
-| Manuscript | *Dependability requirements for lightweight temporal graph models* (IEEE TDSC submission) |
-| Main text | 17 pages, `main.pdf` |
-| Supplemental Material | 12 pages, `supplemental_material.pdf`, single file, sections S-I…S-V |
-| Final revision | 2026-11-04 (energy stance, open-items, cost source, H6, 20-seed confirmation) |
-| Main comparison | Elliptic, **10 seeds**, equal tuning budget |
-| Independent confirmation | BitHeNet, **20 seeds**, never used for development |
-| H6 | **measured, not gated**, non-oracle attack matrix registered before execution |
-| Energy | **not measured**; no joule, power, or efficiency figure is claimed anywhere |
-| Cost chain | **8 stages, 25.9254 s total, 11.5117 s one-off (44.4%)** |
-| Test suite | `249 passed, 1 skipped` (full workspace) / `244 passed, 6 skipped` (public snapshot) |
-| Body-number traceability | `564 numbers, 0 not traceable` (manuscript workspace) |
-
 Earlier P3-era READMEs described a ten-seed BitHeNet run, an "eight-stage
 measured energy" chain, and threshold values of 0.73 / 8 ms. **All of those
 are withdrawn.** Do not use them to describe this release.
@@ -523,7 +505,7 @@ result**:
 
 ## 16. Citation, author statements, and before you push
 
-If you use this code or data, cite the associated IEEE TDSC manuscript and
+If you use this code or data, cite the associated ***Journal manuscript and
 this repository (add the DOI / repository URL once available). The author
 statements in the manuscript are: the manuscript was written by Xiaole Han
 alone; no external funding was received; no competing interests are

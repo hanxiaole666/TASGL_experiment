@@ -1,6 +1,6 @@
 # Open-Source Release Manifest — TASGL Experiment Suite
 
-**Release anchor:** 2026-11-04 camera-ready IEEE TDSC submission (17-page main
+**Release anchor:** 2026-11-04 camera-ready ***Journal submission (17-page main
 text + 12-page Supplemental Material).
 **Uploadable snapshot:** `TASGL_github_release/`
 **Per-file SHA-256 ledger:** `RELEASE_FILELIST.sha256` (in both the repository

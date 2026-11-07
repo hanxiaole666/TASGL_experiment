@@ -1,6 +1,6 @@
 # TASGL 实验套件 — 公开源码与数据发布版
 
-> **状态：** 已与 2026-11-04 IEEE TDSC 终稿对齐。
+> **状态：** 已与 2026-11-04 ***Journal 终稿对齐。
 > **本文件为中文版**，逐节对应的英文版为 [`README.md`](README.md)；两份文件的
 > 章节编号、数值、命令、限制与口径完全一致。
 > **范围：** 本仓库发布的是**实验源码与实测结果数据**，不含论文 LaTeX 源码树、
@@ -31,22 +31,6 @@ TASGL（Temporal-Aware Sparse Graph Learning，时序感知稀疏图学习）在
 ---
 
 ## 2. 版本锚点
-
-本 README 引用的每一个数字都来自终稿，而非早期草稿。权威锚点如下：
-
-| 锚点 | 取值 |
-| --- | --- |
-| 稿件 | *Dependability requirements for lightweight temporal graph models*（IEEE TDSC 投稿） |
-| 主文 | 17 页，`main.pdf` |
-| 补充材料 | 12 页，`supplemental_material.pdf`，单文件，S-I…S-V 五节 |
-| 终版修订 | 2026-11-04（能量口径、open items、成本源、H6、二十种子确认） |
-| 主比较 | Elliptic，**10 种子**，等调优预算 |
-| 独立确认 | BitHeNet，**20 种子**，开发期从未使用 |
-| H6 | **实测但不设门**，攻击矩阵在执行前预先登记 |
-| 能量 | **未实测**；全文不报告任何焦耳、功耗或能效数字 |
-| 成本链 | **8 阶段、总计 25.9254 s、一次性 11.5117 s（44.4%）** |
-| 测试 | 完整工作区 `249 passed, 1 skipped` / 公开发布快照 `244 passed, 6 skipped` |
-| 正文数字可追溯性 | `564 numbers, 0 not traceable`（投稿工作区） |
 
 P3 时代的旧 README 写的是「BitHeNet 十种子运行中」「八阶段实测能耗」以及
 0.73 / 8 ms 的门限值。**这些口径均已撤回**，不得用来描述本次发布。
@@ -471,7 +455,7 @@ grep -RniE "C:\\\\Users\\\\apple|/d/TASGL_experiment|/c/Users" --include='*.py' 
 
 ## 16. 引用、作者声明与上传前检查
 
-若使用本代码或数据，请引用对应的 IEEE TDSC 稿件及本仓库（DOI / 仓库 URL
+若使用本代码或数据，请引用对应的 ***Journal 稿件及本仓库（DOI / 仓库 URL
 待定后补充）。稿件中的作者声明为：全文由韩小乐独立撰写；未接受外部资助；
 无利益冲突声明；研究仅分析公开基准交易记录，不引入私有用户数据。
 
