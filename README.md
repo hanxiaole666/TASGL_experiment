@@ -31,9 +31,6 @@ establish performance leadership for TASGL, and it does not establish
 inferiority either. This repository ships the artifacts that let a reader
 verify that statement rather than take it on trust.
 
-**Author:** Xiaole Han, Business School, Qilu Institute of Technology, Jinan,
-Shandong 250200, China (`hanxiaoleop@163.com`), ORCID [0009-0009-9611-2368](https://orcid.org/0009-0009-9611-2368).
-
 ---
 
 ## 2. Version anchor
@@ -42,7 +39,7 @@ measured energy" chain, and threshold values of 0.73 / 8 ms. **All of those
 are withdrawn.** Do not use them to describe this release.
 
 The LaTeX sources and the two final PDFs are *not* included in this public
-code release (see Section 6). They live in the separate IEEE submission
+code release (see Section 6). They live in the separate Journal submission
 package. Consequently `paper_tdsc.py check --paper_dir <paper>` needs that
 tree; the `build` path described in Section 10 is self-contained here.
 
@@ -178,10 +175,10 @@ and is described file-by-file in `OPENSOURCE_MANIFEST.md`. Rules:
 | `results/**/*.json`, small `*.csv`, `*.log` | `*.pt`, `*.model`, `*.ckpt`, `*.npz` | ~43 MB of weights/checkpoints; **no reported number** depends on them |
 | `Test-log/`, `figs/`, `reference_checks/` | `results/p3/independent_dgraph/**/case_audit_queue.csv` | 10 queues, ~84 MB, regenerable intermediate case lists |
 | `archive/superseded/` (2 JSON + README) | `Data/`, `data/` | **2.8 GB of third-party raw data**, not redistributable; obtain via `download_data.py` |
-| — | `Doc/` | 280 MB / 2779 files of drafts, IEEE templates, prior source snapshots and internal working notes |
+| — | `Doc/` | 280 MB / 2779 files of drafts, Journal templates, prior source snapshots and internal working notes |
 | — | `TASGL论文证据追溯/` | internal evidence-traceability tree from earlier manuscript drafts |
 | — | `__pycache__/`, `.pytest_cache/`, `.idea/`, `.venv/`, `.workbuddy/` | caches, IDE state, private working records |
-| — | manuscript LaTeX tree, `main.pdf`, `supplemental_material.pdf` | separate IEEE submission package; also an IEEE copyright decision (Section 16) |
+| — | manuscript LaTeX tree, `main.pdf`, `supplemental_material.pdf` | separate Journal submission package; also an Journal copyright decision (Section 16) |
 
 **GitHub hard limit:** no single file may exceed 100 MB. Several raw data
 files exceed 400 MB (`elliptic_txs_features.csv` 689 MB, `dgraphfin.npz`
@@ -321,7 +318,7 @@ cross-execution comparison and its log disagreements.
 
 ```bash
 python3 paper_tdsc.py build --results_dir . --paper_dir /tmp/tasgl_rebuild
-python3 paper_tdsc.py check --paper_dir <IEEE-submission-tree>   # needs LaTeX sources
+python3 paper_tdsc.py check --paper_dir <Journal-submission-tree>   # needs LaTeX sources
 python3 paper_tdsc.py ledger --results_dir .
 ```
 
@@ -518,11 +515,11 @@ introduces no private user data.
    choose one explicitly (e.g. MIT / Apache-2.0 / CC-BY-4.0 for data) and
    add the file. Until then the repository is *not* licensed for reuse.
 2. **Manuscript PDFs / LaTeX sources** — currently excluded. Confirm the
-   IEEE policy that applies to your submission before posting a preprint or
+   Journal policy that applies to your submission before posting a preprint or
    the source tree.
 3. **Generative-AI disclosure** — the manuscript's Author Statements contain
    no AI-usage disclosure. If any tooling materially assisted the writing,
-   review IEEE PSPB 8.2.1.B.10 before publication and keep the disclosure
+   review Journal policy  before publication and keep the disclosure
    consistent with the sole-authorship statement.
 
 `OPENSOURCE_MANIFEST.md` lists every shipped file with its SHA-256 and the
