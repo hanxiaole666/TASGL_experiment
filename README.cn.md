@@ -1,6 +1,6 @@
 # TASGL 实验套件 — 公开源码与数据发布版
 
-> **状态：** 已与 2026-11-04 IEEE TDSC 终稿对齐。
+> **状态：** 已与 2026-11-04 ***Journal 终稿对齐。
 > **本文件为中文版**，逐节对应的英文版为 [`README.md`](README.md)；两份文件的
 > 章节编号、数值、命令、限制与口径完全一致。
 > **范围：** 本仓库发布的是**实验源码与实测结果数据**，不含论文 LaTeX 源码树、
@@ -25,8 +25,6 @@ TASGL（Temporal-Aware Sparse Graph Learning，时序感知稀疏图学习）在
 确立其劣势。本仓库提供的产物，是让读者能够核验这一判断，而不是只能选择
 相信。
 
-**作者：** 韩小乐（Xiaole Han），齐鲁理工学院商学院，山东济南 250200
-（`hanxiaoleop@163.com`），ORCID [0009-0009-9611-2368](https://orcid.org/0009-0009-9611-2368)。
 
 ---
 
@@ -36,7 +34,7 @@ TASGL（Temporal-Aware Sparse Graph Learning，时序感知稀疏图学习）在
 
 | 锚点 | 取值 |
 | --- | --- |
-| 稿件 | *Dependability requirements for lightweight temporal graph models*（IEEE TDSC 投稿） |
+| 稿件 | *Dependability requirements for lightweight temporal graph models*（投稿） |
 | 主文 | 17 页，`main.pdf` |
 | 补充材料 | 12 页，`supplemental_material.pdf`，单文件，S-I…S-V 五节 |
 | 终版修订 | 2026-11-04（能量口径、open items、成本源、H6、二十种子确认） |
@@ -52,7 +50,7 @@ P3 时代的旧 README 写的是「BitHeNet 十种子运行中」「八阶段实
 0.73 / 8 ms 的门限值。**这些口径均已撤回**，不得用来描述本次发布。
 
 论文 LaTeX 源码与两份终稿 PDF **不在**本次公开代码发布范围内（见第 6 节），
-它们属于独立的 IEEE 投稿包。因此 `paper_tdsc.py check --paper_dir <paper>`
+它们属于独立的 期刊 投稿包。因此 `paper_tdsc.py check --paper_dir <paper>`
 需要该源码树；第 10 节给出的 `build` 路径在本仓库内即可独立运行。
 
 ---
@@ -174,10 +172,10 @@ TASGL_experiment/
 | `results/**/*.json`、小型 `*.csv`、`*.log` | `*.pt`、`*.model`、`*.ckpt`、`*.npz` | 约 43 MB 权重/检查点；**没有任何已报告数字**依赖它们 |
 | `Test-log/`、`figs/`、`reference_checks/` | `results/p3/independent_dgraph/**/case_audit_queue.csv` | 10 份队列 CSV 约 84 MB，为可再生的中间案件清单 |
 | `archive/superseded/`（2 个 JSON + README） | `Data/`、`data/` | **2.8 GB 第三方原始数据**，不可再分发；用 `download_data.py` 获取 |
-| — | `Doc/` | 280 MB / 2779 文件，含草稿、IEEE 模板、旧源码快照与内部工作记录 |
+| — | `Doc/` | 280 MB / 2779 文件，含草稿、期刊 模板、旧源码快照与内部工作记录 |
 | — | `TASGL论文证据追溯/` | 早期稿件阶段的内部证据追溯树 |
 | — | `__pycache__/`、`.pytest_cache/`、`.idea/`、`.venv/`、`.workbuddy/` | 缓存、IDE 状态、私有工作记录 |
-| — | 论文 LaTeX 源码树、`main.pdf`、`supplemental_material.pdf` | 属独立 IEEE 投稿包，且涉及 IEEE 版权决定（第 16 节） |
+| — | 论文 LaTeX 源码树、`main.pdf`、`supplemental_material.pdf` | 属独立 期刊 投稿包，且涉及 期刊 版权决定（第 16 节） |
 
 **GitHub 硬限制：** 单文件不得超过 100 MB。多个原始数据文件超过 400 MB
 （`elliptic_txs_features.csv` 689 MB、`dgraphfin.npz` 680 MB、若干 BitHeNet
@@ -307,7 +305,7 @@ P6 没有独立 shell 包装，直接调用模块即可，例如 `python3 p6_gat
 
 ```bash
 python3 paper_tdsc.py build --results_dir . --paper_dir /tmp/tasgl_rebuild
-python3 paper_tdsc.py check --paper_dir <IEEE-submission-tree>   # 需要 LaTeX 源码
+python3 paper_tdsc.py check --paper_dir <期刊-submission-tree>   # 需要 LaTeX 源码
 python3 paper_tdsc.py ledger --results_dir .
 ```
 
@@ -471,7 +469,7 @@ grep -RniE "C:\\\\Users\\\\apple|/d/TASGL_experiment|/c/Users" --include='*.py' 
 
 ## 16. 引用、作者声明与上传前检查
 
-若使用本代码或数据，请引用对应的 IEEE TDSC 稿件及本仓库（DOI / 仓库 URL
+若使用本代码或数据，请引用对应的 ***Journal 稿件及本仓库（DOI / 仓库 URL
 待定后补充）。稿件中的作者声明为：全文由韩小乐独立撰写；未接受外部资助；
 无利益冲突声明；研究仅分析公开基准交易记录，不引入私有用户数据。
 
@@ -481,9 +479,9 @@ grep -RniE "C:\\\\Users\\\\apple|/d/TASGL_experiment|/c/Users" --include='*.py' 
    选定（例如代码 MIT / Apache-2.0、数据 CC-BY-4.0）并添加文件。在此之前，
    本仓库**未被授权复用**。
 2. **论文 PDF / LaTeX 源码** —— 当前已排除。发布预印本或源码树之前，请确认
-   适用于您投稿的 IEEE 政策。
+   适用于您投稿的 期刊 政策。
 3. **生成式 AI 使用披露** —— 稿件 Author Statements 中无 AI 使用披露。若写作
-   过程中存在工具实质性辅助，请在公开前核对 IEEE PSPB 8.2.1.B.10，并使披露
+   过程中存在工具实质性辅助，在公开前核对 期刊政策，并使披露
    与独著声明保持一致。
 
 `OPENSOURCE_MANIFEST.md` 列出每个随包文件的 SHA-256 及收录/排除理由；

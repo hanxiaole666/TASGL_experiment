@@ -1,6 +1,6 @@
 # Open-Source Release Manifest — TASGL Experiment Suite
 
-**Release anchor:** 2026-11-04 camera-ready IEEE TDSC submission (17-page main
+**Release anchor:** 2026-11-04 camera-ready ***Journal submission (17-page main
 text + 12-page Supplemental Material).
 **Uploadable snapshot:** `TASGL_github_release/`
 **Per-file SHA-256 ledger:** `RELEASE_FILELIST.sha256` (in both the repository
@@ -55,13 +55,13 @@ so it is never pushed as a nested duplicate of the same modules.
 | INCLUDE | `Test-log/`, `figs/`, `reference_checks/` | 44 timestamped logs, 5 diagnostic PDFs, 3 literature-check CSVs (0.54 MB total) |
 | INCLUDE | `archive/superseded/` (2 JSON + README) | audit trail for the two withdrawn energy-bearing variants |
 | EXCLUDE | `Data/`, `data/` | **2.8 GB third-party raw data**, not redistributable; several files >400 MB. Obtain with `download_data.py` |
-| EXCLUDE | `Doc/` | 280 MB / 2779 files: historical drafts, IEEE templates, prior source snapshots, internal working notes. Contains an older 47-file copy of the same code |
+| EXCLUDE | `Doc/` | 280 MB / 2779 files: historical drafts, Journal templates, prior source snapshots, internal working notes. Contains an older 47-file copy of the same code |
 | EXCLUDE | `TASGL论文证据追溯/` | internal evidence-traceability tree from earlier (pre-final) manuscript drafts |
 | EXCLUDE | `*.pt`, `*.model`, `*.ckpt`, `*.npz` | ~43 MB of weights/checkpoints; no reported number depends on them |
 | EXCLUDE | `results/p3/independent_dgraph/**/case_audit_queue.csv` | 10 files, ~84 MB, regenerable intermediate case queues |
 | EXCLUDE | `*.bat` | legacy Windows-only wrappers containing a machine-specific interpreter path; portable `.sh` equivalents are shipped |
 | EXCLUDE | root `*.txt` run logs, draft `*.md`, draft `*.pdf`, `*.docx` | historical or superseded prose, not part of the code release |
-| EXCLUDE | manuscript LaTeX tree, `main.pdf`, `supplemental_material.pdf` | separate IEEE submission package; also an IEEE copyright/self-archiving decision |
+| EXCLUDE | manuscript LaTeX tree, `main.pdf`, `supplemental_material.pdf` | separate Journal submission package; also an Journal copyright/self-archiving decision |
 | EXCLUDE | `__pycache__/`, `.pytest_cache/`, `.idea/`, `.venv/`, `.git/`, `.workbuddy/` | caches, IDE state, private working records |
 
 **Log redaction (release-only).** 41 `Test-log/*.txt` files and 9
@@ -205,9 +205,9 @@ Both agree on zero untraceable numbers; see Section 10 of `README.md` /
 
 - No `LICENSE` file: choosing one is the author's legal decision. Do not
   publish as "open source" without it.
-- No decision yet on posting the manuscript PDFs / LaTeX sources (IEEE policy).
+- No decision yet on posting the manuscript PDFs / LaTeX sources (Journal policy).
 - No generative-AI usage disclosure in the manuscript's Author Statements;
-  review IEEE PSPB 8.2.1.B.10 if tooling materially assisted the writing.
+  review Journal policy if tooling materially assisted the writing.
 - `paper_constants.json` (manuscript workspace) still records
   `0.2232 µs/node` while the body says `0.2112 µs/node`; both descriptive,
   not gate values, discrepancy unresolved.
